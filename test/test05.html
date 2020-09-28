@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>화면구현4</title>
+    <style>
+        /*font*/
+        @font-face {
+            font-family: 'S-CoreDream-8Heavy';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-8Heavy.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        /*recet :초기화*/
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        /*layout*/
+        #wrap {
+            width: 100%;
+            margin: 0 auto;
+            font-size: 72px;
+            font-family: 'S-CoreDream-8Heavy';
+            color: #fff;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        #header {
+            width: 100%;
+            height: 150px;
+            line-height: 150px;
+            background-color: #607d8b;
+        }
+
+        #banner {
+            width: 100%;
+            height: 400px;
+            line-height: 400px;
+            background-color: #cfd8dc;
+        }
+
+        #contents {
+            width: 100%;
+            height: 890px;
+            background-color: #b0bec5;
+        }
+
+        #contents_wrap {
+            width: 1200px;
+            height: 890px;
+            margin: 0 auto;
+            background-color: #b0bec5;
+        }
+
+        #footer {
+            width: 100%;
+            ;
+            height: 150px;
+            line-height: 150px;
+            background-color: #90a4ae;
+        }
+
+        #content1 {
+            width: 1200px;
+            height: 400px;
+            line-height: 400px;
+            margin: 0 auto;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        #content2 {
+            width: 600px;
+            height: 230px;
+            line-height: 230px;
+            float: left;
+            margin: 0 auto;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        #content3 {
+            width: 600px;
+            height: 230px;
+            line-height: 230px;
+            float: left;
+            margin: 0 auto;
+            background-color: rgba(30, 30, 30, 0.5);
+        }
+
+        #content4 {
+            width: 1200px;
+            height: 400px;
+            line-height: 230px;
+            margin: 0 auto;
+            clear: both;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        /*container : heade, banner,footer*/
+        .container {
+            width: 1200px;
+            height: inherit;
+            margin: 0 auto;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="header">
+            <div class="container">header</div>
+        </div>
+         <!--header-->
+        <div id="banner">
+            <div class="container">banner</div>
+        </div>
+         <!--banner-->
+        <div id="contents">
+            <div id="contents_wrap">
+                <div id="content1">content1</div>
+                <div id="content2">content2</div>
+                <div id="content3">content3</div>
+                <div id="content4">content4</div>
+            </div>
+        </div>
+         <!--contents-->
+        <div id="footer">
+            <div class="container">footer</div>
+        </div>
+         <!--footer-->
+    </div>
+    <!--wrap-->
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>화면구현3</title>
+    <style>
+        /*font*/
+        @font-face {
+            font-family: 'S-CoreDream-8Heavy';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-8Heavy.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        /*recet*/
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        /*layout*/
+        #body {
+            background: #eceff1;
+        }
+        
+        #wrap {
+            width: 1200px;
+            height: 1600px;
+            margin: 0 auto;
+            font-size: 72px;
+            text-align: center;
+            color: #fff;
+            text-transform: uppercase;
+            font-family: 'S-CoreDream-8Heavy';
+        }
+
+        #side {
+            width: 400px;
+            height: 1600px;
+            line-height: 1600px;
+            background: #b0bec5;
+            float: left;
+        }
+
+        #header {
+            width: 800px;
+            height: 300px;
+            line-height: 300px;
+            background: #90a4ae;
+            float: left;
+        }
+
+        #contents {
+            width: 800px;
+            height: 900px;
+            line-height: 900px;
+            background: #78909c;
+            float: left;
+        }
+
+        #footer {
+            width: 800px;
+            height: 400px;
+            line-height: 400px;
+            background: #607d8b;
+            float: left;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="side">side</div>
+        <div id="header">header</div>
+        <div id="contents">contents</div>
+        <div id="footer">footer</div>
+    </div>
+</body>
+
+</html>
