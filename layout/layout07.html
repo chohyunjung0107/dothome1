@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout07</title>
+    <style>
+        @font-face {
+            font-family: 'S-CoreDream-8Heavy';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-8Heavy.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        /*recet :초기화*/
+        * {margin: 0; padding: 0;}
+
+        /*layout :전체영역*/
+        #wrap {
+            width: 100%;
+            font-size: 50px;
+            text-align: center;
+            text-transform: uppercase;
+            color: #fff;
+            font-family: 'S-CoreDream-8Heavy';
+        }
+        
+        #header1 {
+            width: 100%; 
+            height: 70px; 
+            line-height: 70px;
+            background-color: #83716c;
+        }
+        #header2 {
+            width: 100%; 
+            height: 70px; 
+            line-height: 70px;
+            background-color: #795548;
+        }
+        #banner {
+            width: 100%; 
+            height: 400px; 
+            line-height: 400px;
+            background-color: #cec1bd;
+        }
+        #content1 {
+            width: 100%; 
+            height: 300px; 
+            line-height: 300px;
+            background-color: #795548;
+        }
+        #content2 {
+            width: 100%; 
+            height: 900px; 
+            line-height: 900px;
+            background-color: #5d4037;
+        }
+        #content3 {
+            width: 100%; 
+            height: 1700px; 
+            line-height: 1700px;
+            background-color: #3e2723;
+        }
+        #content4 {
+            width: 100%; 
+            height: 300px;
+            line-height: 300px; 
+            background-color: #d7ccc8;
+        }
+        #footer1 {
+            width: 100%; 
+            height: 100px; 
+            line-height: 100px;
+            background-color: #3e2723;
+        }
+        #footer2 {
+            width: 100%; 
+            height: 100px; 
+            line-height: 100px;
+            background-color: #83716c;
+        }
+
+        /*container*/
+        .container {
+            width: 1200px; 
+            height:inherit; 
+            margin: 0 auto; 
+            background-color: rgba(0,0,0,0.3);
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">
+            <div id="header1">
+                <div class="container">header1</div>
+            </div>
+            <div id="header2">
+                <div class="container">header2</div>
+            </div>
+        </div>
+        <!--//header-->
+
+        <div id="banner">
+            <div class="container">banner</div> 
+        </div>
+        <!--//banner-->
+
+        <div id="content">       
+            <div id="content1">
+                <div class="container">content1</div>
+            </div>
+            <div id="content2">
+                <div class="container">content2</div>
+            </div>
+            <div id="content3">
+                <div class="container">content3</div>
+            </div>
+            <div id="content4">
+                <div class="container">content4</div>
+            </div>
+        </div>
+        <!--//content-->
+
+        <div id="footer">
+            <div id="footer1">
+                <div class="container">footer1</div>
+            </div>
+            <div id="footer2">
+                <div class="container">footer2</div>
+            </div>
+        </div>
+        <!--//footer-->
+    </div>
+    <!--//wrap-->
+</body>
+</html>
