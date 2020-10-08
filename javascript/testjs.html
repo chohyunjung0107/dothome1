@@ -6,21 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>생성자 함수 자습</title>
     <script>
-        function aVg(num1, num2, num3) {
-            this.number1 = num1;
-            this.number2 = num2;
-            this.number3 = num3;
-        }
-        aVg.prototype.tot = function () {
-            return (this.number1 + this.number2 + this.number3) / 3;
-        }
-        let person1 = new aVg(100, 100, 90);
-        let person2 = new aVg(50, 50, 50);
-        let person3 = new aVg(10, 100, 10);
+        // function aVg(num1, num2, num3) {
+        //     this.number1 = num1;
+        //     this.number2 = num2;
+        //     this.number3 = num3;
+        // }
+        // aVg.prototype.tot = function () {
+        //     return (this.number1 + this.number2 + this.number3) / 3;
+        // }
+        // let person1 = new aVg(100, 100, 90);
+        // let person2 = new aVg(50, 50, 50);
+        // let person3 = new aVg(10, 100, 10);
 
-        document.write("1번 아이: " + person1.tot(), "<br>");
-        document.write("2번 아이: " + person2.tot(), "<br>");
-        document.write("3번 아이: " + person3.tot(), "<br>");
+        // document.write("1번 아이: " + person1.tot(), "<br>");
+        // document.write("2번 아이: " + person2.tot(), "<br>");
+        // document.write("3번 아이: " + person3.tot(), "<br>");
+
+        function obj5(a, b){
+            this.a = a;
+            this.b = b;
+            this.c = function(){
+                return a*b;
+            }
+        }
+        let result1 = new obj5(100, 200);
+        let result2 = new obj5("자바스크립트", "실행됨");
+
+        result1.c()
+
     </script>
 </head>
 
