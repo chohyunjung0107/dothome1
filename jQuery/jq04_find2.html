@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery</title>
+    <style>
+        @font-face {
+            font-family: 'Cafe24Oneprettynight';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Cafe24Oneprettynight.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        .section {width: 700px; margin: 50px auto; text-align: center; font-family: 'Cafe24Oneprettynight';}
+        .section h1 {font-size: 40px;}
+        .section p  {font-size: 30px;}
+        .section p span {padding: 5px; display: inline-block;}
+    </style>
+</head>
+<body>
+
+    <div class="section">
+        <h1>친화도법(affinity diagram)</h1>    
+        <p class="desc">아이디어를 정리하는 압축 기법이다. 보통 아이디어를 발화하는 방법으로 많이 사용되는 것이 <em>브레인스토밍</em>이다. 그러나 <em>브레인스토밍</em>으로 많은 아이디어나 생각들이 도출되었어도 정돈되지 않아 핵심 파악이 어려울 때가 있다. <strong>친화도법</strong>은 많은 아이디어나 생각을 관련 있는 것끼리 분류하여 전체적인 구조를 파악하는 문제 해결 방법이다. 동일한 주제에 대한 의견이나 미래에 일어날 상황 등을 예측하여 유사성, 연관성이 높은 순으로 재분류하고 파악한 후 해결안을 만든다.</p>
+    </div>    
+    <!-- script -->
+    <script src="jquery.min_1.12.4.js.js" ></script>
+    <script>
+        //선택자 선택 
+        // $(".desc strong").css({color: "#c7254e", backgroundColor: "#f9f2f4", fontSize: "90%", padding: "4px 6px 2px 6px", borderRadius: "5px"});
+        // $(".desc").find(":contains('친화도법')").css({color: "#c7254e", backgroundColor: "#f9f2f4", fontSize: "90%", padding: "4px 6px 2px 6px", borderRadius: "5px"});
+
+
+        //메서드 선택 
+        // $(".desc").find("em").css({color: "#c7254e", backgroundColor: "#f9f2f4", fontSize: "90%", padding: "4px 6px 2px 6px", borderRadius: "5px"});
+
+        // $(".desc").find("strong").mouseover(function(){
+        //     $(this).css({color: "#c7254e", backgroundColor: "#f9f2f4", fontSize: "90%", padding: "4px 6px 2px 6px", borderRadius: "5px"});
+        // });
+        // $(this).mouseout(function(){
+        //     $(".desc").find("strong").css({color: "#000", backgroundColor: "transparent", fontSize: "100%", padding: "0px", borderRadius: "0px"});
+        // });
+
+        //글자 쪼개기 
+        let text = $(".desc").text().split(" ").join("</span><span>")
+        text = "<span>" + text + "</span>";
+        
+                  //text메서드를 쓰게 되면 화면에 글자로 구현되고 html을 쓰게 되면 f12(개발자창)에서 태그가 바뀐 내용을 확인할 수 있다. 
+        // $(".desc").html(text).find("span").mouseover(function(){
+        //     $(this).css({color: "#c7254e", backgroundColor: "#f9f2f4", borderRadius: "5px"});
+        // }) 
+
+        $(".desc").html(text).find("span").hover(function(){
+            $(this).css({color: "#c7254e", backgroundColor: "#f9f2f4", fontSize: "90%", padding: "4px 6px 2px 6px", borderRadius: "5px"});
+        }, function(){
+            $(this).css({color: "#000"});
+        })
+       
+
+       
+        
+    </script>
+</body>
+</html>
