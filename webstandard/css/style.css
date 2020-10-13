@@ -167,6 +167,42 @@
 .notice_hover2 li a span:hover em {visibility: visible;} 
 .notice_hover2 li a span strong {font-size: 12px; padding-top: 3px;}
 
+/* 탭 메뉴 */
+.tab_menu {position: relative; border: 1px solid #ccc; padding: 8px; height: 105px;}
+.tab_menu ul {overflow: hidden; border-bottom: 1px solid #ccc;}
+.tab_menu ul li {float: left; border: 1px solid #ccc; margin-right: -1px; margin-bottom: -1px;}
+.tab_menu ul li a {padding: 5px 10px; display: block;}
+.tab_menu ul li ul {position: absolute; left: 0; top: 48px; border: 0;}
+.tab_menu ul li ul li {background: url(../img/dot.gif) no-repeat 9px 8px; font-size: 12px; border: 0; float: none; padding-left: 18px;}
+.tab_menu ul li ul li a {padding: 0 0 3px 0;}
+
+.tab_menu ul li.active {background: #2c94c4;}
+.tab_menu ul li.active a{color: #fff;}
+.tab_menu ul li.active ul li a {color: #333;}
+
+/* 게시판4 */
+/* .notice4 {margin-top: 15px; padding-top: 8px; position: relative; border: 1px solid #ccc;}
+.notice4 h4 {color: blue; border-bottom: 1px solid #ccc; font-size: 15px; font-weight: bold; padding: 0 0 5px 5px;}
+.notice4 em {color: blueviolet; font-weight: bold;}
+.notice4 ul li {overflow: hidden; padding: 5px 5px;}
+.notice4 ul li a {font-size: 12px; background: url(../img/dot.gif) no-repeat 3px 8px; padding: 0 0 0 8px; float: left; width: 65%; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+.notice4 ul li span {float: right; width: 25%; font-size: 12px;}
+.notice4 a.more {position: absolute; right: 5px; top: 8px;} */
+
+.notice4 {position: relative; border: 1px solid #ccc; margin-top: 15px;}
+.notice4 h4 {border-bottom: 1px solid #ccc; padding: 8px 10px; font-weight: bold; color: #2c94c4;}
+.notice4 h4 em {color: #cf3293;}
+.notice4 ul {padding: 10px;}
+.notice4 li {overflow: hidden;}
+.notice4 li a {padding-left: 8px; background: url(../img/dot.gif) no-repeat 0px 8px; float: left; width: 65%; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+.notice4 li span {float: right; width: 30%; text-align: right;}
+.notice4 a.more {position: absolute; right: 9px; top: 9px;} 
+
+
+
+
+
+
 
 
 
