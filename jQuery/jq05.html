@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function fun1(){
+            let result, a = 100, b = 200, c = 300;
+            result = a < b ? b++ : --c;
+            document.write(result);
+        }
+        fun1(); //200 증감연산자 
+
+        function func2() {
+            let hap, j, k, l;
+            j = k = l = 0;
+            hap = ++j + k++ + ++l;
+            document.write(hap);
+            document.write(j);
+            document.write(k);
+            document.write(l);
+        }
+        document.write("<br>")
+        func2(); // 2 1 1 1
+
+        document.write("<br>")
+        function func4() {
+            let i = 10, j = 10, k=30;
+            i /= j; // i = i / j // i = 1
+            j -= i;//  j = j - i // j = 9
+            k %= j;//  k = k % j // k = 3
+            document.write(i);
+            document.write(j);
+            document.write(k);
+        }
+        func4(); //1 9 3 대입연산자 
+
+        document.write("<br>")
+        function func5() {
+            for(i=1; i<=7; i++){
+                for(j=1; j<=i; j++){
+                    document.write(j);
+                }
+                document.write("<br>");
+            }
+        }
+        func5(); //반복문 중첩 for문
+        // 1
+        // 12
+        // 123
+        // 1234
+        // 12345
+        // 123456
+        // 1234567        
+
+
+    </script>
+</body>
+</html>

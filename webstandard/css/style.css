@@ -181,13 +181,6 @@
 .tab_menu ul li.active ul li a {color: #333;}
 
 /* 게시판4 */
-/* .notice4 {margin-top: 15px; padding-top: 8px; position: relative; border: 1px solid #ccc;}
-.notice4 h4 {color: blue; border-bottom: 1px solid #ccc; font-size: 15px; font-weight: bold; padding: 0 0 5px 5px;}
-.notice4 em {color: blueviolet; font-weight: bold;}
-.notice4 ul li {overflow: hidden; padding: 5px 5px;}
-.notice4 ul li a {font-size: 12px; background: url(../img/dot.gif) no-repeat 3px 8px; padding: 0 0 0 8px; float: left; width: 65%; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
-.notice4 ul li span {float: right; width: 25%; font-size: 12px;}
-.notice4 a.more {position: absolute; right: 5px; top: 8px;} */
 
 .notice4 {position: relative; border: 1px solid #ccc; margin-top: 15px;}
 .notice4 h4 {border-bottom: 1px solid #ccc; padding: 8px 10px; font-weight: bold; color: #2c94c4;}
