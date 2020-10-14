@@ -7,5 +7,5 @@
 
 #제이쿼리 <br>
 1. find() : <a href = "https://chohyunjung0107.github.io/dothome1/jQuery/jq04_find2.html">바로가기</a>
-2. addClass()/removeClass : <a href = "https://chohyunjung0107.github.io/dothome1/jQuery/jq06_addClass2.html">바로가기</a>
+2. addClass()/removeClass() : <a href = "https://chohyunjung0107.github.io/dothome1/jQuery/jq06_addClass2.html">바로가기</a>
 
