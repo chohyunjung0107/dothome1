@@ -8,5 +8,6 @@
 #제이쿼리 <br>
 1. find() : <a href = "https://chohyunjung0107.github.io/dothome1/jQuery/jq04_find2.html">바로가기</a>
 2. addClass()/removeClass() : <a href = "https://chohyunjung0107.github.io/dothome1/jQuery/jq06_addClass2.html">바로가기</a>
-3. text()/html() : <a href = "https://chohyunjung0107.github.io/dothome1/jQuery/jq08_text.html">바로가기</a>
+3. hasClass() : <a href = "https://chohyunjung0107.github.io/dothome1/jQuery/jq07_hasClass.html">바로가기</a>
+4. text()/html() : <a href = "https://chohyunjung0107.github.io/dothome1/jQuery/jq08_text.html">바로가기</a>
 
