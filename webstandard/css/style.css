@@ -25,7 +25,7 @@
 #footer {border-top: 1px solid #eee;}
 
 /* 컨텐츠 레이아웃 */
-#cont_nav {background: #f6fdff;}
+#cont_nav {background: #f6fdff; display: none;}
 #cont_tit {background: #eaf7fd;}
 #cont_ban {background: #dceff7;}
 #cont_cont {background: #f6fdff;}
@@ -70,7 +70,7 @@
 .tit {position: relative;}
 .tit h2 {text-align: center; font-size: 40px; padding: 5px 0; color: #2c94c4; letter-spacing: 2px; font-family: 'Nanum Brush Script';}
 .tit .btn {position: absolute; right: 0; top: 5px; width: 60px; height: 60px; background-image: url(../img/icon.png); background-position: 0 -600px;}
-.tit .btn:hover {background-position: -60px -600px;}
+.tit .btn.on {background-position: 0 -660px;}
 
 /* 배너 */
 .ban {position: relative; padding: 24px 0;}   /*position의 기준점 relative*/
