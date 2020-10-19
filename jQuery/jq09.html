@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //배열 선언 
+        // cosnt arr1 = new Array();
+        // arr1[0] = 100;
+        // arr1[1] = 200;
+
+        // document.write(arr1[0]);
+        // document.write(arr1[1]);
+        // document.write("<br>")
+
+        const arr2 = [100, 200, 300, 400];
+
+        document.write(arr2[0], "<br>")
+        document.write(arr2[1], "<br>")
+        document.write(arr2[2], "<br>")
+        document.write(arr2[3], "<br>")
+
+        document.write("<br>")
+
+        const arr3 = [100,200,300,400,500,600,700,800,900];
+        //for문을 이용해서 출력 
+            for(let i=0; i <= arr3.length; i++){
+            document.write(arr3[i]);
+            document.write("<br>") 
+            document.write(i);
+            document.write("<br>")            
+        }
+        
+        document.write("<br>")    
+
+        //forEach문
+        arr3.forEach((element, index, array) => {
+            document.write(element, "<br>");
+            document.write(index, "<br>");
+            document.write(array, "<br>");
+        })      
+
+        document.write("<br>")  
+        //for in문
+        for( let i in arr3){
+            document.write(arr3[i]);
+        } 
+
+        document.write("<br>")   
+
+        //for of문
+        for ( let i of arr3){
+            document.write("i");
+        }
+     
+        
+
+
+
+
+    </script>
+</body>
+</html>

@@ -183,13 +183,30 @@
 /* 게시판4 */
 
 .notice4 {position: relative; border: 1px solid #ccc; margin-top: 15px;}
-.notice4 h4 {border-bottom: 1px solid #ccc; padding: 8px 10px; font-weight: bold; color: #2c94c4;}
+.notice4 h4 {border-bottom: 1px solid #ccc; padding: 8px 10px; font-weight: bold; height: 30px; color: #2c94c4;}
 .notice4 h4 em {color: #cf3293;}
 .notice4 ul {padding: 10px;}
 .notice4 li {overflow: hidden;}
 .notice4 li a {font-size: 12px; padding-left: 8px; background: url(../img/dot.gif) no-repeat 0px 8px; float: left; width: 65%; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
 .notice4 li span {float: right; width: 30%; text-align: right; font-size: 12px; }
 .notice4 a.more {position: absolute; right: 9px; top: 9px;} 
+
+/* 로그인 */
+#login-wrap {background: #f2f4f5; padding: 15px; margin-bottom: 15px;}
+.login_header {overflow: hidden; font-size: 12px; height: 30px;}
+.login_header .lh_check {float: left; padding-right: 15px;}
+.login_header .lh_check .input_check {vertical-align: -2px;}
+.login_header .lh_ip {float: left;}
+.login_header .lh_ip em {color: #0093bd; text-decoration: underline;}
+
+.login_contents {position: relative;}
+.login_contents .lc_btn{position: absolute; right: 0; top: 0; width: 61px; height: 47px; background: #fff; border: 1px solid #bebebe;}
+.login_contents .input_text{width: 182px; height: 16px; padding: 2px 5px; border: 1px solid #bebebe; margin-bottom: 3px; background: #fff;}
+
+.login_footer {margin-top: 5px;}
+.login_footer li {display: inline;}
+.login_footer li a {font-size: 12px;}
+
 
 /* 갤러리 */
 .gallery {position: relative; border: 1px solid #ccc; height: 225px; overflow: hidden;}
