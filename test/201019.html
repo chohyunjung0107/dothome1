@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function func1(){
+            let result, a=100, b=200, c=300;
+            result = a < b ? b++ : --c;
+            document.write(result, "<br>");
+            document.write(a, "<br>");
+            document.write(b, "<br>");
+            document.write(c, "<br>");
+        }
+        func1();
+
+        document.write("<br>");
+
+        function func2(){
+            let hap, j, k, l;
+            j = k = l = 0;
+            hap = ++j + k++ + ++l;
+            document.write(hap, "<br>");
+            document.write(j, "<br>");
+            document.write(k, "<br>");
+            document.write(l, "<br>");
+        }
+        func2();
+
+        document.write("<br>");
+
+        function func3(){
+            let i = 5, j = 4, k = 1, l, m;
+            l = i > 5 || j != 0;
+            m = j <= 4 && k < 1;
+            document.write(l, "<br>");
+            document.write(m, "<br>");
+        }
+        func3();
+
+        document.write("<br>");
+
+        function func4(){
+            let i = 10, j = 10, k = 30;
+            
+            i /= j;
+            j -= i;
+            k %= j;
+            document.write(i,"<br>");
+            document.write(j,"<br>");
+            document.write(k,"<br>");
+        }
+        func4();
+
+        document.write("<br>");
+
+        function func5(){
+            for(i=1; i<=7; i++){
+                for(j=1; j<=i; j++){
+                    document.write(j);
+                }
+                document.write("<br>");
+            }
+        }
+        func5();
+        
+        document.write("<br>");
+
+        function func6(){
+            let i = 10, hap = 0;
+            while(i > 1){
+                i--;
+                if( i % 3 == 1){
+                    hap += i;
+                }
+            }
+            document.write(hap);
+        }
+        func6();
+
+        document.write("<br>");
+
+        function func7(){
+            let a = [], cnt = 0;
+            for(i=1; i<=5; i++){
+                a += [i];
+            }
+            document.write(a,"<br>");
+
+            for(i=1; i<=5; i++){
+                if(a[i] % 2 !=0){
+                    cnt = cnt + 1;
+                }
+            }
+            document.write(cnt);
+        }
+        func7();
+
+        document.write("<br>");
+
+        function func8(data, exp){
+            let result = 1;
+            for(i=0; i<exp; i++){
+                result = result * data
+            }
+            document.write(result);
+        }
+        func8(2, 5);
+
+        document.write("<br>");
+
+        function func9(){
+            let a = [2,3,2,4,5,6,7,2,3,3,2];
+            let value = 0;
+            for( i=0; i <=a.length; i++){
+                if(a[i] == 7){
+                    value++
+                }
+            }
+            document.write(value);
+        }
+        func9();
+
+        document.write("<br>");
+
+        function func10(){
+            let i, j = 0;
+            for( i=0; i<10; i++){
+                j += i;
+            }
+            document.write(i, j);
+        }
+        func10();
+
+        document.write("<br>");
+
+        function func11(){
+            let a = 12, b=8, c=2, d=3;
+            a /= b++ - c * d;
+            document.write(a,"<br>")
+            document.write(b,"<br>")
+        }
+        func11();
+
+        document.write("<br>");
+
+        function func12(){
+            let a = 1, b=2, c=3, result;
+            result = ++a + b++ + ++c;
+            document.write(result,"<br>");
+            document.write(a,"<br>");
+            document.write(b,"<br>");
+            document.write(c,"<br>");
+        }
+        func12();
+
+        document.write("<br>");
+
+        function func13(){
+            let a, b, c, result;
+            a = 10;
+            b = 20; 
+            c = 30;
+            result = a < b ? ++b : --c;
+            document.write(result,"<br>");
+            document.write(a,"<br>");
+            document.write(b,"<br>");
+            document.write(c,"<br>");
+        }
+        func13();
+
+        document.write("<br>");
+
+        function func14(){
+            let a = 0, sum = 0;
+            while(a<10){
+                a++;
+                if(a % 2 !== 1)continue;
+                document.write(a, "<br>");
+                sum += a;
+            }
+            document.write(sum);
+        }
+        func14();
+
+        document.write("<br>");
+
+        function func15(){
+            let i = 0, sum=0;
+            while(1){
+                i++
+                if(i>10) break;
+                if(i%3 == 0)continue;
+                sum += i;
+                document.write(i);
+            }
+            document.write("<br>")
+            document.write(sum);
+        }
+        func15();
+
+
+        document.write("<br>")
+        document.write("<br>")
+        document.write("<br>")
+
+        let sum=0;
+        for(i=1; i<=100; i++){
+            sum += i;
+        }
+        document.write(sum);
+
+        document.write("<br>")
+
+        for(let i = 1; i < 11; i++){
+            if( i == 6){
+                break;
+            }
+            document.write(i,"<br>");
+}
+
+
+
+document.write("<br>");
+document.write("<br>");
+document.write("<br>");
+document.write("<br>");
+
+for(i=0; i<5; i++){
+
+    // document.write("a."+ i);
+    // document.write("<br>");
+    document.write("ㄱ.", i++); //0 2 4
+    // document.write("<br>");
+    // document.write("ㄴ.", ++i); //2 5
+    // document.write("<br>");
+    // document.write("ㄷ. +i+"); //+i+ +i+
+    // document.write("<br>");
+    // document.write("ㄹ." +i+); //오류 
+
+
+}
+
+
+
+     
+
+
+        
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>

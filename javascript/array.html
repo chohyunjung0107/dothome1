@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr_1=["사당", "교대", "방배","강남"];
+        let arr_2=["신사", "압구정", "옥수"];
+
+        let result = arr_1.join("_"); 
+        console.log(result);
+        // 0: "사당"
+        // 1: "교대"
+        // 2: "방배"
+        // 3: "강남"
+        // 4: "신사"
+        // 5: "압구정"
+        // 6: "옥수"
+        // length: 7
+
+        result = arr_1.concat(arr_2);
+        console.log(result);
+        // 0: "사당"
+        // 1: "교대"
+        // 2: "방배"
+        // 3: "강남"
+        // 4: "신사"
+        // 5: "압구정"
+        // 6: "옥수"
+        // length: 7
+
+        result = arr_1.slice(1,3);
+        console.log(result);
+        // 0: "교대"
+        // 1: "방배"
+        // length: 2
+
+
+
+        arr_1.sort();
+        console.log(arr_1);
+        // 0: "강남"
+        // 1: "교대"
+        // 2: "방배"
+        // 3: "사당"
+        // length: 4
+
+       
+
+        arr_2.reverse();
+        console.log(arr_2); 
+        // 0: "옥수"
+        // 1: "압구정"
+        // 2: "신사"
+        // length: 3
+
+        ///////////////////
+
+        let greenArr = ["교대", "방배", "강남"];
+        let yellowArr = ["미금", "정자", "수서"];
+
+        greenArr.splice(2, 1, "서초", "역삼");
+        console.log(greenArr);
+
+        //(4) ["교대", "방배", "서초", "역삼"]
+
+        let data1 = yellowArr.pop();
+        let data2 = yellowArr.shift();
+
+        yellowArr.push(data2);
+        console.log(yellowArr);
+        //(2) ["정자", "미금"
+
+        yellowArr.push(data1);
+        console.log(yellowArr);
+        //(3) ["정자", "미금", "수서"]
+
+
+    </script>
+</body>
+</html>

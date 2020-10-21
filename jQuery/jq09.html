@@ -53,8 +53,20 @@
 
         //for of문
         for ( let i of arr3){
-            document.write("i");
+            document.write(i);
         }
+
+
+        const arr4 = [100,200,300,400,500,600,700,800,900];
+
+//최신 for문법(forEach)
+arr4.forEach((element, index, array) => {
+    // console.log(element, "<br>");
+    // console.log(index, "<br>");
+    console.log(array, "<br>");
+})
+
+
      
         
 
