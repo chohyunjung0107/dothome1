@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응형레이아웃3</title>
+    <style>
+       * {margin: 0; padding: 0;}
+       .container {width: 1200px; margin: 0 auto;}
+
+       header {width: 100%; height: 100px; background: #111;}
+       aside {width: 70%; height: 900px; background: #333; float: left;}
+       .article1 {width: 30%; height: 300px; background: #555; float: left;}
+       .article2 {width: 30%; height: 300px; background: #777; float: left;}
+       .article3 {width: 30%; height: 300px; background: #999; float: left;}
+       footer {width: 100%; height: 100px; background: #111; clear: both;}
+
+       /* 화면너비 0~1280px */
+       @media (max-width: 1280px){
+             .container {width: 100%;}
+             .article1 {height: 450px;}
+             .article2 {height: 450px;}
+             .article3 {width: 100%;}
+        }
+        /* 화면너비 0~900px */
+        @media (max-width: 900px){
+            .container {width: 100%;}
+            aside {width: 100%; height: 100px;}
+            .article1 {width: 50%;}
+            .article2 {width: 50%;}
+        }
+         /* 화면너비 0~480px */
+         @media (max-width: 480px){
+            .article1 {width: 100%;}
+            .article2 {width: 100%;}
+            
+        }
+
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <main class="container">
+            <header></header>
+            <aside></aside>
+            <article class="article1"></article>
+            <article class="article2"></article>
+            <article class="article3"></article>
+            <footer></footer>
+        </main>
+    </div>
+</body>
+</html>
