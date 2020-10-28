@@ -4,7 +4,7 @@
 
 <a href = "https://chohyunjung0107.github.io/dothome1/webstandard/index.html">웹표준사이트</a><br>
 
-<h3>#사이트  <br></h3>
+<h3>#사이트 따라하기<br></h3>
 1. 카카오1 : <a href = "https://chohyunjung0107.github.io/dothome1/test/test08.html">바로가기</a><br>
 2. 카카오2 : <a href = "https://chohyunjung0107.github.io/dothome1/test/test8-1.html">바로가기</a><br>
 
