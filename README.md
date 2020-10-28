@@ -1,6 +1,6 @@
 # dothome1
-<h3>#개인작업</h3>
-<a href = "https://chohyunjung0107.github.io/dothome1/index.html">닷홈</a>
+<h3>#</h3>
+<a href = "https://chohyunjung0107.github.io/dothome1/index.html">닷홈</a><br>
 <a href = "https://chohyunjung0107.github.io/dothome1/webstandard/index.html">웹표준사이트</a><br>
 
 <h3>#사이트 따라하기<br></h3>
