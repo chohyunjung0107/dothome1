@@ -4,11 +4,11 @@
 
 <a href = "https://chohyunjung0107.github.io/dothome1/webstandard/index.html">웹표준사이트</a>
 
-<h3> #복제 <br></h3>
+<h3>#복제 <br></h3>
 1. 카카오1 : <a href = "https://chohyunjung0107.github.io/dothome1/test/test08.html">바로가기</a>
 2. 카카오2 : <a href = "https://chohyunjung0107.github.io/dothome1/test/test8-1.html">바로가기</a>
 
-#제이쿼리 <br>
+<h3>#제이쿼리 <br></h3>
 1. find() : <a href = "https://chohyunjung0107.github.io/dothome1/jQuery/jq04_find2.html">바로가기</a>
 2. addClass()/removeClass() : <a href = "https://chohyunjung0107.github.io/dothome1/jQuery/jq06_addClass2.html">바로가기</a>
 3. hasClass() : <a href = "https://chohyunjung0107.github.io/dothome1/jQuery/jq07_hasClass.html">바로가기</a>
