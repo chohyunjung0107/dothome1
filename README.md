@@ -1,7 +1,9 @@
 # dothome1
-<h3>학원 실습</h3>
+<h3>#학원 실습</h3>
 <a href = "https://chohyunjung0107.github.io/dothome1/index.html">닷홈</a><br>
 <a href = "https://chohyunjung0107.github.io/dothome1/webstandard/index.html">웹표준사이트</a><br>
+
+<h3>개인 작업</h3><br>
 
 <h3>#사이트 따라하기<br></h3>
 1. 카카오1 : <a href = "https://chohyunjung0107.github.io/dothome1/test/test08.html">바로가기</a><br>
