@@ -112,17 +112,15 @@
                 this.today = today;
             }
             study2(){
-                document.write(this.name+"이 "+this.active+"되었습니다."+this.today+"<br>");
+                document.write(this.name+"이 "+this.today+this.active+"되었습니다.<br>");
             }
         }
 
         const result4 = new Box1("함수11","실행");
         const result5 = new Box2("함수12","실행","10/27");
 
-        // result4.study();
-        result5.study();
+        result4.study1();
         result5.study2();
-
 
 
     </script>
