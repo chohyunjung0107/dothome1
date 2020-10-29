@@ -176,9 +176,9 @@
                         animation-iteration-count: 100;
                     }
                     @keyframes shadow20 {
-                        0% {box-shadow: 150px 150px;}
-                        50% {box-shadow: 0px 0px;}
-                        100% {box-shadow: 150px 150px;}
+                        0% {border-radius: 50px 50px;}
+                        50% {border-radius: 100px 100px;}
+                        100% {border-radius: 50px 50px;}
                     }
 
                     .shadow21 {box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.8);}
@@ -192,15 +192,14 @@
                     .shadow29 {box-shadow: 0px 0px 0px 15px rgba(0,0,0,0.8);}
                     .shadow30 {box-shadow: 0px 0px 0px 17px rgba(0,0,0,0.8);}
                     .shadow30.active {
-                        animation-name: shadow30;
+                        animation-name: shadow20;
                         animation-duration: 2s;
                         animation-iteration-count: 100;
                     }
                     @keyframes shadow30 {
-                        0% {box-shadow: 0px 0px;}
-                        25% {box-shadow: 100px 0px;}
-                        75% {box-shadow: 100px 0px;}
-                        100% {box-shadow: 0px 0px;}
+                        0% {border-radius: 50px 50px;}
+                        50% {border-radius: 100px 100px;}
+                        100% {border-radius: 50px 50px;}
                     }
 
                     .shadow31 {box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.8);}
@@ -220,10 +219,10 @@
                     }
                     @keyframes shadow40 {
                         0% {box-shadow: 100px 100px;}
-                        25% {box-shadow: 0px 0px;}
-                        50% {box-shadow: 0px 0px;}
-                        75% {box-shadow: 0px 0px;}
-                        100% {box-shadow: 100px 100px;}
+                        25% {box-shadow: 50px 0px;}
+                        50% {box-shadow: 25px 0px;}
+                        75% {box-shadow: 50px 0px;}
+                        100% {box-shadow: 0px 0px;}
                     }
 
 
@@ -243,10 +242,10 @@
                         animation-iteration-count: 100;
                     }
                     @keyframes shadow50 {
-                        0% {box-shadow: 0px 0px;}
-                        25% {box-shadow: 0px 0px;}
-                        50% {box-shadow: 300px 300px;}
-                        75% {box-shadow: 0px 0px;}
+                        0% {box-shadow: -100px -100px;}
+                        25% {box-shadow: 50px 50px;}
+                        50% {box-shadow: 100px 100px;}
+                        75% {box-shadow: 50px 50px;}
                         100% {box-shadow: 0px 0px;}
                     }
 
@@ -508,6 +507,75 @@
 </code></pre>
                 </div>
                 <!-- //Intro7 -->
+                 <!-- Intro8 -->
+                 <div class="bs-docs-section">
+                    <h2 id="intro8" class="page-header">Sample08</h2>
+                    <div class="sample">
+                        <h3><span></span><em class="sr-only">box-shadow</em></h3>
+                        <div class="bg8">
+                            <p class="codepen" data-height="400" data-theme-id="light" data-default-tab="result" data-user="chohyunjung0107" data-slug-hash="vYKddKg" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="CSS3- Box-shadow1">
+                                <span>See the Pen <a href="https://codepen.io/chohyunjung0107/pen/vYKddKg">
+                                CSS3- Box-shadow1</a> by chohyunjung0107 (<a href="https://codepen.io/chohyunjung0107">@chohyunjung0107</a>)
+                                on <a href="https://codepen.io">CodePen</a>.</span>
+                              </p>
+                              <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+                            
+                        </div>
+                    </div>
+<pre class="line-numbers language-css"><code>body {background: #17181c;}
+:root {font-size: 16px;}
+.button-wrap {width:500px; position: absolute; left:50%; top: 50%; transform: translate(-50%, -50%); text-align:center; font-size: 16px;}
+.button-wrap button {font-size: 1rem; padding:0.6rem 1rem; margin: 0.4rem; background: none; border: 2px solid #fff; color: #fff; transition: all 0.3s; cursor: alias;}
+
+.button-wrap button:nth-child(1) {color: #cb72aa; border-color: #cb72aa;}
+.button-wrap button:nth-child(2) {color: #ef7f62; border-color: #ef7f62;}
+.button-wrap button:nth-child(3) {color: #ffdc7f; border-color: #ffdc7f;}
+.button-wrap button:nth-child(4) {color: #e5ff60; border-color: #e5ff60;}
+.button-wrap button:nth-child(5) {color: #94e458; border-color: #94e458;}
+.button-wrap button:nth-child(6) {color: #66c887; border-color: #66c887;}
+.button-wrap button:nth-child(7) {color: #1973bc; border-color: #1973bc;}
+.button-wrap button:nth-child(8) {color: #fff; border-color: #fff;}
+
+/* box-shadow */
+.button-wrap button:nth-child(1):hover {box-shadow:inset 0 0 0 2rem #cb72aa; color: #fff;}
+.button-wrap button:nth-child(2):hover {box-shadow: inset -5rem 0 0 0 #ef7f62, inset 5rem 0 0 0 #ef7f62; color: #fff;}
+.button-wrap button:nth-child(3):hover {box-shadow: inset 0 -3rem 0 0 #ffdc7f; color: #fff;}
+.button-wrap button:nth-child(4):hover {box-shadow: inset 10rem 0 0 0 #e5ff60; color: #fff;}
+
+.button-wrap button:nth-child(5):hover {animation: pulse 1s 1; color: #fff;}
+@keyframes pulse {
+	0% {box-shadow: 0 0 0 0 #94e458;}
+	100% {box-shadow: 0 0 0 2rem rgba(255,255,255,0);}
+}
+
+.button-wrap button:nth-child(6):hover {
+	box-shadow: 0 0.5rem 0.5rem -0.4rem #66c887;
+	transform: translatey(-0.14rem);
+	color: #fff;
+}
+.button-wrap button:nth-child(7):hover { box-shadow : 
+	inset 0.5rem 0 0 0 rgba(25,11,188,0.3),
+	inset 1.0rem 0 0 0 rgba(25,11,188,0.3),
+	inset 1.5rem 0 0 0 rgba(25,11,188,0.3),
+	inset 2.0rem 0 0 0 rgba(25,11,188,0.3),
+	inset 2.5rem 0 0 0 rgba(25,11,188,0.3),
+	inset 3.0rem 0 0 0 rgba(25,11,188,0.3),
+	inset 3.5rem 0 0 0 rgba(25,11,188,0.3),
+	inset 4.0rem 0 0 0 rgba(25,11,188,0.3),
+	inset -0.5rem 0 0 0 rgba(25,11,188,0.3),
+	inset -1.0rem 0 0 0 rgba(25,11,188,0.3),
+	inset -1.5rem 0 0 0 rgba(25,11,188,0.3),
+	inset -2.0rem 0 0 0 rgba(25,11,188,0.3),
+	inset -2.5rem 0 0 0 rgba(25,11,188,0.3),
+	inset -3.0rem 0 0 0 rgba(25,11,188,0.3),
+	inset -3.5rem 0 0 0 rgba(25,11,188,0.3),
+	inset -4.0rem 0 0 0 rgba(25,11,188,0.3);
+}
+
+.button-wrap button:nth-child(8):hover {box-shadow: inset -10em 0 0 0 #e0c3fc; color: #fff;}
+</code></pre>
+                </div>
+                <!-- //Intro8 -->
               
             </div>
             <!-- //col-md-12 -->
