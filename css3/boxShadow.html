@@ -154,9 +154,9 @@
                         animation-iteration-count: 100;
                     }
                     @keyframes shadow10 {
-                        0% {border-radius: 0px 0px;}
-                        50% {border-radius: 150px 150px;}
-                        100% {border-radius: 0px 0px;}
+                        0% {box-shadow: 0px 0px 0px rgba(0,0,0,0.8);}
+                        50% {box-shadow: 8px 8px 5px rgba(0,0,0,0.8);}
+                        100% {box-shadow: 18px 18px 5px rgba(0,0,0,0.8);}
                     }
 
 
@@ -176,9 +176,9 @@
                         animation-iteration-count: 100;
                     }
                     @keyframes shadow20 {
-                        0% {border-radius: 50px 50px;}
-                        50% {border-radius: 100px 100px;}
-                        100% {border-radius: 50px 50px;}
+                        0% {box-shadow: 4px 4px 0px rgba(0,0,0,0.8);}
+                        50% {box-shadow: 4px 4px 12px rgba(0,0,0,0.8);}
+                        100% {box-shadow: 4px 4px 27px rgba(0,0,0,0.8);}
                     }
 
                     .shadow21 {box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.8);}
@@ -192,14 +192,14 @@
                     .shadow29 {box-shadow: 0px 0px 0px 15px rgba(0,0,0,0.8);}
                     .shadow30 {box-shadow: 0px 0px 0px 17px rgba(0,0,0,0.8);}
                     .shadow30.active {
-                        animation-name: shadow20;
+                        animation-name: shadow30;
                         animation-duration: 2s;
                         animation-iteration-count: 100;
                     }
                     @keyframes shadow30 {
-                        0% {border-radius: 50px 50px;}
-                        50% {border-radius: 100px 100px;}
-                        100% {border-radius: 50px 50px;}
+                        0% {box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.8);}
+                        50% {box-shadow: 0px 0px 0px 8px rgba(0,0,0,0.8);}
+                        100% {box-shadow: 0px 0px 0px 17px rgba(0,0,0,0.8);}
                     }
 
                     .shadow31 {box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.8);}
@@ -218,11 +218,9 @@
                         animation-iteration-count: 100;
                     }
                     @keyframes shadow40 {
-                        0% {box-shadow: 100px 100px;}
-                        25% {box-shadow: 50px 0px;}
-                        50% {box-shadow: 25px 0px;}
-                        75% {box-shadow: 50px 0px;}
-                        100% {box-shadow: 0px 0px;}
+                        0% {box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.8);}
+                        50% {box-shadow: 0px 0px 12px 8px rgba(0,0,0,0.8);}
+                        100% {box-shadow: 0px 0px 27px 18px rgba(0,0,0,0.8);}
                     }
 
 
@@ -242,11 +240,9 @@
                         animation-iteration-count: 100;
                     }
                     @keyframes shadow50 {
-                        0% {box-shadow: -100px -100px;}
-                        25% {box-shadow: 50px 50px;}
-                        50% {box-shadow: 100px 100px;}
-                        75% {box-shadow: 50px 50px;}
-                        100% {box-shadow: 0px 0px;}
+                        0% {box-shadow: 0px 0px 5px -3px rgba(0,0,0,0.8);}
+                        50% {box-shadow: 0px 8px 5px -3px rgba(0,0,0,0.8);}
+                        100% {box-shadow: 0px 18px 5px -3px rgba(0,0,0,0.8);}
                     }
 
                     .shadow51 {box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.8) inset;}
@@ -265,11 +261,9 @@
                         animation-iteration-count: 100;
                     }
                     @keyframes shadow60 {
-                        0% {box-shadow: 100px 100px;}
-                        25% {box-shadow: 0px 0px;}
-                        50% {box-shadow: 100px 100px;}
-                        75% {box-shadow: 0px 0px;}
-                        100% {box-shadow: 100px 100px;}
+                        0% {box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.8) inset;}
+                        50% {box-shadow: 0px 0px 9px 5px rgba(0,0,0,0.8) inset;}
+                        100% {box-shadow: 0px 0px 14px 10px rgba(0,0,0,0.8) inset;}
                     }
 
                     .shadow61 {box-shadow: 5px 5px 0px 0px #d81b60;}
@@ -289,11 +283,11 @@
                         animation-iteration-count: 100;
                     }
                     @keyframes shadow70 {
-                        0% {box-shadow: 20px 20px;}
-                        25% {box-shadow: 80px 80px;}
-                        50% {box-shadow: 50px 50px;}
-                        75% {box-shadow: 80px 80px;}
-                        100% {box-shadow: 0px 0px;}
+                        0% {box-shadow: 5px 5px 0px 0px #d81b60;}
+                        25% {box-shadow: 5px 5px 0px 0px #d81b60, 10px 5px 0px 0px #ec407a, 15px 15px 0px 0px #f48fb1;}
+                        50% {box-shadow: 5px 5px 0px 0px #d81b60, 10px 5px 0px 0px #ec407a, 15px 15px 0px 0px #f48fb1, 20px 20px 0px 0px #fce4ec, 25px 25px 0px 0px #ff80ab;}
+                        75% {box-shadow: 0px 0px 0px 5px #d81b60 inset, 0px 0px 0px 15px #ec407a inset, 0px 0px 0px 20px #f48fb1 inset;}
+                        100% {box-shadow: 0px 0px 0px 5px #d81b60 inset, 0px 0px 0px 15px #ec407a inset, 0px 0px 0px 20px #f48fb1 inset, 0px 0px 0px 25px #fce4ec inset, 0px 0px 0px 30px #ff80ab inset;}
                     }
                 </style>
                 <!-- Intro1 -->
@@ -500,16 +494,16 @@
                             <div class="shadow70"><span>shadow70</span></div>
                         </div>
                     </div>
-<pre class="line-numbers language-css"><code>.shadow51 {box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.8) inset;}
-.shadow52 {box-shadow: 0px 0px 6px 2px rgba(0,0,0,0.8) inset;}
-.shadow53 {box-shadow: 0px 0px 7px 3px rgba(0,0,0,0.8) inset;}
-.shadow54 {box-shadow: 0px 0px 8px 4px rgba(0,0,0,0.8) inset;}
-.shadow55 {box-shadow: 0px 0px 9px 5px rgba(0,0,0,0.8) inset;}
-.shadow56 {box-shadow: 0px 0px 10px 6px rgba(0,0,0,0.8) inset;}
-.shadow57 {box-shadow: 0px 0px 11px 7px rgba(0,0,0,0.8) inset;}
-.shadow58 {box-shadow: 0px 0px 12px 8px rgba(0,0,0,0.8) inset;}
-.shadow59 {box-shadow: 0px 0px 13px 9px rgba(0,0,0,0.8) inset;}
-.shadow60 {box-shadow: 0px 0px 14px 10px rgba(0,0,0,0.8) inset;}
+<pre class="line-numbers language-css"><code>.shadow61 {box-shadow: 5px 5px 0px 0px #d81b60;}
+.shadow62 {box-shadow: 5px 5px 0px 0px #d81b60, 10px 5px 0px 0px #ec407a;}
+.shadow63 {box-shadow: 5px 5px 0px 0px #d81b60, 10px 5px 0px 0px #ec407a, 15px 15px 0px 0px #f48fb1;}
+.shadow64 {box-shadow: 5px 5px 0px 0px #d81b60, 10px 5px 0px 0px #ec407a, 15px 15px 0px 0px #f48fb1, 20px 20px 0px 0px #fce4ec;}
+.shadow65 {box-shadow: 5px 5px 0px 0px #d81b60, 10px 5px 0px 0px #ec407a, 15px 15px 0px 0px #f48fb1, 20px 20px 0px 0px #fce4ec, 25px 25px 0px 0px #ff80ab;}
+.shadow66 {box-shadow: 0px 0px 0px 5px #d81b60 inset;}
+.shadow67 {box-shadow: 0px 0px 0px 5px #d81b60 inset, 0px 0px 0px 15px #ec407a inset;}
+.shadow68 {box-shadow: 0px 0px 0px 5px #d81b60 inset, 0px 0px 0px 15px #ec407a inset, 0px 0px 0px 20px #f48fb1 inset;}
+.shadow69 {box-shadow: 0px 0px 0px 5px #d81b60 inset, 0px 0px 0px 15px #ec407a inset, 0px 0px 0px 20px #f48fb1 inset, 0px 0px 0px 25px #fce4ec inset;}
+.shadow70 {box-shadow: 0px 0px 0px 5px #d81b60 inset, 0px 0px 0px 15px #ec407a inset, 0px 0px 0px 20px #f48fb1 inset, 0px 0px 0px 25px #fce4ec inset, 0px 0px 0px 30px #ff80ab inset;}
 </code></pre>
                 </div>
                 <!-- //Intro7 -->
@@ -528,58 +522,6 @@
                             
                         </div>
                     </div>
-<pre class="line-numbers language-css"><code>body {background: #17181c;}
-:root {font-size: 16px;}
-.button-wrap {width:500px; position: absolute; left:50%; top: 50%; transform: translate(-50%, -50%); text-align:center; font-size: 16px;}
-.button-wrap button {font-size: 1rem; padding:0.6rem 1rem; margin: 0.4rem; background: none; border: 2px solid #fff; color: #fff; transition: all 0.3s; cursor: alias;}
-
-.button-wrap button:nth-child(1) {color: #cb72aa; border-color: #cb72aa;}
-.button-wrap button:nth-child(2) {color: #ef7f62; border-color: #ef7f62;}
-.button-wrap button:nth-child(3) {color: #ffdc7f; border-color: #ffdc7f;}
-.button-wrap button:nth-child(4) {color: #e5ff60; border-color: #e5ff60;}
-.button-wrap button:nth-child(5) {color: #94e458; border-color: #94e458;}
-.button-wrap button:nth-child(6) {color: #66c887; border-color: #66c887;}
-.button-wrap button:nth-child(7) {color: #1973bc; border-color: #1973bc;}
-.button-wrap button:nth-child(8) {color: #fff; border-color: #fff;}
-
-/* box-shadow */
-.button-wrap button:nth-child(1):hover {box-shadow:inset 0 0 0 2rem #cb72aa; color: #fff;}
-.button-wrap button:nth-child(2):hover {box-shadow: inset -5rem 0 0 0 #ef7f62, inset 5rem 0 0 0 #ef7f62; color: #fff;}
-.button-wrap button:nth-child(3):hover {box-shadow: inset 0 -3rem 0 0 #ffdc7f; color: #fff;}
-.button-wrap button:nth-child(4):hover {box-shadow: inset 10rem 0 0 0 #e5ff60; color: #fff;}
-
-.button-wrap button:nth-child(5):hover {animation: pulse 1s 1; color: #fff;}
-@keyframes pulse {
-	0% {box-shadow: 0 0 0 0 #94e458;}
-	100% {box-shadow: 0 0 0 2rem rgba(255,255,255,0);}
-}
-
-.button-wrap button:nth-child(6):hover {
-	box-shadow: 0 0.5rem 0.5rem -0.4rem #66c887;
-	transform: translatey(-0.14rem);
-	color: #fff;
-}
-.button-wrap button:nth-child(7):hover { box-shadow : 
-	inset 0.5rem 0 0 0 rgba(25,11,188,0.3),
-	inset 1.0rem 0 0 0 rgba(25,11,188,0.3),
-	inset 1.5rem 0 0 0 rgba(25,11,188,0.3),
-	inset 2.0rem 0 0 0 rgba(25,11,188,0.3),
-	inset 2.5rem 0 0 0 rgba(25,11,188,0.3),
-	inset 3.0rem 0 0 0 rgba(25,11,188,0.3),
-	inset 3.5rem 0 0 0 rgba(25,11,188,0.3),
-	inset 4.0rem 0 0 0 rgba(25,11,188,0.3),
-	inset -0.5rem 0 0 0 rgba(25,11,188,0.3),
-	inset -1.0rem 0 0 0 rgba(25,11,188,0.3),
-	inset -1.5rem 0 0 0 rgba(25,11,188,0.3),
-	inset -2.0rem 0 0 0 rgba(25,11,188,0.3),
-	inset -2.5rem 0 0 0 rgba(25,11,188,0.3),
-	inset -3.0rem 0 0 0 rgba(25,11,188,0.3),
-	inset -3.5rem 0 0 0 rgba(25,11,188,0.3),
-	inset -4.0rem 0 0 0 rgba(25,11,188,0.3);
-}
-
-.button-wrap button:nth-child(8):hover {box-shadow: inset -10em 0 0 0 #e0c3fc; color: #fff;}
-</code></pre>
                 </div>
                 <!-- //Intro8 -->
               
