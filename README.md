@@ -17,9 +17,9 @@
 4. text()/html() : <a href = "https://chohyunjung0107.github.io/dothome1/jQuery/jq08_text.html">바로가기</a><br>
 
 <h3>시험</h3>
-1. text()/html() : <a href = "https://chohyunjung0107.github.io/dothome1/test/test09-1.html">바로가기</a><br>
-2. text()/html() : <a href = "https://chohyunjung0107.github.io/dothome1/test/test09-2.html">바로가기</a><br>
-3. text()/html() : <a href = "https://chohyunjung0107.github.io/dothome1/test/test09-3.html">바로가기</a><br>
-4. text()/html() : <a href = "https://chohyunjung0107.github.io/dothome1/test/test09-4.html">바로가기</a><br>
-5. text()/html() : <a href = "https://chohyunjung0107.github.io/dothome1/test/test09-5.html">바로가기</a><br>
+1. 테스트1: <a href = "https://chohyunjung0107.github.io/dothome1/test/test09-1.html">바로가기</a><br>
+2. 테스트2 : <a href = "https://chohyunjung0107.github.io/dothome1/test/test09-2.html">바로가기</a><br>
+3. 테스트3 : <a href = "https://chohyunjung0107.github.io/dothome1/test/test09-3.html">바로가기</a><br>
+4. 테스트4 : <a href = "https://chohyunjung0107.github.io/dothome1/test/test09-4.html">바로가기</a><br>
+5. 테스트5 : <a href = "https://chohyunjung0107.github.io/dothome1/test/test09-5.html">바로가기</a><br>
 
