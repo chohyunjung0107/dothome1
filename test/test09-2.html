@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test09-2</title>
+
+    <style>
+        /* 리셋 */
+        *{margin: 0; padding: 0;}
+
+        /* 아웃라인 */
+        #wrap {width: 100%;}
+        header {width: 100%; height: 100px; background: lightblue;}
+        .content1 {float: left; width: 25%; height: 600px; background: lightcoral;}
+        .content2 {float: left; width: 25%; height: 600px; background: lightsalmon;}
+        .content3 {float: left; width: 25%; height: 600px; background: lightslategray;}
+        .content4 {float: left; width: 25%; height: 600px; background: lime;}
+        footer {clear: both; width: 100%; height: 100px; background: lightblue;}
+
+        /* 미디어쿼리 */
+        @media screen and (max-width: 1210px) {
+            .content1 {float: left; width: 30%; height: 600px; background: lightcoral;}
+            .content2 {float: left; width: 70%; height: 600px; background: lightsalmon;}
+            .content3 {width: 100%; height: 300px; background: lightslategray;}
+            .content4 {display: none;}
+        }
+
+        @media screen and (max-width: 900px) {
+            .content1 {display: none;}
+            .content2 {width: 100%; height: 600px; background: lightsalmon;}
+            .content3 {width: 100%; height: 300px; background: lightslategray;}
+            footer {width: 100%; height: 100px; background: lightblue;}
+        }
+        @media screen and (max-width: 600px) {
+            header {width: 100%; height: 400px; background: lightblue;}
+            .content2 {width: 100%; height: 400px; background: lightsalmon;}
+            .content3 {width: 100%; height: 500px; background: lightslategray;}
+            footer {width: 100%; height: 200px; background: lightblue;}
+        }
+    </style>
+
+</head>
+<body>
+    <div id="wrap">
+        <header></header>
+        <section class="content1"></section>
+        <section class="content2"></section>
+        <section class="content3"></section>
+        <section class="content4"></section>
+        <footer></footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test09-5</title>
+    <style>
+        /* 리셋 */
+        *{margin: 0; padding: 0;}
+        
+        /* 아웃라인 */
+        .container{width: 1600px; margin: 0 auto; height: inherit;}
+        header {width: 100%; height: 100px; background: lawngreen;}
+        nav{width: 100%; height: 300px; background: lemonchiffon;}
+
+        aside {width: 20%; height: 800px; background: lightcoral; float: left; }
+        .section_1 {width: 80%; height: 400px; background: lightblue;  float: left;}
+        .section_1 article{width: 36%;  margin: 7%; height: 200px; background: lightpink; float: left;  border-radius: 20px; }
+        .section_2 {width: 80%; height: 400px; background: lightgray; float: left; }
+
+        .section_3 {width: 33.333%; height: 300px; background: lightsalmon; float: left;}
+        .section_4 {width: 33.333%; height: 300px; background: lightskyblue; float: left;}
+        .section_5 {width: 33.333%; height: 300px; background: lightpink; float: left;}
+
+        .section_6 {width: 80%; padding: 10%; background: lightblue; overflow: hidden;  }
+        .section_6 > article {width: 20%; margin: 2%; height: 200px; background: lawngreen; float: left;  border-radius: 20px;}
+        footer {width: 100%; height: 100px; background: lightpink; overflow: hidden;}
+
+        /* 미디어쿼리 */
+        @media (max-width:1210px){
+            .container{width: 100%;}
+            .section_1 article {width: 80%;}
+            .section_1 article:last-child{display: none;}
+            .section_6 > article:last-child {display: none;}
+            .section_6 > article{width: 28%;}
+        }
+        @media (max-width:900px){
+            .section_1 article {display: none;}
+            .section_3 {width: 100%;}
+            .section_4 {width: 100%;}
+            .section_5 {display: none; }
+        }
+        @media (max-width:600px){
+            nav{width: 100%;}
+            aside {width: 100%; height: 100px;}
+            .section_1{width: 100%;}
+            .section_2{ width: 100%;} 
+            .section_4 {display: none;}
+            .section_5 {display: none;}
+            .section_6 > article{width:90%;}
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <header></header>
+    <nav></nav>
+    <aside></aside>
+    <section class="section_1">
+        <article></article>
+        <article></article>
+    </section>
+    <section class="section_2"></section>
+    <section class="section_3"></section>
+    <section class="section_4"></section>
+    <section class="section_5"></section>
+    <section class="section_6">
+        <article></article>
+        <article></article>
+        <article></article>
+        <article></article>
+    </section>
+    <footer></footer>
+</div>
