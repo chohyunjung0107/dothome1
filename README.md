@@ -1,5 +1,4 @@
-<h2>#dothome1</h2><br>
-
+<h2>#dothome1</h2>
 <h3>#학원 실습</h3>
 <a href = "https://chohyunjung0107.github.io/dothome1/index.html">닷홈</a><br>
 <a href = "https://chohyunjung0107.github.io/dothome1/webstandard/index.html">웹표준사이트</a><br>
