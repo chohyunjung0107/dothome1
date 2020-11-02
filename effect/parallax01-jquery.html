@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax01 - jquery</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <style>
+        @font-face {font-family: 'GongGothicMedium'; src: url('https://github.com/projectnoonnu/noonfonts_20-10/blob/main/GongGothicMedium.woff') format('woff'); font-weight: normal; font-style: normal; }
+        
+        /* 리셋 */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0; padding: 0;
+        }
+        a {text-decoration: none; transition: all 0.2s;}
+
+        /* 메인 */
+        body {--color-h1 : #dc6e25; 
+        --color-title : #fff; --color-sub : #999; 
+        --color-link : #000; --color-bg : #111; 
+        --font-cafe: 'GongGothicMedium';
+        --font-lato: 'Lato', sans-serif;
+
+        background: var(--color-bg); 
+        color: var(--color-title);
+        font-family: var(--font-family);
+        }
+        #parallax-wrap h1 {color: var(--color-h1); font-family: var(--font-lato); font-size: 8vw; font-weight: 900; text-transform: uppercase; padding: 10vw 8vw 0 8vw;}
+        #parallax-wrap h1 em {display: block; font-weight: 100; padding-left: 18vw;}
+
+        .content {margin: 0 auto 35vh; width: 100%;} 
+        .content-item {position: relative; width: 1000px; max-width: 90vw; margin: 60vh 0 60vh;}
+        .content-item:nth-child(even){margin-left: auto;}
+
+        .content-item-num {font-size: 25vw; font-weight: 100; font-family: var(--font-lato); position: absolute; right: -5vw; top: -20vw; opacity: 0.2;}
+        .content-item:nth-child(even) .content-item-num {right: auto; left: -5vw;}
+
+        .content-item-title {font-size: 2vw; font-weight: 100; font-family: var(--font-lato); text-align: right;}
+        .content-item:nth-child(even) .content-item-title {text-align: left;}
+
+        .content-item-imgWrap {position: relative; width: 100%; padding-bottom: 50%; }
+        .content-item-img {width: 100%; position: absolute; left: 0; top: 0; background-size: cover; height: 100%;}
+        
+        .content-item-dese {font-size: 5vw; line-height: 1.4; text-align: right; word-break: keep-all; margin-right: -4vw;  margin-top: -6vw; padding-left: 10vw; z-index: 100; position: relative;}
+        /* position: relative;
+            1. position:absolute의 기준점
+            2. position:absolute를 사용하지 않고 z-index를 사용할 경우
+            3. position:absolute를 사용하지 않고 left, top을 통해서 위치를 설정할 경우 
+        */
+
+        .content-item:nth-child(even) .content-item-dese {text-align: left; margin-right: auto;  padding-left: 0; margin-left: -4vw; padding-right: 10vw;}
+        img {width: 100%; vertical-align: top;}  
+        /* vertical-alingn:top 여백초기화 */
+
+        .content-item:nth-child(1) .content-item-img {background: url(img/images01.jpg); background-size: cover;}
+        .content-item:nth-child(2) .content-item-img {background: url(img/images02.jpg); background-size: cover;}
+        .content-item:nth-child(3) .content-item-img {background: url(img/images03.jpg); background-size: cover;}
+        .content-item:nth-child(4) .content-item-img {background: url(img/images04.jpg); background-size: cover;}
+        .content-item:nth-child(5) .content-item-img {background: url(img/images05.jpg); background-size: cover;}
+        .content-item:nth-child(6) .content-item-img {background: url(img/images06.jpg); background-size: cover;}
+        .content-item:nth-child(7) .content-item-img {background: url(img/images07.jpg); background-size: cover;}
+        .content-item:nth-child(8) .content-item-img {background: url(img/images08.jpg); background-size: cover;}
+        .content-item:nth-child(9) .content-item-img {background: url(img/images09.jpg); background-size: cover;}
+    </style>
+</head>
+<body>
+
+    <main>
+        <section id="parallax-wrap">
+            <h1>Parallax <em>Scrolling</em></h1>
+            <div class="contents">
+                <section id="section1" class="content-item">
+                    <span class="content-item-num" >01</span>
+                    <h2 class="content-item-title">Section1</h2>
+                    <figure class="content-item-imgWrap">
+                        <div class="content-item-img"></div>
+                    </figure>
+                    <p class="content-item-dese">오늘은 2020년 11월 02일입니다.</p>
+                </section>
+                <section id="section2" class="content-item">
+                    <span class="content-item-num" >02</span>
+                    <h2 class="content-item-title">Section2</h2>
+                    <figure class="content-item-imgWrap">
+                        <div class="content-item-img"></div>
+                    </figure>
+                    <p class="content-item-dese">오늘은 2020년 11월 03일입니다.</p>
+                </section>
+                <section id="section3" class="content-item">
+                    <span class="content-item-num" >03</span>
+                    <h2 class="content-item-title">Section3</h2>
+                    <figure class="content-item-imgWrap">
+                        <div class="content-item-img"></div>
+                    </figure>
+                    <p class="content-item-dese">오늘은2020년 11월 04일입니다.</p>
+                </section>
+                <section id="section4" class="content-item">
+                    <span class="content-item-num" >04</span>
+                    <h2 class="content-item-title">Section4</h2>
+                    <figure class="content-item-imgWrap">
+                        <div class="content-item-img"></div>
+                    </figure>
+                    <p class="content-item-dese">오늘은 2020년 11월 05일입니다.</p>
+                </section>
+                <section id="section5" class="content-item">
+                    <span class="content-item-num" >05</span>
+                    <h2 class="content-item-title">Section5</h2>
+                    <figure class="content-item-imgWrap">
+                        <div class="content-item-img"></div>
+                    </figure>
+                    <p class="content-item-dese">오늘은 2020년 11월 06일입니다.</p>
+                </section>
+                <section id="section6" class="content-item">
+                    <span class="content-item-num" >06</span>
+                    <h2 class="content-item-title">Section6</h2>
+                    <figure class="content-item-imgWrap">
+                        <div class="content-item-img"></div>
+                    </figure>
+                    <p class="content-item-dese">오늘은 2020년 11월 07일입니다.</p>
+                </section>
+                <section id="section7" class="content-item">
+                    <span class="content-item-num" >07</span>
+                    <h2 class="content-item-title">Section7</h2>
+                    <figure class="content-item-imgWrap">
+                        <div class="content-item-img"></div>
+                    </figure>
+                    <p class="content-item-dese">오늘은 2020년 11월 07일입니다.</p>
+                </section>
+                <section id="section8" class="content-item">
+                    <span class="content-item-num" >08</span>
+                    <h2 class="content-item-title">Section8</h2>
+                    <figure class="content-item-imgWrap">
+                        <div class="content-item-img"></div>
+                    </figure>
+                    <p class="content-item-dese">오늘은 2020년 11월 07일입니다.</p>
+                </section>
+                <section id="section9" class="content-item">
+                    <span class="content-item-num" >09</span>
+                    <h2 class="content-item-title">Section9</h2>
+                    <figure class="content-item-imgWrap">
+                        <div class="content-item-img"></div>
+                    </figure>
+                    <p class="content-item-dese">오늘은 2020년 11월 07일입니다.</p>
+                </section>
+            </div>
+        </section>
+    </main>
+    
+    <!-- script -->
+    <script src="jquery.min_1.12.4.js.js" ></script>
+    <script>
+        
+    </script>
+</body>
+</html>

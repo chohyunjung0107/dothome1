@@ -1,11 +1,11 @@
 /* 레이아웃 */
 #header {height: 327px; background: url(../img/header_bg.jpg) repeat-x center top;}
+#nav {background-color: #f6fdff;}
 
 /* 컨테이너 */
-.container {width: 1200px; margin: 0 auto; background: rgba(0, 0, 0, 0.3);}
+.container {width: 1200px; margin: 0 auto; /* background: rgba(0, 0, 0, 0.3); */}
 
 /* 헤더 */
-.header {}
 .header .header_menu {text-align: right;}
 .header .header_menu a {color: #ffffff; transition: color 0.3s; padding: 8px 0 6px 10px; display: inline-block; font-family: "Abel"; }
 .header .header_menu a:hover {color: #ccc;}
@@ -22,6 +22,19 @@
 .header .header_icon li a span{font-size: 12px; line-height: 1.6; position: absolute; left: 50%; top: -45px; transform: translateX(-50%); background: #3192bf; padding: 3px 9px; border-radius: 6px 0; opacity: 0;}
 .header .header_icon li a:hover span {opacity: 1; top: -33px;}
 .header .header_icon li a span::before {content:''; border-top: 5px solid #3192bf; border-left: 5px solid transparent; border-right: 5px solid transparent; position: absolute; left: 50%; bottom: -5px; margin-left: -5px;}
+
+/* 전체메뉴 */
+.nav {overflow: hidden; padding: 25px 0;}
+.nav > div {float: left; width: 40%;}
+.nav > div:last-child {width: 20%;} 
+.nav > div h3 {font-size: 18px; color: #25a2d0; font-weight: bold; margin-bottom: 4px;}
+.nav > div ol {overflow: hidden;}
+.nav > div li {float: left; width: 50%; position: relative; padding-left: 8px; box-sizing: border-box;}
+.nav > div li:before {content: ''; width: 3px; height: 3px; background: #25a2d0; border-radius: 50%; position: absolute; left: 0; top: 6px;}
+.nav > div:last-child ol li {width: 100%;}
+.nav > div ol li a {position: relative; transition: all 0.3s ease-out;}
+.nav > div ol li a::after {content: ''; width: 0; height: 1px; background: #25aad0; position: absolute; bottom: 0; left: 0; transition: all 0.3s ease-out;}
+.nav > div ol li:hover a::after {width: 100%;}
 
 
 /* 미디어쿼리 */
