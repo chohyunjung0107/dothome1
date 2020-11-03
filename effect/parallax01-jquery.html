@@ -13,8 +13,19 @@
             box-sizing: border-box;
             margin: 0; padding: 0;
         }
-        a {text-decoration: none; transition: all 0.2s;}
+        a:hover {
+            border-bottom: 1px dashed #fff;
+        }
+
+        img {
+            width: 100%;
+            vertical-align: top;
+        }
+
         ul { list-style: none;}
+        li {
+            list-style: none;
+        }
 
         /* 인포 */
         .info {position:fixed; z-index: 1000;}
@@ -80,22 +91,19 @@
         .content-item:nth-child(9) .content-item-img {background: url(img/images09.jpg); background-size: cover;}
 
         /* 한번에 나타나기 */
-        /* .content > section {opacity: 0; transform: translateY(200px); transition: all 1s;}
-        .content > section.show {opacity: 1; transform: translateY(0);} */
+        /* .contents > section {opacity: 0; transform: translateY(200px); transition: all 1s;}
+        .contents > section.show {opacity: 1; transform: translateY(0);} */
 
         /* 개별적으로 나타나기 */
-        .content > section .content-item-num {opacity: 0; transform: translateY(200px); transition: all 1s 0.1s ease-in-out;} 
-        .content > section.show .content-item-num {opacity: 1;}
+        .contents > section .content-item-num     {opacity: 0; transform: translateY(200px); transition: all 1s 0.1s cubic-bezier(0, 0.51, 0.16, 1.1);}
+        .contents > section .content-item-title   {opacity: 0; transform: translateX(200px); transition: all 1s 0.3s cubic-bezier(0, 0.51, 0.16, 1.1);}
+        .contents > section .content-item-imgWrap {opacity: 0; transform: translateY(200px) rotate(30deg) skew(20deg); transition: all 1s 0.6s cubic-bezier(0, 0.51, 0.16, 1.1);}
+        .contents > section .content-item-desc    {opacity: 0; transform: translateX(200px); transition: all 1s 0.9s cubic-bezier(0, 0.51, 0.16, 1.1);}
 
-        .content > section .content-item-title {opacity: 0; transform: translatex(-200px); transition: all 1s 0.3s ease-in-out;}
-        .content > section .content-item-title {opacity: 1;}
-
-        .content > section .content-item-imgWrap {opacity: 0; transform: translatex(-200px); transition: all 1s 0.6s ease-in-out;}
-        .content > section .content-item-imgWrap {opacity: 1;}
-
-        .content > section .content-item-dese {opacity: 0; transform: translatex(-200px); transition: all 1s 0.9s ease-in-out;}
-        .content > section .content-item-dese {opacity: 1;}
-
+        .contents > section.show .content-item-num     {transform: translateY(0); opacity: .07;}
+        .contents > section.show .content-item-title   {transform: translateX(0); opacity: 1;}
+        .contents > section.show .content-item-imgWrap {transform: translateY(0) rotate(0) skew(0deg); opacity: 1;}
+        .contents > section.show .content-item-desc    {transform: translateX(0); opacity: 1;}
     </style>
 </head>
 <body>
@@ -279,36 +287,55 @@
             }
 
             //나타나기
-            if(scrollTop > $("#section1").offset().top){
+            if( scrollTop >  $("#section1").offset().top ){
                 $("#section1").addClass("show");
             }
-            if(scrollTop > $("#section2").offset().top){
+            if( scrollTop >  $("#section2").offset().top ){
                 $("#section2").addClass("show");
             }
-            if(scrollTop > $("#section3").offset().top){
+            if( scrollTop >  $("#section3").offset().top ){
                 $("#section3").addClass("show");
             }
-            if(scrollTop > $("#section4").offset().top){
+            if( scrollTop >  $("#section4").offset().top ){
                 $("#section4").addClass("show");
             }
-            if(scrollTop > $("#section5").offset().top){
+            if( scrollTop >  $("#section5").offset().top ){
                 $("#section5").addClass("show");
             }
-            if(scrollTop > $("#section6").offset().top){
+            if( scrollTop >  $("#section6").offset().top ){
                 $("#section6").addClass("show");
             }
-            if(scrollTop > $("#section7").offset().top){
+            if( scrollTop >  $("#section7").offset().top ){
                 $("#section7").addClass("show");
             }
-            if(scrollTop > $("#section8").offset().top){
+            if( scrollTop >  $("#section8").offset().top ){
                 $("#section8").addClass("show");
             }
-            if(scrollTop > $("#section9").offset().top){
+            if( scrollTop >  $("#section9").offset().top ){
                 $("#section9").addClass("show");
             }
 
-            //for문 
-            //each()문 
+            /* //for문
+            // for (let i = 1; i <= 9; i++) {
+            //     $(".s" + i + "OT").text(parseInt($("#section" + i).offset().top));
+
+            //     if (scrollTop > parseInt($("#section" + i).offset().top)) {
+            //         $(".s" + i + "OT").css("color", "red");
+            //     } else {
+            //         $(".s" + i + "OT").css("color", "white");
+            //     }
+            // }
+
+            //each
+            // $(".content-item").each(function () {
+            //     if (scrollTop > $(this).offset().top) {
+            //         $(this).addClass("show");
+            //     } else {
+            //         $(this).removeClass("show");
+            //     }
+            // });
+        }); */
+            
         });        
     </script>
 </body>
