@@ -44,8 +44,12 @@
         
         /* 메인 */
         body {--color-h1 : #dc6e25; 
-        --color-title : #fff; --color-sub : #999; 
-        --color-link : #000; --color-bg : #111; 
+        --color-title : #fff; 
+        --color-sub : #999; 
+        --color-link : #000; 
+        --color-bg : #111; 
+        --font-family : 'Lato', 'Chosu'
+
         --font-cafe: 'GongGothicMedium';
         --font-lato: 'Lato', sans-serif;
 
@@ -95,12 +99,12 @@
         .contents > section.show {opacity: 1; transform: translateY(0);} */
 
         /* 개별적으로 나타나기 */
-        .contents > section .content-item-num     {opacity: 0; transform: translateY(200px); transition: all 2s 0.1s cubic-bezier(0, 0.51, 0.16, 1.1);}
-        .contents > section .content-item-title   {opacity: 0; transform: translateX(200px); transition: all 2s 0.3s cubic-bezier(0, 0.51, 0.16, 1.1);}
+        .contents > section .content-item-num     {opacity: 0; transform: translateY(200px); transition: all 1s 0.1s cubic-bezier(0, 0.51, 0.16, 1.1);}
+        .contents > section .content-item-title   {opacity: 0; transform: translateX(200px); transition: all 1s 0.3s cubic-bezier(0, 0.51, 0.16, 1.1);}
         .contents > section .content-item-imgWrap {opacity: 0; transform: translateY(200px) rotate(30deg) skew(20deg); transition: all 1s 0.6s cubic-bezier(0, 0.51, 0.16, 1.1);}
-        .contents > section .content-item-desc    {opacity: 0; transform: translateX(200px); transition: all 2s 0.9s cubic-bezier(0, 0.51, 0.16, 1.1);}
+        .contents > section .content-item-desc    {opacity: 0; transform: translateX(200px); transition: all 1s 0.9s cubic-bezier(0, 0.51, 0.16, 1.1);}
 
-        .contents > section.show .content-item-num     {transform: translateY(0); opacity: 0.07;}
+        .contents > section.show .content-item-num     {transform: translateY(0); opacity: 1;}
         .contents > section.show .content-item-title   {transform: translateX(0); opacity: 1;}
         .contents > section.show .content-item-imgWrap {transform: translateY(0) rotate(0) skew(0deg); opacity: 1;}
         .contents > section.show .content-item-desc    {transform: translateX(0); opacity: 1;}
@@ -226,7 +230,7 @@
     <script src="../assets/js/jquery-1.9.1.min.js"></script>
     <script>
         $(window).scroll(function(){
-            const scrollTop = $(window).scrollTop() + $(window).height()/2;
+            const scrollTop = $(window).scrollTop() + $(window).height() / 2;
 
             //출력용
             $(".scrollTop").text(parseInt(scrollTop));
@@ -241,7 +245,7 @@
             $(".s8OffsetTop").text(parseInt($("#section8").offset().top)); 
             $(".s9OffsetTop").text(parseInt($("#section9").offset().top)); 
 
-            // //출력용 글씨 색 
+            // //출력용(글씨색) 
             // if (scrollTop > $("#section1").offset().top) {
             //     $(".s1OffsetTop").css("color","red");
             // } else {
