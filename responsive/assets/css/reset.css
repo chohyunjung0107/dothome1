@@ -1,5 +1,5 @@
 /* 여백 초기화 */
-body, div, ul, ol, li, dd, dt, dl, h1, h2, h3, h4, h5, h6, input, fieldset, p, select, table, td, tr, textarea, button, form  {margin: 0; padding: 0;}
+body, div, ul, ol, li, dd, dt, dl, h1, h2, h3, h4, h5, h6, input, fieldset, p, select, table, td, tr, textarea, button, form, figure, figcaption  {margin: 0; padding: 0;}
 
 /* a 링크 초기화 */
 a {color: #222; text-decoration: none;}
@@ -10,6 +10,9 @@ ol, ul {list-style: none;}
 
 /* 폰트 초기화 */
 body, input, textarea, select, button, table {font-family: 'Nanum Gothic', AppleSDGothicNeo-Regular,'Malgun Gothic','맑은 고딕',dotum,'돋움',sans-serif; color: #222; font-size: 13px; line-height: 1.5;}
+
+/* 이미지 초기화 */
+img {width: 100%; vertical-align: top;}
 
 /*IR 효과*/
 .ir_pm {display: block; overflow: hidden; font-size: 0; line-height: 0; text-indent: -9999px;}
