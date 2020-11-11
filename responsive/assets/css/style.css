@@ -198,4 +198,5 @@ body {background: url(../img/header_bg.jpg) repeat-x center top;}
 
     #cont_right .column {width: 100%;}
     #cont_right .column.col7 {border-right: 0;}
+    #cont_right .column.col8 {display: block;}
 }
