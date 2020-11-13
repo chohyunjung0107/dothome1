@@ -534,9 +534,13 @@
             e.preventDefault();
             $(".stepbox").removeClass("stop").addClass("stop");
         });
-        $("#intro5 > button").click(function(){
-            $("timing25").removeClass("show").addClass("show");
-            
+
+
+       
+
+        $(".btn-default").click(function(){
+            let txt = $(this).text();
+            $(".timing.bg6 > div").removeClass("normal reverse alternate alternate-reverse").addClass(txt);
         });
 
         
