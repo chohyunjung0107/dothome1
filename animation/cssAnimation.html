@@ -242,7 +242,7 @@
                         1. 기준점 
                         2. z-index
                         3. left, top, bottim, right */
-                    .timing1.show {/*animation-name: move; animation-duration: 2s; animation-iteration-count: 1; animation-timing-function: linear;*/ animation: move 2s 1 linear;}
+                    .timing1.show {animation: move 2s 1 linear; /*animation-name: move; animation-duration: 2s; animation-iteration-count: 1; animation-timing-function: linear;*/}
                     .timing2.show {animation: move 2s 1 ease;}
                     .timing3.show {animation: move 2s 1 ease-in;}
                     .timing4.show {animation: move 2s 1 ease-out;}
@@ -257,10 +257,10 @@
 
                 <!-- Intro1 -->
                 <div class="bs-docs-section">
-                    <h2 id="intro1" class="page-header">animation <button type="button" class="btn btn-warning start1">Start</button></h2>
+                    <h2 id="intro1" class="page-header">timing-function <button type="button" class="btn btn-warning start1">Start</button></h2>
                     
                     <div class="sample">
-                        <h3><span></span><em class="sr-only">border-sadius</em></h3>
+                        <h3><span></span><em class="sr-only">timing-function</em></h3>
                         <div class="timing bg1">
                             <div class="timing1"><span>linear</span></div>
                             <div class="timing2"><span>ease</span></div>
@@ -278,7 +278,7 @@
                 </div>
                 <!-- //Intro1 -->
                 <style>
-                    .timing.bg2 > div {background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);}
+                    .timing.bg2 > div {background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%); font-size: 14px;}
                     
                     .timing6.show {animation: move 4s 1 step-start;}
                     .timing7.show {animation: move 4s 1 step-end;}
