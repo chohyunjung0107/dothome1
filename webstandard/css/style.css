@@ -34,7 +34,6 @@
 .container {width: 990px; margin: 0 auto; height: inherit; /* background: rgba(255,255,255,0.3); */}
 
 /* header */
-.header {}
 .header .header_menu {text-align: right;}
 .header .header_menu a {color: #fff; padding: 10px 0 10px 10px; display: inline-block;}
 .header .header_menu a:hover {color: #666;} 
@@ -74,11 +73,13 @@
 
 /* 배너 */
 .ban {position: relative; padding: 24px 0;}   /*position의 기준점 relative*/
-.ban a {position: absolute; top: 60px; width: 43px; height: 43px; background-image: url(../img/icon.png);}
+/* .ban a {position: absolute; top: 60px; width: 43px; height: 43px; background-image: url(../img/icon.png);}
+
 .ban a.prev {left: -80px; background-position: -150px -0px;}
 .ban a.next {right: -80px; background-image: url(../img/icon.png); background-position: -150px -43px;}
 .ban a.prev:hover {background-position: -193px 0;}
-.ban a.next:hover {background-position: -193px -43px;}
+.ban a.next:hover {background-position: -193px -43px;} */
+
 .ban ul {overflow: hidden;}
 .ban ul li {float: left; width: 330px;}
 .ban a.img:hover {border-color: #98dcdc;}
@@ -86,6 +87,19 @@
 .ban ul li.ban_img1 {text-align: left;}
 .ban ul li.ban_img2 {text-align: center;}
 .ban ul li.ban_img3 {text-align: right;}
+
+/* 배너 슬라이드 */
+.ban_slick .slick-prev {position: absolute; left: 0; bottom: 0; width: 30px; height: 30px; display: inline-block; text-indent: -9999px; border-color: #5dbfeb;} 
+.ban_slick .slick-prev::before {content: '<'; color: #5dbfeb; text-indent: 0; position: absolute; top: 3px; left: 9px;}
+
+.ban_slick .slick-next {position: absolute; right: 0; bottom: 0; width: 30px; height: 30px; display: inline-block; text-indent: -9999px; border-color: #5dbfeb;}
+.ban_slick .slick-next::before {content: '>'; color: #5dbfeb; text-indent: 0; position: absolute; top: 3px; left: 10px;}
+
+.ban_slick .slick-dots {width: 100%; text-align: center;} 
+.ban_slick .slick-dots li {display: inline-block; width: 15px; height: 15px; margin: 5px;}
+
+.ban_slick .slick-dots li button {width: 15px; height: 15px; background: #5dbfeb; border-radius: 50%; text-indent: -9999px; border-width: 0;}
+.ban_slick .slick-dots li.slick-active button {background: #2b91c8;}
 
 /* 컨텐츠 */
 .cont {overflow: hidden; padding-top: 30px;}
