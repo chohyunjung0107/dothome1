@@ -10,7 +10,7 @@
 1. 카카오1 : <a href = "https://chohyunjung0107.github.io/dothome1/test/test08.html">바로가기</a><br>
 2. 카카오2 : <a href = "https://chohyunjung0107.github.io/dothome1/test/test8-1.html">바로가기</a><br>
 3. 네이버클로바 : <a href = "https://chohyunjung0107.github.io/dothome1/test/201117.html">바로가기</a><br>
-4. 메가박스(반응형) : <a href = "https://chohyunjung0107.github.io/dothome1/mega/index02.html">바로가기</a><br>
+4. 메가박스(반응형) : <a href = "https://chohyunjung0107.github.io/dothome1/mega/index05.html">바로가기</a><br>
 
 <h3>#제이쿼리 <br></h3>
 1. find() : <a href = "https://chohyunjung0107.github.io/dothome1/jQuery/jq04_find2.html">바로가기</a><br>
