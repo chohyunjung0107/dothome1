@@ -188,17 +188,141 @@ questionBtn.click(function(){
                 <div class="bs-docs-section">
                     <h2 id="intro2" class="page-header">Quiz2</h2>
                     <p class="bs-callout bs-callout-info">주관식 2문제 스타일(자바스크립트/제이쿼리)</p>
-                      
+                    <iframe width="100%" height="1300px" src="quizeEffect02-javascript.html" frameborder="0"></iframe>
                       <div class="javascriptSource">
                         <h3 class="btn btn-default">Javascript Source</h3>   
-<pre class="line-numbers language-javascript"><code> 
+<pre class="line-numbers language-js"><code> //선택자
+const questionQuiz = document.querySelectorAll(".quiz");
+const questionAsk = document.querySelectorAll(".question");
+const questionNum = document.querySelectorAll(".num");
+const questionBtn = document.querySelectorAll(".confirm-btn");
+const questionBottom = document.querySelectorAll(".confirm-bottom");
+const questionAnswer = document.querySelectorAll(".confirm-answer");
+const questionEx = document.querySelectorAll(".confirm-ex");
 
+//문제 정보
+const quizInfo = [
+    {
+        quizNum : 1,
+        quizAsk : "글씨의 색을 변경하는 CSS 속성은 무엇인가요?",
+        quizAnswer : "color 속성입니다.",
+        quizEx : "글씨 속성은 color 값을 이용합니다."
+    },
+    {
+        quizNum : 2,
+        quizAsk : "position: relative는 언제 사용하나요?",
+        quizAnswer : "color 속성입니다.",
+        quizEx : "글씨 속성은 color 값을 이용합니다."
+    },
+    {
+        quizNum : 3,
+        quizAsk : "콘텐츠 요소를 가운데로 오게 하는 방법 3가지 이상을 설명하시오.",
+        quizAnswer : "color 속성입니다.",
+        quizEx : "글씨 속성은 color 값을 이용합니다."
+    }
+];
+
+//문제출력 - foreach문
+questionQuiz.forEach((elem, index)=>{
+    questionNum[index].innerHTML = quizInfo[index].quizNum;
+    questionAsk[index].innerHTML = quizInfo[index].quizAsk;
+    questionAnswer[index].innerHTML = quizInfo[index].quizAnswer;
+    questionEx[index].innerHTML = quizInfo[index].quizEx;
+});
+
+//정답 및 풀이 숨기기 
+for(let i = 0; i < quizInfo.length; i++){
+    questionBottom[i].style.display = "none";
+}
+
+// //정답 및 풀이 확인하기
+questionBtn.forEach(elem=>{
+    elem.addEventListener("click", function(){
+        this.style.display = "none";
+        this.nextElementSibling.style.display = "block";
+    });
+}); 
 </code></pre>
                       </div>
+                      <iframe width="100%" height="1300px" src="quizeEffect02-jquery.html" frameborder="0"></iframe>
                       <div class="jquerySource">
                         <h3 class="btn btn-default">jQuery Source</h3>
-<pre class="line-numbers language-javascript"><code>
-  
+<pre class="line-numbers language-js"><code><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+//선택자
+const questionAsk = $(".question");
+const questionNum = $(".num");
+const questionBtn = $(".confirm-btn");
+const questionAnswer = $(".confirm-answer");
+const questionEx = $(".confirm-ex");
+
+//문제 정보
+const quizInfo = [
+    {
+        quizNum : 1,
+        quizAsk : "글씨의 색을 변경하는 CSS 속성은 무엇인가요?",
+        quizAnswer : "color 속성입니다.",
+        quizEx : "글씨 속성은 color 값을 이용합니다."
+    },
+    {
+        quizNum : 2,
+        quizAsk : "position: relative는 언제 사용하나요?",
+        quizAnswer : "color 속성입니다.",
+        quizEx : "글씨 속성은 color 값을 이용합니다."
+    },
+    {
+        quizNum : 3,
+        quizAsk : "콘텐츠 요소를 가운데로 오게 하는 방법 3가지 이상을 설명하시오.",
+        quizAnswer : "color 속성입니다.",
+        quizEx : "글씨 속성은 color 값을 이용합니다."
+    }
+];
+//문제 출력
+
+// questionNum.eq(0).html(quizInfo[0].quizNum);
+// questionNum.eq(1).html(quizInfo[1].quizNum);
+// questionNum.eq(2).html(quizInfo[2].quizNum);
+
+// questionAsk.eq(0).html(quizInfo[0].quizAsk);
+// questionAsk.eq(1).html(quizInfo[1].quizAsk);
+// questionAsk.eq(2).html(quizInfo[2].quizAsk);
+
+// questionAnswer.eq(0).html(quizInfo[0].quizAsk);
+// questionAnswer.eq(1).html(quizInfo[1].quizAsk);
+// questionAnswer.eq(2).html(quizInfo[2].quizAsk);
+
+// questionEx.eq(0).html(quizInfo[0].quizEx);
+// questionEx.eq(1).html(quizInfo[1].quizEx);
+// questionEx.eq(2).html(quizInfo[2].quizEx);
+
+//문제 출력 - for문 
+// for(let i = 0; i<quizInfo.length; i++){
+//     questionNum.eq(i).html(quizInfo[i].quizNum);
+//     questionAsk.eq(i).html(quizInfo[i].quizAsk);
+//     questionAnswer.eq(i).html(quizInfo[i].quizAsk);
+//     questionEx.eq(i).html(quizInfo[i].quizEx);
+// }
+
+//문제 출력 - each()
+$(".quiz-wrap .quiz").each(function(i){
+    $(this).find(questionNum).html(quizInfo[i].quizNum);
+    $(this).find(questionAsk).html(quizInfo[i].quizAsk);
+    $(this).find(questionAnswer).html(quizInfo[i].quizAnswer);
+    $(this).find(questionEx).html(quizInfo[i].quizEx);
+});
+
+//정답 숨기기 
+questionAnswer.hide();
+questionEx.hide();
+
+
+
+//정답 확인 
+questionBtn.click(function(){
+    $(this).hide();
+    $(this).nextAll().show();
+})
+</script>
 </code></pre>
                       </div>
 
