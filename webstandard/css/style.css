@@ -89,15 +89,14 @@
 .ban ul li.ban_img3 {text-align: right;}
 
 /* 배너 슬라이드 */
-.ban_slick .slick-prev {position: absolute; left: 0; bottom: 0; width: 30px; height: 30px; display: inline-block; text-indent: -9999px; border-color: #5dbfeb;} 
+.ban_slick .slick-prev {position: absolute; left: -5%; top: 30%; border-radius: 50%; width: 30px; height: 30px; display: inline-block; text-indent: -9999px; border-color: #5dbfeb;} 
 .ban_slick .slick-prev::before {content: '<'; color: #5dbfeb; text-indent: 0; position: absolute; top: 3px; left: 9px;}
 
-.ban_slick .slick-next {position: absolute; right: 0; bottom: 0; width: 30px; height: 30px; display: inline-block; text-indent: -9999px; border-color: #5dbfeb;}
+.ban_slick .slick-next {position: absolute; right: -3%; top: 30%; border-radius: 50%; width: 30px; height: 30px; display: inline-block; text-indent: -9999px; border-color: #5dbfeb;}
 .ban_slick .slick-next::before {content: '>'; color: #5dbfeb; text-indent: 0; position: absolute; top: 3px; left: 10px;}
 
-.ban_slick .slick-dots {width: 100%; text-align: center;} 
-.ban_slick .slick-dots li {display: inline-block; width: 15px; height: 15px; margin: 5px;}
 
+.ban_slick .slick-dots li{width: 15px; height: 15px; margin: 15px 0 0 130px;}
 .ban_slick .slick-dots li button {width: 15px; height: 15px; background: #5dbfeb; border-radius: 50%; text-indent: -9999px; border-width: 0;}
 .ban_slick .slick-dots li.slick-active button {background: #2b91c8;}
 
@@ -244,10 +243,10 @@
 
 /* 팝업 */
 .popup h4{font-size: 14px; color: #0093bd; padding-bottom: 34px;}
-.popup ul {overflow: hidden;}
-.popup li {float: left; width: 93px; margin-right: 5px; }
-.popup li:last-child {margin-right: 0;}
-.popup li img {width: 100%;}
+.popup .lightbox {overflow: hidden;}
+.popup a {float: left; width: 93px; margin-right: 5px; }
+.popup a:last-child {margin-right: 0;}
+.popup a img {width: 100%;}
 
 /* 푸터 */
 .footer {text-align: center; padding: 25px 0;}
