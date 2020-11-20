@@ -89,14 +89,15 @@
 .ban ul li.ban_img3 {text-align: right;}
 
 /* 배너 슬라이드 */
-.ban_slick .slick-prev {position: absolute; left: -5%; top: 30%; border-radius: 50%; width: 30px; height: 30px; display: inline-block; text-indent: -9999px; border-color: #5dbfeb;} 
-.ban_slick .slick-prev::before {content: '<'; color: #5dbfeb; text-indent: 0; position: absolute; top: 3px; left: 9px;}
+.ban_slick .slick-prev {position: absolute; left: -7%; top: 30%; border-radius: 50%; width: 50px; height: 50px; display: inline-block; text-indent: -9999px; border-color: #5dbfeb;} 
+.ban_slick .slick-prev::before {content: '<'; color: #5dbfeb; text-indent: 0; position: absolute; top: 15px; left: 20px;}
 
-.ban_slick .slick-next {position: absolute; right: -3%; top: 30%; border-radius: 50%; width: 30px; height: 30px; display: inline-block; text-indent: -9999px; border-color: #5dbfeb;}
-.ban_slick .slick-next::before {content: '>'; color: #5dbfeb; text-indent: 0; position: absolute; top: 3px; left: 10px;}
+.ban_slick .slick-next {position: absolute; right: -5%; top: 30%; border-radius: 50%; width: 50px; height: 50px; display: inline-block; text-indent: -9999px; border-color: #5dbfeb;}
+.ban_slick .slick-next::before {content: '>'; color: #5dbfeb; text-indent: 0; position: absolute; top: 15px; left: 20px;}
 
-
-.ban_slick .slick-dots li{width: 15px; height: 15px; margin: 15px 0 0 130px;}
+.ban_slick .slick-dots {}
+.ban_slick .slick-dots ul {width: 100px; height: 15px; margin: 0 auto; background: #000;}
+.ban_slick .slick-dots li{width: 30px; height: 15px;} 
 .ban_slick .slick-dots li button {width: 15px; height: 15px; background: #5dbfeb; border-radius: 50%; text-indent: -9999px; border-width: 0;}
 .ban_slick .slick-dots li.slick-active button {background: #2b91c8;}
 
