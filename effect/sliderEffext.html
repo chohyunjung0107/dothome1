@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CHOHYUNJUNG / cssAnimation </title>
+    <title>CHOHYUNJUNG / SliderEffect </title>
 </head>
 <!DOCTYPE html>
 <html lang="ko">
@@ -56,6 +56,11 @@
     <![endif]-->
 </head>
 
+<style>
+    .iframe {position: relative; width: 100%; padding-bottom: 56%;}
+    .iframe iframe {position: absolute; left: 0; top: 0; width: 100%; height: 100%;}
+</style>
+
 <body>
     <a class="sr-only" href="#content">Skip to main content</a>
     <header class="navbar navbar-inverse navbar-static-top bs-docs-nav" role="banner">
@@ -80,13 +85,13 @@
     </header>
     <div class="bs-header bgs5" id="content">
         <div class="container">
-            <h1>SLIDER EFFEXT Reference v1.0 &lt;/doc&gt;</h1>
+            <h1>SLIDER EFFECT Reference v1.0 &lt;/doc&gt;</h1>
             <p><a href="http://chohyun0107.dothome.co.kr/" target="_blank">chohyung0107.dothome.co.kr</a></p>
         </div>
     </div>
     <div class="container bs-docs-container">
         <div class="row">
-            <div class="col-md-9" role="main">
+            <div class="col-md-12" role="main">
 
                 <!-- ad box -->
                 <div class="ad">
@@ -99,34 +104,81 @@
 
                 <!-- Intro1 -->
                 <div class="bs-docs-section">
-                    <h2 id="intro1" class="page-header">클리핑 마스크</h2>
-                    <p class="bs-callout bs-callout-info">클리핑 마스크는 레이어 마스크와 달리 상위 레이어의 이미지를 하위 레이어에 클리핑하여 레이어의 모양으로 잘라낸
-                        것처럼 나타내는 기능입니다.</p>
-                    <div class="row">
-                        <div class="col-xs-12 col-md-12">
-                            <a href="#" class="thumbnail">
-                                <img src="img/sample01.jpg">
-                            </a>
-                        </div>
-                        <div class="col-xs-12 col-md-12">
-                            <a href="#" class="thumbnail">
-                                <img src="img/sample02.jpg">
-                            </a>
-                        </div>
+                    <h2 id="intro1" class="page-header">SliderEffect01</h2>
+                    <p class="bs-callout bs-callout-info">자바스크립트와 제이쿼리를 이용한 이미지 슬라이드 효과</p>
+                    <iframe width="100%" height="1300px" src="sliderEffect01-javascript.html" frameborder="0"></iframe>
+                      <div class="javascriptSource">
+                        <h3 class="btn btn-default">Javascript Source</h3>   
+<pre class="line-numbers language-js"><code><script>const sliderWrap = document.querySelector(".slider-wrap");
+const sliderImg = document.querySelector(".slider-img");
+const slider = document.querySelectorAll(".slider");
+
+let currentIndex = 0;            //현재 보이는 1번째 이미지
+let sliderCount = slider.length; //이미지 갯수
+
+setInterval(() => {
+    let nextIndex = (currentIndex + 1) % sliderCount; //0~5까지 인덱스를 통제 
+                    // (0+1) % 5 = 1
+                    // (1+1) % 5 = 2
+                    // (2+1) % 5 = 3
+                    // (3+1) % 5 = 4
+                    // (4+1) % 5 = 0
+
+    slider[currentIndex].style.opacity = "0";
+    slider[nextIndex].style.opacity = "1"; 
+
+    currentIndex = nextIndex; //이미지 갯수만큼 증감 되는 식(currentIndex++와 유사)
+
+    console.log("currentIndex: " + currentIndex);
+    console.log("nextIndex: " + nextIndex);
+},3000);</script>
+</code></pre>
+                      </div>
+                      <iframe width="100%" height="1300px" src="sliderEffect01-jquery.html" frameborder="0"></iframe>
+                      <div class="jquerySource">
+                        <h3 class="btn btn-default">jQuery Source</h3>
+<pre class="line-numbers language-js"><code><script src="../assets/js/jquery-1.9.1.min.js"></script><script>const sliderWrap = $(".slider-wrap");
+const sliderImg = $(".slider-img");
+const slider = $(".slider");
+
+let currentIndex = 0;            //현재 첫 번째 보이는 이미지
+let sliderCount = slider.length; //이미지 갯수
+
+//3초에 한 번씩 함수 실행 
+setInterval(function(){
+    let nextIndex = (currentIndex + 1) % sliderCount; // 이미지 인덱스를 증감시켜 슬라이드 이미지를 바꿔 줌  
+
+    slider.eq(currentIndex).fadeOut() //3초 후, 첫 번째 이미지를 사라지게 함
+    slider.eq(nextIndex).fadeIn()   //1번째 이미지를 안보이게 하고 2번째 이미지를 보이게 만듦
+
+    //currentIndex++;
+    currentIndex = nextIndex; //앞서 증감식을 세워둔 nextIndex의 값을 currentIndex와 같게 변동시켜줌 
+
+    console.log("currentIndex: " + currentIndex);
+    console.log("nextIndex: " + nextIndex); 
+},3000);</script>
+</code></pre>
+                      </div>
+
                     </div>
-                </div>
                 <!-- //Intro1 -->
-            </div>
-            <!-- //col-md-9 -->
-            <!-- //col-md-3 -->
-            <div class="col-md-3">
-                <div class="bs-sidebar hidden-print" role="complementary">
-                    <ul class="nav bs-sidenav">
-                        <li><a href="#intro1">클리핑 마스크</a></li>
-                    </ul>
+
+                <!-- figma -->
+                <div class="bs-docs-section">
+                    <h2 id="intro3" class="page-header">SLIDER EFFECT - figma</h2>
+                    <p class="bs-callout bs-callout-info">인덱스 증감식을 세워 이미지 슬라이드가 되게 스크립트하였습니다.
+                        <p><a class="btn btn-primary btn-lg" href="https://www.figma.com/proto/f7wcJtuTDkbXuYP2dDrK5I/sliderEffect?node-id=1%3A37&viewport=728%2C644%2C0.4623376727104187&scaling=min-zoom" role="button">확인하기</a></p>
+                    </p>
+                    <div class="iframe">
+                        <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="500" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Ff7wcJtuTDkbXuYP2dDrK5I%2FsliderEffect%3Fnode-id%3D1%253A37%26viewport%3D728%252C644%252C0.4623376727104187%26scaling%3Dmin-zoom" allowfullscreen></iframe>
+                    </div>   
                 </div>
+                <!-- //figma -->
+
             </div>
-            <!--//col-md-3 -->
+            <!-- //col-md-12 -->
+            
+           
         </div>
         <!-- //row -->
     </div>
@@ -137,7 +189,7 @@
             <ul class="footer-links muted">
                 <li>Currently v2.0</li>
                 <li>&middot;</li>
-                <li><a href="https://webstoryboy.github.io/w9/html/">webstoryboy</a></li>
+                <li><a href="https://github.com/chohyunjung0107">chohyunjung</a></li>
                 <li>&middot;</li>
                 <li><a href="http://cafe.naver.com/crossbrowsing" target="_blank">publisher cafe</a></li>
                 <li>&middot;</li>
@@ -152,5 +204,4 @@
     <script src="../assets/js/docs.min.js"></script>
     <script src="../assets/js/prism.js"></script>
 </body>
-
 </html>

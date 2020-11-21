@@ -204,15 +204,16 @@
             //     elem.style.color = "#f00";
             // });
 
-            // //마무리
-            // document.querySelectorAll(".contents em").forEach(elem => {
-            //     elem.addEventListener("mouseenter", () => {
-            //         document.querySelector(".cursor").classList.add("active");
-            //     });
-            //     elem.addEventListener("mouseleave", ()=>{
-            //         document.querySelector(".cursor").classList.remove("active");
-            //     });
-            // });
+
+            //마무리
+            document.querySelectorAll(".contents em").forEach(elem => {
+                elem.addEventListener("mouseenter", () => {
+                    document.querySelector(".cursor").classList.add("active");
+                });
+                elem.addEventListener("mouseleave", ()=>{
+                    document.querySelector(".cursor").classList.remove("active");
+                });
+            });
         });
     </script>
     <!-- //script -->

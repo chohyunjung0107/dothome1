@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CHOHYUNJUNG / cssAnimation </title>
+    <title>CHOHYUNJUNG / GameEffcet </title>
 </head>
 <!DOCTYPE html>
 <html lang="ko">
@@ -56,6 +56,11 @@
     <![endif]-->
 </head>
 
+<style>
+    .iframe {position: relative; width: 100%; padding-bottom: 56%;}
+    .iframe iframe {position: absolute; left: 0; top: 0; width: 100%; height: 100%;}
+</style>
+
 <body>
     <a class="sr-only" href="#content">Skip to main content</a>
     <header class="navbar navbar-inverse navbar-static-top bs-docs-nav" role="banner">
@@ -86,7 +91,7 @@
     </div>
     <div class="container bs-docs-container">
         <div class="row">
-            <div class="col-md-9" role="main">
+            <div class="col-md-12" role="main">
 
                 <!-- ad box -->
                 <div class="ad">
@@ -188,34 +193,157 @@ questionBtn.click(function(){
                 <div class="bs-docs-section">
                     <h2 id="intro2" class="page-header">Quiz2</h2>
                     <p class="bs-callout bs-callout-info">주관식 2문제 스타일(자바스크립트/제이쿼리)</p>
-                      
+                    <iframe width="100%" height="1300px" src="quizeEffect02-javascript.html" frameborder="0"></iframe>
                       <div class="javascriptSource">
                         <h3 class="btn btn-default">Javascript Source</h3>   
-<pre class="line-numbers language-javascript"><code> 
+<pre class="line-numbers language-js"><code>//선택자
+const questionQuiz = document.querySelectorAll(".quiz");
+const questionAsk = document.querySelectorAll(".question");
+const questionNum = document.querySelectorAll(".num");
+const questionBtn = document.querySelectorAll(".confirm-btn");
+const questionBottom = document.querySelectorAll(".confirm-bottom");
+const questionAnswer = document.querySelectorAll(".confirm-answer");
+const questionEx = document.querySelectorAll(".confirm-ex");
 
+//문제 정보
+const quizInfo = [
+    {
+        quizNum : 1,
+        quizAsk : "글씨의 색을 변경하는 CSS 속성은 무엇인가요?",
+        quizAnswer : "color 속성입니다.",
+        quizEx : "글씨 속성은 color 값을 이용합니다."
+    },
+    {
+        quizNum : 2,
+        quizAsk : "position: relative는 언제 사용하나요?",
+        quizAnswer : "color 속성입니다.",
+        quizEx : "글씨 속성은 color 값을 이용합니다."
+    },
+    {
+        quizNum : 3,
+        quizAsk : "콘텐츠 요소를 가운데로 오게 하는 방법 3가지 이상을 설명하시오.",
+        quizAnswer : "color 속성입니다.",
+        quizEx : "글씨 속성은 color 값을 이용합니다."
+    }
+];
+
+//문제출력 - foreach문
+questionQuiz.forEach((elem, index)=>{
+    questionNum[index].innerHTML = quizInfo[index].quizNum;
+    questionAsk[index].innerHTML = quizInfo[index].quizAsk;
+    questionAnswer[index].innerHTML = quizInfo[index].quizAnswer;
+    questionEx[index].innerHTML = quizInfo[index].quizEx;
+});
+
+//정답 및 풀이 숨기기 
+for(let i = 0; i < quizInfo.length; i++){
+    questionBottom[i].style.display = "none";
+}
+
+// //정답 및 풀이 확인하기
+questionBtn.forEach(elem=>{
+    elem.addEventListener("click", function(){
+        this.style.display = "none";
+        this.nextElementSibling.style.display = "block";
+    });
+}); 
 </code></pre>
                       </div>
+                      <iframe width="100%" height="1300px" src="quizeEffect02-jquery.html" frameborder="0"></iframe>
                       <div class="jquerySource">
                         <h3 class="btn btn-default">jQuery Source</h3>
-<pre class="line-numbers language-javascript"><code>
-  
+<pre class="line-numbers language-js"><code><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script><script>//선택자
+const questionAsk = $(".question");
+const questionNum = $(".num");
+const questionBtn = $(".confirm-btn");
+const questionAnswer = $(".confirm-answer");
+const questionEx = $(".confirm-ex");
+
+//문제 정보
+const quizInfo = [
+    {
+        quizNum : 1,
+        quizAsk : "글씨의 색을 변경하는 CSS 속성은 무엇인가요?",
+        quizAnswer : "color 속성입니다.",
+        quizEx : "글씨 속성은 color 값을 이용합니다."
+    },
+    {
+        quizNum : 2,
+        quizAsk : "position: relative는 언제 사용하나요?",
+        quizAnswer : "color 속성입니다.",
+        quizEx : "글씨 속성은 color 값을 이용합니다."
+    },
+    {
+        quizNum : 3,
+        quizAsk : "콘텐츠 요소를 가운데로 오게 하는 방법 3가지 이상을 설명하시오.",
+        quizAnswer : "color 속성입니다.",
+        quizEx : "글씨 속성은 color 값을 이용합니다."
+    }
+];
+//문제 출력
+
+// questionNum.eq(0).html(quizInfo[0].quizNum);
+// questionNum.eq(1).html(quizInfo[1].quizNum);
+// questionNum.eq(2).html(quizInfo[2].quizNum);
+
+// questionAsk.eq(0).html(quizInfo[0].quizAsk);
+// questionAsk.eq(1).html(quizInfo[1].quizAsk);
+// questionAsk.eq(2).html(quizInfo[2].quizAsk);
+
+// questionAnswer.eq(0).html(quizInfo[0].quizAsk);
+// questionAnswer.eq(1).html(quizInfo[1].quizAsk);
+// questionAnswer.eq(2).html(quizInfo[2].quizAsk);
+
+// questionEx.eq(0).html(quizInfo[0].quizEx);
+// questionEx.eq(1).html(quizInfo[1].quizEx);
+// questionEx.eq(2).html(quizInfo[2].quizEx);
+
+//문제 출력 - for문 
+// for(let i = 0; i<quizInfo.length; i++){
+//     questionNum.eq(i).html(quizInfo[i].quizNum);
+//     questionAsk.eq(i).html(quizInfo[i].quizAsk);
+//     questionAnswer.eq(i).html(quizInfo[i].quizAsk);
+//     questionEx.eq(i).html(quizInfo[i].quizEx);
+// }
+
+//문제 출력 - each()
+$(".quiz-wrap .quiz").each(function(i){
+    $(this).find(questionNum).html(quizInfo[i].quizNum);
+    $(this).find(questionAsk).html(quizInfo[i].quizAsk);
+    $(this).find(questionAnswer).html(quizInfo[i].quizAnswer);
+    $(this).find(questionEx).html(quizInfo[i].quizEx);
+});
+
+//정답 숨기기 
+questionAnswer.hide();
+questionEx.hide();
+
+//정답 확인 
+questionBtn.click(function(){
+    $(this).hide();
+    $(this).nextAll().show();
+})</script>
 </code></pre>
                       </div>
 
                     </div>
                 <!-- //Intro2 -->
-            </div>
-            <!-- //col-md-9 -->
-            <!-- //col-md-3 -->
-            <div class="col-md-3">
-                <div class="bs-sidebar hidden-print" role="complementary">
-                    <ul class="nav bs-sidenav">
-                        <li><a href="#intro1">Quiz1</a></li>
-                        <li><a href="#intro2">Quiz2</a></li>
-                    </ul>
+
+                 <!-- figma -->
+                 <div class="bs-docs-section">
+                    <h2 id="intro4" class="page-header">GAME EFFECT - figma</h2>
+                    <p class="bs-callout bs-callout-info">버튼을 클릭하면 답과 풀이를을 숨기고 보여주는 동작을 자바스크립트와 제이쿼리를 이용하여 스크립트하였습니다.  
+                        <p><a class="btn btn-primary btn-lg" href="https://www.figma.com/proto/RpGPJGoxbNktRMuWScAZEZ/quiz?node-id=1%3A40&viewport=840%2C502%2C0.46378323435783386&scaling=min-zoom" role="button">확인하기</a></p>
+                    </p>
+                    <div class="iframe">
+                        <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="900" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FRpGPJGoxbNktRMuWScAZEZ%2Fquiz%3Fnode-id%3D1%253A40%26viewport%3D840%252C502%252C0.46378323435783386%26scaling%3Dmin-zoom" allowfullscreen></iframe>
+                    </div>   
                 </div>
+                <!-- //figma -->
+
             </div>
-            <!--//col-md-3 -->
+            <!-- //col-md-12 -->
+           
         </div>
         <!-- //row -->
     </div>
@@ -226,7 +354,7 @@ questionBtn.click(function(){
             <ul class="footer-links muted">
                 <li>Currently v2.0</li>
                 <li>&middot;</li>
-                <li><a href="https://webstoryboy.github.io/w9/html/">webstoryboy</a></li>
+                <li><a href="https://github.com/chohyunjung0107">chohyunjung</a></li>
                 <li>&middot;</li>
                 <li><a href="http://cafe.naver.com/crossbrowsing" target="_blank">publisher cafe</a></li>
                 <li>&middot;</li>
@@ -241,5 +369,4 @@ questionBtn.click(function(){
     <script src="../assets/js/docs.min.js"></script>
     <script src="../assets/js/prism.js"></script>
 </body>
-
 </html>
