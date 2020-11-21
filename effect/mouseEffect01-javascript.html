@@ -186,13 +186,13 @@
             // document.querySelector(".contents em").addEventListener("mouseenter", function(){});
             // document.querySelector(".contents em").addEventListener("mouseleave", function(){});
 
-            // document.querySelector(".contents em").addEventListener("mouseenter", () => {
-            //     document.querySelector(".cursor").classList.add("active");
-            // });
+            document.querySelector(".contents em").addEventListener("mouseenter", () => {
+                document.querySelector(".cursor").classList.add("active");
+            });
             
-            // document.querySelector(".contents em").addEventListener("mouseleave", () => {
-            //     document.querySelector(".cursor").classList.remove("active");
-            // });
+            document.querySelector(".contents em").addEventListener("mouseleave", () => {
+                document.querySelector(".cursor").classList.remove("active");
+            });
 
             // // //오버 효과: 다중선택 (다시)
             // document.querySelectorAll(".contents em").style.color = "#f00";
@@ -204,15 +204,15 @@
             //     elem.style.color = "#f00";
             // });
 
-            //마무리
-            document.querySelectorAll(".contents em").forEach(elem => {
-                elem.addEventListener("mouseenter", () => {
-                    document.querySelector(".cursor").classList.add("active");
-                });
-                elem.addEventListener("mouseleave", ()=>{
-                    document.querySelector(".cursor").classList.remove("active");
-                });
-            });
+            // //마무리
+            // document.querySelectorAll(".contents em").forEach(elem => {
+            //     elem.addEventListener("mouseenter", () => {
+            //         document.querySelector(".cursor").classList.add("active");
+            //     });
+            //     elem.addEventListener("mouseleave", ()=>{
+            //         document.querySelector(".cursor").classList.remove("active");
+            //     });
+            // });
         });
     </script>
     <!-- //script -->
