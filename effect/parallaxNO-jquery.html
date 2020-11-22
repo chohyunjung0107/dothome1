@@ -1,15 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ParallaxEffet-javascript</title>
-
-     <!-- webfonts -->
-     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,700,900&display=swap" rel="stylesheet">
-
-     <style>
-         @font-face {font-family: 'GongGothicMedium'; src: url('https://github.com/projectnoonnu/noonfonts_20-10/blob/main/GongGothicMedium.woff') format('woff'); font-weight: normal; font-style: normal; }
+    <title>Parallax01 - jquery</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <style>
+        @font-face {font-family: 'GongGothicMedium'; src: url('https://github.com/projectnoonnu/noonfonts_20-10/blob/main/GongGothicMedium.woff') format('woff'); font-weight: normal; font-style: normal; }
         
         /* 리셋 */
         *, *::before, *::after {
@@ -48,7 +45,7 @@
         --color-title : #fff; 
         --color-sub : #999; 
         --color-link : #000; 
-        --color-bg : #888; 
+        --color-bg : #111; 
         --font-family : 'Lato', 'Chosu'
 
         --font-cafe: 'GongGothicMedium';
@@ -95,41 +92,26 @@
         .content-item:nth-child(8) .content-item-img {background: url(img/images08.jpg); background-size: cover;}
         .content-item:nth-child(9) .content-item-img {background: url(img/images09.jpg); background-size: cover;}
 
-        /* 한 번에 나타나기
-        .contents > section {
-            opacity: 0;
-            transform: translateX(-200px);
-            transition: all 1.3s;
-        }
-        .contents > section:nth-child(even) {
-            transform: translateX(200px);
-        }
-        .contents > section.show {
-            opacity: 1;
-            transform: translateX(0px);
-            transition: all 1s;
-        } */
-    
+        /* 한번에 나타나기 */
+        /* .contents > section {opacity: 0; transform: translateY(200px); transition: all 1s;}
+        .contents > section.show {opacity: 1; transform: translateY(0);} */
 
         /* 개별적으로 나타나기 */
-        .contents > section .content-item-num   {opacity: 0; transform: translateY(200px); transition: all 1s .1s cubic-bezier(0, 0.87, 0.26, 1.04);}
-        .contents > section .content-item-title {opacity: 0; transform: translateX(200px); transition: all 1s .3s cubic-bezier(0, 0.87, 0.26, 1.04);}
-        .contents > section .content-item-imgWrap   {opacity: 0; transform: translateY(200px); transition: all 1s .6s cubic-bezier(0, 0.87, 0.26, 1.04);}
-        .contents > section .content-item-dese  {opacity: 0; transform: translateY(200px); transition: all 1s .9s cubic-bezier(0, 0.87, 0.26, 1.04);}
+        .contents > section .content-item-num     {opacity: 0; transform: translateY(200px); transition: all 1s 0.1s cubic-bezier(0, 0.51, 0.16, 1.1);}
+        .contents > section .content-item-title   {opacity: 0; transform: translateX(200px); transition: all 1s 0.3s cubic-bezier(0, 0.51, 0.16, 1.1);}
+        .contents > section .content-item-imgWrap {opacity: 0; transform: translateY(200px) rotate(30deg) skew(20deg); transition: all 1s 0.6s cubic-bezier(0, 0.51, 0.16, 1.1);}
+        .contents > section .content-item-desc    {opacity: 0; transform: translateX(200px); transition: all 1s 0.9s cubic-bezier(0, 0.51, 0.16, 1.1);}
 
-        .contents > section .content-item-title:nth-child(odd) {opacity: 0; transform: translateX(-200px); transition: all 1s .3s cubic-bezier(0, 0.87, 0.26, 1.04);}
-        .contents > section .content-item-dese:nth-child(odd) {opacity: 0; transform: translateX(-200px); transition: all 1s .3s cubic-bezier(0, 0.87, 0.26, 1.04);}
-
-        .contents > section.show .content-item-num   {opacity: .07; transform: translateY(0px);}
-        .contents > section.show .content-item-title {opacity: 1; transform: translateX(0px);}
-        .contents > section.show .content-item-imgWrap   {opacity: 1; transform: translateY(0px);}
-        .contents > section.show .content-item-dese  {opacity: 1; transform: translateY(0px);}
-
-     </style>
+        .contents > section.show .content-item-num     {transform: translateY(0); opacity: 1;}
+        .contents > section.show .content-item-title   {transform: translateX(0); opacity: 1;}
+        .contents > section.show .content-item-imgWrap {transform: translateY(0) rotate(0) skew(0deg); opacity: 1;}
+        .contents > section.show .content-item-desc    {transform: translateX(0); opacity: 1;}
+    </style>
 </head>
 <body>
+
     <div class="info left">
-        <h1>Parallax Effext01 - javascript</h1>
+        <h1>Parallax Effext01 - jQuery</h1>
         <p>패랠랙스 스크로링 효과 -기본</p>
     </div>
     <div class="info right">
@@ -147,7 +129,7 @@
     </div>
     <div class="info bottom">
         <ul>
-            <li>pageYOffset : <span class="pageYOffset">0</span>px</li>
+            <li>scrollTop() : <span class="scrollTop">0</span>px</li>
             <li>#secrion1 : <span class="s1OffsetTop">0</span>PX</li>
             <li>#secrion2 : <span class="s2OffsetTop">0</span>PX</li>
             <li>#secrion3 : <span class="s3OffsetTop">0</span>PX</li>
@@ -241,121 +223,158 @@
             </div>
         </section>
     </main>
-    <!-- //main -->
     
+    <!-- script -->
+    <script src="../assets/js/jquery-1.9.1.min.js"></script>
     <script>
-        window.addEventListener("scroll",()=>{
-            let pageYOffset = window.pageYOffset
+        $(window).scroll(function(){
+            const scrollTop = $(window).scrollTop() + $(window).height() / 2;
 
-            // console.log(parseInt(pageYOffset));
+            //출력용
+            $(".scrollTop").text(parseInt(scrollTop));
 
-            // 출력용
-            document.querySelector(".pageYOffset").textContent = parseInt(pageYOffset) + screen.height / 2;
-            document.querySelector(".s1OffsetTop").textContent = document.getElementById("section1").offsetTop;
-            document.querySelector(".s2OffsetTop").textContent = document.getElementById("section2").offsetTop;
-            document.querySelector(".s3OffsetTop").textContent = document.getElementById("section3").offsetTop;
-            document.querySelector(".s4OffsetTop").textContent = document.getElementById("section4").offsetTop;
-            document.querySelector(".s5OffsetTop").textContent = document.getElementById("section5").offsetTop;
-            document.querySelector(".s6OffsetTop").textContent = document.getElementById("section6").offsetTop;
-            document.querySelector(".s7OffsetTop").textContent = document.getElementById("section7").offsetTop;
-            document.querySelector(".s8OffsetTop").textContent = document.getElementById("section8").offsetTop;
-            document.querySelector(".s9OffsetTop").textContent = document.getElementById("section9").offsetTop;
+            $(".s1OffsetTop").text(parseInt($("#section1").offset().top)); 
+            $(".s2OffsetTop").text(parseInt($("#section2").offset().top)); 
+            $(".s3OffsetTop").text(parseInt($("#section3").offset().top)); 
+            $(".s4OffsetTop").text(parseInt($("#section4").offset().top)); 
+            $(".s5OffsetTop").text(parseInt($("#section5").offset().top)); 
+            $(".s6OffsetTop").text(parseInt($("#section6").offset().top)); 
+            $(".s7OffsetTop").text(parseInt($("#section7").offset().top)); 
+            $(".s8OffsetTop").text(parseInt($("#section8").offset().top)); 
+            $(".s9OffsetTop").text(parseInt($("#section9").offset().top)); 
 
-            //출력용(레드)
+            // //출력용(글씨색) 
+            // if (scrollTop > $("#section1").offset().top) {
+            //     $(".s1OffsetTop").css("color","red");
+            // } else {
+            //     $(".s1OffsetTop").css("color","white");
+            // }
+            // if (scrollTop > $("#section2").offset().top) {
+            //     $(".s2OffsetTop").css("color","red");
+            // } else {
+            //     $(".s2OffsetTop").css("color","white");
+            // }
+            // if (scrollTop > $("#section3").offset().top) {
+            //     $(".s3OffsetTop").css("color","red");
+            // } else {
+            //     $(".s3OffsetTop").css("color","white");
+            // }
+            // if (scrollTop > $("#section4").offset().top) {
+            //     $(".s4OffsetTop").css("color","red");
+            // } else {
+            //     $(".s4OffsetTop").css("color","white");
+            // }
+            // if (scrollTop > $("#section5").offset().top) {
+            //     $(".s5OffsetTop").css("color","red");
+            // } else {
+            //     $(".s5OffsetTop").css("color","white");
+            // }
+            // if (scrollTop > $("#section6").offset().top) {
+            //     $(".s6OffsetTop").css("color","red");
+            // } else {
+            //     $(".s6OffsetTop").css("color","white");
+            // }
+            // if (scrollTop > $("#section7").offset().top) {
+            //     $(".s7OffsetTop").css("color","red");
+            // } else {
+            //     $(".s7OffsetTop").css("color","white");
+            // }
+            // if (scrollTop > $("#section8").offset().top) {
+            //     $(".s8OffsetTop").css("color","red");
+            // } else {
+            //     $(".s8OffsetTop").css("color","white");
+            // }
+            // if (scrollTop > $("#section9").offset().top) {
+            //     $(".s9OffsetTop").css("color","red");
+            // } else {
+            //     $(".s9OffsetTop").css("color","white");
+            // } 
 
-            if(pageYOffset > document.getElementById("section1").offsetTop){
-                document.querySelector(".s1OffsetTop").style.color = "red";
-            }else {
-                document.querySelector(".s1OffsetTop").style.color = "black";
-            }
-            if(pageYOffset > document.getElementById("section2").offsetTop){
-                document.querySelector(".s2OffsetTop").style.color = "red";
-            }else {
-                document.querySelector(".s2OffsetTop").style.color = "black";
-            }
-            if(pageYOffset > document.getElementById("section3").offsetTop){
-                document.querySelector(".s3OffsetTop").style.color = "red";
-            }else {
-                document.querySelector(".s3OffsetTop").style.color = "black";
-            }
-            if(pageYOffset > document.getElementById("section4").offsetTop){
-                document.querySelector(".s4OffsetTop").style.color = "red";
-            }else {
-                document.querySelector(".s4OffsetTop").style.color = "black";
-            }
-            if(pageYOffset > document.getElementById("section5").offsetTop){
-                document.querySelector(".s5OffsetTop").style.color = "red";
-            }else {
-                document.querySelector(".s5OffsetTop").style.color = "black";
-            }
-            if(pageYOffset > document.getElementById("section6").offsetTop){
-                document.querySelector(".s6OffsetTop").style.color = "red";
-            }else {
-                document.querySelector(".s6OffsetTop").style.color = "black";
-            }
-            if(pageYOffset > document.getElementById("section7").offsetTop){
-                document.querySelector(".s7OffsetTop").style.color = "red";
-            }else {
-                document.querySelector(".s7OffsetTop").style.color = "black";
-            }
-            if(pageYOffset > document.getElementById("section8").offsetTop){
-                document.querySelector(".s8OffsetTop").style.color = "red";
-            }else {
-                document.querySelector(".s8OffsetTop").style.color = "black";
-            }
-            if(pageYOffset > document.getElementById("section9").offsetTop){
-                document.querySelector(".s9OffsetTop").style.color = "red";
-            }else {
-                document.querySelector(".s9OffsetTop").style.color = "black";
-            }
+            // //나타나기
+            // if( scrollTop >  $("#section1").offset().top ){
+            //     $("#section1").addClass("show");
+            // } else {
+            //     $("#section1").removeClass("show");
+            // }
+            // if( scrollTop >  $("#section2").offset().top ){
+            //     $("#section2").addClass("show");
+            // } else {
+            //     $("#section2").removeClass("show");
+            // }
+            // if( scrollTop >  $("#section3").offset().top ){
+            //     $("#section3").addClass("show");
+            // } else {
+            //     $("#section3").removeClass("show");
+            // }
+            // if( scrollTop >  $("#section4").offset().top ){
+            //     $("#section4").addClass("show");
+            // } else {
+            //     $("#section4").removeClass("show");
+            // }
+            // if( scrollTop >  $("#section5").offset().top ){
+            //     $("#section5").addClass("show");
+            // } else {
+            //     $("#section5").removeClass("show");
+            // }
+            // if( scrollTop >  $("#section6").offset().top ){
+            //     $("#section6").addClass("show");
+            // } else {
+            //     $("#section6").removeClass("show");
+            // }
+            // if( scrollTop >  $("#section7").offset().top ){
+            //     $("#section7").addClass("show");
+            // } else {
+            //     $("#section7").removeClass("show");
+            // }
+            // if( scrollTop >  $("#section8").offset().top ){
+            //     $("#section8").addClass("show");
+            // } else {
+            //     $("#section8").removeClass("show");
+            // }
+            // if( scrollTop >  $("#section9").offset().top ){
+            //     $("#section9").addClass("show");
+            // } else {
+            //     $("#section9").removeClass("show");
+            // }
 
-            //나타나기
-            if(pageYOffset > document.getElementById("section1").offsetTop){
-                document.getElementById("section1").classList.add("show");
-            }else{
-                document.getElementById("section1").classList.remove("show");
-            }
-            if(pageYOffset > document.getElementById("section2").offsetTop){
-                document.getElementById("section2").classList.add("show");
-            }else{
-                document.getElementById("section2").classList.remove("show");
-            }
-            if(pageYOffset > document.getElementById("section3").offsetTop){
-                document.getElementById("section3").classList.add("show");
-            }else{
-                document.getElementById("section3").classList.remove("show");
-            }
-            if(pageYOffset > document.getElementById("section4").offsetTop){
-                document.getElementById("section4").classList.add("show");
-            }else{
-                document.getElementById("section4").classList.remove("show");
-            }
-            if(pageYOffset > document.getElementById("section5").offsetTop){
-                document.getElementById("section5").classList.add("show");
-            }else{
-                document.getElementById("section5").classList.remove("show");
-            }
-            if(pageYOffset > document.getElementById("section6").offsetTop){
-                document.getElementById("section6").classList.add("show");
-            }else{
-                document.getElementById("section6").classList.remove("show");
-            }
-            if(pageYOffset > document.getElementById("section7").offsetTop){
-                document.getElementById("section7").classList.add("show");
-            }else{
-                document.getElementById("section7").classList.remove("show");
-            }
-            if(pageYOffset > document.getElementById("section8").offsetTop){
-                document.getElementById("section8").classList.add("show");
-            }else{
-                document.getElementById("section8").classList.remove("show");
-            }
-            if(pageYOffset > document.getElementById("section9").offsetTop){
-                document.getElementById("section9").classList.add("show");
-            }else{
-                document.getElementById("section9").classList.remove("show");
-            }
-        });
+            // //for문 
+            // $(window).scroll(function(){
+            //     const scrollTop = $(window).scrollTop() + $(window).height()/2;
+            //     $(".scrollTop").text(parseInt(scrollTop));
+
+            //     for(let i=1; i<=9; i++){
+            //         $(".s"+i+"OffsetTop").text( parseInt($("#section"+i).offset().top) );
+            //         if (scrollTop > $("#section"+i).offset().top) {
+            //             $(".s"+i+"OffsetTop").css("color","red");
+            //             $("#section"+i).addClass("show");
+            //         } else {
+            //         $(".s"+i+"OffsetTop").css("color","white");
+            //         $("#section"+i).removeClass("show");
+            //         }
+            //     }
+            // });
+
+            // each() 
+            $(window).scroll(function(){
+                    const scrollTop = $(window).scrollTop();
+                    $(".scrollTop").text(parseInt(scrollTop));
+
+                    $(".content-item").each(function(num){
+                        $(".s"+(num+1)+"OffsetTop").text( parseInt($("#section"+(num+1)).offset().top) );
+                        if( scrollTop > $(this).offset().top ){
+                            $(".s"+(num+1)+"OffsetTop").css("color","red");
+                            $(this).addClass("show");
+                        } else {
+                            $(".s"+(num+1)+"OffsetTop").css("color","white");
+                            $(this).removeClass("show");
+                        }
+                    });
+                });
+        });  
+        
+        
+        
+            
     </script>
 </body>
 </html>

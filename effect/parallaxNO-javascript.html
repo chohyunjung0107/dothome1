@@ -1,16 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ParallaxEffet-jQuery</title>
-
-     <!-- webfonts -->
-     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,700,900&display=swap" rel="stylesheet">
-
-     <style>
-         @font-face {font-family: 'GongGothicMedium'; src: url('https://github.com/projectnoonnu/noonfonts_20-10/blob/main/GongGothicMedium.woff') format('woff'); font-weight: normal; font-style: normal; }
-        
+    <title>Parallax01 - javascript</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: '62570체';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.3/62570체.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }        
         /* 리셋 */
         *, *::before, *::after {
             box-sizing: border-box;
@@ -21,12 +22,14 @@
         }
 
         img {
-            width: 100%; 
+            width: 100%;
             vertical-align: top;
         }
 
         ul { list-style: none;}
-        li {list-style: none;}
+        li {
+            list-style: none;
+        }
 
         /* 인포 */
         .info {position:fixed; z-index: 1000;}
@@ -36,7 +39,7 @@
         .info h1 {font-size: 2em; line-height: 1.4;}
         .info p {font-size: 1rem;}
         .info li {font-size: 1rem; line-height: 1.4;}
-        .info li a {color: #fff; width: 25px; height: 25px; border: 1px dashed #fff; display: inline-block; border-radius: 50%; text-align: center; line-height: 25px; font-size: 0.8rem; margin: 5px; }
+        .info li a {color: #222; width: 25px; height: 25px; border: 1px dashed #fff; display: inline-block; border-radius: 50%; text-align: center; line-height: 25px; font-size: 0.8rem; margin: 5px; }
         .info li a.active{background: #fff; color: #000;}
 
         @media (max-width: 800px){
@@ -45,13 +48,9 @@
         
         /* 메인 */
         body {--color-h1 : #dc6e25; 
-        --color-title : #fff; 
-        --color-sub : #999; 
-        --color-link : #000; 
-        --color-bg : #111; 
-        --font-family : 'Lato', 'Chosu'
-
-        --font-cafe: 'GongGothicMedium';
+        --color-title : #000; --color-sub : #999; 
+        --color-link : #000; --color-bg : #cecece; 
+        --font-cafe: '62570체';
         --font-lato: 'Lato', sans-serif;
 
         background: var(--color-bg); 
@@ -95,39 +94,31 @@
         .content-item:nth-child(8) .content-item-img {background: url(img/images08.jpg); background-size: cover;}
         .content-item:nth-child(9) .content-item-img {background: url(img/images09.jpg); background-size: cover;}
 
-        /* 한 번에 나타나기
-        .contents > section {
-            opacity: 0;
-            transform: translateY(200px);
-            transition: all 1.3s;
-        }
-        .contents > section.show {
-            opacity: 1;
-            transform: translateY(0px);
-            transition: all 1s;
-        } */
+        /* 한번에 나타나기 */
+        .contents > section {opacity: 0; transform: translateY(200px); transition: all 1s;}
+        .contents > section.show {opacity: 1; transform: translateY(0);}
 
         /* 개별적으로 나타나기 */
-        .contents > section .content-item-num   {opacity: 0; transform: translateY(200px); transition: all 1s 0.1s ease;}
-        .contents > section .content-item-title {opacity: 0; transform: translateX(200px); transition: all 1s 0.3s ease;}
-        .contents > section .content-item-img   {opacity: 0; transform: translateY(200px); transition: all 1s 0.6s ease;}
-        .contents > section .content-item-dese  {opacity: 0; transform: translatex(200px); transition: all 1s 0.9s ease;}
+        .contents > section .content-item-num     {opacity: 0; transform: translateY(200px); transition: all 1s 0.1s cubic-bezier(0, 0.51, 0.16, 1.1);}
+        .contents > section .content-item-title   {opacity: 0; transform: translateX(200px); transition: all 1s 0.3s cubic-bezier(0, 0.51, 0.16, 1.1);}
+        .contents > section .content-item-imgWrap {opacity: 0; transform: translateY(200px) rotate(30deg) skew(20deg); transition: all 1s 0.6s cubic-bezier(0, 0.51, 0.16, 1.1);}
+        .contents > section .content-item-desc    {opacity: 0; transform: translateX(200px); transition: all 1s 0.9s cubic-bezier(0, 0.51, 0.16, 1.1);}
 
-        .contents > section.show .content-item-num   {opacity: .07; transform: translateY(0px);}
-        .contents > section.show .content-item-title {opacity: 1; transform: translateX(0px);}
-        .contents > section.show .content-item-img   {opacity: 1; transform: translateY(0px);}
-        .contents > section.show .content-item-dese  {opacity: 1; transform: translatex(0px);}
-
-     </style>
+        .contents > section.show .content-item-num     {transform: translateY(0); opacity: .07;}
+        .contents > section.show .content-item-title   {transform: translateX(0); opacity: 1;}
+        .contents > section.show .content-item-imgWrap {transform: translateY(0) rotate(0) skew(0deg); opacity: 1;}
+        .contents > section.show .content-item-desc    {transform: translateX(0); opacity: 1;}
+    </style>
 </head>
 <body>
+
     <div class="info left">
-        <h1>Parallax Effext01 - jQuery</h1>
+        <h1>Parallax Effext01 - jacascript</h1>
         <p>패랠랙스 스크로링 효과 -기본</p>
     </div>
     <div class="info right">
         <ul>
-            <li><a href="parallax01-jquery.html" class="active">1</a><a href="parallax01-javascript.html">1</a></li>
+            <li><a href="parallax01-jquery.html">1</a><a href="parallax01-javascript.html" class="active">1</a></li>
             <li><a href="parallax02-jquery.html">2</a><a href="parallax02-javascript.html">2</a></li>
             <li><a href="parallax03-jquery.html">3</a><a href="parallax03-javascript.html">3</a></li>
             <li><a href="parallax04-jquery.html">4</a><a href="parallax04-javascript.html">4</a></li>
@@ -140,7 +131,7 @@
     </div>
     <div class="info bottom">
         <ul>
-            <li>scrollTop() : <span class="scrollTop">0</span>px</li>
+            <li>scrollTop() : <span class="pageYoffset">0</span>px</li>
             <li>#secrion1 : <span class="s1OffsetTop">0</span>PX</li>
             <li>#secrion2 : <span class="s2OffsetTop">0</span>PX</li>
             <li>#secrion3 : <span class="s3OffsetTop">0</span>PX</li>
@@ -234,101 +225,71 @@
             </div>
         </section>
     </main>
-    <!-- //main -->
     
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"></script>
+    <!-- script -->
+    
     <script>
-        $(window).scroll(function(){
-            const scrotllTop = $(window).scrollTop() + $(window).height();
-            // console.log(parseInt(scrotllTop)); 
+        
+        window.addEventListener("scroll", function(){
+            let pageYoffset = window.pageYoffset;
 
-            //출력용
-            $(".scrollTop").text(parseInt(scrotllTop)); //정수화 시킨 스크롤탑 값
-            $(".s1OffsetTop").text(parseInt($("#section1").offset().top));
-            $(".s2OffsetTop").text(parseInt($("#section2").offset().top));
-            $(".s3OffsetTop").text(parseInt($("#section3").offset().top));
-            $(".s4OffsetTop").text(parseInt($("#section4").offset().top));
-            $(".s5OffsetTop").text(parseInt($("#section5").offset().top));
-            $(".s6OffsetTop").text(parseInt($("#section6").offset().top));
-            $(".s7OffsetTop").text(parseInt($("#section7").offset().top));
-            $(".s8OffsetTop").text(parseInt($("#section8").offset().top));
-            $(".s9OffsetTop").text(parseInt($("#section9").offset().top));
+            //출력용 
+            document.querySelector(".pageYoffset").innerText = parseInt(pageYoffset);
+            document.querySelector(".s1OffsetTop").innerText = document.getElementById("section1").offsetTop;
+            document.querySelector(".s2OffsetTop").innerText = document.getElementById("section2").offsetTop;
+            document.querySelector(".s3OffsetTop").innerText = document.getElementById("section3").offsetTop;
+            document.querySelector(".s4OffsetTop").innerText = document.getElementById("section4").offsetTop;
+            document.querySelector(".s5OffsetTop").innerText = document.getElementById("section5").offsetTop;
+            document.querySelector(".s6OffsetTop").innerText = document.getElementById("section6").offsetTop;
+            document.querySelector(".s7OffsetTop").innerText = document.getElementById("section7").offsetTop;
+            document.querySelector(".s8OffsetTop").innerText = document.getElementById("section8").offsetTop;
+            document.querySelector(".s9OffsetTop").innerText = document.getElementById("section9").offsetTop;
 
-            //출력용(오프셋값과 스크롤탑값을 레드-화이트로 구별)
-            if(scrotllTop >  $("#section1").offset().top ){ //스크롤탑값이 오프셋값을 넘어가면 빨간색으로 글자가 바뀜
-                $(".s1OffsetTop").css("color","red");
-            }else {
-                $(".s1OffsetTop").css("color","white");
+            //출력용 글씨 색 
+            if(pageYOffset > document.getElementById("section1").offsetTop){
+                document.querySelector(".s1OffsetTop").style.color = "red";
+            } else {
+                document.querySelector(".s1OffsetTop").style.color = "white";
             }
-            if(scrotllTop >  $("#section2").offset().top ){
-                $(".s2OffsetTop").css("color","red");
-            }else {
-                $(".s2OffsetTop").css("color","white");
+            if(pageYOffset > document.getElementById("section2").offsetTop){
+                document.querySelector(".s2OffsetTop").style.color = "red";
+            } else {
+                document.querySelector(".s2OffsetTop").style.color = "white";
             }
-            if(scrotllTop >  $("#section3").offset().top ){
-                $(".s3OffsetTop").css("color","red");
-            }else {
-                $(".s3OffsetTop").css("color","white");
+            if(pageYOffset > document.getElementById("section3").offsetTop){
+                document.querySelector(".s3OffsetTop").style.color = "red";
+            } else {
+                document.querySelector(".s3OffsetTop").style.color = "white";
             }
-            if(scrotllTop >  $("#section4").offset().top ){
-                $(".s4OffsetTop").css("color","red");
-            }else {
-                $(".s4OffsetTop").css("color","white");
+            if(pageYOffset > document.getElementById("section4").offsetTop){
+                document.querySelector(".s4OffsetTop").style.color = "red";
+            } else {
+                document.querySelector(".s4OffsetTop").style.color = "white";
             }
-            if(scrotllTop >  $("#section5").offset().top ){
-                $(".s5OffsetTop").css("color","red");
-            }else {
-                $(".s5OffsetTop").css("color","white");
+            if(pageYOffset > document.getElementById("section5").offsetTop){
+                document.querySelector(".s5OffsetTop").style.color = "red";
+            } else {
+                document.querySelector(".s5OffsetTop").style.color = "white";
             }
-            if(scrotllTop >  $("#section6").offset().top ){
-                $(".s6OffsetTop").css("color","red");
-            }else {
-                $(".s6OffsetTop").css("color","white");
+            if(pageYOffset > document.getElementById("section6").offsetTop){
+                document.querySelector(".s6OffsetTop").style.color = "red";
+            } else {
+                document.querySelector(".s6OffsetTop").style.color = "white";
             }
-            if(scrotllTop >  $("#section7").offset().top ){
-                $(".s7OffsetTop").css("color","red");
-            }else {
-                $(".s7OffsetTop").css("color","white");
+            if(pageYOffset > document.getElementById("section7").offsetTop){
+                document.querySelector(".s7OffsetTop").style.color = "red";
+            } else {
+                document.querySelector(".s7OffsetTop").style.color = "white";
             }
-            if(scrotllTop >  $("#section8").offset().top ){
-                $(".s8OffsetTop").css("color","red");
-            }else {
-                $(".s8OffsetTop").css("color","white");
+            if(pageYOffset > document.getElementById("section8").offsetTop){
+                document.querySelector(".s8OffsetTop").style.color = "red";
+            } else {
+                document.querySelector(".s8OffsetTop").style.color = "white";
             }
-            if(scrotllTop >  $("#section9").offset().top ){
-                $(".s9OffsetTop").css("color","red");
-            }else {
-                $(".s8OffsetTop").css("color","white");
-            }
-
-            //나타나기
-            if(scrotllTop >  $("#section1").offset().top ){
-                $("#section1").addClass("show");
-            }
-            if(scrotllTop >  $("#section2").offset().top ){
-                $("#section2").addClass("show");
-            }
-            if(scrotllTop >  $("#section3").offset().top ){
-                $("#section3").addClass("show");
-            }
-            if(scrotllTop >  $("#section4").offset().top ){
-                $("#section4").addClass("show");
-            }
-            if(scrotllTop >  $("#section5").offset().top ){
-                $("#section5").addClass("show");
-            }
-            if(scrotllTop >  $("#section6").offset().top ){
-                $("#section6").addClass("show");
-            }
-            if(scrotllTop >  $("#section7").offset().top ){
-                $("#section7").addClass("show");
-            }
-            if(scrotllTop >  $("#section8").offset().top ){
-                $("#section8").addClass("show");
-            }
-            if(scrotllTop >  $("#section9").offset().top ){
-                $("#section9").addClass("show");
+            if(pageYOffset > document.getElementById("section9").offsetTop){
+                document.querySelector(".s9OffsetTop").style.color = "red";
+            } else {
+                document.querySelector(".s9OffsetTop").style.color = "white";
             }
         });
     </script>

@@ -1,17 +1,16 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Parallax01 - javascript</title>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
-    <style>
-        @font-face {
-            font-family: '62570체';
-            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.3/62570체.woff') format('woff');
-            font-weight: normal;
-            font-style: normal;
-        }        
+    <title>ParallaxEffet-javascript</title>
+
+     <!-- webfonts -->
+     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,700,900&display=swap" rel="stylesheet">
+
+     <style>
+         @font-face {font-family: 'GongGothicMedium'; src: url('https://github.com/projectnoonnu/noonfonts_20-10/blob/main/GongGothicMedium.woff') format('woff'); font-weight: normal; font-style: normal; }
+        
         /* 리셋 */
         *, *::before, *::after {
             box-sizing: border-box;
@@ -22,14 +21,12 @@
         }
 
         img {
-            width: 100%;
+            width: 100%; 
             vertical-align: top;
         }
 
         ul { list-style: none;}
-        li {
-            list-style: none;
-        }
+        li {list-style: none;}
 
         /* 인포 */
         .info {position:fixed; z-index: 1000;}
@@ -39,7 +36,7 @@
         .info h1 {font-size: 2em; line-height: 1.4;}
         .info p {font-size: 1rem;}
         .info li {font-size: 1rem; line-height: 1.4;}
-        .info li a {color: #222; width: 25px; height: 25px; border: 1px dashed #fff; display: inline-block; border-radius: 50%; text-align: center; line-height: 25px; font-size: 0.8rem; margin: 5px; }
+        .info li a {color: #fff; width: 25px; height: 25px; border: 1px dashed #fff; display: inline-block; border-radius: 50%; text-align: center; line-height: 25px; font-size: 0.8rem; margin: 5px; }
         .info li a.active{background: #fff; color: #000;}
 
         @media (max-width: 800px){
@@ -48,9 +45,13 @@
         
         /* 메인 */
         body {--color-h1 : #dc6e25; 
-        --color-title : #000; --color-sub : #999; 
-        --color-link : #000; --color-bg : #cecece; 
-        --font-cafe: '62570체';
+        --color-title : #fff; 
+        --color-sub : #999; 
+        --color-link : #000; 
+        --color-bg : #888; 
+        --font-family : 'Lato', 'Chosu'
+
+        --font-cafe: 'GongGothicMedium';
         --font-lato: 'Lato', sans-serif;
 
         background: var(--color-bg); 
@@ -94,31 +95,46 @@
         .content-item:nth-child(8) .content-item-img {background: url(img/images08.jpg); background-size: cover;}
         .content-item:nth-child(9) .content-item-img {background: url(img/images09.jpg); background-size: cover;}
 
-        /* 한번에 나타나기 */
-        .contents > section {opacity: 0; transform: translateY(200px); transition: all 1s;}
-        .contents > section.show {opacity: 1; transform: translateY(0);}
+        /* 한 번에 나타나기
+        .contents > section {
+            opacity: 0;
+            transform: translateX(-200px);
+            transition: all 1.3s;
+        }
+        .contents > section:nth-child(even) {
+            transform: translateX(200px);
+        }
+        .contents > section.show {
+            opacity: 1;
+            transform: translateX(0px);
+            transition: all 1s;
+        } */
+    
 
         /* 개별적으로 나타나기 */
-        .contents > section .content-item-num     {opacity: 0; transform: translateY(200px); transition: all 1s 0.1s cubic-bezier(0, 0.51, 0.16, 1.1);}
-        .contents > section .content-item-title   {opacity: 0; transform: translateX(200px); transition: all 1s 0.3s cubic-bezier(0, 0.51, 0.16, 1.1);}
-        .contents > section .content-item-imgWrap {opacity: 0; transform: translateY(200px) rotate(30deg) skew(20deg); transition: all 1s 0.6s cubic-bezier(0, 0.51, 0.16, 1.1);}
-        .contents > section .content-item-desc    {opacity: 0; transform: translateX(200px); transition: all 1s 0.9s cubic-bezier(0, 0.51, 0.16, 1.1);}
+        .contents > section .content-item-num   {opacity: 0; transform: translateY(200px); transition: all 1s .1s cubic-bezier(0, 0.87, 0.26, 1.04);}
+        .contents > section .content-item-title {opacity: 0; transform: translateX(200px); transition: all 1s .3s cubic-bezier(0, 0.87, 0.26, 1.04);}
+        .contents > section .content-item-imgWrap   {opacity: 0; transform: translateY(200px); transition: all 1s .6s cubic-bezier(0, 0.87, 0.26, 1.04);}
+        .contents > section .content-item-dese  {opacity: 0; transform: translateY(200px); transition: all 1s .9s cubic-bezier(0, 0.87, 0.26, 1.04);}
 
-        .contents > section.show .content-item-num     {transform: translateY(0); opacity: .07;}
-        .contents > section.show .content-item-title   {transform: translateX(0); opacity: 1;}
-        .contents > section.show .content-item-imgWrap {transform: translateY(0) rotate(0) skew(0deg); opacity: 1;}
-        .contents > section.show .content-item-desc    {transform: translateX(0); opacity: 1;}
-    </style>
+        .contents > section .content-item-title:nth-child(odd) {opacity: 0; transform: translateX(-200px); transition: all 1s .3s cubic-bezier(0, 0.87, 0.26, 1.04);}
+        .contents > section .content-item-dese:nth-child(odd) {opacity: 0; transform: translateX(-200px); transition: all 1s .3s cubic-bezier(0, 0.87, 0.26, 1.04);}
+
+        .contents > section.show .content-item-num   {opacity: .07; transform: translateY(0px);}
+        .contents > section.show .content-item-title {opacity: 1; transform: translateX(0px);}
+        .contents > section.show .content-item-imgWrap   {opacity: 1; transform: translateY(0px);}
+        .contents > section.show .content-item-dese  {opacity: 1; transform: translateY(0px);}
+
+     </style>
 </head>
 <body>
-
     <div class="info left">
-        <h1>Parallax Effext01 - jacascript</h1>
+        <h1>Parallax Effext01 - javascript</h1>
         <p>패랠랙스 스크로링 효과 -기본</p>
     </div>
     <div class="info right">
         <ul>
-            <li><a href="parallax01-jquery.html">1</a><a href="parallax01-javascript.html" class="active">1</a></li>
+            <li><a href="parallax01-jquery.html" class="active">1</a><a href="parallax01-javascript.html">1</a></li>
             <li><a href="parallax02-jquery.html">2</a><a href="parallax02-javascript.html">2</a></li>
             <li><a href="parallax03-jquery.html">3</a><a href="parallax03-javascript.html">3</a></li>
             <li><a href="parallax04-jquery.html">4</a><a href="parallax04-javascript.html">4</a></li>
@@ -131,7 +147,7 @@
     </div>
     <div class="info bottom">
         <ul>
-            <li>scrollTop() : <span class="pageYoffset">0</span>px</li>
+            <li>pageYOffset : <span class="pageYOffset">0</span>px</li>
             <li>#secrion1 : <span class="s1OffsetTop">0</span>PX</li>
             <li>#secrion2 : <span class="s2OffsetTop">0</span>PX</li>
             <li>#secrion3 : <span class="s3OffsetTop">0</span>PX</li>
@@ -225,71 +241,119 @@
             </div>
         </section>
     </main>
-    
-    <!-- script -->
+    <!-- //main -->
     
     <script>
-        
-        window.addEventListener("scroll", function(){
-            let pageYoffset = window.pageYoffset;
+        window.addEventListener("scroll",()=>{
+            let pageYOffset = window.pageYOffset
 
-            //출력용 
-            document.querySelector(".pageYoffset").innerText = parseInt(pageYoffset);
-            document.querySelector(".s1OffsetTop").innerText = document.getElementById("section1").offsetTop;
-            document.querySelector(".s2OffsetTop").innerText = document.getElementById("section2").offsetTop;
-            document.querySelector(".s3OffsetTop").innerText = document.getElementById("section3").offsetTop;
-            document.querySelector(".s4OffsetTop").innerText = document.getElementById("section4").offsetTop;
-            document.querySelector(".s5OffsetTop").innerText = document.getElementById("section5").offsetTop;
-            document.querySelector(".s6OffsetTop").innerText = document.getElementById("section6").offsetTop;
-            document.querySelector(".s7OffsetTop").innerText = document.getElementById("section7").offsetTop;
-            document.querySelector(".s8OffsetTop").innerText = document.getElementById("section8").offsetTop;
-            document.querySelector(".s9OffsetTop").innerText = document.getElementById("section9").offsetTop;
+            // console.log(parseInt(pageYOffset));
 
-            //출력용 글씨 색 
+            // 출력용
+            document.querySelector(".pageYOffset").textContent = parseInt(pageYOffset) + screen.height / 2;
+            document.querySelector(".s1OffsetTop").textContent = document.getElementById("section1").offsetTop;
+            document.querySelector(".s2OffsetTop").textContent = document.getElementById("section2").offsetTop;
+            document.querySelector(".s3OffsetTop").textContent = document.getElementById("section3").offsetTop;
+            document.querySelector(".s4OffsetTop").textContent = document.getElementById("section4").offsetTop;
+            document.querySelector(".s5OffsetTop").textContent = document.getElementById("section5").offsetTop;
+            document.querySelector(".s6OffsetTop").textContent = document.getElementById("section6").offsetTop;
+            document.querySelector(".s7OffsetTop").textContent = document.getElementById("section7").offsetTop;
+            document.querySelector(".s8OffsetTop").textContent = document.getElementById("section8").offsetTop;
+            document.querySelector(".s9OffsetTop").textContent = document.getElementById("section9").offsetTop;
+
+            //출력용(레드)
+
             if(pageYOffset > document.getElementById("section1").offsetTop){
                 document.querySelector(".s1OffsetTop").style.color = "red";
-            } else {
-                document.querySelector(".s1OffsetTop").style.color = "white";
+            }else {
+                document.querySelector(".s1OffsetTop").style.color = "black";
             }
             if(pageYOffset > document.getElementById("section2").offsetTop){
                 document.querySelector(".s2OffsetTop").style.color = "red";
-            } else {
-                document.querySelector(".s2OffsetTop").style.color = "white";
+            }else {
+                document.querySelector(".s2OffsetTop").style.color = "black";
             }
             if(pageYOffset > document.getElementById("section3").offsetTop){
                 document.querySelector(".s3OffsetTop").style.color = "red";
-            } else {
-                document.querySelector(".s3OffsetTop").style.color = "white";
+            }else {
+                document.querySelector(".s3OffsetTop").style.color = "black";
             }
             if(pageYOffset > document.getElementById("section4").offsetTop){
                 document.querySelector(".s4OffsetTop").style.color = "red";
-            } else {
-                document.querySelector(".s4OffsetTop").style.color = "white";
+            }else {
+                document.querySelector(".s4OffsetTop").style.color = "black";
             }
             if(pageYOffset > document.getElementById("section5").offsetTop){
                 document.querySelector(".s5OffsetTop").style.color = "red";
-            } else {
-                document.querySelector(".s5OffsetTop").style.color = "white";
+            }else {
+                document.querySelector(".s5OffsetTop").style.color = "black";
             }
             if(pageYOffset > document.getElementById("section6").offsetTop){
                 document.querySelector(".s6OffsetTop").style.color = "red";
-            } else {
-                document.querySelector(".s6OffsetTop").style.color = "white";
+            }else {
+                document.querySelector(".s6OffsetTop").style.color = "black";
             }
             if(pageYOffset > document.getElementById("section7").offsetTop){
                 document.querySelector(".s7OffsetTop").style.color = "red";
-            } else {
-                document.querySelector(".s7OffsetTop").style.color = "white";
+            }else {
+                document.querySelector(".s7OffsetTop").style.color = "black";
             }
             if(pageYOffset > document.getElementById("section8").offsetTop){
                 document.querySelector(".s8OffsetTop").style.color = "red";
-            } else {
-                document.querySelector(".s8OffsetTop").style.color = "white";
+            }else {
+                document.querySelector(".s8OffsetTop").style.color = "black";
             }
             if(pageYOffset > document.getElementById("section9").offsetTop){
                 document.querySelector(".s9OffsetTop").style.color = "red";
-            } else {
-                document.querySelector(".s9OffsetTop").style.color = "white";
+            }else {
+                document.querySelector(".s9OffsetTop").style.color = "black";
+            }
+
+            //나타나기
+            if(pageYOffset > document.getElementById("section1").offsetTop){
+                document.getElementById("section1").classList.add("show");
+            }else{
+                document.getElementById("section1").classList.remove("show");
+            }
+            if(pageYOffset > document.getElementById("section2").offsetTop){
+                document.getElementById("section2").classList.add("show");
+            }else{
+                document.getElementById("section2").classList.remove("show");
+            }
+            if(pageYOffset > document.getElementById("section3").offsetTop){
+                document.getElementById("section3").classList.add("show");
+            }else{
+                document.getElementById("section3").classList.remove("show");
+            }
+            if(pageYOffset > document.getElementById("section4").offsetTop){
+                document.getElementById("section4").classList.add("show");
+            }else{
+                document.getElementById("section4").classList.remove("show");
+            }
+            if(pageYOffset > document.getElementById("section5").offsetTop){
+                document.getElementById("section5").classList.add("show");
+            }else{
+                document.getElementById("section5").classList.remove("show");
+            }
+            if(pageYOffset > document.getElementById("section6").offsetTop){
+                document.getElementById("section6").classList.add("show");
+            }else{
+                document.getElementById("section6").classList.remove("show");
+            }
+            if(pageYOffset > document.getElementById("section7").offsetTop){
+                document.getElementById("section7").classList.add("show");
+            }else{
+                document.getElementById("section7").classList.remove("show");
+            }
+            if(pageYOffset > document.getElementById("section8").offsetTop){
+                document.getElementById("section8").classList.add("show");
+            }else{
+                document.getElementById("section8").classList.remove("show");
+            }
+            if(pageYOffset > document.getElementById("section9").offsetTop){
+                document.getElementById("section9").classList.add("show");
+            }else{
+                document.getElementById("section9").classList.remove("show");
             }
         });
     </script>

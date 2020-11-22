@@ -1,12 +1,15 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Parallax01 - jquery</title>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
-    <style>
-        @font-face {font-family: 'GongGothicMedium'; src: url('https://github.com/projectnoonnu/noonfonts_20-10/blob/main/GongGothicMedium.woff') format('woff'); font-weight: normal; font-style: normal; }
+    <title>ParallaxEffet-jQuery</title>
+
+     <!-- webfonts -->
+     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,700,900&display=swap" rel="stylesheet">
+
+     <style>
+         @font-face {font-family: 'GongGothicMedium'; src: url('https://github.com/projectnoonnu/noonfonts_20-10/blob/main/GongGothicMedium.woff') format('woff'); font-weight: normal; font-style: normal; }
         
         /* 리셋 */
         *, *::before, *::after {
@@ -92,24 +95,32 @@
         .content-item:nth-child(8) .content-item-img {background: url(img/images08.jpg); background-size: cover;}
         .content-item:nth-child(9) .content-item-img {background: url(img/images09.jpg); background-size: cover;}
 
-        /* 한번에 나타나기 */
-        /* .contents > section {opacity: 0; transform: translateY(200px); transition: all 1s;}
-        .contents > section.show {opacity: 1; transform: translateY(0);} */
+        /* 한 번에 나타나기
+        .contents > section {
+            opacity: 0;
+            transform: translateY(200px);
+            transition: all 1.3s;
+        }
+        .contents > section.show {
+            opacity: 1;
+            transform: translateY(0px);
+            transition: all 1s;
+        } */
 
         /* 개별적으로 나타나기 */
-        .contents > section .content-item-num     {opacity: 0; transform: translateY(200px); transition: all 1s 0.1s cubic-bezier(0, 0.51, 0.16, 1.1);}
-        .contents > section .content-item-title   {opacity: 0; transform: translateX(200px); transition: all 1s 0.3s cubic-bezier(0, 0.51, 0.16, 1.1);}
-        .contents > section .content-item-imgWrap {opacity: 0; transform: translateY(200px) rotate(30deg) skew(20deg); transition: all 1s 0.6s cubic-bezier(0, 0.51, 0.16, 1.1);}
-        .contents > section .content-item-desc    {opacity: 0; transform: translateX(200px); transition: all 1s 0.9s cubic-bezier(0, 0.51, 0.16, 1.1);}
+        .contents > section .content-item-num   {opacity: 0; transform: translateY(200px); transition: all 1s 0.1s ease;}
+        .contents > section .content-item-title {opacity: 0; transform: translateX(200px); transition: all 1s 0.3s ease;}
+        .contents > section .content-item-img   {opacity: 0; transform: translateY(200px); transition: all 1s 0.6s ease;}
+        .contents > section .content-item-dese  {opacity: 0; transform: translatex(200px); transition: all 1s 0.9s ease;}
 
-        .contents > section.show .content-item-num     {transform: translateY(0); opacity: 1;}
-        .contents > section.show .content-item-title   {transform: translateX(0); opacity: 1;}
-        .contents > section.show .content-item-imgWrap {transform: translateY(0) rotate(0) skew(0deg); opacity: 1;}
-        .contents > section.show .content-item-desc    {transform: translateX(0); opacity: 1;}
-    </style>
+        .contents > section.show .content-item-num   {opacity: .07; transform: translateY(0px);}
+        .contents > section.show .content-item-title {opacity: 1; transform: translateX(0px);}
+        .contents > section.show .content-item-img   {opacity: 1; transform: translateY(0px);}
+        .contents > section.show .content-item-dese  {opacity: 1; transform: translatex(0px);}
+
+     </style>
 </head>
 <body>
-
     <div class="info left">
         <h1>Parallax Effext01 - jQuery</h1>
         <p>패랠랙스 스크로링 효과 -기본</p>
@@ -223,158 +234,103 @@
             </div>
         </section>
     </main>
+    <!-- //main -->
     
-    <!-- script -->
-    <script src="../assets/js/jquery-1.9.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"></script>
     <script>
         $(window).scroll(function(){
-            const scrollTop = $(window).scrollTop() + $(window).height() / 2;
+            const scrotllTop = $(window).scrollTop() + $(window).height();
+            // console.log(parseInt(scrotllTop)); 
 
             //출력용
-            $(".scrollTop").text(parseInt(scrollTop));
+            $(".scrollTop").text(parseInt(scrotllTop)); //정수화 시킨 스크롤탑 값
+            $(".s1OffsetTop").text(parseInt($("#section1").offset().top));
+            $(".s2OffsetTop").text(parseInt($("#section2").offset().top));
+            $(".s3OffsetTop").text(parseInt($("#section3").offset().top));
+            $(".s4OffsetTop").text(parseInt($("#section4").offset().top));
+            $(".s5OffsetTop").text(parseInt($("#section5").offset().top));
+            $(".s6OffsetTop").text(parseInt($("#section6").offset().top));
+            $(".s7OffsetTop").text(parseInt($("#section7").offset().top));
+            $(".s8OffsetTop").text(parseInt($("#section8").offset().top));
+            $(".s9OffsetTop").text(parseInt($("#section9").offset().top));
 
-            $(".s1OffsetTop").text(parseInt($("#section1").offset().top)); 
-            $(".s2OffsetTop").text(parseInt($("#section2").offset().top)); 
-            $(".s3OffsetTop").text(parseInt($("#section3").offset().top)); 
-            $(".s4OffsetTop").text(parseInt($("#section4").offset().top)); 
-            $(".s5OffsetTop").text(parseInt($("#section5").offset().top)); 
-            $(".s6OffsetTop").text(parseInt($("#section6").offset().top)); 
-            $(".s7OffsetTop").text(parseInt($("#section7").offset().top)); 
-            $(".s8OffsetTop").text(parseInt($("#section8").offset().top)); 
-            $(".s9OffsetTop").text(parseInt($("#section9").offset().top)); 
+            //출력용(오프셋값과 스크롤탑값을 레드-화이트로 구별)
+            if(scrotllTop >  $("#section1").offset().top ){ //스크롤탑값이 오프셋값을 넘어가면 빨간색으로 글자가 바뀜
+                $(".s1OffsetTop").css("color","red");
+            }else {
+                $(".s1OffsetTop").css("color","white");
+            }
+            if(scrotllTop >  $("#section2").offset().top ){
+                $(".s2OffsetTop").css("color","red");
+            }else {
+                $(".s2OffsetTop").css("color","white");
+            }
+            if(scrotllTop >  $("#section3").offset().top ){
+                $(".s3OffsetTop").css("color","red");
+            }else {
+                $(".s3OffsetTop").css("color","white");
+            }
+            if(scrotllTop >  $("#section4").offset().top ){
+                $(".s4OffsetTop").css("color","red");
+            }else {
+                $(".s4OffsetTop").css("color","white");
+            }
+            if(scrotllTop >  $("#section5").offset().top ){
+                $(".s5OffsetTop").css("color","red");
+            }else {
+                $(".s5OffsetTop").css("color","white");
+            }
+            if(scrotllTop >  $("#section6").offset().top ){
+                $(".s6OffsetTop").css("color","red");
+            }else {
+                $(".s6OffsetTop").css("color","white");
+            }
+            if(scrotllTop >  $("#section7").offset().top ){
+                $(".s7OffsetTop").css("color","red");
+            }else {
+                $(".s7OffsetTop").css("color","white");
+            }
+            if(scrotllTop >  $("#section8").offset().top ){
+                $(".s8OffsetTop").css("color","red");
+            }else {
+                $(".s8OffsetTop").css("color","white");
+            }
+            if(scrotllTop >  $("#section9").offset().top ){
+                $(".s9OffsetTop").css("color","red");
+            }else {
+                $(".s8OffsetTop").css("color","white");
+            }
 
-            // //출력용(글씨색) 
-            // if (scrollTop > $("#section1").offset().top) {
-            //     $(".s1OffsetTop").css("color","red");
-            // } else {
-            //     $(".s1OffsetTop").css("color","white");
-            // }
-            // if (scrollTop > $("#section2").offset().top) {
-            //     $(".s2OffsetTop").css("color","red");
-            // } else {
-            //     $(".s2OffsetTop").css("color","white");
-            // }
-            // if (scrollTop > $("#section3").offset().top) {
-            //     $(".s3OffsetTop").css("color","red");
-            // } else {
-            //     $(".s3OffsetTop").css("color","white");
-            // }
-            // if (scrollTop > $("#section4").offset().top) {
-            //     $(".s4OffsetTop").css("color","red");
-            // } else {
-            //     $(".s4OffsetTop").css("color","white");
-            // }
-            // if (scrollTop > $("#section5").offset().top) {
-            //     $(".s5OffsetTop").css("color","red");
-            // } else {
-            //     $(".s5OffsetTop").css("color","white");
-            // }
-            // if (scrollTop > $("#section6").offset().top) {
-            //     $(".s6OffsetTop").css("color","red");
-            // } else {
-            //     $(".s6OffsetTop").css("color","white");
-            // }
-            // if (scrollTop > $("#section7").offset().top) {
-            //     $(".s7OffsetTop").css("color","red");
-            // } else {
-            //     $(".s7OffsetTop").css("color","white");
-            // }
-            // if (scrollTop > $("#section8").offset().top) {
-            //     $(".s8OffsetTop").css("color","red");
-            // } else {
-            //     $(".s8OffsetTop").css("color","white");
-            // }
-            // if (scrollTop > $("#section9").offset().top) {
-            //     $(".s9OffsetTop").css("color","red");
-            // } else {
-            //     $(".s9OffsetTop").css("color","white");
-            // } 
-
-            // //나타나기
-            // if( scrollTop >  $("#section1").offset().top ){
-            //     $("#section1").addClass("show");
-            // } else {
-            //     $("#section1").removeClass("show");
-            // }
-            // if( scrollTop >  $("#section2").offset().top ){
-            //     $("#section2").addClass("show");
-            // } else {
-            //     $("#section2").removeClass("show");
-            // }
-            // if( scrollTop >  $("#section3").offset().top ){
-            //     $("#section3").addClass("show");
-            // } else {
-            //     $("#section3").removeClass("show");
-            // }
-            // if( scrollTop >  $("#section4").offset().top ){
-            //     $("#section4").addClass("show");
-            // } else {
-            //     $("#section4").removeClass("show");
-            // }
-            // if( scrollTop >  $("#section5").offset().top ){
-            //     $("#section5").addClass("show");
-            // } else {
-            //     $("#section5").removeClass("show");
-            // }
-            // if( scrollTop >  $("#section6").offset().top ){
-            //     $("#section6").addClass("show");
-            // } else {
-            //     $("#section6").removeClass("show");
-            // }
-            // if( scrollTop >  $("#section7").offset().top ){
-            //     $("#section7").addClass("show");
-            // } else {
-            //     $("#section7").removeClass("show");
-            // }
-            // if( scrollTop >  $("#section8").offset().top ){
-            //     $("#section8").addClass("show");
-            // } else {
-            //     $("#section8").removeClass("show");
-            // }
-            // if( scrollTop >  $("#section9").offset().top ){
-            //     $("#section9").addClass("show");
-            // } else {
-            //     $("#section9").removeClass("show");
-            // }
-
-            // //for문 
-            // $(window).scroll(function(){
-            //     const scrollTop = $(window).scrollTop() + $(window).height()/2;
-            //     $(".scrollTop").text(parseInt(scrollTop));
-
-            //     for(let i=1; i<=9; i++){
-            //         $(".s"+i+"OffsetTop").text( parseInt($("#section"+i).offset().top) );
-            //         if (scrollTop > $("#section"+i).offset().top) {
-            //             $(".s"+i+"OffsetTop").css("color","red");
-            //             $("#section"+i).addClass("show");
-            //         } else {
-            //         $(".s"+i+"OffsetTop").css("color","white");
-            //         $("#section"+i).removeClass("show");
-            //         }
-            //     }
-            // });
-
-            // each() 
-            $(window).scroll(function(){
-                    const scrollTop = $(window).scrollTop();
-                    $(".scrollTop").text(parseInt(scrollTop));
-
-                    $(".content-item").each(function(num){
-                        $(".s"+(num+1)+"OffsetTop").text( parseInt($("#section"+(num+1)).offset().top) );
-                        if( scrollTop > $(this).offset().top ){
-                            $(".s"+(num+1)+"OffsetTop").css("color","red");
-                            $(this).addClass("show");
-                        } else {
-                            $(".s"+(num+1)+"OffsetTop").css("color","white");
-                            $(this).removeClass("show");
-                        }
-                    });
-                });
-        });  
-        
-        
-        
-            
+            //나타나기
+            if(scrotllTop >  $("#section1").offset().top ){
+                $("#section1").addClass("show");
+            }
+            if(scrotllTop >  $("#section2").offset().top ){
+                $("#section2").addClass("show");
+            }
+            if(scrotllTop >  $("#section3").offset().top ){
+                $("#section3").addClass("show");
+            }
+            if(scrotllTop >  $("#section4").offset().top ){
+                $("#section4").addClass("show");
+            }
+            if(scrotllTop >  $("#section5").offset().top ){
+                $("#section5").addClass("show");
+            }
+            if(scrotllTop >  $("#section6").offset().top ){
+                $("#section6").addClass("show");
+            }
+            if(scrotllTop >  $("#section7").offset().top ){
+                $("#section7").addClass("show");
+            }
+            if(scrotllTop >  $("#section8").offset().top ){
+                $("#section8").addClass("show");
+            }
+            if(scrotllTop >  $("#section9").offset().top ){
+                $("#section9").addClass("show");
+            }
+        });
     </script>
 </body>
 </html>
