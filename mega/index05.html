@@ -148,7 +148,7 @@
         <div class="container">
             <div class="row">
                 <div class="movie">
-                    <h2 class="ir_so">최신 영화 정보</h2>
+                    <h2 class="ir_so">영화 예매</h2>
                     <div class="movie_title">
                         <ul>
                             <li class="active"><a href="#">박스오피스</a></li>
@@ -191,7 +191,7 @@
                                         </div>
                                     </div>
                                     <div class="infor">
-                                        <h3><span class="icon a12 ir_pm">전체관란가</span> <strong>침묵</strong></h3>
+                                        <h3><span class="icon a12 ir_pm">12세</span> <strong>침묵</strong></h3>
                                         <div class="infor_btn">
                                             <a href="#">상세보기</a>
                                             <a href="#">예매하기</a>
@@ -311,7 +311,7 @@
                                         </div>
                                     </div>
                                     <div class="infor">
-                                        <h3><span class="icon a19 ir_pm">19세 이상 관람</span> <strong>신세계</strong></h3>
+                                        <h3><span class="icon a19 ir_pm">19세 이상 관람</span><strong>신세계</strong></h3>
                                         <div class="infor_btn">
                                             <a href="#">상세정보</a>
                                             <a href="#">예매하기</a>
@@ -676,15 +676,33 @@
         });
 
         //영화차트 이미지 슬라이드
-        var mySwiper = new Swiper('.swiper-container2', {
+        var swiper = new Swiper('.swiper-container2',{
             slidesPerView: 4,
             spaceBetween: 24,
-            // mousewheel: {
-            //     invert: true,
-            // },
-            // autoplay: {
-            //     delay: 5000,
-            // },
+            mousewheel: {
+                invert: true,
+            },
+            keyboard: {
+                enabled: true,
+                onlyInViewport: false,
+            },
+            autoplay: {
+                delay: 6000,
+            },
+            breakpoints: {
+                600: {
+                    slidesPerView: 1.4,
+                    spaceBetween: 24
+                },
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 24
+                },
+                960: {
+                    slidesPerView: 3,
+                    spaceBetween: 24
+                }
+            }
         });
 
          //영화차트 탭 메뉴
@@ -697,6 +715,7 @@
             e.preventDefault();
             var target = $(this);         
             var index = target.index();  
+            
             movBtn.removeClass("active");   
             target.addClass("active");    
             movCont.css("display","none");
