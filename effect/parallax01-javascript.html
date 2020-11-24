@@ -31,7 +31,7 @@
         /* 인포 */
         .info {position:fixed; z-index: 1000;}
         .info.left {left: 20px; top: 20px;}
-        .info.right {right: 20px; top: 20px;}
+        .info.right {right: 20px; top: 20px;}.
         .info.bottom {right: 20px; bottom: 20px;}
         .info h1 {font-size: 2em; line-height: 1.4;}
         .info p {font-size: 1rem;}
@@ -245,12 +245,12 @@
     
     <script>
         window.addEventListener("scroll",()=>{
-            let pageYOffset = window.pageYOffset
+            let pageYOffset = window.pageYOffset+ screen.height;
 
             // console.log(parseInt(pageYOffset));
 
             // 출력용
-            document.querySelector(".pageYOffset").textContent = parseInt(pageYOffset) + screen.height;
+            document.querySelector(".pageYOffset").textContent = parseInt(pageYOffset) 
             document.querySelector(".s1OffsetTop").textContent = document.getElementById("section1").offsetTop;
             document.querySelector(".s2OffsetTop").textContent = document.getElementById("section2").offsetTop;
             document.querySelector(".s3OffsetTop").textContent = document.getElementById("section3").offsetTop;

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLOVA-3</title>
+    <style>
+         /* 리셋 */
+       *{margin: 0; padding: 0;}
+       ul,li {list-style: none;}
+       a, em {text-decoration: none; color: #fff; font-style: normal;}
+       
+
+       /* 폰트 */
+       @font-face {
+        font-family: 'NanumBarunGothic';
+        font-style: normal;
+        font-weight: 400;
+        src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot');
+        src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot?#iefix') format('embedded-opentype'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.woff') format('woff'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.ttf') format('truetype');
+        }
+
+        @font-face {
+        font-family: 'NanumBarunGothic';
+        font-style: normal;
+        font-weight: 700;
+        src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.eot');
+        src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.eot?#iefix') format('embedded-opentype'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.woff') format('woff'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.ttf') format('truetype')
+        }
+
+        @font-face {
+        font-family: 'NanumBarunGothic';
+        font-style: normal;
+        font-weight: 300;
+        src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.eot');
+        src: url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.eot?#iefix') format('embedded-opentype'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.woff') format('woff'), url('//cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.ttf') format('truetype');
+        }
+
+        .nanumbarungothic * {
+        font-family: 'NanumBarunGothic', sans-serif;
+        }
+
+        /* 레이아웃 */
+       #wrap {width: 100%;}
+       #header {width: 100%; height: 100px; background: #000;}
+       #banner {width: 100%; height: 436px; background: #fff;}
+       #content {width: 100%; height: 1500px;}
+       #footer {width: 100%; height: 105px; background: #000;}
+
+       .container {width: 920px; height: inherit; background: rgba(0,0,0,0); margin: 0 auto;}
+
+       /* 헤더 */
+       .header {position: relative; top: 45%;}
+       .header .logo {display: block; position: absolute; left: 0; top: 0; width: 150px; height: 30px; background: url(img/1120_logo.png), -4px -62px, no-repeat}
+       .header ul {position: absolute; left: 25%; top: 200%;}
+       .header li {display: inline; margin-right: 30px;}
+       .header .header_btn {position: absolute; top: 200%; right: 0;}
+       .header .header_btn .header_btn1 {border: 1px solid #fff; padding: 5px; border-radius: 5px;}
+       .header .header_btn .header_btn2 {border: 1px solid #fff; padding: 5px; border-radius: 5px;}
+
+       /* 배너 */
+       .banner {position: relative;}
+       .banner h1 {text-align: center; padding-top: 100px;}
+       .banner h1 em {color: #01be75;}
+       .banner > a { background: #05d686; color: #fff; padding: 10px; border-radius: 5px; text-align: center;
+                    position: absolute; top: 150%; left: 50%; transform: translate(-50%, -50%);}
+
+        /* 컨텐츠 */
+        .content {overflow: hidden;}
+        .content ul {}
+        .content ul li {border: 1px solid #ccc; width: 170px; height: 170px; margin-right: -1px; margin-bottom: -1px;}
+        .content ul li:nth-child(1) {float: left; background: url(https://static-clova.pstatic.net/static/70fd2ea/img/partner/dy_media.png) center center; background-size: cover;}
+        .content ul li:nth-child(2) {float: left; background: url(https://static-clova.pstatic.net/static/70fd2ea/img/partner/partner_logo_1.png) center center; background-size: cover;}
+        .content ul li:nth-child(3) {float: left; background: url(https://static-clova.pstatic.net/static/70fd2ea/img/partner/partner_logo_2.png) center center; background-size: cover;}
+        .content ul li:nth-child(4) {float: left; background: url(https://static-clova.pstatic.net/static/70fd2ea/img/partner/partner_logo_3.png) center center; background-size: cover;}
+        .content ul li:nth-child(5) {float: left; background: url(https://static-clova.pstatic.net/static/70fd2ea/img/partner/partner_logo_4.png) center center; background-size: cover;}
+
+        .content ul li:nth-child(6) {float: left; background: url(https://static-clova.pstatic.net/static/70fd2ea/img/partner/partner_logo_5.png) center center; background-size: cover;}
+        .content ul li:nth-child(7) {float: left; background: url(https://static-clova.pstatic.net/static/70fd2ea/img/partner/partner_logo_6.png) center center; background-size: cover;}
+        .content ul li:nth-child(8) {float: left; background: url(https://static-clova.pstatic.net/static/70fd2ea/img/partner/partner_logo_7.png) center center; background-size: cover;}
+        .content ul li:nth-child(9) {float: left; background: url(https://static-clova.pstatic.net/static/70fd2ea/img/partner/partner_logo_8.png) center center; background-size: cover;}
+        .content ul li:nth-child(10) {float: left; background: url(https://static-clova.pstatic.net/static/70fd2ea/img/partner/partner_logo_9.png) center center; background-size: cover;}
+
+        .content ul li:nth-child(11) {float: left; background: url(https://static-clova.pstatic.net/static/70fd2ea/img/partner/partner_logo_10.png) center center; background-size: cover;}
+        .content ul li:nth-child(12) {float: left; background: url(https://static-clova.pstatic.net/static/70fd2ea/img/partner/partner_logo_11.png) center center; background-size: cover;}
+        .content ul li:nth-child(13) {float: left; background: url(https://static-clova.pstatic.net/static/70fd2ea/img/partner/partner_logo_12.png) center center; background-size: cover;}
+        .content ul li:nth-child(14) {float: left; background: url(https://static-clova.pstatic.net/static/70fd2ea/img/partner/partner_logo_13.png) center center; background-size: cover;}
+        .content ul li:nth-child(15) {float: left; background: url(https://static-clova.pstatic.net/static/70fd2ea/img/partner/partner_logo_14.png) center center; background-size: cover;}
+
+        .content ul li:nth-child(16) {float: left; background: url(https://static-clova.pstatic.net/static/70fd2ea/img/partner/partner_logo_15.png) center center; background-size: cover;}
+        .content ul li:nth-child(17) {float: left; background: url(https://static-clova.pstatic.net/static/70fd2ea/img/partner/partner_logo_16.png) center center; background-size: cover;}
+        .content ul li:nth-child(18) {float: left; background: url(https://static-clova.pstatic.net/static/70fd2ea/img/partner/partner_logo_17.png) center center; background-size: cover;}
+        .content ul li:nth-child(19) {float: left; background: url(https://static-clova.pstatic.net/static/70fd2ea/img/partner/partner_logo_18.png) center center; background-size: cover;}
+        .content ul li:nth-child(20) {float: left; background: url(https://static-clova.pstatic.net/static/70fd2ea/img/partner/partner_logo_19.png) center center; background-size: cover;}
+
+        .content ul li:nth-child(21) {float: left; background: url(https://static-clova.pstatic.net/static/70fd2ea/img/partner/partner_logo_20.png) center center; background-size: cover;}
+        .content ul li:nth-child(22) {float: left; background: url(https://static-clova.pstatic.net/static/70fd2ea/img/partner/partner_logo_21.png) center center; background-size: cover;}
+        .content ul li:nth-child(23) {float: left; background: url(https://static-clova.pstatic.net/static/70fd2ea/img/partner/partner_logo_22.png) center center; background-size: cover;}
+        .content ul li:nth-child(24) {float: left; background: url(https://static-clova.pstatic.net/static/70fd2ea/img/partner/partner_logo_23.png) center center; background-size: cover;}
+        .content ul li:nth-child(25) {float: left; background: url(https://static-clova.pstatic.net/static/70fd2ea/img/partner/partner_logo_24.png) center center; background-size: cover;}
+
+        .content ul li:nth-child(26) {float: left; background: url(https://static-clova.pstatic.net/static/70fd2ea/img/partner/partner_logo_25.png) center center; background-size: cover;}
+        .content ul li:nth-child(27) {float: left; background: url(https://static-clova.pstatic.net/static/70fd2ea/img/partner/partner_logo_26.png) center center; background-size: cover;}
+        .content ul li:nth-child(28) {float: left; background: url(https://static-clova.pstatic.net/static/70fd2ea/img/partner/partner_logo_27.png) center center; background-size: cover;}
+        .content ul li:nth-child(29) {float: left; background: url(https://static-clova.pstatic.net/static/70fd2ea/img/partner/partner_logo_28.png) center center; background-size: cover;}
+        .content ul li:nth-child(30) {float: left; background: url(https://static-clova.pstatic.net/static/70fd2ea/img/partner/partner_logo_29.png) center center; background-size: cover;}
+
+        .content ul li:nth-child(31) {float: left; background: url(https://static-clova.pstatic.net/static/70fd2ea/img/partner/partner_logo_28.png) center center; background-size: cover;}
+        .content ul li:nth-child(32) {float: left; background: url(https://static-clova.pstatic.net/static/70fd2ea/img/partner/partner_logo_31.png) center center; background-size: cover;}
+        .content ul li:nth-child(33) {float: left; background: url(https://static-clova.pstatic.net/static/70fd2ea/img/partner/partner_logo_32.png) center center; background-size: cover;}
+        .content ul li:nth-child(34) {float: left; background: url(https://static-clova.pstatic.net/static/70fd2ea/img/partner/partner_logo_33.png) center center; background-size: cover;}
+        .content ul li:nth-child(35) {float: left; background: url(https://static-clova.pstatic.net/static/70fd2ea/img/partner/partner_logo_31.png) center center; background-size: cover;}
+
+        .content ul li:nth-child(36) {float: left; background: url(https://static-clova.pstatic.net/static/70fd2ea/img/partner/partner_logo_10.png) center center; background-size: cover;}
+        .content ul li:nth-child(37) {float: left; background: url(https://static-clova.pstatic.net/static/70fd2ea/img/partner/partner_logo_1.png) center center; background-size: cover;}
+        .content ul li:nth-child(38) {float: left; background: url(https://static-clova.pstatic.net/static/70fd2ea/img/partner/partner_logo_2.png) center center; background-size: cover;}
+        
+        
+        /* 푸터 */
+        .footer {}
+        .footer_logo {padding-top: 10px; width: 145px; height: 20px; background: url(img/1120_logo.png) no-repeat -4px -34px;}
+        .footer ul {padding-top: 10px;}
+        .footer ul li {display: inline-block; color: gray; font-size: 13px;}
+        .footer ul li:nth-child(1) {margin:0 10px 0 0px;}
+        .footer ul li:nth-child(3) {margin: 0 120px 0 140px;}
+        .footer ul li:nth-child(4) {margin-right: 10px;}
+        .footer ul li:nth-child(5) {margin-right: 10px;}
+        .footer ul li:nth-child(6) {margin-right: 10px;}
+        .footer ul li:nth-child(7) {margin-right: 10px;}
+
+      
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+            <div class="container">
+                <div class="header">
+                    <h1 class="logo"></h1>
+                    <ul>
+                        <li><a href="#">기술/솔루션</a></li>
+                        <li><a href="#">제품</a></li>
+                        <li><a href="#">플랫폼</a></li>
+                        <li><a href="#">파트너</a></li>
+                        <li><a href="#">리서치</a></li>
+                    </ul>
+                    <div class="header_btn">
+                        <a href="#" class="header_btn1">Biz Start</a>
+                        <a href="#" class="header_btn2">비즈니스 문의</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- //header -->
+
+        <!-- banner -->
+        <section id="banner">
+            <div class="banner">
+                <h1><em>클로바</em>는 다양한 브랜드,<br>서비스 및 개발사들과 함께 하겠습니다.</h1>
+                <a href="#">제휴 제안 신청</a>
+            </div>
+        </section>
+        <!-- //banner -->
+
+        <!-- content -->
+        <div id="content">
+            <div class="container">
+                <section class="content">
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                 </section>
+            </div>
+        </div>
+        <!-- //content -->
+
+        <footer id="footer">
+            <div class="container">
+                <div class="footer">
+                    <div class="footer_logo"></div>
+                    <ul>
+                        <li>고객센터 1833-5387</li>
+                        <li>09:00 - 18:00 (주말, 공휴일 휴무) </li>
+                        <li>Powered by NAVER · LINE</li>
+                        <li>공지사항</li>
+                        <li>이용약관</li>
+                        <li>CLOVA채용안내</li>
+                        <li>CLOVA JP</li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        <!-- /footer -->
+    </div>
+    <!-- //wrap -->
+</body>
+</html>

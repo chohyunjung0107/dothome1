@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Parallax01 - jquery</title>
+    <title>Slider Effect02 - jquery</title>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
     <style>
         @font-face {
@@ -59,8 +59,9 @@
         color: var(--color-title);
         font-family: var(--font-family);
         font-style: 16px;
-        background: url(img/images13@2.jpg);
+        background: url(img/images10@2.jpg) no-repeat center center;
         background-size: cover;
+        height: 100vh;
         }
         body:before {
             content: '';
@@ -72,45 +73,43 @@
 
         /* slider */
         .slider-wrap {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+            width: 800px; height: 480px; 
+            overflow: hidden;
+            position: absolute;
+            left: 50%; top: 50%; 
+            transform: translate(-50%, -50%);
+            z-index: 100;
         }
         .slider-img {
-            position: relative;
-            width: 800px; height: 480px;
             overflow: hidden;
-            box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.5);
-           
+            width: 4000px; height: 480px;
+            position: relative;
+
         }
-        .slider-img .slider {
-            position: absolute;
-            left: 0; top: 0; 
-            
+        .slider-img .slider{
+            width: 800px; height: 480px;
+            float: left;
+            position: relative;
         }
         .slider-img .slider span {
             position: absolute;
             left: 5px; top: 5px;
         }
-        .slider-img .slider:nth-child(1) {z-index: 5;}
-        .slider-img .slider:nth-child(2) {z-index: 4;}
-        .slider-img .slider:nth-child(3) {z-index: 3;}
-        .slider-img .slider:nth-child(4) {z-index: 2;}
-        .slider-img .slider:nth-child(5) {z-index: 1;}
+        
+        
 
     </style>
 </head>
 <body>
 
     <div class="info left">
-        <h1>SliderEffect01 - jQuery</h1>
-        <p>이미지 슬라이드 - 3초에 한 번씩 변경</p>
+        <h1>SliderEffect02 - jQuery</h1>
+        <p>이미지 슬라이드 - 가로로 이동하기</p>
     </div>
     <div class="info right">
         <ul>
-            <li><a href="sliderEffect01-jquery.html" class="active">1</a><a href="sliderEffect01-javascript.html">1</a></li>
-            <li><a href="sliderEffect02-jquery.html">2</a><a href="sliderEffect02-javascript.html">2</a></li>
+            <li><a href="sliderEffect01-jquery.html">1</a><a href="sliderEffect01-javascript.html">1</a></li>
+            <li><a href="sliderEffect02-jquery.html"  class="active">2</a><a href="sliderEffect02-javascript.html">2</a></li>
             <li><a href="sliderEffect03-jquery.html">3</a><a href="sliderEffect03-javascript.html">3</a></li>
             <li><a href="sliderEffect04-jquery.html">4</a><a href="sliderEffect04-javascript.html">4</a></li>
             <li><a href="sliderEffect05-jquery.html">5</a><a href="sliderEffect05-javascript.html">5</a></li>
@@ -144,22 +143,30 @@
         const sliderImg = $(".slider-img");
         const slider = $(".slider");
 
-        let currentIndex = 0;            //현재 첫 번째 보이는 이미지
-        let sliderCount = slider.length; //이미지 갯수
+        let currentIndex = 0; //현재 보이는 이미지 
+        let sliderCount = slider.length; //총 이미지 갯수
 
-        //3초에 한 번씩 함수 실행 
         setInterval(function(){
-            let nextIndex = (currentIndex + 1) % sliderCount; // 이미지 인덱스를 증감시켜 슬라이드 이미지를 바꿔 줌  
 
-            slider.eq(currentIndex).fadeOut() //3초 후, 첫 번째 이미지를 사라지게 함
-            slider.eq(nextIndex).fadeIn()   //1번째 이미지를 안보이게 하고 2번째 이미지를 보이게 만듦
+            // if(currentIndex<sliderCount - 1){
+            //     currentIndex++ //0 1 2 3 4 0
+            // }else {
+            //     currentIndex = 0;
+            // }
+            currentIndex < sliderCount - 1 ? currentIndex++ : currentIndex = 0; //삼항연산자로 if문을 간략하게 써줌 
 
-            //currentIndex++;
-            currentIndex = nextIndex; //앞서 증감식을 세워둔 nextIndex의 값을 currentIndex와 같게 변동시켜줌 
+            let sliderPosition = currentIndex * (-800) + "px";
+                                // 0 =   0 * -800px -> 0
+                                // 1 =   1 * -800px -> -800px
+                                // 2 =   2 * -800px -> -1600px(3번째 이미지)
+                                // 3 =   3 * -800px -> -2400px(4번째 이미지)
+            sliderImg.animate({ left: sliderPosition },400);
+            
+            // console.log("currentIndex :" + currentIndex);
+            // console.log("sliderPosition :" + sliderPosition);
+        }, 3000);
 
-            console.log("currentIndex: " + currentIndex);
-            console.log("nextIndex: " + nextIndex); 
-        },3000);
+
     </script>
 </body>
 </html>

@@ -48,7 +48,7 @@
         --color-title : #fff; 
         --color-sub : #999; 
         --color-link : #000; 
-        --color-bg : #111; 
+        --color-bg : #888; 
         --font-family : 'Lato', 'Chosu'
 
         --font-cafe: 'GongGothicMedium';
@@ -57,11 +57,12 @@
         background: var(--color-bg); 
         color: var(--color-title);
         font-family: var(--font-family);
+        --aspect-ratio: 33/17;
         }
         #parallax-wrap h1 {color: var(--color-h1); font-family: var(--font-lato); font-size: 8vw; font-weight: 900; text-transform: uppercase; padding: 10vw 8vw 0 8vw;}
         #parallax-wrap h1 em {display: block; font-weight: 100; padding-left: 18vw;}
 
-        .content {margin: 0 auto 35vh; width: 100%;} 
+        .content {margin: 0 auto 35vh; width: 100%; overflow: hidden;} 
         .content-item {position: relative; width: 1000px; max-width: 90vw; margin: 60vh 0 60vh;}
         .content-item:nth-child(even){margin-left: auto;}
 
@@ -71,8 +72,8 @@
         .content-item-title {font-size: 2vw; font-weight: 100; font-family: var(--font-lato); text-align: right;}
         .content-item:nth-child(even) .content-item-title {text-align: left;}
 
-        .content-item-imgWrap {position: relative; width: 100%; padding-bottom: 50%; }
-        .content-item-img {width: 100%; position: absolute; left: 0; top: 0; background-size: cover; height: 100%;}
+        .content-item-imgWrap {position: relative; --width: 100%; width: var(--width); /* padding-bottim: 50% */padding-bottom: calc(var(--width) / (var(--aspect-ratio))); overflow: hidden; background: red;}
+        .content-item-img {width: var(--width);  height: calc(100% + (3 * var(--overflow))); --overflow: 60px; position: absolute; left: 0; top: calc(-1 * var(--overflow)); background-size: cover; background-position: 50% 0;}
         
         .content-item-dese {font-size: 5vw; line-height: 1.4; text-align: right; word-break: keep-all; margin-right: -4vw;  margin-top: -6vw; padding-left: 10vw; z-index: 100; position: relative;}
         /* position: relative;
@@ -85,50 +86,28 @@
         img {width: 100%; vertical-align: top;}  
         /* vertical-alingn:top 여백초기화 */
 
-        .content-item:nth-child(1) .content-item-img {background: url(img/images01.jpg); background-size: cover;}
-        .content-item:nth-child(2) .content-item-img {background: url(img/images02.jpg); background-size: cover;}
-        .content-item:nth-child(3) .content-item-img {background: url(img/images03.jpg); background-size: cover;}
-        .content-item:nth-child(4) .content-item-img {background: url(img/images04.jpg); background-size: cover;}
-        .content-item:nth-child(5) .content-item-img {background: url(img/images05.jpg); background-size: cover;}
-        .content-item:nth-child(6) .content-item-img {background: url(img/images06.jpg); background-size: cover;}
-        .content-item:nth-child(7) .content-item-img {background: url(img/images07.jpg); background-size: cover;}
-        .content-item:nth-child(8) .content-item-img {background: url(img/images08.jpg); background-size: cover;}
-        .content-item:nth-child(9) .content-item-img {background: url(img/images09.jpg); background-size: cover;}
+        .content-item:nth-child(1) .content-item-img {background: url(img/images10.jpg); background-size: cover;}
+        .content-item:nth-child(2) .content-item-img {background: url(img/images11.jpg); background-size: cover;}
+        .content-item:nth-child(3) .content-item-img {background: url(img/images12.jpg); background-size: cover;}
+        .content-item:nth-child(4) .content-item-img {background: url(img/images09.jpg); background-size: cover;}
+        .content-item:nth-child(5) .content-item-img {background: url(img/images08.jpg); background-size: cover;}
+        .content-item:nth-child(6) .content-item-img {background: url(img/images07.jpg); background-size: cover;}
+        .content-item:nth-child(7) .content-item-img {background: url(img/images06.jpg); background-size: cover;}
+        .content-item:nth-child(8) .content-item-img {background: url(img/images05.jpg); background-size: cover;}
+        .content-item:nth-child(9) .content-item-img {background: url(img/images04.jpg); background-size: cover;}
 
-        /* 한 번에 나타나기
-        .contents > section {
-            opacity: 0;
-            transform: translateY(200px);
-            transition: all 1.3s;
-        }
-        .contents > section.show {
-            opacity: 1;
-            transform: translateY(0px);
-            transition: all 1s;
-        } */
-
-        /* 개별적으로 나타나기 */
-        .contents > section .content-item-num   {opacity: 0; transform: translateY(200px); transition: all 1s 0.1s ease;}
-        .contents > section .content-item-title {opacity: 0; transform: translateX(200px); transition: all 1s 0.3s ease;}
-        .contents > section .content-item-img   {opacity: 0; transform: translateY(200px); transition: all 1s 0.6s ease;}
-        .contents > section .content-item-dese  {opacity: 0; transform: translatex(200px); transition: all 1s 0.9s ease;}
-
-        .contents > section.show .content-item-num   {opacity: .07; transform: translateY(0px);}
-        .contents > section.show .content-item-title {opacity: 1; transform: translateX(0px);}
-        .contents > section.show .content-item-img   {opacity: 1; transform: translateY(0px);}
-        .contents > section.show .content-item-dese  {opacity: 1; transform: translatex(0px);}
-
+        
      </style>
 </head>
 <body>
     <div class="info left">
-        <h1>Parallax Effext01 - jQuery</h1>
-        <p>패랠랙스 스크로링 효과 -기본</p>
+        <h1>Parallax Effext01 - javascript</h1>
+        <p>패랠랙스 스크로링 효과 - 이질감 주기</p>
     </div>
     <div class="info right">
         <ul>
-            <li><a href="parallax01-jquery.html" class="active">1</a><a href="parallax01-javascript.html">1</a></li>
-            <li><a href="parallax02-jquery.html">2</a><a href="parallax02-javascript.html">2</a></li>
+            <li><a href="parallax01-jquery.html">1</a><a href="parallax01-javascript.html">1</a></li>
+            <li><a href="parallax02-jquery.html">2</a><a href="parallax02-javascript.html"  class="active">2</a></li>
             <li><a href="parallax03-jquery.html">3</a><a href="parallax03-javascript.html">3</a></li>
             <li><a href="parallax04-jquery.html">4</a><a href="parallax04-javascript.html">4</a></li>
             <li><a href="parallax05-jquery.html">5</a><a href="parallax05-javascript.html">5</a></li>
@@ -141,19 +120,10 @@
     <div class="info bottom">
         <ul>
             <li>scrollTop() : <span class="scrollTop">0</span>px</li>
-            <li>#secrion1 : <span class="s1OffsetTop">0</span>PX</li>
-            <li>#secrion2 : <span class="s2OffsetTop">0</span>PX</li>
-            <li>#secrion3 : <span class="s3OffsetTop">0</span>PX</li>
-            <li>#secrion4 : <span class="s4OffsetTop">0</span>PX</li>
-            <li>#secrion5 : <span class="s5OffsetTop">0</span>PX</li>
-            <li>#secrion6 : <span class="s6OffsetTop">0</span>PX</li>
-            <li>#secrion7 : <span class="s7OffsetTop">0</span>PX</li>
-            <li>#secrion8 : <span class="s8OffsetTop">0</span>PX</li>
-            <li>#secrion9 : <span class="s9OffsetTop">0</span>PX</li>
+            
         </ul>
     </div>
     <!-- info -->
-
 
     <main>
         <section id="parallax-wrap">
@@ -235,101 +205,46 @@
         </section>
     </main>
     <!-- //main -->
-    
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"></script>
     <script>
-        $(window).scroll(function(){
-            const scrotllTop = $(window).scrollTop() + $(window).height()/2;
-            // console.log(parseInt(scrotllTop)); 
+        window.addEventListener("scroll",()=>{
+            let pageYOffset = (window.pageYOffset || document.documentElement.scrollTop) //호환성을 맞춰주기 위해(IE)
 
-            //출력용
-            $(".scrollTop").text(parseInt(scrotllTop)); //정수화 시킨 스크롤탑 값
-            $(".s1OffsetTop").text(parseInt($("#section1").offset().top));
-            $(".s2OffsetTop").text(parseInt($("#section2").offset().top));
-            $(".s3OffsetTop").text(parseInt($("#section3").offset().top));
-            $(".s4OffsetTop").text(parseInt($("#section4").offset().top));
-            $(".s5OffsetTop").text(parseInt($("#section5").offset().top));
-            $(".s6OffsetTop").text(parseInt($("#section6").offset().top));
-            $(".s7OffsetTop").text(parseInt($("#section7").offset().top));
-            $(".s8OffsetTop").text(parseInt($("#section8").offset().top));
-            $(".s9OffsetTop").text(parseInt($("#section9").offset().top));
+            // let offset1 = (pageYOffset - document.getElementById("section1").offsetTop) * 0.2; //시작점 0 * 0.2
+            // let offset2 = (pageYOffset - document.getElementById("section2").offsetTop) * 0.2;
+            // let offset3 = (pageYOffset - document.getElementById("section3").offsetTop) * 0.2;
+            // let offset4 = (pageYOffset - document.getElementById("section4").offsetTop) * 0.2;
+            // let offset5 = (pageYOffset - document.getElementById("section5").offsetTop) * 0.2;
+            // let offset6 = (pageYOffset - document.getElementById("section6").offsetTop) * 0.2;
+            // let offset7 = (pageYOffset - document.getElementById("section7").offsetTop) * 0.2;
+            // let offset8 = (pageYOffset - document.getElementById("section8").offsetTop) * 0.2;
+            // let offset9 = (pageYOffset - document.getElementById("section9").offsetTop) * 0.2;
 
-            //출력용(오프셋값과 스크롤탑값을 레드-화이트로 구별)
-            if(scrotllTop >  $("#section1").offset().top ){ //스크롤탑값이 오프셋값을 넘어가면 빨간색으로 글자가 바뀜
-                $(".s1OffsetTop").css("color","red");
-            }else {
-                $(".s1OffsetTop").css("color","white");
-            }
-            if(scrotllTop >  $("#section2").offset().top ){
-                $(".s2OffsetTop").css("color","red");
-            }else {
-                $(".s2OffsetTop").css("color","white");
-            }
-            if(scrotllTop >  $("#section3").offset().top ){
-                $(".s3OffsetTop").css("color","red");
-            }else {
-                $(".s3OffsetTop").css("color","white");
-            }
-            if(scrotllTop >  $("#section4").offset().top ){
-                $(".s4OffsetTop").css("color","red");
-            }else {
-                $(".s4OffsetTop").css("color","white");
-            }
-            if(scrotllTop >  $("#section5").offset().top ){
-                $(".s5OffsetTop").css("color","red");
-            }else {
-                $(".s5OffsetTop").css("color","white");
-            }
-            if(scrotllTop >  $("#section6").offset().top ){
-                $(".s6OffsetTop").css("color","red");
-            }else {
-                $(".s6OffsetTop").css("color","white");
-            }
-            if(scrotllTop >  $("#section7").offset().top ){
-                $(".s7OffsetTop").css("color","red");
-            }else {
-                $(".s7OffsetTop").css("color","white");
-            }
-            if(scrotllTop >  $("#section8").offset().top ){
-                $(".s8OffsetTop").css("color","red");
-            }else {
-                $(".s8OffsetTop").css("color","white");
-            }
-            if(scrotllTop >  $("#section9").offset().top ){
-                $(".s9OffsetTop").css("color","red");
-            }else {
-                $(".s8OffsetTop").css("color","white");
-            }
+            // document.querySelector("#section1 .content-item-dese").style.transform = "translateX("+ -offset1 +"px)";
+            // document.querySelector("#section2 .content-item-dese").style.transform = "translateX("+ -offset2 +"px)";
+            // document.querySelector("#section3 .content-item-dese").style.transform = "translateX("+ -offset3 +"px)";
+            // document.querySelector("#section4 .content-item-dese").style.transform = "translateX("+ -offset4 +"px)";
+            // document.querySelector("#section5 .content-item-dese").style.transform = "translateX("+ -offset5 +"px)";
+            // document.querySelector("#section6 .content-item-dese").style.transform = "translateX("+ -offset6 +"px)";
+            // document.querySelector("#section7 .content-item-dese").style.transform = "translateX("+ -offset7 +"px)";
+            // document.querySelector("#section8 .content-item-dese").style.transform = "translateX("+ -offset8 +"px)";
+            // document.querySelector("#section9 .content-item-dese").style.transform = "translateX("+ -offset9 +"px)";
 
-            //나타나기
-            if(scrotllTop >  $("#section1").offset().top ){
-                $("#section1").addClass("show");
-            }
-            if(scrotllTop >  $("#section2").offset().top ){
-                $("#section2").addClass("show");
-            }
-            if(scrotllTop >  $("#section3").offset().top ){
-                $("#section3").addClass("show");
-            }
-            if(scrotllTop >  $("#section4").offset().top ){
-                $("#section4").addClass("show");
-            }
-            if(scrotllTop >  $("#section5").offset().top ){
-                $("#section5").addClass("show");
-            }
-            if(scrotllTop >  $("#section6").offset().top ){
-                $("#section6").addClass("show");
-            }
-            if(scrotllTop >  $("#section7").offset().top ){
-                $("#section7").addClass("show");
-            }
-            if(scrotllTop >  $("#section8").offset().top ){
-                $("#section8").addClass("show");
-            }
-            if(scrotllTop >  $("#section9").offset().top ){
-                $("#section9").addClass("show");
-            }
+            //한번에(for문)
+            // for(let i=1; i<10; i++){
+            //     let offset = (pageYOffset - document.getElementById("section"+i).offsetTop) * 0.2;
+            //     document.querySelector("#section"+i+" .content-item-dese").style.transform = "translateX("+ -offset +"px)";
+            // }
+
+            //한번에(forEach문)
+            document.querySelectorAll(".content-item").forEach((elem)=>{
+                // console.log(elem);
+                let target = elem.childNodes[7];
+                let offset = (pageYOffset - elem.offsetTop) * 0.2;
+                target.style.transform = "translateY("+ -offset +"px)";
+            });
+            
+
+           
         });
     </script>
 </body>
