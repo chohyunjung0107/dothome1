@@ -31,7 +31,7 @@
         /* 인포 */
         .info {position:fixed; z-index: 1000;}
         .info.left {left: 20px; top: 20px;}
-        .info.right {right: 20px; top: 20px;}.
+        .info.right {right: 20px; top: 20px;}
         .info.bottom {right: 20px; bottom: 20px;}
         .info h1 {font-size: 2em; line-height: 1.4;}
         .info p {font-size: 1rem;}
@@ -245,116 +245,138 @@
     
     <script>
         window.addEventListener("scroll",()=>{
-            let pageYOffset = window.pageYOffset+ screen.height;
+            let pageYOffset = window.pageYOffset+ screen.height/2;
 
             // console.log(parseInt(pageYOffset));
 
             // 출력용
             document.querySelector(".pageYOffset").textContent = parseInt(pageYOffset) 
-            document.querySelector(".s1OffsetTop").textContent = document.getElementById("section1").offsetTop;
-            document.querySelector(".s2OffsetTop").textContent = document.getElementById("section2").offsetTop;
-            document.querySelector(".s3OffsetTop").textContent = document.getElementById("section3").offsetTop;
-            document.querySelector(".s4OffsetTop").textContent = document.getElementById("section4").offsetTop;
-            document.querySelector(".s5OffsetTop").textContent = document.getElementById("section5").offsetTop;
-            document.querySelector(".s6OffsetTop").textContent = document.getElementById("section6").offsetTop;
-            document.querySelector(".s7OffsetTop").textContent = document.getElementById("section7").offsetTop;
-            document.querySelector(".s8OffsetTop").textContent = document.getElementById("section8").offsetTop;
-            document.querySelector(".s9OffsetTop").textContent = document.getElementById("section9").offsetTop;
+            // document.querySelector(".s1OffsetTop").textContent = document.getElementById("section1").offsetTop;
+            // document.querySelector(".s2OffsetTop").textContent = document.getElementById("section2").offsetTop;
+            // document.querySelector(".s3OffsetTop").textContent = document.getElementById("section3").offsetTop;
+            // document.querySelector(".s4OffsetTop").textContent = document.getElementById("section4").offsetTop;
+            // document.querySelector(".s5OffsetTop").textContent = document.getElementById("section5").offsetTop;
+            // document.querySelector(".s6OffsetTop").textContent = document.getElementById("section6").offsetTop;
+            // document.querySelector(".s7OffsetTop").textContent = document.getElementById("section7").offsetTop;
+            // document.querySelector(".s8OffsetTop").textContent = document.getElementById("section8").offsetTop;
+            // document.querySelector(".s9OffsetTop").textContent = document.getElementById("section9").offsetTop;
 
             //출력용(레드)
 
-            if(pageYOffset > document.getElementById("section1").offsetTop){
-                document.querySelector(".s1OffsetTop").style.color = "red";
-            }else {
-                document.querySelector(".s1OffsetTop").style.color = "black";
-            }
-            if(pageYOffset > document.getElementById("section2").offsetTop){
-                document.querySelector(".s2OffsetTop").style.color = "red";
-            }else {
-                document.querySelector(".s2OffsetTop").style.color = "black";
-            }
-            if(pageYOffset > document.getElementById("section3").offsetTop){
-                document.querySelector(".s3OffsetTop").style.color = "red";
-            }else {
-                document.querySelector(".s3OffsetTop").style.color = "black";
-            }
-            if(pageYOffset > document.getElementById("section4").offsetTop){
-                document.querySelector(".s4OffsetTop").style.color = "red";
-            }else {
-                document.querySelector(".s4OffsetTop").style.color = "black";
-            }
-            if(pageYOffset > document.getElementById("section5").offsetTop){
-                document.querySelector(".s5OffsetTop").style.color = "red";
-            }else {
-                document.querySelector(".s5OffsetTop").style.color = "black";
-            }
-            if(pageYOffset > document.getElementById("section6").offsetTop){
-                document.querySelector(".s6OffsetTop").style.color = "red";
-            }else {
-                document.querySelector(".s6OffsetTop").style.color = "black";
-            }
-            if(pageYOffset > document.getElementById("section7").offsetTop){
-                document.querySelector(".s7OffsetTop").style.color = "red";
-            }else {
-                document.querySelector(".s7OffsetTop").style.color = "black";
-            }
-            if(pageYOffset > document.getElementById("section8").offsetTop){
-                document.querySelector(".s8OffsetTop").style.color = "red";
-            }else {
-                document.querySelector(".s8OffsetTop").style.color = "black";
-            }
-            if(pageYOffset > document.getElementById("section9").offsetTop){
-                document.querySelector(".s9OffsetTop").style.color = "red";
-            }else {
-                document.querySelector(".s9OffsetTop").style.color = "black";
+            // if(pageYOffset > document.getElementById("section1").offsetTop){
+            //     document.querySelector(".s1OffsetTop").style.color = "red";
+            // }else {
+            //     document.querySelector(".s1OffsetTop").style.color = "black";
+            // }
+            // if(pageYOffset > document.getElementById("section2").offsetTop){
+            //     document.querySelector(".s2OffsetTop").style.color = "red";
+            // }else {
+            //     document.querySelector(".s2OffsetTop").style.color = "black";
+            // }
+            // if(pageYOffset > document.getElementById("section3").offsetTop){
+            //     document.querySelector(".s3OffsetTop").style.color = "red";
+            // }else {
+            //     document.querySelector(".s3OffsetTop").style.color = "black";
+            // }
+            // if(pageYOffset > document.getElementById("section4").offsetTop){
+            //     document.querySelector(".s4OffsetTop").style.color = "red";
+            // }else {
+            //     document.querySelector(".s4OffsetTop").style.color = "black";
+            // }
+            // if(pageYOffset > document.getElementById("section5").offsetTop){
+            //     document.querySelector(".s5OffsetTop").style.color = "red";
+            // }else {
+            //     document.querySelector(".s5OffsetTop").style.color = "black";
+            // }
+            // if(pageYOffset > document.getElementById("section6").offsetTop){
+            //     document.querySelector(".s6OffsetTop").style.color = "red";
+            // }else {
+            //     document.querySelector(".s6OffsetTop").style.color = "black";
+            // }
+            // if(pageYOffset > document.getElementById("section7").offsetTop){
+            //     document.querySelector(".s7OffsetTop").style.color = "red";
+            // }else {
+            //     document.querySelector(".s7OffsetTop").style.color = "black";
+            // }
+            // if(pageYOffset > document.getElementById("section8").offsetTop){
+            //     document.querySelector(".s8OffsetTop").style.color = "red";
+            // }else {
+            //     document.querySelector(".s8OffsetTop").style.color = "black";
+            // }
+            // if(pageYOffset > document.getElementById("section9").offsetTop){
+            //     document.querySelector(".s9OffsetTop").style.color = "red";
+            // }else {
+            //     document.querySelector(".s9OffsetTop").style.color = "black";
+            // }
+
+            //나타나기
+            // if(pageYOffset > document.getElementById("section1").offsetTop){
+            //     document.getElementById("section1").classList.add("show");
+            // }else{
+            //     document.getElementById("section1").classList.remove("show");
+            // }
+            // if(pageYOffset > document.getElementById("section2").offsetTop){
+            //     document.getElementById("section2").classList.add("show");
+            // }else{
+            //     document.getElementById("section2").classList.remove("show");
+            // }
+            // if(pageYOffset > document.getElementById("section3").offsetTop){
+            //     document.getElementById("section3").classList.add("show");
+            // }else{
+            //     document.getElementById("section3").classList.remove("show");
+            // }
+            // if(pageYOffset > document.getElementById("section4").offsetTop){
+            //     document.getElementById("section4").classList.add("show");
+            // }else{
+            //     document.getElementById("section4").classList.remove("show");
+            // }
+            // if(pageYOffset > document.getElementById("section5").offsetTop){
+            //     document.getElementById("section5").classList.add("show");
+            // }else{
+            //     document.getElementById("section5").classList.remove("show");
+            // }
+            // if(pageYOffset > document.getElementById("section6").offsetTop){
+            //     document.getElementById("section6").classList.add("show");
+            // }else{
+            //     document.getElementById("section6").classList.remove("show");
+            // }
+            // if(pageYOffset > document.getElementById("section7").offsetTop){
+            //     document.getElementById("section7").classList.add("show");
+            // }else{
+            //     document.getElementById("section7").classList.remove("show");
+            // }
+            // if(pageYOffset > document.getElementById("section8").offsetTop){
+            //     document.getElementById("section8").classList.add("show");
+            // }else{
+            //     document.getElementById("section8").classList.remove("show");
+            // }
+            // if(pageYOffset > document.getElementById("section9").offsetTop){
+            //     document.getElementById("section9").classList.add("show");
+            // }else{
+            //     document.getElementById("section9").classList.remove("show");
+            // }
+
+            //for으로 한 번에 작성 
+            for(let i = 1; i<=9; i++){
+                //출력문
+                document.querySelector(".s"+i+"OffsetTop").textContent = document.getElementById("section"+i).offsetTop;
+                
+                // 스크롤값에 따른 글자색 바꾸기
+                if(pageYOffset > document.getElementById("section"+i).offsetTop){
+                document.querySelector(".s"+i+"OffsetTop").style.color = "red";
+                } else {
+                    document.querySelector(".s"+i+"OffsetTop").style.color = "black";
+                }
             }
 
             //나타나기
-            if(pageYOffset > document.getElementById("section1").offsetTop){
-                document.getElementById("section1").classList.add("show");
-            }else{
-                document.getElementById("section1").classList.remove("show");
-            }
-            if(pageYOffset > document.getElementById("section2").offsetTop){
-                document.getElementById("section2").classList.add("show");
-            }else{
-                document.getElementById("section2").classList.remove("show");
-            }
-            if(pageYOffset > document.getElementById("section3").offsetTop){
-                document.getElementById("section3").classList.add("show");
-            }else{
-                document.getElementById("section3").classList.remove("show");
-            }
-            if(pageYOffset > document.getElementById("section4").offsetTop){
-                document.getElementById("section4").classList.add("show");
-            }else{
-                document.getElementById("section4").classList.remove("show");
-            }
-            if(pageYOffset > document.getElementById("section5").offsetTop){
-                document.getElementById("section5").classList.add("show");
-            }else{
-                document.getElementById("section5").classList.remove("show");
-            }
-            if(pageYOffset > document.getElementById("section6").offsetTop){
-                document.getElementById("section6").classList.add("show");
-            }else{
-                document.getElementById("section6").classList.remove("show");
-            }
-            if(pageYOffset > document.getElementById("section7").offsetTop){
-                document.getElementById("section7").classList.add("show");
-            }else{
-                document.getElementById("section7").classList.remove("show");
-            }
-            if(pageYOffset > document.getElementById("section8").offsetTop){
-                document.getElementById("section8").classList.add("show");
-            }else{
-                document.getElementById("section8").classList.remove("show");
-            }
-            if(pageYOffset > document.getElementById("section9").offsetTop){
-                document.getElementById("section9").classList.add("show");
-            }else{
-                document.getElementById("section9").classList.remove("show");
-            }
+            document.querySelectorAll(".content-item").forEach(elem=>{
+                if(pageYOffset > elem.offsetTop){
+                    elem.classList.add("show");
+                }else {
+                    elem.classList.remove("show");
+                }
+            });
         });
     </script>
 </body>

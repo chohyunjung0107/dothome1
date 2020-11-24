@@ -66,14 +66,14 @@
                     position: absolute; top: 150%; left: 50%; transform: translate(-50%, -50%);}
 
         /* 컨텐츠 */
-        .content {overflow: hidden;}
-        .content ul {}
-        .content ul li {border: 1px solid #ccc; width: 170px; height: 170px; margin-right: -1px; margin-bottom: -1px;}
-        .content ul li:nth-child(1) {float: left; background: url(https://static-clova.pstatic.net/static/70fd2ea/img/partner/dy_media.png) center center; background-size: cover;}
-        .content ul li:nth-child(2) {float: left; background: url(https://static-clova.pstatic.net/static/70fd2ea/img/partner/partner_logo_1.png) center center; background-size: cover;}
-        .content ul li:nth-child(3) {float: left; background: url(https://static-clova.pstatic.net/static/70fd2ea/img/partner/partner_logo_2.png) center center; background-size: cover;}
-        .content ul li:nth-child(4) {float: left; background: url(https://static-clova.pstatic.net/static/70fd2ea/img/partner/partner_logo_3.png) center center; background-size: cover;}
-        .content ul li:nth-child(5) {float: left; background: url(https://static-clova.pstatic.net/static/70fd2ea/img/partner/partner_logo_4.png) center center; background-size: cover;}
+        .content {width: 865px; height: 1360px; margin: 0 auto;}
+        .content ul {overflow: hidden; }
+        .content ul li {border: 1px solid #ccc; width: 170px; height: 170px; margin-right: -1px; margin-top: -1px;}
+        .content ul li:nth-child(1) {margin-top: 1px; float: left; background: url(https://static-clova.pstatic.net/static/70fd2ea/img/partner/dy_media.png) center center; background-size: cover;}
+        .content ul li:nth-child(2) {margin-top: 1px; float: left; background: url(https://static-clova.pstatic.net/static/70fd2ea/img/partner/partner_logo_1.png) center center; background-size: cover;}
+        .content ul li:nth-child(3) {margin-top: 1px; float: left; background: url(https://static-clova.pstatic.net/static/70fd2ea/img/partner/partner_logo_2.png) center center; background-size: cover;}
+        .content ul li:nth-child(4) {margin-top: 1px; float: left; background: url(https://static-clova.pstatic.net/static/70fd2ea/img/partner/partner_logo_3.png) center center; background-size: cover;}
+        .content ul li:nth-child(5) {margin-top: 1px; float: left; background: url(https://static-clova.pstatic.net/static/70fd2ea/img/partner/partner_logo_4.png) center center; background-size: cover;}
 
         .content ul li:nth-child(6) {float: left; background: url(https://static-clova.pstatic.net/static/70fd2ea/img/partner/partner_logo_5.png) center center; background-size: cover;}
         .content ul li:nth-child(7) {float: left; background: url(https://static-clova.pstatic.net/static/70fd2ea/img/partner/partner_logo_6.png) center center; background-size: cover;}
@@ -117,16 +117,24 @@
         
         
         /* 푸터 */
-        .footer {}
-        .footer_logo {padding-top: 10px; width: 145px; height: 20px; background: url(img/1120_logo.png) no-repeat -4px -34px;}
-        .footer ul {padding-top: 10px;}
-        .footer ul li {display: inline-block; color: gray; font-size: 13px;}
-        .footer ul li:nth-child(1) {margin:0 10px 0 0px;}
-        .footer ul li:nth-child(3) {margin: 0 120px 0 140px;}
-        .footer ul li:nth-child(4) {margin-right: 10px;}
-        .footer ul li:nth-child(5) {margin-right: 10px;}
-        .footer ul li:nth-child(6) {margin-right: 10px;}
-        .footer ul li:nth-child(7) {margin-right: 10px;}
+        .footer {position: relative; padding-top: 10px;}
+        .footer_logo {width: 145px; height: 20px; background: url(img/1120_logo.png) no-repeat -4px -34px;}
+
+        .footer .logo_r {position: absolute; right: 0px; top: -20px;}
+        
+        .footer .logo_r li:nth-child(1) {width: 21px; height: 18px; background: url(img/1120_logo.png) no-repeat -128px -92px; margin-right: 20px;}
+        .footer .logo_r li:nth-child(2) {width: 18px; height: 18px; background: url(img/1120_logo.png) no-repeat -164px -218px; margin-right: -70px;}
+        .footer .logo_r li:nth-child(3) {width: 18px; height: 18px; background: url(img/1120_logo.png) no-repeat -138px -218px; margin-right: 20px;}
+        .footer .logo_r li:nth-child(4) {width: 20px; height: 14px; background: url(img/1120_logo.png) no-repeat -200px -172px; margin-right: 20px;}
+
+        .footer ul {padding-top: 30px;}
+        .footer ul li {display: inline-block; color: gray; font-size: 12px;}
+        .footer ul li:nth-child(1) {margin: 0}
+        .footer ul li:nth-child(3) {margin: 0 90px}
+        .footer ul li:nth-child(4) {margin-right: 5px;}
+        .footer ul li:nth-child(5) {margin-right: 5px;}
+        .footer ul li:nth-child(6) {margin-right: 5px;}
+        .footer ul li:nth-child(7) {margin-right: 5px;}
 
       
     </style>
@@ -216,6 +224,12 @@
             <div class="container">
                 <div class="footer">
                     <div class="footer_logo"></div>
+                    <ul class="logo_r">
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                        <li><a href="#"></a></li>
+                    </ul>
                     <ul>
                         <li>고객센터 1833-5387</li>
                         <li>09:00 - 18:00 (주말, 공휴일 휴무) </li>
@@ -228,7 +242,7 @@
                 </div>
             </div>
         </footer>
-        <!-- /footer -->
+        <!-- //footer -->
     </div>
     <!-- //wrap -->
 </body>
