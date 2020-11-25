@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ParallaxEffet-javascript</title>
+    <title>ParallaxEffet-jQuery</title>
 
      <!-- webfonts -->
      <link href="https://fonts.googleapis.com/css?family=Lato:100,300,700,900&display=swap" rel="stylesheet">
@@ -48,7 +48,7 @@
         --color-title : #fff; 
         --color-sub : #999; 
         --color-link : #000; 
-        --color-bg : #888; 
+        --color-bg : #111; 
         --font-family : 'Lato', 'Chosu'
 
         --font-cafe: 'GongGothicMedium';
@@ -72,7 +72,7 @@
         .content-item-title {font-size: 2vw; font-weight: 100; font-family: var(--font-lato); text-align: right;}
         .content-item:nth-child(even) .content-item-title {text-align: left;}
 
-        .content-item-imgWrap {position: relative; --width: 100%; width: var(--width); /* padding-bottim: 50% */padding-bottom: calc(var(--width) / (var(--aspect-ratio))); overflow: hidden; background: red;}
+        .content-item-imgWrap {position: relative; --width: 100%; width: var(--width); /* padding-bottim: 50% */padding-bottom: calc(var(--width) / (var(--aspect-ratio))); overflow: hidden;}
         .content-item-img {width: var(--width);  height: calc(100% + (3 * var(--overflow))); --overflow: 60px; position: absolute; left: 0; top: calc(-1 * var(--overflow)); background-size: cover; background-position: 50% 0;}
         
         .content-item-dese {font-size: 5vw; line-height: 1.4; text-align: right; word-break: keep-all; margin-right: -4vw;  margin-top: -6vw; padding-left: 10vw; z-index: 100; position: relative;}
@@ -86,30 +86,49 @@
         img {width: 100%; vertical-align: top;}  
         /* vertical-alingn:top 여백초기화 */
 
-        .content-item:nth-child(1) .content-item-img {background: url(img/images10.jpg); background-size: cover;}
-        .content-item:nth-child(2) .content-item-img {background: url(img/images11.jpg); background-size: cover;}
-        .content-item:nth-child(3) .content-item-img {background: url(img/images12.jpg); background-size: cover;}
-        .content-item:nth-child(4) .content-item-img {background: url(img/images09.jpg); background-size: cover;}
-        .content-item:nth-child(5) .content-item-img {background: url(img/images08.jpg); background-size: cover;}
-        .content-item:nth-child(6) .content-item-img {background: url(img/images07.jpg); background-size: cover;}
-        .content-item:nth-child(7) .content-item-img {background: url(img/images06.jpg); background-size: cover;}
-        .content-item:nth-child(8) .content-item-img {background: url(img/images05.jpg); background-size: cover;}
-        .content-item:nth-child(9) .content-item-img {background: url(img/images04.jpg); background-size: cover;}
+        .content-item:nth-child(1) .content-item-img {background: url(img/images01.jpg); background-size: cover;}
+        .content-item:nth-child(2) .content-item-img {background: url(img/images02.jpg); background-size: cover;}
+        .content-item:nth-child(3) .content-item-img {background: url(img/images03.jpg); background-size: cover;}
+        .content-item:nth-child(4) .content-item-img {background: url(img/images04.jpg); background-size: cover;}
+        .content-item:nth-child(5) .content-item-img {background: url(img/images05.jpg); background-size: cover;}
+        .content-item:nth-child(6) .content-item-img {background: url(img/images06.jpg); background-size: cover;}
+        .content-item:nth-child(7) .content-item-img {background: url(img/images07.jpg); background-size: cover;}
+        .content-item:nth-child(8) .content-item-img {background: url(img/images08.jpg); background-size: cover;}
+        .content-item:nth-child(9) .content-item-img {background: url(img/images09.jpg); background-size: cover;}
 
+        /* 한번에 나타나기 */
+        /* .content-item-dese  {
+            opacity: 0;
+            transform: translateY(150px);
+            transition: all 0.7s cubic-bezier(0.9, -0.09, 0.58, 1);
+        }
+        .content-item-dese.show  {
+            opacity: 1;
+            transform: translateY(0px);
+        } */
+
+        /* 한글자씩 나타나기 */
+        .content-item-dese span {
+            opacity: 0;
+            transform: translateY(100px);
+            display: inline-block;
+            transition: all 0.7s cubic-bezier(0.9, -0.09, 0.58, 1);
+            min-width: 20px;
+        }
         
      </style>
 </head>
 <body>
     <div class="info left">
-        <h1>Parallax Effext02 - javascript</h1>
+        <h1>Parallax Effext04 - jQuery</h1>
         <p>패랠랙스 스크로링 효과 - 이질감 주기</p>
     </div>
     <div class="info right">
         <ul>
             <li><a href="parallax01-jquery.html">1</a><a href="parallax01-javascript.html">1</a></li>
-            <li><a href="parallax02-jquery.html">2</a><a href="parallax02-javascript.html"  class="active">2</a></li>
+            <li><a href="parallax02-jquery.html">2</a><a href="parallax02-javascript.html">2</a></li>
             <li><a href="parallax03-jquery.html">3</a><a href="parallax03-javascript.html">3</a></li>
-            <li><a href="parallax04-jquery.html">4</a><a href="parallax04-javascript.html">4</a></li>
+            <li><a href="parallax04-jquery.html"   class="active">4</a><a href="parallax04-javascript.html">4</a></li>
             <li><a href="parallax05-jquery.html">5</a><a href="parallax05-javascript.html">5</a></li>
             <li><a href="parallax06-jquery.html">6</a><a href="parallax06-javascript.html">6</a></li>
             <li><a href="parallax07-jquery.html">7</a><a href="parallax07-javascript.html">7</a></li>
@@ -124,6 +143,7 @@
         </ul>
     </div>
     <!-- info -->
+
 
     <main>
         <section id="parallax-wrap">
@@ -199,53 +219,71 @@
                     <figure class="content-item-imgWrap">
                         <div class="content-item-img"></div>
                     </figure>
-                    <p class="content-item-dese">오늘은 2020년 11월 10일입니다.</p>
+                    <p class="content-item-dese" aria-label="오늘은 2020년 11월 10일입니다.">오늘은 2020년 11월 10일입니다.</p>
                 </section>
             </div>
         </section>
     </main>
     <!-- //main -->
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"></script>
     <script>
-        window.addEventListener("scroll",()=>{
-            let pageYOffset = (window.pageYOffset || document.documentElement.scrollTop) //호환성을 맞춰주기 위해(IE)
+        // let text = $("#section1 .content-item-dese").text();
+        // let split = text.split("").join("</span><span>"); //글자를 쪼개고 사이에 글자를 붙쳐줌
+        // split = "<span>" + split + "</span>"; //맨 앞과 뒤에는 붙일 수 없어 감싸줌
 
-            // let offset1 = (pageYOffset - document.getElementById("section1").offsetTop) * 0.2; //시작점 0 * 0.2
-            // let offset2 = (pageYOffset - document.getElementById("section2").offsetTop) * 0.2;
-            // let offset3 = (pageYOffset - document.getElementById("section3").offsetTop) * 0.2;
-            // let offset4 = (pageYOffset - document.getElementById("section4").offsetTop) * 0.2;
-            // let offset5 = (pageYOffset - document.getElementById("section5").offsetTop) * 0.2;
-            // let offset6 = (pageYOffset - document.getElementById("section6").offsetTop) * 0.2;
-            // let offset7 = (pageYOffset - document.getElementById("section7").offsetTop) * 0.2;
-            // let offset8 = (pageYOffset - document.getElementById("section8").offsetTop) * 0.2;
-            // let offset9 = (pageYOffset - document.getElementById("section9").offsetTop) * 0.2;
-
-            // document.querySelector("#section1 .content-item-dese").style.transform = "translateX("+ -offset1 +"px)";
-            // document.querySelector("#section2 .content-item-dese").style.transform = "translateX("+ -offset2 +"px)";
-            // document.querySelector("#section3 .content-item-dese").style.transform = "translateX("+ -offset3 +"px)";
-            // document.querySelector("#section4 .content-item-dese").style.transform = "translateX("+ -offset4 +"px)";
-            // document.querySelector("#section5 .content-item-dese").style.transform = "translateX("+ -offset5 +"px)";
-            // document.querySelector("#section6 .content-item-dese").style.transform = "translateX("+ -offset6 +"px)";
-            // document.querySelector("#section7 .content-item-dese").style.transform = "translateX("+ -offset7 +"px)";
-            // document.querySelector("#section8 .content-item-dese").style.transform = "translateX("+ -offset8 +"px)";
-            // document.querySelector("#section9 .content-item-dese").style.transform = "translateX("+ -offset9 +"px)";
-
-            //한번에(for문)
-            // for(let i=1; i<10; i++){
-            //     let offset = (pageYOffset - document.getElementById("section"+i).offsetTop) * 0.2;
-            //     document.querySelector("#section"+i+" .content-item-dese").style.transform = "translateX("+ -offset +"px)";
-            // }
-
-            //한번에(forEach문)
-            document.querySelectorAll(".content-item").forEach((elem)=>{
-                // console.log(elem);
-                let target = elem.childNodes[7];
-                let offset = (pageYOffset - elem.offsetTop) * 0.2;
-                target.style.transform = "translateY("+ -offset +"px)";
-            });
-            
-
-           
+        //글씨 쪼개기
+        $(".content-item-dese").each(function(){
+            let text = $(this).text();
+            let split = text.split("").join("</span><span aria-hidden='true'>");
+            split = "<span aria-hidden='true'>" + split + "</span>";
+            $(this).html(split).attr("aria-label", text); //스펜으로 쪼개진 말때문에 웹표준을 준수하기 위하여 아리아 라벨을 넣어줌 
         });
+
+        $(window).scroll(function(){
+            // //한번에 나오게 하기
+            // $(".content-item").each(function(){ 
+            //     if( $(window).scrollTop() > $(this).offset().top ){
+            //         $(this).find(".content-item-dese").addClass("show");
+            //     } else {
+            //         $(this).find(".content-item-dese").removeClass("show");
+            //     }
+            // });
+
+            // //한 글자씩 나오게 하기(스팬처리하여 쪼갠 글자에 setTimeout을 사용하여 순차적으로 나타게함)
+            // if( $(window).scrollTop() > $("#section1").offset().top ){
+            //     $("#section1 .content-item-dese span").each(function(i){
+            //         setTimeout(() => {
+            //             $("#section1 .content-item-dese span").eq(i).addClass("show");
+            //         }, 50 * (i+1));
+            //     });
+            // }
+            
+            // 한 글자씩 한번에 나오게 하기
+            $(".content-item").each(function(){             
+                if( $(window).scrollTop() > $(this).offset().top){
+                    
+                    gsap.to( $(this).find(".content-item-dese span"), {duration: .3, opacity: 1, y:0, stagger: 0.05, ease: Power1.ease} );
+                }else { 
+
+                }
+            });
+
+            // //글자 빨리 띄우기 (연습)    
+            // $(".content-item").each(function(){             
+            //     if( $(window).scrollTop() > $(this).offset().top){
+                    
+            //         gsap.to( $(this).find(".content-item-dese span"), {duration: .3, opacity: 1, y:0, stagger: 0.05, ease: Power1.ease} );
+            //     }else { 
+
+            //     }
+            // });
+        });
+        
+
+
+
     </script>
 </body>
 </html>

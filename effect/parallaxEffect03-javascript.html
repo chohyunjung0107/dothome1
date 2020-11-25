@@ -72,7 +72,7 @@
         .content-item-title {font-size: 2vw; font-weight: 100; font-family: var(--font-lato); text-align: right;}
         .content-item:nth-child(even) .content-item-title {text-align: left;}
 
-        .content-item-imgWrap {position: relative; --width: 100%; width: var(--width); /* padding-bottim: 50% */padding-bottom: calc(var(--width) / (var(--aspect-ratio))); overflow: hidden; background: red;}
+        .content-item-imgWrap {position: relative; --width: 100%; width: var(--width); /* padding-bottim: 50% */padding-bottom: calc(var(--width) / (var(--aspect-ratio))); overflow: hidden;}
         .content-item-img {width: var(--width);  height: calc(100% + (3 * var(--overflow))); --overflow: 60px; position: absolute; left: 0; top: calc(-1 * var(--overflow)); background-size: cover; background-position: 50% 0;}
         
         .content-item-dese {font-size: 5vw; line-height: 1.4; text-align: right; word-break: keep-all; margin-right: -4vw;  margin-top: -6vw; padding-left: 10vw; z-index: 100; position: relative;}
@@ -101,14 +101,14 @@
 </head>
 <body>
     <div class="info left">
-        <h1>Parallax Effext02 - javascript</h1>
+        <h1>Parallax Effext03 - javascript</h1>
         <p>패랠랙스 스크로링 효과 - 이질감 주기</p>
     </div>
     <div class="info right">
         <ul>
             <li><a href="parallax01-jquery.html">1</a><a href="parallax01-javascript.html">1</a></li>
-            <li><a href="parallax02-jquery.html">2</a><a href="parallax02-javascript.html"  class="active">2</a></li>
-            <li><a href="parallax03-jquery.html">3</a><a href="parallax03-javascript.html">3</a></li>
+            <li><a href="parallax02-jquery.html">2</a><a href="parallax02-javascript.html">2</a></li>
+            <li><a href="parallax03-jquery.html">3</a><a href="parallax03-javascript.html"   class="active">3</a></li>
             <li><a href="parallax04-jquery.html">4</a><a href="parallax04-javascript.html">4</a></li>
             <li><a href="parallax05-jquery.html">5</a><a href="parallax05-javascript.html">5</a></li>
             <li><a href="parallax06-jquery.html">6</a><a href="parallax06-javascript.html">6</a></li>
@@ -205,47 +205,40 @@
         </section>
     </main>
     <!-- //main -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"></script>
     <script>
-        window.addEventListener("scroll",()=>{
-            let pageYOffset = (window.pageYOffset || document.documentElement.scrollTop) //호환성을 맞춰주기 위해(IE)
+        let pageYOffset = window.pageYOffset;
 
-            // let offset1 = (pageYOffset - document.getElementById("section1").offsetTop) * 0.2; //시작점 0 * 0.2
-            // let offset2 = (pageYOffset - document.getElementById("section2").offsetTop) * 0.2;
-            // let offset3 = (pageYOffset - document.getElementById("section3").offsetTop) * 0.2;
-            // let offset4 = (pageYOffset - document.getElementById("section4").offsetTop) * 0.2;
-            // let offset5 = (pageYOffset - document.getElementById("section5").offsetTop) * 0.2;
-            // let offset6 = (pageYOffset - document.getElementById("section6").offsetTop) * 0.2;
-            // let offset7 = (pageYOffset - document.getElementById("section7").offsetTop) * 0.2;
-            // let offset8 = (pageYOffset - document.getElementById("section8").offsetTop) * 0.2;
-            // let offset9 = (pageYOffset - document.getElementById("section9").offsetTop) * 0.2;
+        const scroll = () => {
+            const nwePageYOffset = window.pageYOffset;
+            const different = nwePageYOffset - pageXOffset;
 
-            // document.querySelector("#section1 .content-item-dese").style.transform = "translateX("+ -offset1 +"px)";
-            // document.querySelector("#section2 .content-item-dese").style.transform = "translateX("+ -offset2 +"px)";
-            // document.querySelector("#section3 .content-item-dese").style.transform = "translateX("+ -offset3 +"px)";
-            // document.querySelector("#section4 .content-item-dese").style.transform = "translateX("+ -offset4 +"px)";
-            // document.querySelector("#section5 .content-item-dese").style.transform = "translateX("+ -offset5 +"px)";
-            // document.querySelector("#section6 .content-item-dese").style.transform = "translateX("+ -offset6 +"px)";
-            // document.querySelector("#section7 .content-item-dese").style.transform = "translateX("+ -offset7 +"px)";
-            // document.querySelector("#section8 .content-item-dese").style.transform = "translateX("+ -offset8 +"px)";
-            // document.querySelector("#section9 .content-item-dese").style.transform = "translateX("+ -offset9 +"px)";
+            console.log("scrollTop :" + pageYOffset);
+            console.log("newScrollTop :" + nwePageYOffset);
+            console.log("different :" + different);
 
-            //한번에(for문)
-            // for(let i=1; i<10; i++){
-            //     let offset = (pageYOffset - document.getElementById("section"+i).offsetTop) * 0.2;
-            //     document.querySelector("#section"+i+" .content-item-dese").style.transform = "translateX("+ -offset +"px)";
-            // }
+            let target = document.querySelectorAll(".content-item-img")
 
-            //한번에(forEach문)
-            document.querySelectorAll(".content-item").forEach((elem)=>{
-                // console.log(elem);
-                let target = elem.childNodes[7];
-                let offset = (pageYOffset - elem.offsetTop) * 0.2;
-                target.style.transform = "translateY("+ -offset +"px)";
-            });
-            
+            // target.style.transform = "rotate("+different+"deg)"
+            //forEach
+            target.forEach((box) => {
+                box.style.transform = "rotate("+different+"deg)"
+                
+            })
+            pageYOffset = nwePageYOffset;
+            requestAnimationFrame(scroll);
+        }
+        scroll();
+        
 
-           
-        });
+        // let num = 0;
+        // function render(){
+        //     document.querySelector(".content-item-num").innerHTML = num;
+        //     num++
+        //     // setInterval(render, 100);
+        //     requestAnimationFrame(render); //1초에 60프레임을 자동으로 움직임 
+        // }
+        // render();
     </script>
 </body>
 </html>
