@@ -252,12 +252,9 @@
                 let offset2 = (scrollTop-$(this).offset().top) * 0.2;
 
                 $(this).find(".content-item-dese").css({"transform": "translateY("+ -offset1 +"px)"});
-                $(this).find(".content-item-num").css({"transform": "translateY("+ offset1 +"px)"});
-                $(this).find(".content-item-img").css({"transform": "translateY("+ offset2 +"px)"});
+                $(this).find(".content-item-num").css({"transform": "translateY("+ -offset1 +"px)"});
+                $(this).find(".content-item-img").css({"transform": "translateY("+ -offset2 +"px)"});
             });
-
-
-            
         });
     </script>
 </body>

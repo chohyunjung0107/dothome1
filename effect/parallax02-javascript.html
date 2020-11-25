@@ -120,7 +120,6 @@
     <div class="info bottom">
         <ul>
             <li>scrollTop() : <span class="scrollTop">0</span>px</li>
-            
         </ul>
     </div>
     <!-- info -->
@@ -209,7 +208,7 @@
         window.addEventListener("scroll",()=>{
             let pageYOffset = (window.pageYOffset || document.documentElement.scrollTop) //호환성을 맞춰주기 위해(IE)
 
-            // let offset1 = (pageYOffset - document.getElementById("section1").offsetTop) * 0.2; //시작점 0 * 0.2
+            // let offset1 = (pageYOffset - document.getElementById("section1").offsetTop) * 0.2; //시작점 - 0 * 0.2
             // let offset2 = (pageYOffset - document.getElementById("section2").offsetTop) * 0.2;
             // let offset3 = (pageYOffset - document.getElementById("section3").offsetTop) * 0.2;
             // let offset4 = (pageYOffset - document.getElementById("section4").offsetTop) * 0.2;
@@ -238,13 +237,10 @@
             //한번에(forEach문)
             document.querySelectorAll(".content-item").forEach((elem)=>{
                 // console.log(elem);
-                let target = elem.childNodes[7];
+                let target = elem.childNodes[7]; //childNodes는 주어진 요소의 자식 노드 모음( collection )을 반환합니다.//[7]이 뭐지?
                 let offset = (pageYOffset - elem.offsetTop) * 0.2;
                 target.style.transform = "translateY("+ -offset +"px)";
             });
-            
-
-           
         });
     </script>
 </body>
