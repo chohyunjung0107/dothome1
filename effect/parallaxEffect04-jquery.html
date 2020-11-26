@@ -111,9 +111,13 @@
         .content-item-dese span {
             opacity: 0;
             transform: translateY(100px);
+            transition: all 0.77s cubic-bezier(0, 0.48, 0, 1.04);
             display: inline-block;
-            transition: all 0.7s cubic-bezier(0.9, -0.09, 0.58, 1);
             min-width: 20px;
+        }
+        .content-item-dese span.show {
+            transform: translateY(0);
+            opacity: 1;
         }
         
      </style>
@@ -252,23 +256,77 @@
             // });
 
             // //한 글자씩 나오게 하기(스팬처리하여 쪼갠 글자에 setTimeout을 사용하여 순차적으로 나타게함)
-            // if( $(window).scrollTop() > $("#section1").offset().top ){
-            //     $("#section1 .content-item-dese span").each(function(i){
-            //         setTimeout(() => {
-            //             $("#section1 .content-item-dese span").eq(i).addClass("show");
-            //         }, 50 * (i+1));
-            //     });
-            // }
+            if( $(window).scrollTop() > $("#section1").offset().top ){
+                $("#section1 .content-item-dese span").each(function(i){
+                    setTimeout(() => {
+                        $("#section1 .content-item-dese span").eq(i).addClass("show");
+                    }, 50 * (i+1));
+                });
+            }
+            if( $(window).scrollTop() > $("#section2").offset().top ){
+                $("#section2 .content-item-dese span").each(function(i){
+                    setTimeout(() => {
+                        $("#section2 .content-item-dese span").eq(i).addClass("show");
+                    }, 50 * (i+1));
+                });
+            }
+            if( $(window).scrollTop() > $("#section3").offset().top ){
+                $("#section3 .content-item-dese span").each(function(i){
+                    setTimeout(() => {
+                        $("#section3 .content-item-dese span").eq(i).addClass("show");
+                    }, 50 * (i+1));
+                });
+            }
+            if( $(window).scrollTop() > $("#section4").offset().top ){
+                $("#section4 .content-item-dese span").each(function(i){
+                    setTimeout(() => {
+                        $("#section4 .content-item-dese span").eq(i).addClass("show");
+                    }, 50 * (i+1));
+                });
+            }
+            if( $(window).scrollTop() > $("#section5").offset().top ){
+                $("#section5 .content-item-dese span").each(function(i){
+                    setTimeout(() => {
+                        $("#section5 .content-item-dese span").eq(i).addClass("show");
+                    }, 50 * (i+1));
+                });
+            }
+            if( $(window).scrollTop() > $("#section6").offset().top ){
+                $("#section6 .content-item-dese span").each(function(i){
+                    setTimeout(() => {
+                        $("#section6 .content-item-dese span").eq(i).addClass("show");
+                    }, 50 * (i+1));
+                });
+            }
+            if( $(window).scrollTop() > $("#section7").offset().top ){
+                $("#section7 .content-item-dese span").each(function(i){
+                    setTimeout(() => {
+                        $("#section7 .content-item-dese span").eq(i).addClass("show");
+                    }, 50 * (i+1));
+                });
+            }
+            if( $(window).scrollTop() > $("#section8").offset().top ){
+                $("#section8 .content-item-dese span").each(function(i){
+                    setTimeout(() => {
+                        $("#section8 .content-item-dese span").eq(i).addClass("show");
+                    }, 50 * (i+1));
+                });
+            }
+            if( $(window).scrollTop() > $("#section9").offset().top ){
+                $("#section9 .content-item-dese span").each(function(i){
+                    setTimeout(() => {
+                        $("#section9 .content-item-dese span").eq(i).addClass("show");
+                    }, 50 * (i+1));
+                });
+            }
             
-            // 한 글자씩 한번에 나오게 하기
-            $(".content-item").each(function(){             
-                if( $(window).scrollTop() > $(this).offset().top){
+            // 한 글자씩 한번에 나오게 하기 (과부하가 걸림)
+            // $(".content-item").each(function(){             
+            //     if( $(window).scrollTop() > $(this).offset().top){
                     
-                    gsap.to( $(this).find(".content-item-dese span"), {duration: .3, opacity: 1, y:0, stagger: 0.05, ease: Power1.ease} );
-                }else { 
-
-                }
-            });
+            //         gsap.to( $(this).find(".content-item-dese span"), {duration: .3, opacity: 1, y:0, stagger: 0.05, ease: Power1.ease} );
+            //     }
+            // });
 
             // //글자 빨리 띄우기 (연습)    
             // $(".content-item").each(function(){             
