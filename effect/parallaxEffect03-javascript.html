@@ -207,15 +207,15 @@
     <!-- //main -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"></script>
     <script>
-        let pageYOffset = window.pageYOffset;
+        let pageYOffset = window.pageYOffset; 
 
         const scroll = () => {
             const nwePageYOffset = window.pageYOffset;
             const different = nwePageYOffset - pageYOffset;
 
-            console.log("scrollTop :" + pageYOffset);
-            console.log("newScrollTop :" + nwePageYOffset);
-            console.log("different :" + different);
+            console.log("scrollTop :" + pageYOffset); //0
+            console.log("newScrollTop :" + nwePageYOffset); //
+            console.log("different :" + different); //차이값
 
             let target = document.querySelectorAll(".content-item-img")
 
@@ -225,7 +225,7 @@
                 box.style.transform = "rotate("+different+"deg)"
                 
             })
-            pageYOffset = nwePageYOffset;
+            pageYOffset = nwePageYOffset; //0으로 만들어 줌
             requestAnimationFrame(scroll);
         }
         scroll();

@@ -236,8 +236,8 @@
 
             //한번에(forEach문)
             document.querySelectorAll(".content-item").forEach((elem)=>{
-                // console.log(elem);
-                let target = elem.childNodes[7]; //childNodes는 주어진 요소의 자식 노드 모음( collection )을 반환합니다.//[7]이 뭐지?
+                console.log(elem);
+                let target = elem.childNodes[7]; //childNodes는 주어진 요소의 자식 노드 모음( collection )을 반환합니다.
                 let offset = (pageYOffset - elem.offsetTop) * 0.2;
                 target.style.transform = "translateY("+ -offset +"px)";
             });
