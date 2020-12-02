@@ -93,20 +93,18 @@
         <div class="row">
             <div class="col-md-12" role="main">
 
-                <!-- ad box -->
-                <div class="ad">
-                    <script src="https://ads-partners.coupang.com/g.js"></script>
-                    <script>
-                        new PartnersCoupang.G({ id:347687 });
-                    </script>
-                </div>
-                <!-- //ad box -->
+                <!-- ad box 1140 -->
+                <script src="https://ads-partners.coupang.com/g.js"></script>
+                <script>
+                    new PartnersCoupang.G({ id:348411 });
+                </script>
+                <!-- //ad box 1140 -->
 
                 <!-- Intro1 -->
                 <div class="bs-docs-section">
                     <h2 id="intro1" class="page-header">MouseEffect01</h2>
                     <p class="bs-callout bs-callout-info">자바스크립트와 제이쿼리를 이용한 마우스 효과</p>
-                    <iframe width="100%" height="1300px" src="mouseEffect01-javascript.html" frameborder="0"></iframe>
+                    <iframe width="100%" height="600px" src="mouseEffect01-javascript.html" frameborder="0"></iframe>
                       <div class="javascriptSource">
                         <h3 class="btn btn-default">Javascript Source</h3>   
 <pre class="line-numbers language-js"><code><script>//출력용 
@@ -168,7 +166,7 @@ window.addEventListener("mousemove",function(e){
 });</script> 
 </code></pre>
                       </div>
-                      <iframe width="100%" height="1300px" src="mouseEffect01-jquery.html" frameborder="0"></iframe>
+                      <iframe width="100%" height="600" src="mouseEffect01-jquery.html" frameborder="0"></iframe>
                       <div class="jquerySource">
                         <h3 class="btn btn-default">jQuery Source</h3>
 <pre class="line-numbers language-js"><code><script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script><script>//출력용
@@ -204,7 +202,7 @@ $(".contents p em").hover(function(){
                 <div class="bs-docs-section">
                     <h2 id="intro2" class="page-header">MouseEffect02</h2>
                     <p class="bs-callout bs-callout-info">자바스크립트와 제이쿼리를 이용한 마우스 효과</p>
-                    <iframe width="100%" height="1300px" src="mouseEffect02-javascript.html" frameborder="0"></iframe>
+                    <iframe width="100%" height="600px" src="mouseEffect02-javascript.html" frameborder="0"></iframe>
                       <div class="javascriptSource">
                         <h3 class="btn btn-default">Javascript Source</h3>   
 <pre class="line-numbers language-js"><code><script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script><script>//출력용 
@@ -251,7 +249,7 @@ cursorText.forEach(elem => {
 });</script> 
 </code></pre>
                       </div>
-                      <iframe width="100%" height="1300px" src="mouseEffect02-jquery.html" frameborder="0"></iframe>
+                      <iframe width="100%" height="600px" src="mouseEffect02-jquery.html" frameborder="0"></iframe>
                       <div class="jquerySource">
                         <h3 class="btn btn-default">jQuery Source</h3>
 <pre class="line-numbers language-js"><code><script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script><script>//출력용 
@@ -287,6 +285,124 @@ $(document).mousemove(function(e){
 
                     </div>
                 <!-- //Intro2 -->
+
+                 <!-- Intro3 -->
+                 <div class="bs-docs-section">
+                    <h2 id="intro2" class="page-header">MouseEffect03</h2>
+                    <p class="bs-callout bs-callout-info">자바스크립트와 제이쿼리를 이용한 마우스 효과</p>
+                    <iframe width="100%" height="600px" src="mouseEffect03-javascript.html" frameborder="0"></iframe>
+                      <div class="javascriptSource">
+                        <h3 class="btn btn-default">Javascript Source</h3>   
+<pre class="line-numbers language-js"><code>
+</code></pre>
+                      </div>
+                      <iframe width="100%" height="600px" src="mouseEffect03-jquery.html" frameborder="0"></iframe>
+                      <div class="jquerySource">
+                        <h3 class="btn btn-default">jQuery Source</h3>
+<pre class="line-numbers language-js"><code>
+</code></pre>
+                      </div>
+                    </div>
+                <!-- //Intro3 -->
+
+                <!-- Intro4 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro2" class="page-header">MouseEffect04</h2>
+                    <p class="bs-callout bs-callout-info">자바스크립트와 제이쿼리를 이용한 마우스 효과</p>
+                    <iframe width="100%" height="600px" src="mouseEffect03-javascript.html" frameborder="0"></iframe>
+                      <div class="javascriptSource">
+                        <h3 class="btn btn-default">Javascript Source</h3>   
+<pre class="line-numbers language-js"><code>
+</code></pre>
+                      </div>
+                      <iframe width="100%" height="600px" src="mouseEffect04-jquery.html" frameborder="0"></iframe>
+                      <div class="jquerySource">
+                        <h3 class="btn btn-default">jQuery Source</h3>
+<pre class="line-numbers language-js"><code><script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script><script>let x = 0,
+    y = 0;
+    mouseX = 0,
+    mouseY = 0,
+    angleX = 0,
+    angleY = 0,
+    fmouseX = 0,
+    fmouseY = 0;
+
+
+$(window).mousemove(function(e){
+    x = e.pageX;
+    y = e.pageY;
+
+    //커서의 0,0에서 기준점을 중앙으로 만들어야함(y축/2, x축/2)
+    // mouseX =  $(window).width()/2 - x; //화면을 절반으로 나눠 가운데로 맞춰주고 -x하여 0,0을 만들어 줘 마우스가 움직이는 기준점을 가운데로 만들어 준다.
+    // mouseY =  $(window).height()/2 - y; 
+
+    //마우스 x축 y축 : 최소값 -50/최댓값 50으로 설정
+    mouseX = Math.max(-50, Math.min(50, $(window).width()/2 - x)) //바뀌는 X값을 넣어 변하는 최솟값을 잡아줌
+    mouseY = Math.min(-50, Math.min(50, $(window).height()/2 - y))
+
+    angleX = (12 * mouseX) / 100; //가공된 수치로 움직임에 각도의 제약을 줌.
+    angleY = (12 * mouseY) / 100;
+
+    fmouseX += (angleX - fmouseX) * 0.1; //+시켜줘 움직임을 부드럽게 해줌.
+    fmouseY += (angleY - fmouseY) * 0.1;
+
+    //커서 움직이기
+    gsap.to(".cursor",{duration: 0.3, left: x, top: y});
+
+    //이미지 움직이기
+    $(".move-image").css({"transform": "translate(-50%, -50%) perspective(600px) rotateX("+ fmouseY +"deg) rotateY("+ -fmouseX +"deg)"})
+});
+
+//출력용 
+$(window).mousemove(function(e){
+    $(".pageX").text(x);
+    $(".pageY").text(y);
+    $(".mouseX").text(mouseX);
+    $(".mouseY").text(mouseY);
+    $(".angleX").text(angleX);
+    $(".angleY").text(angleY);
+    $(".fmouseX").text(Math.round(fmouseX));
+    $(".fmouseY").text(Math.round(fmouseY));
+});</script>
+</code></pre>
+                      </div>
+                    </div>
+                <!-- //Intro4 -->
+
+                <!-- Intro5 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro2" class="page-header">MouseEffect05</h2>
+                    <p class="bs-callout bs-callout-info">자바스크립트와 제이쿼리를 이용한 마우스 효과</p>
+                    <iframe width="100%" height="600px" src="mouseEffect03-javascript.html" frameborder="0"></iframe>
+                      <div class="javascriptSource">
+                        <h3 class="btn btn-default">Javascript Source</h3>   
+<pre class="line-numbers language-js"><code>
+</code></pre>
+                      </div>
+                      <iframe width="100%" height="600px" src="mouseEffect05-jquery.html" frameborder="0"></iframe>
+                      <div class="jquerySource">
+                        <h3 class="btn btn-default">jQuery Source</h3>
+<pre class="line-numbers language-js"><code><script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script><script>$(".move-image").mousemove(function(e){
+    gsap.to(".cursor",{duration: 0.2, left: e.pageX - 10, top: e.pageY -10}); 
+    // console.log(e)
+    let x = e.clientX - ($(".move-image").width()/2 + $(".move-image").position().left );
+    let y = e.clientY - ($(".move-image").height()/2 + $(".move-image").position().top ); 
+
+    $(".img").attr({"style":"transform:translate("+x/20+"px, "+y/20+"px)"});
+});
+
+//출력용
+$(window).mousemove(function(e){
+    $(".clientX").text(e.clientX);
+    $(".clientY").text(e.clientY);
+})</script>
+</code></pre>
+                      </div>
+                    </div>
+                <!-- //Intro5 -->
+
+
+
 
                  <!-- figma -->
                  <div class="bs-docs-section">
