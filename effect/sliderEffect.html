@@ -106,7 +106,7 @@
                 <div class="bs-docs-section">
                     <h2 id="intro1" class="page-header">SliderEffect01</h2>
                     <p class="bs-callout bs-callout-info">자바스크립트와 제이쿼리를 이용한 이미지 슬라이드 효과</p>
-                    <iframe width="100%" height="1300px" src="sliderEffect01-javascript.html" frameborder="0"></iframe>
+                    <iframe width="100%" height="600px" src="sliderEffect01-javascript.html" frameborder="0"></iframe>
                       <div class="javascriptSource">
                         <h3 class="btn btn-default">Javascript Source</h3>   
 <pre class="line-numbers language-js"><code><script>const sliderWrap = document.querySelector(".slider-wrap");
@@ -134,7 +134,7 @@ setInterval(() => {
 },3000);</script>
 </code></pre>
                       </div>
-                      <iframe width="100%" height="1300px" src="sliderEffect01-jquery.html" frameborder="0"></iframe>
+                      <iframe width="100%" height="600px" src="sliderEffect01-jquery.html" frameborder="0"></iframe>
                       <div class="jquerySource">
                         <h3 class="btn btn-default">jQuery Source</h3>
 <pre class="line-numbers language-js"><code><script src="../assets/js/jquery-1.9.1.min.js"></script><script>const sliderWrap = $(".slider-wrap");
@@ -159,16 +159,266 @@ setInterval(function(){
 },3000);</script>
 </code></pre>
                       </div>
-
                     </div>
                 <!-- //Intro1 -->
+
+                 <!-- Intro2 -->
+                 <div class="bs-docs-section">
+                    <h2 id="intro1" class="page-header">SliderEffect02</h2>
+                    <p class="bs-callout bs-callout-info">자바스크립트와 제이쿼리를 이용한 이미지 슬라이드 효과</p>
+                    <iframe width="100%" height="600px" src="sliderEffect02-javasctipt.html" frameborder="0"></iframe>
+                      <div class="javascriptSource">
+                        <h3 class="btn btn-default">Javascript Source</h3>   
+<pre class="line-numbers language-js"><code><script>const sliderWrap = document.querySelector(".slider-wrap");
+const sliderImg = document.querySelector(".slider-img");
+const slider = document.querySelectorAll(".slider");
+
+let currentIndex = 0;            //현재 보이는 1번째 이미지
+let sliderCount = slider.length; //이미지 갯수
+let sliderWidth =  document.querySelector(".slider").clientWidth; //이미지의 whidth값 
+
+console.log(sliderWidth);
+console.log(sliderCount);
+
+
+setInterval(function(){
+    // if(currentIndex < sliderCount -1){
+    //     currentIndex++;
+    // }else {
+    //     currentIndex = 0;
+    // }
+    currentIndex < sliderCount -1 ? currentIndex++ : currentIndex = 0;
+    
+    let sliderPosition = currentIndex * -(sliderWidth)+"px";
+    // sliderImg.animate({ left: sliderPosition },400);
+    // sliderImg.style.left = sliderPosition;
+    // sliderImg.style.transition = "all 0.6s";
+
+    gsap.to(sliderImg, {duration: 0.6, left:sliderPosition, ease: "expo.in"});
+
+},3000);</script>
+</code></pre>
+                      </div>
+                      <iframe width="100%" height="600px" src="sliderEffect02-jquery.html" frameborder="0"></iframe>
+                      <div class="jquerySource">
+                        <h3 class="btn btn-default">jQuery Source</h3>
+<pre class="line-numbers language-js"><code><script src="../assets/js/jquery-1.9.1.min.js"></script><script>const sliderWrap = $(".slider-wrap");
+const sliderImg = $(".slider-img");
+const slider = $(".slider");
+
+let currentIndex = 0; //현재 보이는 이미지 
+let sliderCount = slider.length; //총 이미지 갯수
+
+setInterval(function(){
+
+    // if(currentIndex<sliderCount - 1){
+    //     currentIndex++ //0 1 2 3 4 0
+    // }else {
+    //     currentIndex = 0;
+    // }
+    currentIndex < sliderCount - 1 ? currentIndex++ : currentIndex = 0; //삼항연산자로 if문을 간략하게 써줌 
+
+    let sliderPosition = currentIndex * (-800) + "px";
+                        // 0 =   0 * -800px -> 0
+                        // 1 =   1 * -800px -> -800px
+                        // 2 =   2 * -800px -> -1600px(3번째 이미지)
+                        // 3 =   3 * -800px -> -2400px(4번째 이미지)
+    sliderImg.animate({ left: sliderPosition },400);
+    
+    // console.log("currentIndex :" + currentIndex);
+    // console.log("sliderPosition :" + sliderPosition);
+}, 3000);</script>
+</code></pre>
+                      </div>
+                    </div>
+                <!-- //Intro2 -->
+
+                <!-- Intro3 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro1" class="page-header">SliderEffect03</h2>
+                    <p class="bs-callout bs-callout-info">자바스크립트와 제이쿼리를 이용한 이미지 슬라이드 효과</p>
+                    <iframe width="100%" height="600px" src="sliderEffect02-javasctipt.html" frameborder="0"></iframe>
+                      <div class="javascriptSource">
+                        <h3 class="btn btn-default">Javascript Source</h3>   
+<pre class="line-numbers language-js"><code>
+</code></pre>
+                      </div>
+                      <iframe width="100%" height="600px" src="sliderEffect03-jquery.html" frameborder="0"></iframe>
+                      <div class="jquerySource">
+                        <h3 class="btn btn-default">jQuery Source</h3>
+<pre class="line-numbers language-js"><code><script src="../assets/js/jquery-1.9.1.min.js"></script><script>const sliderWrap = $(".slider-wrap");
+const sliderImg = $(".slider-img");
+const slider = $(".slider");
+
+setInterval(function(){
+    sliderImg.animate({ left: "-800px" }, 400, function(){
+        $(".slider:first-child").appendTo(sliderImg) //첫번째 이미지를 슬라이드 맨 마지막에 넣겠다.
+        sliderImg.css("left",""); //left값을 0으로 만들어줘 애니메이션 효과로 만들어 줌
+    });
+},3000);</script>
+</code></pre>
+                      </div>
+                    </div>
+                <!-- //Intro3 -->
+
+                <!-- Intro4 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro1" class="page-header">SliderEffect04</h2>
+                    <p class="bs-callout bs-callout-info">자바스크립트와 제이쿼리를 이용한 이미지 슬라이드 효과</p>
+                    <iframe width="100%" height="600px" src="sliderEffect02-javasctipt.html" frameborder="0"></iframe>
+                      <div class="javascriptSource">
+                        <h3 class="btn btn-default">Javascript Source</h3>   
+<pre class="line-numbers language-js"><code>
+</code></pre>
+                      </div>
+                      <iframe width="100%" height="600px" src="sliderEffect04-jquery.html" frameborder="0"></iframe>
+                      <div class="jquerySource">
+                        <h3 class="btn btn-default">jQuery Source</h3>
+<pre class="line-numbers language-js"><code><script src="../assets/js/jquery-1.9.1.min.js"></script><script>
+const sliderWrap = $(".slider-wrap");
+const sliderImg = $(".slider-img");
+const slider = $(".slider");
+
+let currentIndex = 0;
+let sliderHeight = slider.height();
+let sliderSpeed = 400;
+
+// //한 바퀴 
+// setInterval(function(){
+//     currentIndex < 4 ?  currentIndex++ : currentIndex = 0;
+
+//     let sliderPosition = currentIndex * -sliderHeight;
+//     sliderImg.animate({ top: sliderPosition }, sliderSpeed);
+// },3000);
+
+//연속
+setInterval(function(){
+    sliderImg.animate({ top: -sliderHeight }, sliderSpeed, function(){
+    $(".slider:eq(0)").appendTo(sliderImg); //첫번째 이미지를 마지막 이미지 끝에 
+    sliderImg.css("top", "");
+    });
+}, 3000);</script>
+</code></pre>
+                      </div>
+                    </div>
+                <!-- //Intro4 -->
+
+                <!-- Intro5 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro1" class="page-header">SliderEffect05</h2>
+                    <p class="bs-callout bs-callout-info">자바스크립트와 제이쿼리를 이용한 이미지 슬라이드 효과</p>
+                    <iframe width="100%" height="600px" src="sliderEffect02-javasctipt.html" frameborder="0"></iframe>
+                      <div class="javascriptSource">
+                        <h3 class="btn btn-default">Javascript Source</h3>   
+<pre class="line-numbers language-js"><code>
+</code></pre>
+                      </div>
+                      <iframe width="100%" height="600px" src="sliderEffect05-jquery.html" frameborder="0"></iframe>
+                      <div class="jquerySource">
+                        <h3 class="btn btn-default">jQuery Source</h3>
+<pre class="line-numbers language-js"><code><script src="../assets/js/jquery-1.9.1.min.js"></script><script>
+const sliderWrap = $(".slider-wrap");
+const sliderImg = $(".slider-img");
+const slider = $(".slider");
+const sliderBtn = $(".slider-btn");
+
+let currentIndex = 0;
+let sliderCount = slider.length;
+let sliderWidth = slider.width();
+let sliderHeight = slider.height();
+let sliderTotalWidth = sliderWidth * sliderCount
+
+//현재 사진을 앞/뒤로 미리 이미지를 배치함 
+sliderImg.css({ width: sliderTotalWidth, height: sliderHeight, marginLeft: -sliderWidth }); //css에서 조정하였던 슬라이드 이미지의 가로/세로 길이 값/왼쪽마진값을 스크립트로 지정하여 구조를 만듦
+$(".slider:last-child").prependTo(sliderImg);
+
+
+//버튼을 클릭하면 사진을 슬라이드 함
+function moveLeft(){
+    sliderImg.animate({ left: +sliderWidth }, 400, function(){
+        $(".slider:last-child").prependTo(sliderImg);
+        sliderImg.css("left","");
+    }); 
+}
+function moveRight(){
+    sliderImg.animate({ left: -sliderWidth }, 400, function(){
+        $(".slider:first-child").appendTo(sliderImg);
+        sliderImg.css("left","");
+    });
+}
+sliderBtn.find(".prev").click(function(){
+    moveLeft();
+});
+sliderBtn.find(".next").click(function(){
+    moveRight();
+});</script>
+</code></pre>
+                      </div>
+                    </div>
+                <!-- //Intro5 -->
+
+                <!-- Intro6 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro1" class="page-header">SliderEffect06</h2>
+                    <p class="bs-callout bs-callout-info">자바스크립트와 제이쿼리를 이용한 이미지 슬라이드 효과</p>
+                    <iframe width="100%" height="650px" src="sliderEffect02-javasctipt.html" frameborder="0"></iframe>
+                      <div class="javascriptSource">
+                        <h3 class="btn btn-default">Javascript Source</h3>   
+<pre class="line-numbers language-js"><code>
+</code></pre>
+                      </div>
+                      <iframe width="100%" height="650px" src="sliderEffect06-jquery.html" frameborder="0"></iframe>
+                      <div class="jquerySource">
+                        <h3 class="btn btn-default">jQuery Source</h3>
+<pre class="line-numbers language-js"><code><script src="../assets/js/jquery-1.9.1.min.js"></script><script>const sliderWrap = $(".slider-wrap");
+const sliderImg = $(".slider-img");
+const slider = $(".slider");
+const sliderBtn = $(".slider-btn");
+
+let sliderCount = slider.length;
+let sliderWidth = slider.outerWidth();
+let sliderShowNumber = 3;
+let currentIndex = 0;
+
+let sliderCopy = $(".slider:lt("+sliderShowNumber+")").clone();
+sliderImg.append(sliderCopy);
+
+function moveLeft(){
+    if(currentIndex == 0){ //처음 이미지
+        currentIndex = sliderCount;
+        sliderImg.css("margin-left", sliderWidth * -currentIndex);
+    }
+    currentIndex--;
+    sliderImg.animate({ "margin-left": -sliderWidth * currentIndex }, 400);
+}
+
+function moveRight(){
+    if (currentIndex == sliderCount){ //마지막 이미지
+        currentIndex = 0;
+        sliderImg.stop().css("margin-left", currentIndex);
+    }
+    currentIndex++;
+    sliderImg.animate({ "margin-left": -sliderWidth * currentIndex }, 400);
+    
+}
+
+//버튼을 클릭하기 
+sliderBtn.on("click","a",function(){
+    if( $(this).hasClass("prev") ){
+        moveLeft();
+    }else {
+        moveRight();
+    }
+});</script>
+</code></pre>
+                      </div>
+                    </div>
+                <!-- //Intro6 -->
 
                 <!-- figma -->
                 <div class="bs-docs-section">
                     <h2 id="intro3" class="page-header">SLIDER EFFECT - figma</h2>
-                    <p class="bs-callout bs-callout-info">인덱스 증감식을 세워 이미지 슬라이드가 되게 스크립트하였습니다.
                         <p><a class="btn btn-primary btn-lg" href="https://www.figma.com/proto/f7wcJtuTDkbXuYP2dDrK5I/sliderEffect?node-id=1%3A37&viewport=728%2C644%2C0.4623376727104187&scaling=min-zoom" role="button">확인하기</a></p>
-                    </p>
                     <div class="iframe">
                         <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="500" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Ff7wcJtuTDkbXuYP2dDrK5I%2FsliderEffect%3Fnode-id%3D1%253A37%26viewport%3D728%252C644%252C0.4623376727104187%26scaling%3Dmin-zoom" allowfullscreen></iframe>
                     </div>   
