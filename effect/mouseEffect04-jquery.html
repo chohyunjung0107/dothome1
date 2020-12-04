@@ -201,7 +201,7 @@
                 mouseX = Math.max(-50, Math.min(50, $(window).width()/2 - x)) //바뀌는 X값을 넣어 변하는 최솟값을 잡아줌
                 mouseY = Math.min(-50, Math.min(50, $(window).height()/2 - y))
 
-                angleX = (12 * mouseX) / 100; //가공된 수치로 움직임에 각도의 제약을 줌.
+                angleX = (12 * mouseX) / 100; //가공된 수치로 움직임에 각도 제약을 줌.
                 angleY = (12 * mouseY) / 100;
 
                 fmouseX += (angleX - fmouseX) * 0.1; //+시켜줘 움직임을 부드럽게 해줌.
