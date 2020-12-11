@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mouse Effect04 - js</title>
+    <title>Mouse Effect04 - javascript</title>
 </head>
 <body>
     <style>
@@ -35,7 +35,7 @@
             content: '';
             position: absolute; left: 0; top: 0;
             width: 100%; height: 100vh;
-            background: rgba(30,5,0,0.4);
+            background:rgba(30,5,0,0.4);
         }
 
         /* info */
@@ -78,51 +78,56 @@
         }
 
         /* main */
-        .contents {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            height: 100vh;
-            width: 100%;
-            z-index: 10;
+        .move-image {
+            position: absolute;
+            left: 50%; top: 50%;
+            transform: translate(-50%, -50%) perspective(600px) rotateX(0deg) rotateY(0deg);
+            transform-style: preserve-3d;
+            will-change: transform;
+        }
+        .move-image .ming img {
+            border-radius: 5px;
+        }
+        .move-image .ming {
             position: relative;
         }
-        .contents p {
-            font-size: 3vw;
-            color: #fff;
+        .move-image .ming::before {
+            content: '';
+            position: absolute; left: 5%; bottom: -20px;
+            width: 90%; height: 40px;
+            background: url(img/images07.jpg) no-repeat;
+            background-size: 100% 40px;
+            filter: blur(15px);
+            z-index: -1;
+            opacity: .9;
         }
-        .contents p:first-child {
-            font-size: 2.3w;
-            line-height: 2;
+        .move-image .mtxt {
+            font-size: 1.5rem;
+            position: absolute; left: 50%; bottom: 50%;
+            transform: translate3d(-50%, 68%, 150px);
+            background: rgba(0,0,0,0.5);
+            padding: 2vw;
+            text-align: center;
+            border-radius: 2px;
+            white-space: nowrap;
+            
         }
-        .contents p em {
-            color: cornflowerblue;
-            border-bottom: 2px dashed cornflowerblue;
-            font-style: normal;
-            transition: background-color .2s, border-color .2s;
+        .move-image .mtxt p:nth-child(1) {
+            font-size: 1rem;
         }
         .cursor {
-            position: absolute;
-            left: 0; top: 0;
-            width: 20px; height: 20px;
+            position: absolute; width: 10px; height: 10px;
+            background: #fff; 
             border-radius: 50%;
             z-index: 1000;
-            background:#fff;
             user-select: none;
             pointer-events: none;
             transform: scale(1);
-            transition: transform .3s ease-in-out;
-            mix-blend-mode: difference;
+            transition: transform 0.3s ease-in-out;
         }
         .cursor.active {
-            transform: scale(10);
+            transform: scale(12);
         }
-        .cursor.active2 {
-            background: red;
-            transform: scale(10);
-        }
-        
     </style>
 </body>
 
@@ -136,7 +141,7 @@
             <li><a href="monseEffect01-jquery.html">1</a><a href="parallax01-javascript.html">1</a></li>
             <li><a href="monseEffect02-jquery.html">2</a><a href="parallax02-javascript.html">2</a></li>
             <li><a href="monseEffect03-jquery.html">3</a><a href="parallax03-javascript.html">3</a></li>
-            <li><a href="monseEffect04-jquery.html">4</a><a href="parallax04-javascript.html"   class="active">4</a></li>
+            <li><a href="monseEffect04-jquery.html">4</a><a href="parallax04-javascript.html"  class="active">4</a></li>
             <li><a href="monseEffect05-jquery.html">5</a><a href="parallax05-javascript.html">5</a></li>
             <li><a href="monseEffect06-jquery.html">6</a><a href="parallax06-javascript.html">6</a></li>
             <li><a href="monseEffect07-jquery.html">7</a><a href="parallax07-javascript.html">7</a></li>
@@ -146,72 +151,69 @@
     </div>
     <div class="info bottom">
         <ul>
-            <li>multiplay</li>
-            <li>screen</li>
-            <li>overlay</li>
-            <li>darken</li>
-            <li>lighten</li>
-            <li>color-dodge</li>
-            <li>color-burn</li>
-            <li>hard-light</li>
-            <li>soft-light</li>
-            <li class="active">difference</li>
-            <li>exclusion</li>
-            <li>hue</li>
-            <li>saturation</li>
-            <li>color</li>
-            <li>luminosity</li>
+            <li>pageX : <span class="pageX">0</span> </li>
+            <li>pageY : <span class="pageY">0</span> </li>
+            <li>mouseX : <span class="mouseX">0</span> </li>
+            <li>mouseY: <span class="mouseY">0</span> </li>
         </ul>
     </div>
     <!-- //info -->
 
     <main>
         <div class="cursor"></div>
-
-        <div class="contents">
-            <p>Never <em>understimate</em> your own ignorance.</p>
-            <p>네 자신의 무지를 절대 <em>과소평가</em> 하지 마라</p>
+        
+        <div class="move-image">
+            <div class="ming"><img src="img/images07.jpg" alt="이미지"></div>
+            <div class="mtxt">
+                <p>Luck is when preparedness meets opportunity.</p>
+                <p>운이란 준비가 기호를 만나는 것이다.</p>
+            </div>
         </div>
     </main>
 
     <!-- script -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
         <script>
-        //선택자 
-        const cursor = document.querySelector(".cursor")
-        const contentEm = document.querySelectorAll(".contents em")
-        const infoLi = document.querySelectorAll(".info.bottom li")
+           let x = 0,
+                y = 0;
+                mouseX = 0,
+                mouseY = 0,
+                angleX = 0,
+                angleY = 0,
+                fmouseX = 0,
+                fmouseY = 0;
 
-        //움직임 효과 
-        document.addEventListener("mousemove", function(e){
-            gsap.to(cursor, {duration: 0.3, left:e.pageX, top:e.pageY});
-        });
-              
-        //오버효과
-        contentEm.forEach(elem=>{
-            elem.addEventListener("mouseenter", ()=>{
-                cursor.classList.add("active");
+            document.addEventListener("mousemove",function(e){
+                x = e.pageX;
+                y = e.pageY;
+
+                // mouseX = window.innerWidth/2 - x;
+                // mouseY = window.innerHeight/2 - y;
+
+                mouseX = Math.max(-100, Math.min(100, window.innerWidth/2 - x));
+                mouseY = Math.max(-100, Math.min(100, window.innerHeight/2 - y));
+
+                angleX = (12 * mouseX) / 100; //가공된 수치로 움직임에 각도 제약을 줌.
+                angleY = (12 * mouseY) / 100;
+
+                fmouseX += (angleX - fmouseX) * 0.1; //+시켜줘 움직임을 부드럽게 해줌.
+                fmouseY += (angleY - fmouseY) * 0.1;
+
+                //움직임 
+                const move = document.querySelector(".move-image");
+                move.style.transform = "translate(-50%, -50%) perspective(600px) rotateX("+fmouseY+"deg) rotateY("+ -fmouseX+"deg)";
+
+                //커서
+                gsap.to(".cursor", {duration: 0.3, left: x, top: y})
             });
-            elem.addEventListener("mouseleave", ()=>{
-                cursor.classList.remove("active");
+
+            //출력용 
+            document.addEventListener("mousemove",function(){
+                document.querySelector(".pageX").textContent = x;
+                document.querySelector(".pageY").textContent = y;
+                document.querySelector(".mouseX").textContent = mouseX;
+                document.querySelector(".mouseY").textContent = mouseY;
             });
-
-        });
-
-        //출력용
-        infoLi.forEach(info => {
-            info.addEventListener("click", function(){
-                const txt = this.textContent || this.innerHTML;
-                cursor.style.mixBlendMode = txt;
-
-                infoLi.forEach(li => {
-                    li.classList.remove("active");
-                    this.classList.add("active");
-                });
-            });
-        });
-          
-          
         </script>
     <!-- //script -->
 </body>
