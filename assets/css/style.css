@@ -219,11 +219,12 @@
 	
 }
 #contents_tit p {
-	padding:35px 0; 
-	font-family: 'Gaegu', cursive; font-size: 40px;
+	padding:20px 0; 
+	font-family: 'MaruBuri-Regular'; font-size: 20px;
+	line-height: 1;
 }
 #contents_tit p a {
-	color:#2c94c4; 
+	color:#071c87; 
 }
 
 
@@ -375,7 +376,14 @@
 
 .image-wrap:hover .hover-wrap, overlay-text-thumb {color: #fff;}
 
-
+/* 블럭 이미지 교체 */
+.image-wrap {
+	background: url(../img/svg-donut.svg);
+	background-size: cover;
+}
+.image-wrap .hover-wrap .overlay-img-donut {
+	margin-top: 0% !important;
+}
 
 
 /* 도넛 */
