@@ -441,10 +441,6 @@ background: url('../img/AjaxLoader.gif') no-repeat center center #aebab6;
 
 }
 
-
-
-
-
 @media (max-width: 480px) {
 	.navbar-fixed-top, .navbar-fixed-bottom {
 	position: static;
@@ -463,9 +459,11 @@ background: url('../img/AjaxLoader.gif') no-repeat center center #aebab6;
 	}
 	#header h1{
 	color: #3692b8;
-	
-	
+	}
 
+	.at4-follow {
+		display: none;
+	}
 }
 
 /*NO MORE TABLES!! ;) 
@@ -491,11 +489,3 @@ background: url('../img/AjaxLoader.gif') no-repeat center center #aebab6;
     
    
 }
-
-
-
-
-
-
-
-
