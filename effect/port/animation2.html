@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation1</title>
+
+    <style>
+        body
+        {
+        margin:0;
+        padding:0
+        }
+        #loading {
+            background: linear-gradient(to right, #9733EE, #DA22FF);
+            height: 100%;
+            width: 100%;
+            position: fixed;
+            top: 0px;
+            left: 0;
+        }
+        .cssload-box-loading {
+        width: 49px;
+        height: 49px;
+        margin: auto;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        }
+        .cssload-box-loading:before {
+        content: '';
+        width: 49px;
+        height: 5px;
+        background: #000000;
+        opacity: 0.1;
+        position: absolute;
+        top: 58px;
+        left: 0;
+        border-radius: 50%;
+        animation: shadow 0.58s linear infinite;
+        }
+        .cssload-box-loading:after {
+        content: '';
+        width: 49px;
+        height: 49px;
+        background: #FDD245;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: 3px;
+        animation: load-animate 0.58s linear infinite;
+        }
+        @keyframes load-animate {
+        17% {
+            border-bottom-right-radius: 3px;
+        }
+        25% {
+            transform: translateY(9px) rotate(22.5deg);
+        }
+        50% {
+            transform: translateY(18px) scale(1, 0.9) rotate(45deg);
+            border-bottom-right-radius: 39px;
+        }
+        75% {
+            transform: translateY(9px) rotate(67.5deg);
+        }
+        100% {
+            transform: translateY(0) rotate(90deg);
+        }
+        }
+        @keyframes shadow {
+        0%, 100% {
+            transform: scale(1, 1);
+        }
+        50% {
+            transform: scale(1.2, 1);
+        }
+        }
+    </style>
+</head>
+<body>
+    <div id="loading">
+        <div class="cssload-box-loading"></div>
+    </div>
+</body>
+</html>
