@@ -107,8 +107,14 @@
                     <h2 id="intro1" class="page-header">SliderEffect01</h2>
                     <p class="bs-callout bs-callout-info">자바스크립트와 제이쿼리를 이용한 이미지 슬라이드 효과</p>
                     <iframe width="100%" height="600px" src="sliderEffect01-javascript.html" frameborder="0"></iframe>
-                      <div class="javascriptSource">
-                        <h3 class="btn btn-default">Javascript Source</h3>   
+                    <iframe width="100%" height="600px" src="sliderEffect01-jquery.html" frameborder="0"></iframe>
+                    <div>
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li role="presentation" class="active"><a href="#home1" aria-controls="home" role="tab" data-toggle="tab">JavaScript</a></li>
+                            <li role="presentation"><a href="#profile1" aria-controls="profile" role="tab" data-toggle="tab">jQuery</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane active" id="home1">
 <pre class="line-numbers language-js"><code><script>const sliderWrap = document.querySelector(".slider-wrap");
 const sliderImg = document.querySelector(".slider-img");
 const slider = document.querySelectorAll(".slider");
@@ -117,26 +123,24 @@ let currentIndex = 0;            //현재 보이는 1번째 이미지
 let sliderCount = slider.length; //이미지 갯수
 
 setInterval(() => {
-    let nextIndex = (currentIndex + 1) % sliderCount; //0~5까지 인덱스를 통제 
-                    // (0+1) % 5 = 1
-                    // (1+1) % 5 = 2
-                    // (2+1) % 5 = 3
-                    // (3+1) % 5 = 4
-                    // (4+1) % 5 = 0
+let nextIndex = (currentIndex + 1) % sliderCount; //0~5까지 인덱스를 통제 
+// (0+1) % 5 = 1
+// (1+1) % 5 = 2
+// (2+1) % 5 = 3
+// (3+1) % 5 = 4
+// (4+1) % 5 = 0
 
-    slider[currentIndex].style.opacity = "0";
-    slider[nextIndex].style.opacity = "1"; 
+slider[currentIndex].style.opacity = "0";
+slider[nextIndex].style.opacity = "1"; 
 
-    currentIndex = nextIndex; //이미지 갯수만큼 증감 되는 식(currentIndex++와 유사)
+currentIndex = nextIndex; //이미지 갯수만큼 증감 되는 식(currentIndex++와 유사)
 
-    console.log("currentIndex: " + currentIndex);
-    console.log("nextIndex: " + nextIndex);
+console.log("currentIndex: " + currentIndex);
+console.log("nextIndex: " + nextIndex);
 },3000);</script>
 </code></pre>
-                      </div>
-                      <iframe width="100%" height="600px" src="sliderEffect01-jquery.html" frameborder="0"></iframe>
-                      <div class="jquerySource">
-                        <h3 class="btn btn-default">jQuery Source</h3>
+    </div>
+    <div role="tabpanel" class="tab-pane" id="profile1">
 <pre class="line-numbers language-js"><code><script src="../assets/js/jquery-1.9.1.min.js"></script><script>const sliderWrap = $(".slider-wrap");
 const sliderImg = $(".slider-img");
 const slider = $(".slider");
@@ -158,8 +162,10 @@ setInterval(function(){
     console.log("nextIndex: " + nextIndex); 
 },3000);</script>
 </code></pre>
-                      </div>
-                    </div>
+    </div>
+</div>
+</div>
+                </div>
                 <!-- //Intro1 -->
 
                  <!-- Intro2 -->
@@ -354,7 +360,7 @@ sliderBtn.find(".next").click(function(){
 });</script>
 </code></pre>
                       </div>
-                    </div>
+                </div>
                 <!-- //Intro5 -->
 
                 <!-- Intro6 -->
@@ -364,12 +370,6 @@ sliderBtn.find(".next").click(function(){
                     <iframe width="100%" height="650px" src="sliderEffect02-javasctipt.html" frameborder="0"></iframe>
                       <div class="javascriptSource">
                         <h3 class="btn btn-default">Javascript Source</h3>   
-<pre class="line-numbers language-js"><code>
-</code></pre>
-                      </div>
-                      <iframe width="100%" height="650px" src="sliderEffect06-jquery.html" frameborder="0"></iframe>
-                      <div class="jquerySource">
-                        <h3 class="btn btn-default">jQuery Source</h3>
 <pre class="line-numbers language-js"><code><script src="../assets/js/jquery-1.9.1.min.js"></script><script>const sliderWrap = $(".slider-wrap");
 const sliderImg = $(".slider-img");
 const slider = $(".slider");
@@ -412,6 +412,73 @@ sliderBtn.on("click","a",function(){
 });</script>
 </code></pre>
                       </div>
+                    </div>
+                <!-- //Intro6 -->
+
+                 <!-- Intro7 -->
+                 <div class="bs-docs-section">
+                    <h2 id="intro1" class="page-header">SliderEffect07</h2>
+                    <p class="bs-callout bs-callout-info">자바스크립트 이용한 이미지 슬라이드 효과</p>
+                    <iframe width="100%" height="650px" src="sliderEffect-3d.html" frameborder="0"></iframe>
+                      <div class="javascriptSource">
+                        <h3 class="btn btn-default">Javascript Source</h3>   
+<pre class="line-numbers language-js"><code><script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script><script>
+const n = 12;
+
+gsap.timeline()
+    .set('#container', {perspective:800})
+
+for(let i=0; i<n; i++){
+    //컨테이너 안에 div 12개 만들기(html 확인하기)
+    let b = document.createElement('div');
+    b.classList.add('box');
+    document.getElementById('container').appendChild(b);
+
+    //12개의 박스에 색 넣기
+    gsap.set(b, {
+        left:'50%',
+        top:'50%',
+        x:'-50%',
+        y:'-50%',
+        z:600,
+        width:300,
+        height:600,
+        borderRadius:20,
+        background:()=>'hsl('+(i/n*360)+',100%,50%)'
+    });
+
+    //박스 3d 위치 값 설정하기
+    gsap.fromTo(b, {
+        scaleY:0,
+        // opacity:0.7,
+        zIndex:()=>(i<n/2)?-i:i,
+        rotationY:90+i/n*206.5,
+        transformOrigin:String("50% 50% -1060%")
+    },{
+        scaleY:1,
+        duration:1,
+        delay:1-0.5*(i/n),
+        ease:'elastic'
+    })
+
+    //마우스 오버하면 박스가 흔들리는 효과
+    b.onmouseenter = (e) => {
+        gsap.to(b, {duration:0.3, rotationX: -14, y:'-130%', ease: 'back.out(6)'})
+    }
+    b.onmouseleave = (e) => {
+        gsap.to(b, {duration:0.4, rotationX: 0, y:'-50%'})
+    }
+
+}
+
+//마우스 오버 시 전체 박스가 움직이는 효과
+window.onmousemove = (e) => {
+    gsap.to('.box', {duration:0.6, rotationY: (i)=>45+i/n*206.5+90*(e.clientX/window.innerWidth)})
+}</script>
+</code></pre>
+                      </div>
+                      </div>
+
                     </div>
                 <!-- //Intro6 -->
 
