@@ -175,8 +175,10 @@
             if(currentIndex == 0){ //처음 이미지
                 currentIndex = sliderCount;
                 sliderImg.css("margin-left", sliderWidth * -currentIndex);
+                console.log("in :"+ currentIndex); 
             }
-            currentIndex--;
+            currentIndex--; //좌측 이동하여 사진을 슬라이드해줌 
+            console.log("out :"+ currentIndex);
             sliderImg.animate({ "margin-left": -sliderWidth * currentIndex }, 400);
         }
 

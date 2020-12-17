@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>parallax-vertical</title>
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
+    <style>
+        @font-face {
+            font-family: 'NEXON Lv2 Gothic Light';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic Light.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        *{margin: 0; padding: 0; font-family: 'Poppins', sans-serif;}
+
+        #section1 {
+            height: 100vh;
+            background: tomato;
+        }
+        #section2 {
+            height: 100vh;
+            background: #444;
+        }
+        #section3 {
+            height: 100vh;
+            background: #999;
+        }
+        #section4 {
+            height: 100vh;
+            background: red;
+        }
+        #section5 {
+            height: 100vh;
+            background: rebeccapurple;
+        }
+        #section6 {
+            height: 100vh;
+            background: teal;
+        }
+        #section1 .imgWrap .img {
+            background: url(../img/images01.jpg);
+            background-size: cover;
+            width: 100%; height: 100%;
+        }
+        #section2 .imgWrap .img {
+            background: url(../img/images02.jpg);
+            background-size: cover;
+            width: 100%; height: 100%;
+        }
+        #section3 .imgWrap .img {
+            background: url(../img/images03.jpg);
+            background-size: cover;
+            width: 100%; height: 100%;
+        }
+        #section4 .imgWrap .img {
+            background: url(../img/images04.jpg);
+            background-size: cover;
+            width: 100%; height: 100%;
+        }
+        #section5 .imgWrap .img {
+            background: url(../img/images05.jpg);
+            background-size: cover;
+            width: 100%; height: 100%;
+        }
+        #section6 .imgWrap .img {
+            background: url(../img/images06.jpg);
+            background-size: cover;
+            width: 100%; height: 100%;
+        }
+
+        .content-item {
+            position: relative;
+        }
+        .content-item .num {
+            position: absolute;
+            left: 80%; top: 0%;
+            font-size: 20vw;
+            color: #fff;
+            z-index: 90;
+            font-weight: 100;
+            opacity: 0.2222;
+            letter-spacing: -1vw;
+        }
+        .content-item .imgWrap {
+            position: absolute;
+            left: 50%; top: 60%;
+            transform: translate(-50%, -50%);
+            z-index: 100;
+            width: 50vw; height: 50vh;
+
+        }
+        .content-item .content-item .imgWrap .img {
+            position: absolute;
+            left: 50%; height: 50%;
+            transform: translate(-50%, -50%);
+            background-size: cover;
+            width: 100%; height: 100%;
+            background: #000;
+        }
+        .content-item .title {
+            position: absolute; left: 20%; top: 70%;
+            width: 50vw;
+            font-size: 4vw;
+            line-height: 1.4;
+            color: #fff;
+            z-index: 110;
+            word-break: keep-all;
+            font-family: 'NEXON Lv2 Gothic Light';
+        }
+
+        /* 가로스크롤링 기본 셋팅 */
+        body {
+            height: 10000px;
+        }
+        #contents {
+            width: 600vw;
+            overflow: hidden;
+            position: fixed;
+            left: 0; top: 0;
+        }
+        #contents  > section {
+            float: left;
+            width: 100vw;
+        }
+
+        .character {
+            width: 200px; height: 200px;
+            position: fixed;
+            left: 50%; bottom: 0;
+            margin-left: -90px;
+            z-index: 200;
+            background-image: url(../img/roby.png);
+            background-size: 1800px;
+        }
+        .character.walking {
+            animation: walk 0.8s steps(9, start) infinite;
+        }
+        .character.left {
+            background-position: 0 -200px;
+            animation: walk2 0.8s steps(9, start) infinite;
+
+        }
+        @keyframes walk {
+            0%   {background-position: 0px 0px;}
+            100% {background-position: -1800px 0px;}
+        }
+        @keyframes walk2 {
+            0%   {background-position: 0px -200px;}
+            100% {background-position: -1800px -200px;}
+        }
+        #section3 .img {
+            opacity: 0;
+        }
+        #section3 .title {
+            opacity: 0;
+        }
+        #section3 .num {
+            opacity: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="character"></div>
+
+    <section id="contents">
+        <section id=section1 class="content-item">
+            <span class="num">01</span>
+            <div class="imgWrap">
+                <div class="img"></div>
+            </div>
+            <div class="title">결과도 중요하지만 과정이 더 중요하다.</div>
+        </section> 
+        <!-- //section1 -->
+        <section id=section2 class="content-item">
+            <span class="num">02</span>
+            <div class="imgWrap">
+                <div class="img"></div>
+            </div>
+            <div class="title">2020년 12월 15일입니다.</div>
+        </section> 
+        <!-- //section2 -->
+        <section id=section3 class="content-item">
+            <span class="num">03</span>
+            <div class="imgWrap">
+                <div class="img"></div>
+            </div>
+            <div class="title">2020년 12월 16일입니다.</div>
+        </section> 
+        <!-- //section3 -->
+        <section id=section4 class="content-item">
+            <span class="num">04</span>
+            <div class="imgWrap">
+                <div class="img"></div>
+            </div>
+            <div class="title">2020년 12월 17일입니다.</div>
+        </section> 
+        <!-- //section4 -->
+        <section id=section5 class="content-item">
+            <span class="num">05</span>
+            <div class="imgWrap">
+                <div class="img"></div>
+            </div>
+            <div class="title">2020년 12월 18일입니다.</div>
+        </section> 
+        <!-- //section5 -->
+        <section id=section6 class="content-item">
+            <span class="num">06</span>
+            <div class="imgWrap">
+                <div class="img"></div>
+            </div>
+            <div class="title">올해 마지막 달입니다.</div>
+        </section> 
+        <!-- //section6 -->
+    </section>
+
+    <!-- script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"></script>
+    <script>
+        // $(window).scroll(function(){
+        //     const scroll = $(window).scrollTop(); //전체 h값을 구해준다.
+
+        //     $("#contents").css("left", -scroll); // 전체 h값을 가로값에 넣어준다. -scroll값으로 왼쪽으로가게 해준다.
+        // });
+
+        let lastScrollTop = 0;
+        const totalWidth = $("#contents").width(); 
+        $("body").css("height",totalWidth);
+
+        //스크롤이 됐을 때 캐릭터를 움직이게 만들어 주는 스크립트
+        $(window).scroll(function(){
+            let wScroll = $(window).scrollTop();
+            let wWidth = $(window).width();
+            let wHeight = $(window).height();
+            let dHeight = $("body").height() - wHeight; //전체 세로 값 - 현재 화면의 세로 값
+            let dWidth = totalWidth - wWidth;        //전체 가로 값 - 현재 화면의 가로 값 
+            let step = dWidth/dHeight;
+            let goLeft = wScroll * step;
+            // console.log(goLeft);
+            $("#contents").css("left", -goLeft);
+
+            clearTimeout($.data(this,"scollCheck"));
+
+            //스크롤을 멈췄을 때 캐릭터 멈춤
+            $.data(this, "scollCheck", setTimeout(function(){
+                $(".character").removeClass("walking");
+            },100))
+            $.data(this, "scollCheck", setTimeout(function(){
+                $(".character").removeClass("left");
+            },100))
+
+            //캐릭터 앞, 뒤 걸음
+            if( wScroll > lastScrollTop ){
+                $(".character").removeClass("left");
+                $(".character").addClass("walking");
+            } else {
+                $(".character").addClass("left");
+            }
+            lastScrollTop = wScroll;
+
+            //컨텐츠 요소마다 패럴랙스 효과 주기
+            if(wScroll > $("#section1").position().left + $(window).width()/2 ) {
+                gsap.to("#section1 .img", {duration:0.4, opacity:1, top: "50%"})
+                gsap.to("#section1 .title", {duration:0.4, opacity:1, top: "60%", delay: 0.4})
+                gsap.to("#section1 .num", {duration:0.4, opacity:1, left: "60%", delay: 0.8})
+            }
+            if(wScroll > $("#section2").position().left + $(window).width()/2 ) {
+                gsap.to("#section2 .img", {duration:0.4, opacity:1, top: "50%"})
+                gsap.to("#section2 .title", {duration:0.4, opacity:1, top: "60%", delay: 0.4})
+                gsap.to("#section2 .num", {duration:0.4, opacity:1, left: "60%", delay: 0.8})
+            }
+            if(wScroll > $("#section3").position().left + $(window).width()/2 ) {
+                gsap.to("#section3 .img", {duration:0.4, opacity:1, top: "50%"})
+                gsap.to("#section3 .title", {duration:0.4, opacity:1, top: "60%", delay: 0.4})
+                gsap.to("#section3 .num", {duration:1.5, opacity:1, left: "60%", delay: 0.8})
+            }
+            if(wScroll > $("#section4").position().left + $(window).width()/2 ) {
+                gsap.to("#section4 .img", {duration:0.4, opacity:1, top: "50%"})
+                gsap.to("#section4 .title", {duration:0.4, opacity:1, top: "60%", delay: 0.4})
+                gsap.to("#section4 .num", {duration:1.5, opacity:1, left: "60%", delay: 0.8})
+            }
+            if(wScroll > $("#section5").position().left + $(window).width()/2 ) {
+                gsap.to("#section5 .img", {duration:0.4, opacity:1, top: "50%"})
+                gsap.to("#section5 .title", {duration:0.4, opacity:1, top: "60%", delay: 0.4})
+                gsap.to("#section5 .num", {duration:1.5, opacity:1, left: "60%", delay: 0.8})
+            }
+            if(wScroll > $("#section6").offset().left + $(window).width()) {
+                gsap.to("#section6 .img", {duration:0.4, opacity:1, top: "50%"})
+                gsap.to("#section6 .title", {duration:0.4, opacity:1, top: "60%", delay: 0.4})
+                gsap.to("#section6 .num", {duration:1.5, opacity:1, left: "60%", delay: 0.8})
+            }
+        })
+
+        //키보드로 작동
+        $(document).keydown(function(e){
+            if(e.which == 39){ 
+                let scrollTop = $(document).scrollTop();
+                $(window).scrollTop(scrollTop + 50);
+            }
+            if(e.which == 37){
+                let scrollTop = $(document).scrollTop();
+                $(window).scrollTop(scrollTop - 50);
+            }
+            console.log(event.keycode);
+            
+        })
+
+    </script>
+</body>
+</html>

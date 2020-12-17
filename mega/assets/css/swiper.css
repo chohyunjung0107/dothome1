@@ -12,8 +12,6 @@
     list-style: none;
     padding: 0;
     z-index: 1;
-    width: 100%;
-    height: 100%;
 }
 .swiper-container-no-flexbox .swiper-slide {
     float: left;
@@ -70,7 +68,8 @@
     background: #000; 
     opacity: .2;
 }
-.swiper-slide .swiper-container2 .swiper-slide:after {
+
+.swiper-container2 .swiper-slide:after{
     opacity: 0;
 }
 .swiper-slide-invisible-blank {
