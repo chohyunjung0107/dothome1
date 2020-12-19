@@ -68,6 +68,7 @@
             color: #fff;
             font-size: 4vw;
         }
+
         /* section2 */
         .s2Txt01 {
             width: 100VW; height: 100vw;
@@ -86,6 +87,7 @@
             color: transparent;
             text-transform: capitalize;
             white-space: nowrap;
+            
         }
         .s2Txt03 {
             color: #fff;
@@ -93,25 +95,59 @@
         }
         .s2Txt03 .text1 {
             top: 30%; 
+            /* border: 1px solid #fff; */
+            display: inline-block;
+            left: 29.3vw; 
+            padding-top: 10vh;
         }
         .s2Txt03 .text1-desc {
             font-size: 1.5vw; 
             font-family: 'NEXON Lv1 Gothic OTF Light';
+            /* border: 1px solid #fff; */
+            display: inline-block;
+            left: 60%;
+            padding-bottom: 10vh;
         }
 
         .s2Txt03 .text2 {
             top: 30%; 
+            display: inline-block;
+            left: 29.3vw; 
+            padding-top: 10vh;
         }
         .s2Txt03 .text2-desc {
-            font-size: 1.5vw; top: 40%;
+            font-size: 1.5vw; 
             font-family: 'NEXON Lv1 Gothic OTF Light';
+            display: inline-block;
+            left: 60%;
+            padding-bottom: 10vh;
         }
 
         .s2Txt03 .text3 {
-            top: 30%; display: none;
+            top: 30%; 
+            display: inline-block;
+            left: 29.3vw; 
+            padding-top: 10vh;
+        }
+        .s2Txt03 .text3-desc {
+            font-size: 1.5vw; 
+            font-family: 'NEXON Lv1 Gothic OTF Light';
+            display: inline-block;
+            left: 60%;
+            padding-bottom: 10vh;
         }
         .s2Txt03 .text4 {
-            top: 30%; display: none;
+            top: 30%; 
+            display: inline-block;
+            left: 29.3vw; 
+            padding-top: 10vh;
+        }
+        .s2Txt03 .text4-desc {
+            font-size: 1.5vw; 
+            font-family: 'NEXON Lv1 Gothic OTF Light';
+            display: inline-block;
+            left: 60%;
+            padding-bottom: 10vh;
         }
         .s2Txt04 {
             width: 60vw; height: 60vh;
@@ -121,13 +157,31 @@
             background-position: center top;
             /* background-color: #ccc; */
             top: 70%;
-
+            display: flex;
+            overflow: hidden;
         }
         .s2Txt04 .img1 {
-            margin: 30px;
+            flex: 0 0 100%;
+            margin-left: 2vw;
         }
-        .s2Txt04 .img1 img {
-            border-radius: 30px 30px 0 0;
+        .s2Txt04 .img2 {
+            flex: 0 0 100%;
+            margin-left: -2vw;
+            
+        }
+        .s2Txt04 .img3 {
+            flex: 0 0 100%;
+            margin-left: -2vw;
+        }
+        .s2Txt04 .img4 {
+            flex: 0 0 100%;
+            margin-left: -2vw;
+        }
+        .s2Txt04 img {
+            margin-top: 3vh;
+            justify-content: center;
+            width: 56vw; height: 56vh;
+            border-radius: 5px 5px 0 0;
         }
     </style>
 </head>
@@ -185,41 +239,82 @@
                 <div class="s2Txt03">
                     <p class="fixed text1"
                         data-7900="opacity:0;"
-                        data-8300="opacity:0; top:50%;"
-                        data-8800="opacity:1; top:25%;"
-                        data-8900="opacity:0;"
+                        data-8900="opacity:0; top:50%;"
+                        data-9000="opacity:1; top:25%;"
+                        data-10000="opacity:0;"
                     >웹표준 사이트</p>
                     <p class="fixed text1-desc"
                         data-7900="opacity:0;"
-                        data-8300="opacity:0; top:50%;"
-                        data-8800="opacity:1; top:35%;"
-                        data-8900="opacity:0;"
+                        data-8900="opacity:0; top:50%;"
+                        data-9100="opacity:1; top:35%;"
+                        data-10000="opacity:0;"
                     >웹접근성 지침서 2.0을 기반으로 사이트를 제작하였습니다.</p>
 
                     <p class="fixed text2"
-                        data-9000="opacity:0; top:50%;"
-                        data-9500="opacity:0; top:50%;"
-                        data-9800="opacity:1; top:25%;"
+                        data-10000="opacity:0;"
+                        data-11000="opacity:0; top:50%;"
+                        data-11900="opacity:1; top:25%;"
+                        data-12900="opacity:0;"
                     >반응형 사이트</p>
                         <p class="fixed text2-desc"
-                        data-8900="opacity:0; top:50%;"
-                        data-9000="opacity:0; top:50%;"
-                        data-9200="opacity:1; top:35%;"
+                            data-10000="opacity:0;"
+                            data-10900="opacity:0; top:50%;"
+                            data-11900="opacity:1; top:35%;"
+                            data-12900="opacity:0;"
                     >모든 디바이스 환경에따라 최적화시켜 사이트를 만들었습니다.</p>
-                    <!-- <p class="fixed text3">클론 메가박스</p>
-                    <p class="fixed text3-desc">기업에서 가장 많이 사용하는 스타일의 사이트를 제작하였습니다.</p>
-                    <p class="fixed text4">리액트</p>
-                    <p class="fixed text4-desc">React를 이용하여 포트폴리오 사이트를 제작하였습니다.</p> -->
+                    <p class="fixed text3"
+                        data-12900="opacity:0;"
+                        data-13000="opacity:0; top:50%;"
+                        data-13900="opacity:1; top:25%;"
+                        data-14900="opacity:0;"
+                    >클론 메가박스</p>
+                    <p class="fixed text3-desc"
+                        data-12900="opacity:0;"
+                        data-13000="opacity:0; top:50%;"
+                        data-13900="opacity:1; top:35%;"
+                        data-14900="opacity:0;"
+                    >기업에서 가장 많이 사용하는 스타일의 사이트를 제작하였습니다.</p>
+                    <p class="fixed text4"
+                        data-14900="opacity:0;"
+                        data-15000="opacity:0; top:50%;"
+                        data-15900="opacity:1; top:25%;"
+                        data-16900="opacity:0;"
+                    >리액트</p>
+                    <p class="fixed text4-desc"
+                        data-14900="opacity:0;"
+                        data-15000="opacity:0; top:50%;"
+                        data-15900="opacity:1; top:35%;"
+                        data-16900="opacity:0;"
+                    >React를 이용하여 포트폴리오 사이트를 제작하였습니다.</p>
                 </div>
                 <div class="s2Txt04 fixed"
                     data-8000="opacity:1; top: 0%;"
                     data-9000="opacity:1; top:60%;"
                     data-9300="opacity:1; top:73%;"
                 >
-                    <div class="img1"><img src="img/apple-img (5).jpg" alt="웹표준이미지"></div>
-                    <!-- <div class="img2"><img src="img/apple-img (3).jpg" alt="웹표준이미지"></div>
-                    <div class="img3"><img src="img/apple-img (4).jpg" alt="웹표준이미지"></div>
-                    <div class="img4"><img src="img/apple-img (1).jpg" alt="웹표준이미지"></div> -->
+                    <div class="img1"
+                        data-8000 ="opacity:1;"
+                        data-9000 ="opacity:1; margin-left: 2vw;"
+                        data-11000 ="opacity:0;"
+                    ><img src="img/apple-img (5).jpg" alt="웹표준이미지"></div>
+                    <div class="img2"
+                        data-10000 ="opacity:0;"
+                        data-11000 ="opacity:1;"
+                        data-12000 ="opacity:1; margin-left:-60vw;"
+                        data-13000 ="opacity:0;"
+                    ><img src="img/apple-img (2).jpg" alt="반응형이미지"></div>
+                    <div class="img3"
+                        data-12000 ="opacity:0;"
+                        data-13000 ="opacity:1;"
+                        data-14000 ="opacity:1; margin-left:-60vw;"
+                        data-15000 ="opacity:0;"
+                    ><img src="img/apple-img (4).jpg" alt="메가박스이미지"></div>
+                    <div class="img4"
+                        data-14000 ="opacity:0;"
+                        data-15000 ="opacity:1;"
+                        data-16000 ="opacity:1; margin-left:-60vw;"
+                        data-17000 ="opacity:0;"
+                    ><img src="img/apple-img (1).jpg" alt="리액트이미지"></div>
                 </div>
 
             </div>
