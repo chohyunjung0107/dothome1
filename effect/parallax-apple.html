@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>parallax-apple</title>
+    <style>
+        @font-face {
+            font-family: 'NEXON Lv2 Gothic Bold';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic Bold.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'NEXON Lv1 Gothic OTF Light';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF Light.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        * {margin: 0; padding: 0; box-sizing: border-box;}
+        body {height: 20000px;}
+
+        .scroll {
+            position: fixed;
+            right: 10px; top: 10px;
+            width: 50px; height: 50px; line-height: 50px; 
+            text-align: center; color: #fff;
+            background: rgba(0,0,0,0.5);
+            z-index: 1000000000;
+        }
+        #section1 {}
+        #section1 {}
+        #section1 {}
+        #section1 {}
+        #section1 {}
+        #section1 {}
+
+        /* common */
+        .fixed {
+            font-family: 'NEXON Lv2 Gothic Bold';
+            position: fixed;
+            top: 50%; left: 50%; 
+            transform: translate(-50%, -50%);
+            z-index: 1000;
+        }
+        img { 
+            width: 100%; vertical-align: top;
+        }
+        /* section1 */
+        .sTxt01 {
+            font-size: 8vw;
+        }
+        .sTxt02 {
+            font-size: 8vw;
+            white-space: nowrap;
+        }
+        .sTxt03 {
+            width: 0%; height: 0%;
+            z-index: 900;
+        }
+        .sTxt04 {
+            width: 30vw; height: 30vw;
+            background: #000;
+            border-radius: 50%;
+            z-index: 900;
+        }
+        .s1Txt05 {
+            color: #fff;
+            font-size: 4vw;
+        }
+        /* section2 */
+        .s2Txt01 {
+            width: 100VW; height: 100vw;
+            background: #000;
+        }
+        .s2Txt02 {
+            
+        }
+        .s2Txt02 h2 {
+            font-size: 4vw;
+            background-repeat: no-repeat;
+            background-image: url(img/apple-text-bg.jpg);
+            background-size: cover;
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            text-transform: capitalize;
+            white-space: nowrap;
+        }
+        .s2Txt03 {
+            color: #fff;
+            font-size: 3vw;
+        }
+        .s2Txt03 .text1 {
+            top: 30%; 
+        }
+        .s2Txt03 .text1-desc {
+            font-size: 1.5vw; 
+            font-family: 'NEXON Lv1 Gothic OTF Light';
+        }
+
+        .s2Txt03 .text2 {
+            top: 30%; 
+        }
+        .s2Txt03 .text2-desc {
+            font-size: 1.5vw; top: 40%;
+            font-family: 'NEXON Lv1 Gothic OTF Light';
+        }
+
+        .s2Txt03 .text3 {
+            top: 30%; display: none;
+        }
+        .s2Txt03 .text4 {
+            top: 30%; display: none;
+        }
+        .s2Txt04 {
+            width: 60vw; height: 60vh;
+            background-image: url(img/apple-pad-mokup.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center top;
+            /* background-color: #ccc; */
+            top: 70%;
+
+        }
+        .s2Txt04 .img1 {
+            margin: 30px;
+        }
+        .s2Txt04 .img1 img {
+            border-radius: 30px 30px 0 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="scroll">0</div> 
+
+    <div id="contents">
+        <div id="section1"
+            data-0 ="display: block;"
+            data-7999 ="display: none;"
+        >
+            <div class="sTxt01 fixed"
+                data-0 = "top: 50%; opacity:1;"
+                data-500 = "top: 30%; opacity:0;"
+            >안녕하세요.</div>
+            <div class="sTxt02 fixed"
+                data-300 = "top: 70%; opacity:0;"
+                data-800 = "top: 30%; opacity:1; font-size: 8vw;"
+                data-1700 = "top: 50%; opacity:1; font-size: 0vw;"
+            >프론트엔드개발자입니다.</div>
+            <div class="sTxt03 fixed"
+                data-1600 = "width: 0%; height:0%; border-radius: 50%;" 
+                data-3000 ="width: 100%; height:100%; border-radius: 0%;"
+            ><img src="img/apple-01.jpg" alt="이미지" class="fixed"
+                data-1600 = "border-radius: 500px;" 
+                data-3000 ="border-radius: 0px;"
+            >
+            </div>
+            <div class="sTxt04 fixed" data-title= "검은색 원"
+                data-2300 = "width: 0vw; height:0vw;" 
+                data-3300 = "width: 30vw; height:30vw;"
+                data-5000 = "width: 30vw; height: 30vw;"
+                data-7600 = "width: 230vw; height: 230vw;"
+            ><span class="s1Txt05 fixed"
+                data-2800 = "transform: translate(-50%, -50%) scale(0) rotate(-360deg);" 
+                data-4300 ="transform: translate(-50%, -50%) scale(1) rotate(0deg);"
+                data-5000 ="transform: translate(-50%, -50%) scale(1) rotate(0deg);"
+                data-7000 ="transform: translate(-50%, -50%) scale(0) rotate(0deg);"
+            >Hello!</span> 
+            </div>
+        </div> 
+        <!--//section1-->
+        <div id="section2"
+            data-7899 ="display: none;"
+            data-7900 ="display: block;"
+            data-17000 ="display: block;"
+            data-17001 ="display: none;">
+            <div class="s2Txt01 fixed" data-title="검은색 배경"></div>
+            <div class="s2Txt02">
+                <h2 class="fixed"
+                    data-7900= "opacity:0; transform: translate(-50%, -50%) scale(2);"
+                    data-8000= "opacity:1; top:50%; transform: translate(-50%, -50%) scale(2);"
+                    data-8800= "opacity:1; top:14%; transform: translate(-50%, -50%) scale(1);"
+                >I've been working on Sites</h2>
+                <div class="s2Txt03">
+                    <p class="fixed text1"
+                        data-7900="opacity:0;"
+                        data-8300="opacity:0; top:50%;"
+                        data-8800="opacity:1; top:25%;"
+                        data-8900="opacity:0;"
+                    >웹표준 사이트</p>
+                    <p class="fixed text1-desc"
+                        data-7900="opacity:0;"
+                        data-8300="opacity:0; top:50%;"
+                        data-8800="opacity:1; top:35%;"
+                        data-8900="opacity:0;"
+                    >웹접근성 지침서 2.0을 기반으로 사이트를 제작하였습니다.</p>
+
+                    <p class="fixed text2"
+                        data-9000="opacity:0; top:50%;"
+                        data-9500="opacity:0; top:50%;"
+                        data-9800="opacity:1; top:25%;"
+                    >반응형 사이트</p>
+                        <p class="fixed text2-desc"
+                        data-8900="opacity:0; top:50%;"
+                        data-9000="opacity:0; top:50%;"
+                        data-9200="opacity:1; top:35%;"
+                    >모든 디바이스 환경에따라 최적화시켜 사이트를 만들었습니다.</p>
+                    <!-- <p class="fixed text3">클론 메가박스</p>
+                    <p class="fixed text3-desc">기업에서 가장 많이 사용하는 스타일의 사이트를 제작하였습니다.</p>
+                    <p class="fixed text4">리액트</p>
+                    <p class="fixed text4-desc">React를 이용하여 포트폴리오 사이트를 제작하였습니다.</p> -->
+                </div>
+                <div class="s2Txt04 fixed"
+                    data-8000="opacity:1; top: 0%;"
+                    data-9000="opacity:1; top:60%;"
+                    data-9300="opacity:1; top:73%;"
+                >
+                    <div class="img1"><img src="img/apple-img (5).jpg" alt="웹표준이미지"></div>
+                    <!-- <div class="img2"><img src="img/apple-img (3).jpg" alt="웹표준이미지"></div>
+                    <div class="img3"><img src="img/apple-img (4).jpg" alt="웹표준이미지"></div>
+                    <div class="img4"><img src="img/apple-img (1).jpg" alt="웹표준이미지"></div> -->
+                </div>
+
+            </div>
+        </div>
+        <!--//section2-->
+        <div id="section3"></div> <!--//section3-->
+        <div id="section4"></div> <!--//section4-->
+        <div id="section5"></div> <!--//section5-->
+        <div id="section6"></div> <!--//section6-->
+    </div>
+
+    <!-- script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/skrollr@0.6.26/dist/skrollr.min.js"></script>
+    <script>
+        var s = skrollr.init();
+
+        $(window).scroll(function(){
+            let scrollTop = $(window).scrollTop();
+            $(".scroll").text(Math.round(scrollTop));
+        });
+    </script>
+</body>
+</html>
