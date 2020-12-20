@@ -316,9 +316,10 @@
 
     //스크롤링하면 
     window.addEventListener("scroll",()=>{
-        let scrollTop = window.pageYOffset;
+        let scrollTop = window.pageYOffset+screen.height/2;
+        let pageYOffset = window.pageYOffset+ screen.height/2;
         let section2 = document.getElementById("section2");
-        let reveal = document.querySelectorAll(".reveal");
+        let reveal =  document.querySelectorAll(".reveal");
 
         // console.log(scrollTop);
 
@@ -326,16 +327,16 @@
         //     section2.classList.add("show");
         // }
 
-        //각 섹션의 오프셋 값에 닿으면 show를 붙쳐야함(this는 윈도우값이 들어오네)
-        reveal.forEach((element, index) => {
-            if(scrollTop+ screen.height/2 > element.offsetTop){
-                element.classList.add("show");
-            }else {
-                element.classList.remove("show");
-            }
-            // console.log(index);
-
-        });
+        //각 섹션의 오프셋 값에 닿으면 show를 붙쳐야함(this는 윈도우값이 들어오네/스크롤을 하면 각섹션에 붙어야하는데)
+        reveal.forEach(elem=>{
+                console.log(elem);
+                
+                if(pageYOffset > elem.offsetTop){
+                    elem.classList.add("show");
+                }else {
+                    elem.classList.remove("show");
+                }
+            });
         
     })
 
