@@ -178,11 +178,71 @@
             margin-left: -2vw;
         }
         .s2Txt04 img {
-            margin-top: 3vh;
+            margin-top: 4vh;
             justify-content: center;
             width: 56vw; height: 56vh;
-            border-radius: 5px 5px 0 0;
+            border-radius: 16px 16px 0 0;
         }
+        .s2Txt04 > div .view {
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, 50%);
+            top: 50%;
+            width: 100px; height: 100px; 
+            background: rgba(0,0,0,0.5);
+            text-align: center;
+            color: rgba(255,255,255,0.8);
+            border-radius: 50%;
+            line-height: 100px;
+            text-decoration: none;
+            transition: all 400ms ease;
+        }
+        .s2Txt04 > div .view.white {
+            background: rgba(255,255,255,0.5);
+            color: rgba(255,255,255,0.8);
+            box-shadow: 255 255 255 6px inset rgba(255,255,255,0.9);
+        }
+        .s2Txt04 > div .view:hover {
+            box-shadow: 0 0 0 6px inset rgba(0,0,0,0.9);
+            background:rgba(0,0,0,1);
+        }
+        .s2Txt04 > div .view.white:hover {
+            box-shadow: 0 0 0 6px inset rgba(255,255,255,0.9);
+            background:rgba(255,255,255,1);
+        }
+
+        /* sction3 */
+        .s3Txt01 {
+            width: 100vw; height: 100vh;
+            background: #000;
+        }
+        .s3Txt02 h2{
+            font-size: 4vw;
+            background-repeat: no-repeat;
+            background-image: url(img/apple-text-bg.jpg);
+            background-size: cover;
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            text-transform: capitalize;
+            white-space: nowrap;            
+        }
+        .s3Txt02 .txtBox1{}
+        .s3Txt02 .txtBox2{}
+        .s3Txt02 .txtBox3{}
+        .s3Txt02 .txtBox4{}
+        .s3Txt02 .txtBox5{}
+
+        .s3Txt03 .aniBox1{
+            width: 300px; height: 300px;
+            background: red;
+        }
+        .s3Txt03 .aniBox2{}
+        .s3Txt03 .aniBox3{}
+        .s3Txt03 .aniBox4{}
+        .s3Txt03 .aniBox5{}
+
+
     </style>
 </head>
 <body>
@@ -249,7 +309,6 @@
                         data-9100="opacity:1; top:35%;"
                         data-10000="opacity:0;"
                     >웹접근성 지침서 2.0을 기반으로 사이트를 제작하였습니다.</p>
-
                     <p class="fixed text2"
                         data-10000="opacity:0;"
                         data-11000="opacity:0; top:50%;"
@@ -296,31 +355,88 @@
                         data-8000 ="opacity:1;"
                         data-9000 ="opacity:1; margin-left: 2vw;"
                         data-11000 ="opacity:0;"
-                    ><img src="img/apple-img (5).jpg" alt="웹표준이미지"></div>
+                    ><img src="img/apple-img (5).jpg" alt="웹표준이미지">
+                        <a href="#" class="view">VIEW</a>
+                    </div>
                     <div class="img2"
                         data-10000 ="opacity:0;"
                         data-11000 ="opacity:1;"
                         data-12000 ="opacity:1; margin-left:-60vw;"
                         data-13000 ="opacity:0;"
-                    ><img src="img/apple-img (2).jpg" alt="반응형이미지"></div>
+                    ><img src="img/apple-img (2).jpg" alt="반응형이미지">
+                        <a href="#" class="view">VIEW</a>
+                    </div>
                     <div class="img3"
                         data-12000 ="opacity:0;"
                         data-13000 ="opacity:1;"
                         data-14000 ="opacity:1; margin-left:-60vw;"
                         data-15000 ="opacity:0;"
-                    ><img src="img/apple-img (4).jpg" alt="메가박스이미지"></div>
+                    ><img src="img/apple-img (4).jpg" alt="메가박스이미지">
+                        <a href="#" class="view">VIEW</a>
+                    </div>
                     <div class="img4"
                         data-14000 ="opacity:0;"
                         data-15000 ="opacity:1;"
                         data-16000 ="opacity:1; margin-left:-60vw;"
                         data-17000 ="opacity:0;"
-                    ><img src="img/apple-img (1).jpg" alt="리액트이미지"></div>
+                    ><img src="img/apple-img (1).jpg" alt="리액트이미지">
+                        <a href="#" class="view white">VIEW</a>
+                    </div>
                 </div>
 
             </div>
         </div>
         <!--//section2-->
-        <div id="section3"></div> <!--//section3-->
+        
+        <div id="section3"
+            data-7899 ="display: none;"
+            data-17000 ="display: block;"
+            data-40000 ="display: block;"
+            data-40001 ="display: none;"
+        >
+            <div class="s3Txt01 fixed" data-title="검은색 배경"
+                data-17000= "width: 200vw; height: 200vh;"
+                data-18000= "width: 30vw; height: 30vh;"
+            ></div>
+            <div class="s3Txt02">
+                <h2 class="txtBox0 fixed"
+                    data-18000= "opacity:1;"
+                    data-20000= "opacity:0;"
+                ><span>I've been workingon Animation</span></h2>
+                <h2 class="txtBox1 fixed"
+                    data-20000= "opacity:0;"
+                    data-22000= "opacity:1;"
+                    data-24000= "opacity:0;"
+                ><span>Animation1</span></h2>
+                <h2 class="txtBox2 fixed"
+                    data-24000= "opacity:0;"
+                    data-26000= "opacity:1;"
+                    data-28000= "opacity:0;"
+                ><span>Animation2</span></h2>
+                <h2 class="txtBox3 fixed"
+                    data-28000= "opacity:0;"
+                    data-30000= "opacity:1;"
+                    data-32000= "opacity:0;"
+                ><span>Animation3</span></h2>
+                <h2 class="txtBox4 fixed"
+                    data-32000= "opacity:0;"
+                    data-34000= "opacity:1;"
+                    data-36000= "opacity:0;"
+                ><span>Animation4</span></h2>
+                <h2 class="txtBox5 fixed"
+                    data-36000= "opacity:0;"
+                    data-38000= "opacity:1;"
+                    data-40000= "opacity:0;"
+                ><span>Animation5</span></h2>
+            <div class="s3Txt03">
+                <div class="aniBox1"></div>
+                <div class="aniBox2"></div>
+                <div class="aniBox3"></div>
+                <div class="aniBox4"></div>
+                <div class="aniBox5"></div>
+            </div>
+        </div>
+        <!--//section3-->
         <div id="section4"></div> <!--//section4-->
         <div id="section5"></div> <!--//section5-->
         <div id="section6"></div> <!--//section6-->
