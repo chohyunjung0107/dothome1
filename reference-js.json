@@ -1,0 +1,872 @@
+{
+  "status": "ok",
+  "status_message": "Query was successful",
+  "data": {
+    "refer": [
+      {
+        "type": "javascript",
+        "id": "변수",
+        "link": "https://webzz.tistory.com/229",
+        "image": "https://i1.daumcdn.net/thumb/T650x650/?fname=https://t1.daumcdn.net/cfile/tistory/99BECF3C5BB02F501B",
+        "title": "변수",
+        "desc": "변수(Variables)는 변하는 데이터 (값)을 저장할 수 있는 메모리 공간입니다. 변수는 하나의 값만 넣을 수 있습니다.",
+        "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+        "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+        "element": "인라인 구조(Inline Element)",
+        "version" : "javascript",
+        "view" : "밑줄과 파란색으로 표시",
+        "definition" : [
+            "하이퍼 링크란 현재 페이지에서 다른 페이지의 이동을 말합니다."
+        ]
+      },
+      {
+        "type": "javascript",
+        "id": "",
+        "link": "https://webzz.tistory.com/229",
+        "image": "https://i1.daumcdn.net/thumb/T650x650/?fname=https://t1.daumcdn.net/cfile/tistory/99BECF3C5BB02F501B",
+        "title": "문자형",
+        "desc": "문자형(String) 데이터는 문자나 숫자를 큰 따옴표 또는 작은 따옴표로 감싸고 있습니다.",
+        "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+        "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+        "element": "인라인 구조(Inline Element)",
+        "version" : "javascript",
+        "view" : "밑줄과 파란색으로 표시",
+        "definition" : [
+            "하이퍼 링크란 현재 페이지에서 다른 페이지의 이동을 말합니다."
+        ]
+      },
+      {
+        "type": "javascript",
+        "id": "",
+        "link": "https://webzz.tistory.com/229",
+        "image": "https://i1.daumcdn.net/thumb/T650x650/?fname=https://t1.daumcdn.net/cfile/tistory/99BECF3C5BB02F501B",
+        "title": "숫자형",
+        "desc": "숫자형(Number) 데이터는 단어 의미 그대로 숫자를 의미합니다.",
+        "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+        "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+        "element": "인라인 구조(Inline Element)",
+        "version" : "javascript",
+        "view" : "밑줄과 파란색으로 표시",
+        "definition" : [
+            "하이퍼 링크란 현재 페이지에서 다른 페이지의 이동을 말합니다."
+        ]
+      },
+      {
+        "type": "javascript",
+        "id": "",
+        "link": "https://webzz.tistory.com/229",
+        "image": "https://i1.daumcdn.net/thumb/T650x650/?fname=https://t1.daumcdn.net/cfile/tistory/99BECF3C5BB02F501B",
+        "title": "typeof ",
+        "desc": "typeof는 지정한 데이터 또는 변수에 저장된 자료형을 알고 싶을 때 사용합니다.",
+        "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+        "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+        "element": "인라인 구조(Inline Element)",
+        "version" : "javascript",
+        "view" : "밑줄과 파란색으로 표시",
+        "definition" : [
+            "하이퍼 링크란 현재 페이지에서 다른 페이지의 이동을 말합니다."
+        ]
+      },
+      {
+        "type": "javascript",
+        "id": "연산자",
+        "link": "https://webzz.tistory.com/229",
+        "image": "https://i1.daumcdn.net/thumb/T650x650/?fname=https://t1.daumcdn.net/cfile/tistory/99BECF3C5BB02F501B",
+        "title": "산술 연산자",
+        "desc": "산술 연산자에는 더하기(+), 빼기(-), 곱하기(*), 나누기(/), 나머지(%)가 있습니다.",
+        "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+        "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+        "element": "인라인 구조(Inline Element)",
+        "version" : "javascript",
+        "view" : "밑줄과 파란색으로 표시",
+        "definition" : [
+            "하이퍼 링크란 현재 페이지에서 다른 페이지의 이동을 말합니다."
+        ]
+      },
+      {
+        "type": "javascript",
+        "id": "",
+        "link": "https://webzz.tistory.com/229",
+        "image": "https://i1.daumcdn.net/thumb/T650x650/?fname=https://t1.daumcdn.net/cfile/tistory/99BECF3C5BB02F501B",
+        "title": "대입 연산자",
+        "desc": "대입 연산자(=)는 연산된 데이터를 변수에 저장할 때 사용합니다.",
+        "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+        "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+        "element": "인라인 구조(Inline Element)",
+        "version" : "javascript",
+        "view" : "밑줄과 파란색으로 표시",
+        "definition" : [
+            "하이퍼 링크란 현재 페이지에서 다른 페이지의 이동을 말합니다."
+        ]
+      },
+      {
+        "type": "javascript",
+        "id": "",
+        "link": "https://webzz.tistory.com/229",
+        "image": "https://i1.daumcdn.net/thumb/T650x650/?fname=https://t1.daumcdn.net/cfile/tistory/99BECF3C5BB02F501B",
+        "title": "비교 연산자",
+        "desc": "두 데이터를 '크다, 작다, 같다'와 같이 비교할 때 사용하는 연산자 입니다.",
+        "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+        "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+        "element": "인라인 구조(Inline Element)",
+        "version" : "javascript",
+        "view" : "밑줄과 파란색으로 표시",
+        "definition" : [
+            "하이퍼 링크란 현재 페이지에서 다른 페이지의 이동을 말합니다."
+        ]
+      },
+      {
+        "type": "javascript",
+        "id": "",
+        "link": "https://webzz.tistory.com/229",
+        "image": "https://i1.daumcdn.net/thumb/T650x650/?fname=https://t1.daumcdn.net/cfile/tistory/99BECF3C5BB02F501B",
+        "title": "증감 연산자",
+        "desc": "증감 연산자에는 숫자형 데이터를 1씩 증가시키는 증가 연산자 (++)와 반대로 1씩 감소시키는 감소 연산자(--)가 있습니다.",
+        "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+        "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+        "element": "인라인 구조(Inline Element)",
+        "version" : "javascript",
+        "view" : "밑줄과 파란색으로 표시",
+        "definition" : [
+            "하이퍼 링크란 현재 페이지에서 다른 페이지의 이동을 말합니다."
+        ]
+      },
+      {
+        "type": "javascript",
+        "id": "",
+        "link": "https://webzz.tistory.com/229",
+        "image": "https://i1.daumcdn.net/thumb/T650x650/?fname=https://t1.daumcdn.net/cfile/tistory/99BECF3C5BB02F501B",
+        "title": "논리 연산자",
+        "desc": "논리 연산자에는 ∥(or), &&(and), !(not)이 있습니다.",
+        "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+        "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+        "element": "인라인 구조(Inline Element)",
+        "version" : "javascript",
+        "view" : "밑줄과 파란색으로 표시",
+        "definition" : [
+            "하이퍼 링크란 현재 페이지에서 다른 페이지의 이동을 말합니다."
+        ]
+      },
+      {
+        "type": "javascript",
+        "id": "조건문",
+        "link": "https://webzz.tistory.com/229",
+        "image": "https://i1.daumcdn.net/thumb/T650x650/?fname=https://t1.daumcdn.net/cfile/tistory/99BECF3C5BB02F501B",
+        "title": "if",
+        "desc": "if문은 조건식을 만족(true)할 경우에만 코드를 실행합니다.",
+        "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+        "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+        "element": "인라인 구조(Inline Element)",
+        "version" : "javascript",
+        "view" : "밑줄과 파란색으로 표시",
+        "definition" : [
+            "하이퍼 링크란 현재 페이지에서 다른 페이지의 이동을 말합니다."
+        ]
+      },
+      {
+        "type": "javascript",
+        "id": "",
+        "link": "https://webzz.tistory.com/229",
+        "image": "https://i1.daumcdn.net/thumb/T650x650/?fname=https://t1.daumcdn.net/cfile/tistory/99BECF3C5BB02F501B",
+        "title": "else",
+        "desc": "else 문은 조건식을 만족할(true) 경우와 만족하지 않을 (false) 경우에 따라 실행되는 코드가 달라집니다. 두 가지 결과가 나올 수 있습니다.",
+        "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+        "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+        "element": "인라인 구조(Inline Element)",
+        "version" : "javascript",
+        "view" : "밑줄과 파란색으로 표시",
+        "definition" : [
+            "하이퍼 링크란 현재 페이지에서 다른 페이지의 이동을 말합니다."
+        ]
+      },
+      {
+        "type": "javascript",
+        "id": "",
+        "link": "https://webzz.tistory.com/229",
+        "image": "https://i1.daumcdn.net/thumb/T650x650/?fname=https://t1.daumcdn.net/cfile/tistory/99BECF3C5BB02F501B",
+        "title": "다중 if",
+        "desc": "다중 if 문은 두 가지 이상의 조건식과 정해 놓은 조건을 만족하지 않았을 때 실행되는 코드로 이루어져 있습니다.",
+        "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+        "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+        "element": "인라인 구조(Inline Element)",
+        "version" : "javascript",
+        "view" : "밑줄과 파란색으로 표시",
+        "definition" : [
+            "하이퍼 링크란 현재 페이지에서 다른 페이지의 이동을 말합니다."
+        ]
+      },
+      {
+        "type": "javascript",
+        "id": "",
+        "link": "https://webzz.tistory.com/229",
+        "image": "https://i1.daumcdn.net/thumb/T650x650/?fname=https://t1.daumcdn.net/cfile/tistory/99BECF3C5BB02F501B",
+        "title": "switch",
+        "desc": "해당 조건에 맞는 case를 구분해서 수행하는 제어문입니다.",
+        "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+        "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+        "element": "인라인 구조(Inline Element)",
+        "version" : "javascript",
+        "view" : "밑줄과 파란색으로 표시",
+        "definition" : [
+            "하이퍼 링크란 현재 페이지에서 다른 페이지의 이동을 말합니다."
+        ]
+      },
+      {
+        "type": "javascript",
+        "id": "",
+        "link": "https://webzz.tistory.com/229",
+        "image": "https://i1.daumcdn.net/thumb/T650x650/?fname=https://t1.daumcdn.net/cfile/tistory/99BECF3C5BB02F501B",
+        "title": "삼항연산자 ",
+        "desc": "조건부 연산자(=삼항연산자)는 조건을 처리하는 if문의 다른 형태 제어문입니다.",
+        "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+        "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+        "element": "인라인 구조(Inline Element)",
+        "version" : "javascript",
+        "view" : "밑줄과 파란색으로 표시",
+        "definition" : [
+            "하이퍼 링크란 현재 페이지에서 다른 페이지의 이동을 말합니다."
+        ]
+      },
+      {
+        "type": "javascript",
+        "id": "반복문",
+        "link": "https://webzz.tistory.com/229",
+        "image": "https://i1.daumcdn.net/thumb/T650x650/?fname=https://t1.daumcdn.net/cfile/tistory/99BECF3C5BB02F501B",
+        "title": "while",
+        "desc": "while문은 조건식을 만족할 때 까지 코드를 여러 회 반복하여 실행할 수 있습니다.",
+        "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+        "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+        "element": "인라인 구조(Inline Element)",
+        "version" : "javascript",
+        "view" : "밑줄과 파란색으로 표시",
+        "definition" : [
+            "하이퍼 링크란 현재 페이지에서 다른 페이지의 이동을 말합니다."
+        ]
+      },
+      {
+        "type": "javascript",
+        "id": "",
+        "link": "https://webzz.tistory.com/229",
+        "image": "https://i1.daumcdn.net/thumb/T650x650/?fname=https://t1.daumcdn.net/cfile/tistory/99BECF3C5BB02F501B",
+        "title": "do while",
+        "desc": "do while문은 반드시 한 번은 코드를 실행하고 조건식을 검사합니다.",
+        "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+        "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+        "element": "인라인 구조(Inline Element)",
+        "version" : "javascript",
+        "view" : "밑줄과 파란색으로 표시",
+        "definition" : [
+            "하이퍼 링크란 현재 페이지에서 다른 페이지의 이동을 말합니다."
+        ]
+      },
+      {
+        "type": "javascript",
+        "id": "",
+        "link": "https://webzz.tistory.com/229",
+        "image": "https://i1.daumcdn.net/thumb/T650x650/?fname=https://t1.daumcdn.net/cfile/tistory/99BECF3C5BB02F501B",
+        "title": "for",
+        "desc": "for문은 조건식을 만족할 때 까지 특정 코드를 반복해서 실행합니다.",
+        "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+        "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+        "element": "인라인 구조(Inline Element)",
+        "version" : "javascript",
+        "view" : "밑줄과 파란색으로 표시",
+        "definition" : [
+            "하이퍼 링크란 현재 페이지에서 다른 페이지의 이동을 말합니다."
+        ]
+      },
+      {
+        "type": "javascript",
+        "id": "",
+        "link": "https://webzz.tistory.com/229",
+        "image": "https://i1.daumcdn.net/thumb/T650x650/?fname=https://t1.daumcdn.net/cfile/tistory/99BECF3C5BB02F501B",
+        "title": "중첩 for",
+        "desc": "for문 안에 for문을 사용한 것을 중첩 for문이라고 합니다.",
+        "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+        "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+        "element": "인라인 구조(Inline Element)",
+        "version" : "javascript",
+        "view" : "밑줄과 파란색으로 표시",
+        "definition" : [
+            "하이퍼 링크란 현재 페이지에서 다른 페이지의 이동을 말합니다."
+        ]
+      },
+      {
+        "type": "javascript",
+        "id": "",
+        "link": "https://webzz.tistory.com/229",
+        "image": "https://i1.daumcdn.net/thumb/T650x650/?fname=https://t1.daumcdn.net/cfile/tistory/99BECF3C5BB02F501B",
+        "title": "break",
+        "desc": "break문은 반복문을 강제로 종료할 때 사용합니다.",
+        "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+        "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+        "element": "인라인 구조(Inline Element)",
+        "version" : "javascript",
+        "view" : "밑줄과 파란색으로 표시",
+        "definition" : [
+            "하이퍼 링크란 현재 페이지에서 다른 페이지의 이동을 말합니다."
+        ]
+      },
+      {
+        "type": "javascript",
+        "id": "",
+        "link": "https://webzz.tistory.com/229",
+        "image": "https://i1.daumcdn.net/thumb/T650x650/?fname=https://t1.daumcdn.net/cfile/tistory/99BECF3C5BB02F501B",
+        "title": "continue",
+        "desc": "for문이나 while문의 {}안에서 continue 문장을 만난 순간 continue문 아래에 있는 실행해야 하는 문장들을 건너 뛰고, 다음 반복을 시작합니다.",
+        "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+        "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+        "element": "인라인 구조(Inline Element)",
+        "version" : "javascript",
+        "view" : "밑줄과 파란색으로 표시",
+        "definition" : [
+            "하이퍼 링크란 현재 페이지에서 다른 페이지의 이동을 말합니다."
+        ]
+      },
+      {
+        "type": "javascript",
+        "id": "함수",
+        "link": "https://webzz.tistory.com/229",
+        "image": "https://i1.daumcdn.net/thumb/T650x650/?fname=https://t1.daumcdn.net/cfile/tistory/99BECF3C5BB02F501B",
+        "title": "선언적 함수",
+        "desc": "가장 기본적으로 사용하는 함수의 형태입니다. 기본적으로 함수는 함수 이름을 설정하고 함수 이름을 호출해야 실행이 됩니다.",
+        "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+        "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+        "element": "인라인 구조(Inline Element)",
+        "version" : "javascript",
+        "view" : "밑줄과 파란색으로 표시",
+        "definition" : [
+            "하이퍼 링크란 현재 페이지에서 다른 페이지의 이동을 말합니다."
+        ]
+      },
+      {
+        "type": "javascript",
+        "id": "",
+        "link": "https://webzz.tistory.com/229",
+        "image": "https://i1.daumcdn.net/thumb/T650x650/?fname=https://t1.daumcdn.net/cfile/tistory/99BECF3C5BB02F501B",
+        "title": "익명 함수",
+        "desc": "익명 함수는 함수에 이름이 없기 때문에 변수에 넣어서 사용하는 함수입니다.",
+        "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+        "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+        "element": "인라인 구조(Inline Element)",
+        "version" : "javascript",
+        "view" : "밑줄과 파란색으로 표시",
+        "definition" : [
+            "하이퍼 링크란 현재 페이지에서 다른 페이지의 이동을 말합니다."
+        ]
+      },
+      {
+        "type": "javascript",
+        "id": "",
+        "link": "https://webzz.tistory.com/229",
+        "image": "https://i1.daumcdn.net/thumb/T650x650/?fname=https://t1.daumcdn.net/cfile/tistory/99BECF3C5BB02F501B",
+        "title": "매개변수가 있는 함수",
+        "desc": "매개변수가 있는 함수 정의문은 함수를 호출할 때 전달하고자 하는 값을 입력하여 호출할 수 있습니다.",
+        "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+        "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+        "element": "인라인 구조(Inline Element)",
+        "version" : "javascript",
+        "view" : "밑줄과 파란색으로 표시",
+        "definition" : [
+            "하이퍼 링크란 현재 페이지에서 다른 페이지의 이동을 말합니다."
+        ]
+      },
+      {
+        "type": "javascript",
+        "id": "",
+        "link": "https://webzz.tistory.com/229",
+        "image": "https://i1.daumcdn.net/thumb/T650x650/?fname=https://t1.daumcdn.net/cfile/tistory/99BECF3C5BB02F501B",
+        "title": "Arguments 함수",
+        "desc": "함수 정의문에서 arguments를 사용하면 매개변수를 사용하는 것처럼 함수 호출문의 값을 받아올 수 있습니다.",
+        "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+        "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+        "element": "인라인 구조(Inline Element)",
+        "version" : "javascript",
+        "view" : "밑줄과 파란색으로 표시",
+        "definition" : [
+            "하이퍼 링크란 현재 페이지에서 다른 페이지의 이동을 말합니다."
+        ]
+      },
+      {
+        "type": "javascript",
+        "id": "",
+        "link": "https://webzz.tistory.com/229",
+        "image": "https://i1.daumcdn.net/thumb/T650x650/?fname=https://t1.daumcdn.net/cfile/tistory/99BECF3C5BB02F501B",
+        "title": "리턴값이 있는 함수",
+        "desc": "return문은 함수에서 결괏값을 반환할 때 사용합니다.(return=결과)",
+        "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+        "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+        "element": "인라인 구조(Inline Element)",
+        "version" : "javascript",
+        "view" : "밑줄과 파란색으로 표시",
+        "definition" : [
+            "하이퍼 링크란 현재 페이지에서 다른 페이지의 이동을 말합니다."
+        ]
+      },
+      {
+        "type": "javascript",
+        "id": "",
+        "link": "https://webzz.tistory.com/229",
+        "image": "https://i1.daumcdn.net/thumb/T650x650/?fname=https://t1.daumcdn.net/cfile/tistory/99BECF3C5BB02F501B",
+        "title": "재귀함수",
+        "desc": "재귀함수는 함수 정의문 내에 함수를 다시 호출하여 함수를 반복문처럼 사용할 때 사용합니다.",
+        "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+        "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+        "element": "인라인 구조(Inline Element)",
+        "version" : "javascript",
+        "view" : "밑줄과 파란색으로 표시",
+        "definition" : [
+            "하이퍼 링크란 현재 페이지에서 다른 페이지의 이동을 말합니다."
+        ]
+      },
+      {
+        "type": "javascript",
+        "id": "",
+        "link": "https://webzz.tistory.com/229",
+        "image": "https://i1.daumcdn.net/thumb/T650x650/?fname=https://t1.daumcdn.net/cfile/tistory/99BECF3C5BB02F501B",
+        "title": "콜백 함수",
+        "desc": "함수를 변수에 저장하고 변수를 함수의 인자로 사용하여 매개변수에 전달하는 함수입니다.",
+        "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+        "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+        "element": "인라인 구조(Inline Element)",
+        "version" : "javascript",
+        "view" : "밑줄과 파란색으로 표시",
+        "definition" : [
+            "하이퍼 링크란 현재 페이지에서 다른 페이지의 이동을 말합니다."
+        ]
+      },
+      {
+        "type": "javascript",
+        "id": "",
+        "link": "https://webzz.tistory.com/229",
+        "image": "https://i1.daumcdn.net/thumb/T650x650/?fname=https://t1.daumcdn.net/cfile/tistory/99BECF3C5BB02F501B",
+        "title": "내부 함수",
+        "desc": "내장 객체를 생성할 때는 이미 자바스크립트 엔진에 내장되어 있는 객체 생성자 함수를 사용하여 객체를 생성 합니다.",
+        "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+        "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+        "element": "인라인 구조(Inline Element)",
+        "version" : "javascript",
+        "view" : "밑줄과 파란색으로 표시",
+        "definition" : [
+            "하이퍼 링크란 현재 페이지에서 다른 페이지의 이동을 말합니다."
+        ]
+      },
+      {
+        "type": "javascript",
+        "id": "",
+        "link": "https://webzz.tistory.com/229",
+        "image": "https://i1.daumcdn.net/thumb/T650x650/?fname=https://t1.daumcdn.net/cfile/tistory/99BECF3C5BB02F501B",
+        "title": "객체 생성자 함수",
+        "desc": "객체를 생성할 때 사용하는 함수 입니다.",
+        "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+        "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+        "element": "인라인 구조(Inline Element)",
+        "version" : "javascript",
+        "view" : "밑줄과 파란색으로 표시",
+        "definition" : [
+            "하이퍼 링크란 현재 페이지에서 다른 페이지의 이동을 말합니다."
+        ]
+      },
+      {
+        "type": "javascript",
+        "id": "",
+        "link": "https://webzz.tistory.com/229",
+        "image": "https://i1.daumcdn.net/thumb/T650x650/?fname=https://t1.daumcdn.net/cfile/tistory/99BECF3C5BB02F501B",
+        "title": "프로토타입 함수",
+        "desc": "프로토타입(Prototype)의 사전적 의미는 '원형'입니다. 자바스크립트에서 '원형'은 객체 생성자 함수를 의미합니다.",
+        "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+        "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+        "element": "인라인 구조(Inline Element)",
+        "version" : "javascript",
+        "view" : "밑줄과 파란색으로 표시",
+        "definition" : [
+            "하이퍼 링크란 현재 페이지에서 다른 페이지의 이동을 말합니다."
+        ]
+      },
+      {
+        "type": "javascript",
+        "id": "",
+        "link": "https://webzz.tistory.com/229",
+        "image": "https://i1.daumcdn.net/thumb/T650x650/?fname=https://t1.daumcdn.net/cfile/tistory/99BECF3C5BB02F501B",
+        "title": "화살표 함수",
+        "desc": "화살표 함수는 항상 익명입니다. 이  함수 표현은 메소드 함수가 아닌 곳에 가장 적합 합니다. 그래서 생성자로서 사용할 수 없습니다.",
+        "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+        "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+        "element": "인라인 구조(Inline Element)",
+        "version" : "javascript",
+        "view" : "밑줄과 파란색으로 표시",
+        "definition" : [
+            "하이퍼 링크란 현재 페이지에서 다른 페이지의 이동을 말합니다."
+        ]
+      },
+      {
+        "type": "javascript",
+        "id": "A",
+        "link": "https://webzz.tistory.com/229",
+        "image": "https://i1.daumcdn.net/thumb/T650x650/?fname=https://t1.daumcdn.net/cfile/tistory/99BECF3C5BB02F501B",
+        "title": "addEventListener",
+        "desc": "addEventListener() 메서드는 지정한 이벤트가 대상에 전달될 때마다 호출할 함수를 설정합니다.",
+        "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+        "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+        "element": "인라인 구조(Inline Element)",
+        "version" : "javascript",
+        "view" : "밑줄과 파란색으로 표시",
+        "definition" : [
+            "하이퍼 링크란 현재 페이지에서 다른 페이지의 이동을 말합니다."
+        ]
+      },
+      {
+        "type": "javascript",
+        "id": "C",
+        "link": "https://webzz.tistory.com/229",
+        "image": "https://i1.daumcdn.net/thumb/T650x650/?fname=https://t1.daumcdn.net/cfile/tistory/99BECF3C5BB02F501B",
+        "title": "classList",
+        "desc": "classList는 읽기 전용 프로퍼티로 공백으로 구분된 문자열인 element.className을 통해 엘리먼트의  클래스 목록에 접근하는 방식을 대체하는 간편한 방법입니다.",
+        "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+        "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+        "element": "인라인 구조(Inline Element)",
+        "version" : "javascript",
+        "view" : "밑줄과 파란색으로 표시",
+        "definition" : [
+            "하이퍼 링크란 현재 페이지에서 다른 페이지의 이동을 말합니다."
+        ]
+      },
+      {
+        "type": "javascript",
+        "id": "F",
+        "link": "https://webzz.tistory.com/229",
+        "image": "https://i1.daumcdn.net/thumb/T650x650/?fname=https://t1.daumcdn.net/cfile/tistory/99BECF3C5BB02F501B",
+        "title": "forEach",
+        "desc": "forEach()는 주어진 callback을 배열에 있는 각 요소에 대해 오름차순으로 한 번씩 실행합니다.",
+        "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+        "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+        "element": "인라인 구조(Inline Element)",
+        "version" : "javascript",
+        "view" : "밑줄과 파란색으로 표시",
+        "definition" : [
+            "하이퍼 링크란 현재 페이지에서 다른 페이지의 이동을 말합니다."
+        ]
+      },
+      {
+        "type": "javascript",
+        "id": "",
+        "link": "https://webzz.tistory.com/229",
+        "image": "https://i1.daumcdn.net/thumb/T650x650/?fname=https://t1.daumcdn.net/cfile/tistory/99BECF3C5BB02F501B",
+        "title": "for in (for of) ",
+        "desc": "for - in문은 상속된 열거 가능한 속성들을 포함하여 객체에서 문자열로 키가 지정된 모든 열거 가능한 속성에 대해 반복합니다.",
+        "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+        "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+        "element": "인라인 구조(Inline Element)",
+        "version" : "javascript",
+        "view" : "밑줄과 파란색으로 표시",
+        "definition" : [
+            "하이퍼 링크란 현재 페이지에서 다른 페이지의 이동을 말합니다."
+        ]
+      },
+      {
+        "type": "javascript",
+        "id": "G",
+        "link": "https://webzz.tistory.com/229",
+        "image": "https://i1.daumcdn.net/thumb/T650x650/?fname=https://t1.daumcdn.net/cfile/tistory/99BECF3C5BB02F501B",
+        "title": "getElementById",
+        "desc": "getElementById() 메서드는 주어진 문자열과 일치하는 id 속성을 가진 요소를 찾고, 이를 나타내는 Element 객체를 반환합니다.",
+        "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+        "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+        "element": "인라인 구조(Inline Element)",
+        "version" : "javascript",
+        "view" : "밑줄과 파란색으로 표시",
+        "definition" : [
+            "하이퍼 링크란 현재 페이지에서 다른 페이지의 이동을 말합니다."
+        ]
+      },
+      {
+        "type": "javascript",
+        "id": "I",
+        "link": "https://webzz.tistory.com/229",
+        "image": "https://i1.daumcdn.net/thumb/T650x650/?fname=https://t1.daumcdn.net/cfile/tistory/99BECF3C5BB02F501B",
+        "title": "innerText innerHTML",
+        "desc": "innerText는 문자열 그대로를 리턴하는 반면, innerHTML은 태그를 적용시켜, 즉 문자열을 html로 인식하여 리턴합니다.",
+        "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+        "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+        "element": "인라인 구조(Inline Element)",
+        "version" : "javascript",
+        "view" : "밑줄과 파란색으로 표시",
+        "definition" : [
+            "하이퍼 링크란 현재 페이지에서 다른 페이지의 이동을 말합니다."
+        ]
+      },
+      {
+        "type": "javascript",
+        "id": "M",
+        "link": "https://webzz.tistory.com/229",
+        "image": "https://i1.daumcdn.net/thumb/T650x650/?fname=https://t1.daumcdn.net/cfile/tistory/99BECF3C5BB02F501B",
+        "title": "Math.round()",
+        "desc": "Math.round() 함수는 입력값을 반올림한 수와 가장 가까운 정수 값을 반환합니다.",
+        "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+        "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+        "element": "인라인 구조(Inline Element)",
+        "version" : "javascript",
+        "view" : "밑줄과 파란색으로 표시",
+        "definition" : [
+            "하이퍼 링크란 현재 페이지에서 다른 페이지의 이동을 말합니다."
+        ]
+      },
+      {
+        "type": "javascript",
+        "id": "",
+        "link": "https://webzz.tistory.com/229",
+        "image": "https://i1.daumcdn.net/thumb/T650x650/?fname=https://t1.daumcdn.net/cfile/tistory/99BECF3C5BB02F501B",
+        "title": "Math.random()",
+        "desc": "Math.random() 함수는 난수0이상 1이하의 랜덤 숫자를 만듭니다.",
+        "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+        "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+        "element": "인라인 구조(Inline Element)",
+        "version" : "javascript",
+        "view" : "밑줄과 파란색으로 표시",
+        "definition" : [
+            "하이퍼 링크란 현재 페이지에서 다른 페이지의 이동을 말합니다."
+        ]
+      },
+      {
+        "type": "javascript",
+        "id": "O",
+        "link": "https://webzz.tistory.com/229",
+        "image": "https://i1.daumcdn.net/thumb/T650x650/?fname=https://t1.daumcdn.net/cfile/tistory/99BECF3C5BB02F501B",
+        "title": "object",
+        "desc": "자바스크립트는 객체(object) 기반 언어입니다. 객체는 기능과 속성을 가지고 있습니다.",
+        "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+        "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+        "element": "인라인 구조(Inline Element)",
+        "version" : "javascript",
+        "view" : "밑줄과 파란색으로 표시",
+        "definition" : [
+            "하이퍼 링크란 현재 페이지에서 다른 페이지의 이동을 말합니다."
+        ]
+      },
+      {
+        "type": "javascript",
+        "id": "",
+        "link": "https://webzz.tistory.com/229",
+        "image": "https://i1.daumcdn.net/thumb/T650x650/?fname=https://t1.daumcdn.net/cfile/tistory/99BECF3C5BB02F501B",
+        "title": "offsfetX / offsetY",
+        "desc": "이벤트 대상이 기준이 됩니다. 전체 문서를 기준으로 합니다.(스크롤 화면 포함)",
+        "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+        "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+        "element": "인라인 구조(Inline Element)",
+        "version" : "javascript",
+        "view" : "밑줄과 파란색으로 표시",
+        "definition" : [
+            "하이퍼 링크란 현재 페이지에서 다른 페이지의 이동을 말합니다."
+        ]
+      },
+      {
+        "type": "javascript",
+        "id": "",
+        "link": "https://webzz.tistory.com/229",
+        "image": "https://i1.daumcdn.net/thumb/T650x650/?fname=https://t1.daumcdn.net/cfile/tistory/99BECF3C5BB02F501B",
+        "title": "offsetTop",
+        "desc": "window의 읽기 전용 속성으로, 상단과 현재 요소의 상대적 거리를 반환합니다.",
+        "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+        "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+        "element": "인라인 구조(Inline Element)",
+        "version" : "javascript",
+        "view" : "밑줄과 파란색으로 표시",
+        "definition" : [
+            "하이퍼 링크란 현재 페이지에서 다른 페이지의 이동을 말합니다."
+        ]
+      },
+      {
+        "type": "javascript",
+        "id": "",
+        "link": "https://webzz.tistory.com/229",
+        "image": "https://i1.daumcdn.net/thumb/T650x650/?fname=https://t1.daumcdn.net/cfile/tistory/99BECF3C5BB02F501B",
+        "title": "preventDefault()",
+        "desc": "a 태그나 submit 태그는 누르게 되면 href 를 통해 이동하거나 , 창이 새로고침하여 실행됩니다. preventDefault 를 통해 이러한 동작을 막아줄 수 있습니다.",
+        "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+        "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+        "element": "인라인 구조(Inline Element)",
+        "version" : "javascript",
+        "view" : "밑줄과 파란색으로 표시",
+        "definition" : [
+            "하이퍼 링크란 현재 페이지에서 다른 페이지의 이동을 말합니다."
+        ]
+      },
+      {
+        "type": "javascript",
+        "id": "",
+        "link": "https://webzz.tistory.com/229",
+        "image": "https://i1.daumcdn.net/thumb/T650x650/?fname=https://t1.daumcdn.net/cfile/tistory/99BECF3C5BB02F501B",
+        "title": "pageX,YOffset",
+        "desc": "위 메서드는 전체 문서를 기준으로 x,y 좌표를 반환 합니다. 스크롤 화면을 포함해서 측정합니다.",
+        "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+        "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+        "element": "인라인 구조(Inline Element)",
+        "version" : "javascript",
+        "view" : "밑줄과 파란색으로 표시",
+        "definition" : [
+            "하이퍼 링크란 현재 페이지에서 다른 페이지의 이동을 말합니다."
+          ]
+      },
+      {
+        "type": "javascript",
+        "id": "",
+        "link": "https://webzz.tistory.com/229",
+        "image": "https://i1.daumcdn.net/thumb/T650x650/?fname=https://t1.daumcdn.net/cfile/tistory/99BECF3C5BB02F501B",
+        "title": "parseInt",
+        "desc": "문자열을 정수로 바꾸는 함수입니다.",
+        "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+        "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+        "element": "인라인 구조(Inline Element)",
+        "version" : "javascript",
+        "view" : "밑줄과 파란색으로 표시",
+        "definition" : [
+            "하이퍼 링크란 현재 페이지에서 다른 페이지의 이동을 말합니다."
+        ]
+      },
+      {
+        "type": "javascript",
+        "id": "Q",
+        "link": "https://webzz.tistory.com/229",
+        "image": "https://i1.daumcdn.net/thumb/T650x650/?fname=https://t1.daumcdn.net/cfile/tistory/99BECF3C5BB02F501B",
+        "title": "querySelector",
+        "desc": "리턴되는 값은 인자를 받아 일치하는 baseElement의 자손의 엘리먼트를 갖고 옵니다.",
+        "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+        "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+        "element": "인라인 구조(Inline Element)",
+        "version" : "javascript",
+        "view" : "밑줄과 파란색으로 표시",
+        "definition" : [
+            "하이퍼 링크란 현재 페이지에서 다른 페이지의 이동을 말합니다."
+        ]
+      },
+      {
+        "type": "javascript",
+        "id": "R",
+        "link": "https://webzz.tistory.com/229",
+        "image": "https://i1.daumcdn.net/thumb/T650x650/?fname=https://t1.daumcdn.net/cfile/tistory/99BECF3C5BB02F501B",
+        "title": "requestAnimationFrame",
+        "desc": "브라우저에게 수행하기를 원하는 애니메이션을 알리고 다음 리페인트가 진행되기 전에 해당 애니메이션을 업데이트하는 함수를 호출하게 합니다.",
+        "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+        "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+        "element": "인라인 구조(Inline Element)",
+        "version" : "javascript",
+        "view" : "밑줄과 파란색으로 표시",
+        "definition" : [
+            "하이퍼 링크란 현재 페이지에서 다른 페이지의 이동을 말합니다."
+        ]
+      },
+      {
+        "type": "javascript",
+        "id": "S",
+        "link": "https://webzz.tistory.com/229",
+        "image": "https://i1.daumcdn.net/thumb/T650x650/?fname=https://t1.daumcdn.net/cfile/tistory/99BECF3C5BB02F501B",
+        "title": "setInterval",
+        "desc": "setInterval은 일정 시간 마다 함수를 실행하는 방법입니다.",
+        "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+        "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+        "element": "인라인 구조(Inline Element)",
+        "version" : "javascript",
+        "view" : "밑줄과 파란색으로 표시",
+        "definition" : [
+            "하이퍼 링크란 현재 페이지에서 다른 페이지의 이동을 말합니다."
+        ]
+      },
+      {
+        "type": "javascript",
+        "id": "",
+        "link": "https://webzz.tistory.com/229",
+        "image": "https://i1.daumcdn.net/thumb/T650x650/?fname=https://t1.daumcdn.net/cfile/tistory/99BECF3C5BB02F501B",
+        "title": "setTimeout",
+        "desc": " setTimeout는 일정 시간이 지난 후에 함수를 실행하는 방법입니다.",
+        "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+        "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+        "element": "인라인 구조(Inline Element)",
+        "version" : "javascript",
+        "view" : "밑줄과 파란색으로 표시",
+        "definition" : [
+            "하이퍼 링크란 현재 페이지에서 다른 페이지의 이동을 말합니다."
+        ]
+      },
+      {
+        "type": "javascript",
+        "id": "",
+        "link": "https://webzz.tistory.com/229",
+        "image": "https://i1.daumcdn.net/thumb/T650x650/?fname=https://t1.daumcdn.net/cfile/tistory/99BECF3C5BB02F501B",
+        "title": "setAttribute",
+        "desc": "setAttribute()는 선택한 요소(element)의 속성(attribute) 값을 정합니다.",
+        "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+        "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+        "element": "인라인 구조(Inline Element)",
+        "version" : "javascript",
+        "view" : "밑줄과 파란색으로 표시",
+        "definition" : [
+            "하이퍼 링크란 현재 페이지에서 다른 페이지의 이동을 말합니다."
+        ]
+      },
+      {
+        "type": "javascript",
+        "id": "",
+        "link": "https://webzz.tistory.com/229",
+        "image": "https://i1.daumcdn.net/thumb/T650x650/?fname=https://t1.daumcdn.net/cfile/tistory/99BECF3C5BB02F501B",
+        "title": "split",
+        "desc": "split는 파라미터로 구분자를 주면 해당 구분자를 기준으로 문자열을 잘라 리스트 형식으로 반환합니다.",
+        "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+        "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+        "element": "인라인 구조(Inline Element)",
+        "version" : "javascript",
+        "view" : "밑줄과 파란색으로 표시",
+        "definition" : [
+            "하이퍼 링크란 현재 페이지에서 다른 페이지의 이동을 말합니다."
+        ]
+      },
+      {
+        "type": "javascript",
+        "id": "",
+        "link": "https://webzz.tistory.com/229",
+        "image": "https://i1.daumcdn.net/thumb/T650x650/?fname=https://t1.daumcdn.net/cfile/tistory/99BECF3C5BB02F501B",
+        "title": "screenX/screenY",
+        "desc": "이 메서드는 모니터 화면을 기준으로 좌표를 제공합니다.",
+        "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+        "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+        "element": "인라인 구조(Inline Element)",
+        "version" : "javascript",
+        "view" : "밑줄과 파란색으로 표시",
+        "definition" : [
+            "하이퍼 링크란 현재 페이지에서 다른 페이지의 이동을 말합니다."
+        ]
+      },
+      {
+        "type": "javascript",
+        "id": "T",
+        "link": "https://webzz.tistory.com/229",
+        "image": "https://i1.daumcdn.net/thumb/T650x650/?fname=https://t1.daumcdn.net/cfile/tistory/99BECF3C5BB02F501B",
+        "title": "toString",
+        "desc": "toString() 메서드는 특정한 Number 객체를 나타내는 문자열을 반환합니다.",
+        "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+        "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+        "element": "인라인 구조(Inline Element)",
+        "version" : "javascript",
+        "view" : "밑줄과 파란색으로 표시",
+        "definition" : [
+            "하이퍼 링크란 현재 페이지에서 다른 페이지의 이동을 말합니다."
+        ]
+      },
+      {
+        "type": "javascript",
+        "id": "",
+        "link": "https://webzz.tistory.com/229",
+        "image": "https://i1.daumcdn.net/thumb/T650x650/?fname=https://t1.daumcdn.net/cfile/tistory/99BECF3C5BB02F501B",
+        "title": "textContent",
+        "desc": "Node 인터페이스의 textContent 속성은 노드와 그 자손의 텍스트 콘텐츠를 표현합니다.",
+        "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
+        "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
+        "element": "인라인 구조(Inline Element)",
+        "version" : "javascript",
+        "view" : "밑줄과 파란색으로 표시",
+        "definition" : [
+            "하이퍼 링크란 현재 페이지에서 다른 페이지의 이동을 말합니다."
+        ]
+      }
+    ]
+  }
+}
