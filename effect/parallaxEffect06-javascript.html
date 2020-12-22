@@ -314,31 +314,48 @@
     //        });
     //    });
 
-    //스크롤링하면 
-    window.addEventListener("scroll",()=>{
-        let scrollTop = window.pageYOffset+screen.height/2;
-        let pageYOffset = window.pageYOffset+ screen.height/2;
-        let section2 = document.getElementById("section2");
-        let reveal =  document.querySelectorAll(".reveal");
+        function scrollReveal(){
+            const reveal = document.querySelectorAll(".reveal");
+            reveal.forEach(elem => {
+                let scrollTop = document.documentElement.scrollTop + window.innerHeight/2; 
+                let offsetTop = elem.offsetTop + elem.parentElement.offsetTop; //부모요소로 오프셋탑 값이 설정되기 때문에 각 요소의 오프셋탑값을 지정
+                // console.log(elem.offsetTop); //숫자가 똑같은데, 글자와 이미지에 넣은 기준이 되어 있다.
 
-        // console.log(scrollTop);
-
-        // if(scrollTop > section2.offsetTop) {
-        //     section2.classList.add("show");
-        // }
-
-        //각 섹션의 오프셋 값에 닿으면 show를 붙쳐야함(this는 윈도우값이 들어오네/스크롤을 하면 각섹션에 붙어야하는데)
-        reveal.forEach(elem=>{
-                console.log(elem);
-                
-                if(pageYOffset > elem.offsetTop){
+                if(scrollTop > offsetTop){
                     elem.classList.add("show");
-                }else {
-                    elem.classList.remove("show");
                 }
             });
+        }
         
-    })
+        window.addEventListener("scroll", scrollReveal)
+
+
+
+    // //스크롤링하면 
+    // window.addEventListener("scroll",()=>{
+    //     let scrollTop = window.pageYOffset+screen.height/2;
+    //     let pageYOffset = window.pageYOffset+ screen.height/2;
+    //     let section2 = document.getElementById("section2");
+    //     let reveal =  document.querySelectorAll(".reveal");
+
+    //     // console.log(scrollTop);
+
+    //     // if(scrollTop > section2.offsetTop) {
+    //     //     section2.classList.add("show");
+    //     // }
+
+    //     //각 섹션의 오프셋 값에 닿으면 show를 붙쳐야함(this는 윈도우값이 들어오네/스크롤을 하면 각섹션에 붙어야하는데)
+    //     reveal.forEach(elem=>{
+    //             console.log(elem);
+                
+    //             if(pageYOffset > elem.offsetTop){
+    //                 elem.classList.add("show");
+    //             }else {
+    //                 elem.classList.remove("show");
+    //             }
+    //         });
+        
+    // })
 
     </script>
 </body>

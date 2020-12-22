@@ -139,15 +139,15 @@
         .s2Txt03 .text4 {
             top: 30%; 
             display: inline-block;
-            left: 29.3vw; 
+            left: 33vw; 
             padding-top: 10vh;
         }
         .s2Txt03 .text4-desc {
             font-size: 1.5vw; 
             font-family: 'NEXON Lv1 Gothic OTF Light';
             display: inline-block;
-            left: 60%;
-            padding-bottom: 10vh;
+            left: 57vw;
+            padding-bottom: 11vh;
         }
         .s2Txt04 {
             width: 60vw; height: 60vh;
@@ -156,32 +156,32 @@
             background-repeat: no-repeat;
             background-position: center top;
             /* background-color: #ccc; */
-            top: 70%;
             display: flex;
             overflow: hidden;
+            margin-top: 13%;
         }
         .s2Txt04 .img1 {
-            flex: 0 0 100%;
+            flex: 1 1 100%;
             margin-left: 2vw;
         }
         .s2Txt04 .img2 {
-            flex: 0 0 100%;
+            flex: 1 1 100%;
             margin-left: -2vw;
             
         }
         .s2Txt04 .img3 {
-            flex: 0 0 100%;
+            flex: 1 1 100%;
             margin-left: -2vw;
         }
         .s2Txt04 .img4 {
-            flex: 0 0 100%;
+            flex: 1 1 100%;
             margin-left: -2vw;
         }
         .s2Txt04 img {
-            margin-top: 4vh;
+            margin-top: 3.5vh;
             justify-content: center;
             width: 56vw; height: 56vh;
-            border-radius: 16px 16px 0 0;
+            border-radius: 9px;
         }
         .s2Txt04 > div .view {
             position: absolute;
@@ -199,7 +199,7 @@
         }
         .s2Txt04 > div .view.white {
             background: rgba(255,255,255,0.5);
-            color: rgba(255,255,255,0.8);
+            color: rgba(0,0,0,0.8);
             box-shadow: 255 255 255 6px inset rgba(255,255,255,0.9);
         }
         .s2Txt04 > div .view:hover {
@@ -214,7 +214,7 @@
         /* sction3 */
         .s3Txt01 {
             width: 100vw; height: 100vh;
-            background: #000;
+            background: #000;            
         }
         .s3Txt02 h2{
             font-size: 4vw;
@@ -227,16 +227,40 @@
             text-transform: capitalize;
             white-space: nowrap;            
         }
-        .s3Txt02 .txtBox1{}
-        .s3Txt02 .txtBox2{}
-        .s3Txt02 .txtBox3{}
-        .s3Txt02 .txtBox4{}
-        .s3Txt02 .txtBox5{}
+        .s3Txt02 .txtBox1{
 
-        .s3Txt03 .aniBox1{
-            width: 300px; height: 300px;
-            background: red;
         }
+        .s3Txt02 .txtBox1 > iframe {
+            position: absolute;
+            left: -50%; bottom: -600%;
+            width: 0vw; height: 40vh;
+        }
+        .s3Txt02 .txtBox2{}
+        .s3Txt02 .txtBox2 > iframe {
+            position: absolute;
+            right: -150%; top: -600%;
+            width: 0vw; height: 40vh;
+        }
+        .s3Txt02 .txtBox3{}
+        .s3Txt02 .txtBox3 > iframe {
+            position: absolute;
+            left: -150%; top: -600%;
+            width: 0vw; height: 40vh;
+        }
+        .s3Txt02 .txtBox4{}
+        .s3Txt02 .txtBox4 > iframe {
+            position: absolute;
+            right: -150%; bottom: -600%;
+            width: 0vw; height: 40vh;
+        }
+        .s3Txt02 .txtBox5{}
+        .s3Txt02 .txtBox5 > iframe {
+            position: absolute;
+            left: -150%; bottom: -600%;
+            width: 0vw; height: 40vh;
+        }
+
+        .s3Txt03 .aniBox1{}
         .s3Txt03 .aniBox2{}
         .s3Txt03 .aniBox3{}
         .s3Txt03 .aniBox4{}
@@ -346,10 +370,10 @@
                         data-16900="opacity:0;"
                     >React를 이용하여 포트폴리오 사이트를 제작하였습니다.</p>
                 </div>
-                <div class="s2Txt04 fixed"
-                    data-8000="opacity:1; top: 0%;"
-                    data-9000="opacity:1; top:60%;"
-                    data-9300="opacity:1; top:73%;"
+                <div class="s2Txt04 fixed" data-title="목업"
+                    data-7000="opacity:1; margin-top: 70%;"
+                    data-9000="opacity:1; margin-top: 40%;"
+                    data-9300="opacity:1; margin-top: 15%;"
                 >
                     <div class="img1"
                         data-8000 ="opacity:1;"
@@ -361,7 +385,7 @@
                     <div class="img2"
                         data-10000 ="opacity:0;"
                         data-11000 ="opacity:1;"
-                        data-12000 ="opacity:1; margin-left:-60vw;"
+                        data-12000 ="opacity:1; margin-left:-57.5vw;"
                         data-13000 ="opacity:0;"
                     ><img src="img/apple-img (2).jpg" alt="반응형이미지">
                         <a href="#" class="view">VIEW</a>
@@ -369,7 +393,7 @@
                     <div class="img3"
                         data-12000 ="opacity:0;"
                         data-13000 ="opacity:1;"
-                        data-14000 ="opacity:1; margin-left:-60vw;"
+                        data-14000 ="opacity:1; margin-left:-57.5vw;"
                         data-15000 ="opacity:0;"
                     ><img src="img/apple-img (4).jpg" alt="메가박스이미지">
                         <a href="#" class="view">VIEW</a>
@@ -377,7 +401,7 @@
                     <div class="img4"
                         data-14000 ="opacity:0;"
                         data-15000 ="opacity:1;"
-                        data-16000 ="opacity:1; margin-left:-60vw;"
+                        data-16000 ="opacity:1; margin-left:-57.5vw;"
                         data-17000 ="opacity:0;"
                     ><img src="img/apple-img (1).jpg" alt="리액트이미지">
                         <a href="#" class="view white">VIEW</a>
@@ -401,41 +425,63 @@
             <div class="s3Txt02">
                 <h2 class="txtBox0 fixed"
                     data-18000= "opacity:1;"
+                    data-19000= "opacity:0;"
                     data-20000= "opacity:0;"
                 ><span>I've been workingon Animation</span></h2>
                 <h2 class="txtBox1 fixed"
                     data-20000= "opacity:0;"
                     data-22000= "opacity:1;"
                     data-24000= "opacity:0;"
-                ><span>Animation1</span></h2>
+                ><span>Animation1</span>
+                 <iframe height="200" style="width: 200%;" scrolling="no" title="SVG - wave Mask" src="https://codepen.io/chohyunjung0107/embed/GRjWLdr?height=265&theme-id=light&default-tab=result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                    See the Pen <a href='https://codepen.io/chohyunjung0107/pen/GRjWLdr'>SVG - wave Mask</a> by chohyunjung0107
+                    (<a href='https://codepen.io/chohyunjung0107'>@chohyunjung0107</a>) on <a href='https://codepen.io'>CodePen</a>.
+                  </iframe>
+                </h2>
                 <h2 class="txtBox2 fixed"
                     data-24000= "opacity:0;"
                     data-26000= "opacity:1;"
                     data-28000= "opacity:0;"
-                ><span>Animation2</span></h2>
+                ><span>Animation2</span>
+                  <iframe height="200" style="width: 200%;" scrolling="no" title="GSAP Animation01" src="https://codepen.io/chohyunjung0107/embed/JjKqdrq?height=265&theme-id=light&default-tab=result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                    See the Pen <a href='https://codepen.io/chohyunjung0107/pen/JjKqdrq'>GSAP Animation01</a> by chohyunjung0107
+                    (<a href='https://codepen.io/chohyunjung0107'>@chohyunjung0107</a>) on <a href='https://codepen.io'>CodePen</a>.
+                  </iframe>
+                </h2>
                 <h2 class="txtBox3 fixed"
                     data-28000= "opacity:0;"
                     data-30000= "opacity:1;"
                     data-32000= "opacity:0;"
-                ><span>Animation3</span></h2>
+                ><span>Animation3</span>
+                  <iframe height="200" style="width: 200%;" scrolling="no" title="Backgorund Effext06" src="https://codepen.io/chohyunjung0107/embed/oNLJVbq?height=265&theme-id=light&default-tab=result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                    See the Pen <a href='https://codepen.io/chohyunjung0107/pen/oNLJVbq'>Backgorund Effext06</a> by chohyunjung0107
+                    (<a href='https://codepen.io/chohyunjung0107'>@chohyunjung0107</a>) on <a href='https://codepen.io'>CodePen</a>.
+                  </iframe>
+                </h2>
                 <h2 class="txtBox4 fixed"
                     data-32000= "opacity:0;"
                     data-34000= "opacity:1;"
                     data-36000= "opacity:0;"
-                ><span>Animation4</span></h2>
+                ><span>Animation4</span>
+                  <iframe height="200" style="width: 200%;" scrolling="no" title="Rocket Animation" src="https://codepen.io/chohyunjung0107/embed/oNLJbrz?height=265&theme-id=light&default-tab=result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                    See the Pen <a href='https://codepen.io/chohyunjung0107/pen/oNLJbrz'>Rocket Animation</a> by chohyunjung0107
+                    (<a href='https://codepen.io/chohyunjung0107'>@chohyunjung0107</a>) on <a href='https://codepen.io'>CodePen</a>.
+                  </iframe>
+                </h2>
                 <h2 class="txtBox5 fixed"
                     data-36000= "opacity:0;"
                     data-38000= "opacity:1;"
                     data-40000= "opacity:0;"
-                ><span>Animation5</span></h2>
-            <div class="s3Txt03">
-                <div class="aniBox1"></div>
-                <div class="aniBox2"></div>
-                <div class="aniBox3"></div>
-                <div class="aniBox4"></div>
-                <div class="aniBox5"></div>
+                ><span>Animation5</span>
+                  <iframe height="200" style="width: 200%;" scrolling="no" title="Wave Circle" src="https://codepen.io/chohyunjung0107/embed/bGeKmdp?height=265&theme-id=light&default-tab=result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                    See the Pen <a href='https://codepen.io/chohyunjung0107/pen/bGeKmdp'>Wave Circle</a> by chohyunjung0107
+                    (<a href='https://codepen.io/chohyunjung0107'>@chohyunjung0107</a>) on <a href='https://codepen.io'>CodePen</a>.
+                  </iframe>
+                </h2>
+                
             </div>
         </div>
+        
         <!--//section3-->
         <div id="section4"></div> <!--//section4-->
         <div id="section5"></div> <!--//section5-->
