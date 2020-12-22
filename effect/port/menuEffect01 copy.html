@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>menu effect01</title>
+    
+    <style>
+     @font-face {
+    font-family: 'TmoneyRoundWindExtraBold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/TmoneyRoundWindExtraBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    }
+
+    body {
+        font-size: 18px;
+        background: #9fddd8;
+        font-family: 'TmoneyRoundWindExtraBold';
+        line-height: 1.4;
+    }
+
+    .quiz-wrap{
+        max-width: 500px;
+        background: #e3e3e3;
+        margin: 50px auto;
+        padding: 20px;
+    }
+
+    .quiz-wrap .info {
+        margin-bottom: 30px;
+    }
+    .quiz-wrap .info ul {
+        border: 3px solid #000;
+    }
+    .quiz-wrap .info li {
+        border-bottom: 3px solid #000;
+        padding: 8px
+    }
+    .quiz-wrap .info li:last-child {
+        border-bottom: 0
+    }
+
+    .quiz-wrap .quiz{
+        border: 3px solid #000;
+        padding: 20px;
+    }
+    .quiz-wrap .quiz h2 {
+        font-size:30px; text-align:center; padding-bottom:20px;
+    }
+    .quiz-wrap .quiz .question {
+        font-size: 22px;
+        padding-bottom: 20px;
+        position:relative;
+        padding-left: 25px
+        
+    }
+    .quiz-wrap .quiz .question::before {
+        content: '';
+        width: 10px; height: 10px;
+        background: #000;
+        border-radius: 50%;
+        position: absolute; left: 0px; top: 10px;
+    }
+
+    .quiz-wrap .quiz .confirm-btn {
+        background: #00005c;
+        color: #fff;
+        text-align: center;
+        padding: 10px;
+        border-radius: 30px;
+        cursor: pointer;
+        margin-bottom:20px
+    }
+    .quiz-wrap .quiz .confirm-answer {
+        border: 3px solid #000;
+        padding: 10px;
+        text-align: center;
+        margin-bottom: 20px
+    }
+    .quiz-wrap .quiz .confirm-answer::before {
+        content : "정답은 : "
+    }
+    .quiz-wrap .quiz .confirm-answer::after {
+        content : "입니다."
+    }
+    .quiz-wrap .quiz .confirm-ex {
+        color: red;
+        position: relative;
+        padding-left: 17px;
+    }
+    .quiz-wrap .quiz .confirm-ex::before {
+        content: '';
+        width: 10px; height: 10px;
+        background: red;
+        border-radius: 50%;
+        position: absolute; left: 0; top: 6px;
+    }
+
+    </style>
+</head>
+<body>
+    <div class="quiz-wrap">
+        <div class="info">
+            <ul>
+                <li>시험 유형 : <span>주관식 1문제</span></li>
+                <li>시험 과목 : <span>CSS</span></li>
+            </ul>
+        </div>
+        <div class="quiz">
+            <h2>&lt; 문제<span class="num"></span> &gt;</h2>
+            <p class="question"></p>
+            <div class="confirm">
+                <p class="confirm-btn">정답확인</p>
+                <p class="confirm-answer"></p>
+                <p class="confirm-ex"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        // //문제정보 
+        // const quizNum ="1";
+        // const quizAsk ="태그 중에서 유일하게 블로 구조를 감쌀 수 있는 태그는?";
+        // const quizAnswer ="&lt; a &gt;";
+        // const quizEx ="HTML5에는 &lt; a &gt; 태그는 유일하게 블록 구조를 감쌀 수 있습니다.";
+
+        // //선택자 
+        // const question = document.querySelector(".question");
+        // // const question = $("question"); 제이쿼리
+        // const questionNum = document.querySelector(".num");
+        // const questionBtn = document.querySelector(".confirm-btn");
+        // const questionAnswer = document.querySelector(".confirm-answer");
+        // const questionEx = document.querySelector(".confirm-ex");
+
+        // //문제 번호를 출력 
+        // questionNum.innerText = quizNum;
+        // // questionNum.innerHTML = quizNum;
+        // // $(".num").text(quizNum);
+        // // $(".num").html(quizNum);
+
+        // //문제 출력 
+        // // question.innerText = quizAsk;
+        // question.innerHTML = quizAsk;
+
+        // //정답 출력 
+        // // questionAnswer.innerText = quizAnswer;
+        // questionAnswer.innerHTML = quizAnswer;
+
+        // //예제 출력 
+        // questionEx.innerHTML = quizEx;
+        // // questionEx.innerHTML = quizEx;
+
+        // //정답 숨기기
+        // questionAnswer.style.display = "none";
+        // questionEx.style.display = "none";
+
+        // //정답 확인 
+        // //버튼을 클릭 -> 버튼 숨기기 -> 정답 보여주기 
+        // questionBtn.addEventListener("click",function(){
+        // 	questionBtn.style.display ="none";
+        // 	questionAnswer.style.display = "block";
+        // 	questionEx.style.display = "block";
+        // });
+
+        //<jQuery>
+        //문제 정보  
+        const quizNum ="1";
+        const quizAsk ="태그 중에서 유일하게 블로 구조를 감쌀 수 있는 태그는?";
+        const quizAnswer ="&lt; a &gt;";
+        const quizEx ="HTML5에는 &lt; a &gt; 태그는 유일하게 블록 구조를 감쌀 수 있습니다.";
+
+        //선택자 
+        var question = $(".question");
+        var questionNum = $(".num");
+        var questionBtn = $(".confirm-btn");
+        var questionAnswer = $(".confirm-answer");
+        var questionEx = $(".confirm-ex");
+
+        //문제출력
+        questionNum.text(quizNum);
+        question.text(quizAsk);
+        questionAnswer.html(quizAnswer);
+        questionEx.html(quizEx);
+
+        //정답 숨기기
+        questionAnswer.hide();
+        questionEx.hide();
+
+        //정답 확인
+        questionBtn.click(function(){
+            questionBtn.hide();
+            questionAnswer.show();
+            questionEx.show();
+        });
+
+    </script>
+    
+</body>
+</html>
