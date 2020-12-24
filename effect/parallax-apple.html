@@ -186,7 +186,7 @@
         .s2Txt04 > div .view {
             position: absolute;
             left: 50%;
-            transform: translate(-50%, 50%);
+            transform: translate(-50%, 0%);
             top: 50%;
             width: 100px; height: 100px; 
             background: rgba(0,0,0,0.5);
@@ -260,12 +260,64 @@
             width: 0vw; height: 40vh;
         }
 
-        .s3Txt03 .aniBox1{}
-        .s3Txt03 .aniBox2{}
-        .s3Txt03 .aniBox3{}
-        .s3Txt03 .aniBox4{}
-        .s3Txt03 .aniBox5{}
+       /* section4 */
+       .s4Txt01 {
+           width: 100vw; height: 100vw;
+           background: #000;
+       }
+       .s4Txt01 .circle1 {
+           width: 5vw; height: 5vw;
+           border: 8px solid #fff;
+           border-radius: 50%;
+           position: absolute;
+           left: 50%; top: 50%;
+           transform: translate(-50%, -50%);
+       }
+       .s4Txt01 .circle2 {
+           width: 5vw; height: 5vw;
+           border: 8px solid #fff;
+           border-radius: 50%;
+           position: absolute;
+           left: 50%; top: 50%;
+           transform: translate(-50%, -50%);
+           
+       }
+       .s4Txt01 .circle3 {
+           width: 5vw; height: 5vw;
+           border: 8px solid #fff;
+           border-radius: 50%;
+           position: absolute;
+           left: 50%; top: 50%;
+           transform: translate(-50%, -50%);
+           
+       }
+       .s4Txt01 .circle4 {
+           width: 5vw; height: 5vw;
+           border: 8px solid #fff;
+           border-radius: 50%;
+           position: absolute;
+           left: 50%; top: 50%;
+           transform: translate(-50%, -50%);
+           
+       }
+       .s4Txt02 {
+            width: 30vw; height: 30vw;
+            background: #fff;
+            border-radius: 50%;
+            position: relative;
+            z-index: 999;
+       }
+       .s4Txt03 {
 
+       }
+       .s4Txt03 h1 {
+        position: absolute;
+        top: 50%; left: 50%;
+        width: 100%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        /* border: 1px solid red; */
+        }
 
     </style>
 </head>
@@ -421,6 +473,9 @@
             <div class="s3Txt01 fixed" data-title="검은색 배경"
                 data-17000= "width: 200vw; height: 200vh;"
                 data-18000= "width: 30vw; height: 30vh;"
+                data-38000= "width: 30vw; height: 30vh;"
+                data-39900= "width: 60vw; height: 60vh;"
+
             ></div>
             <div class="s3Txt02">
                 <h2 class="txtBox0 fixed"
@@ -478,12 +533,72 @@
                     (<a href='https://codepen.io/chohyunjung0107'>@chohyunjung0107</a>) on <a href='https://codepen.io'>CodePen</a>.
                   </iframe>
                 </h2>
-                
             </div>
         </div>
-        
         <!--//section3-->
-        <div id="section4"></div> <!--//section4-->
+        <div id="section4"
+            data-7899 ="display: none;"
+            data-17000 ="display: none;"
+            data-40000 ="display: block;"
+            data-60000 ="display: block;"
+            data-61000 ="display: none;"
+        ><div class="s4Txt01 fixed" data-title="검은색 배경"
+            data-39990= "width: 60vw; height: 60vh;"
+            data-30000= "width: 80vw; height: 80vh;"
+            data-40000= "width: 80vw; height: 80vh;"
+            data-41000= "width: 100vw; height: 100vh;"
+        >
+            <div class="circle1"
+                data-40000= "opacity:1; background:#fff; transform: translate(-50%, -50%) scale(0);"
+                data-41000= "opacity:1; background:#fff; transform: translate(-50%, -50%) scale(0);"
+                data-42000= "opacity:.5; background:transparent; border:3px solid #fff; transform: translate(-50%, -50%) scale(2);"
+                data-43000= "opacity:.3; background:transparent; border:2px solid #fff; transform: translate(-50%, -50%) scale(5);"
+                data-44000= "opacity:.2; background:transparent; border:1px solid #fff; transform: translate(-50%, -50%) scale(7);"
+                data-45000= "opacity:0; background:transparent; border:1px solid #fff; transform: translate(-50%, -50%) scale(8);"
+            ></div>
+            <div class="circle2"
+                data-42000= "opacity:1; background:#fff; transform: translate(-50%, -50%) scale(0);"
+                data-43000= "opacity:1; background:#fff; transform: translate(-50%, -50%) scale(0);"
+                data-44000= "opacity:.5; background:transparent; border:3px solid #fff; transform: translate(-50%, -50%) scale(2);"
+                data-45000= "opacity:.3; background:transparent; border:2px solid #fff; transform: translate(-50%, -50%) scale(5);"
+                data-46000= "opacity:.2; background:transparent; border:1px solid #fff; transform: translate(-50%, -50%) scale(7);"
+                data-47000= "opacity:0; background:transparent; border:1px solid #fff; transform: translate(-50%, -50%) scale(8);"
+            ></div>
+            <div class="circle3"
+                data-44000= "opacity:1; background:#fff; transform: translate(-50%, -50%) scale(0);"
+                data-45000= "opacity:1; background:#fff; transform: translate(-50%, -50%) scale(0);"
+                data-46000= "opacity:.5; background:transparent; border:3px solid #fff; transform: translate(-50%, -50%) scale(2);"
+                data-47000= "opacity:.3; background:transparent; border:2px solid #fff; transform: translate(-50%, -50%) scale(5);"
+                data-48000= "opacity:.2; background:transparent; border:1px solid #fff; transform: translate(-50%, -50%) scale(7);"
+                data-49000= "opacity:0; background:transparent; border:1px solid #fff; transform: translate(-50%, -50%) scale(8);"
+            ></div>
+            <!-- s4Txt02 -->
+            <div class="circle4" data-title="하얀색 배경"
+                data-46000= "opacity:1; background:#fff; transform: translate(-50%, -50%) scale(0); width: 0vw; height: 0vh; border-radius: 50%;"
+                data-47000= "opacity:1; transform: translate(-50%, -50%) scale(0); width: 0vw; height: 0vw;"
+                data-48000= "opacity:1; transform: translate(-50%, -50%) scale(2); width: 0vw; height: 0vw;"
+                data-49000= "opacity:1; transform: translate(-50%, -50%) scale(3); width: 0vw; height: 0vw;  border-radius:50%;"
+            ></div>
+            <div class="s4Txt02 fixed"
+                data-49000= "width: 0vw; height: 0vw; border-radius:50%;"
+                data-49900= "width: 10vw; height: 10vw; border-radius:50%;" 
+                data-50000= "width: 20vw; height: 20vw; border-radius:50%;" 
+                data-51000= "width: 50vw; height: 50vw; border-radius:50%;" 
+                data-52000= "width: 80vw; height: 80vw; border-radius:50%;" 
+                data-53000= "width: 150vw; height: 150vw; border-radius:50%;" 
+            ></div>
+            <!-- s4Txt03 -->
+            <div class="s4Txt03 fixed"
+                data-50000= "width: 20vw; height: 20vw; border-radius:50%;" 
+                data-51000= "width: 50vw; height: 50vw; border-radius:50%;" 
+            ><h1
+                data-46000= "opacity:0";
+                data-48000= "opacity:0";
+                data-49000= "opacity:1";
+            >thank you!</h1></div>
+        </div>
+        </div>
+        <!--//section4-->
         <div id="section5"></div> <!--//section5-->
         <div id="section6"></div> <!--//section6-->
     </div>
