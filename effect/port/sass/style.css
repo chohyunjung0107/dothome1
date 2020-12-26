@@ -96,7 +96,7 @@ body {
   height: 10px;
   border-radius: 50%;
   background: #000;
-  z-index: 100000;
+  z-index: 100000000000000;
 }
 
 .scroll {
@@ -133,6 +133,53 @@ body {
   display: flex;
 }
 
+#section1 .menu {
+  width: 4vw;
+  height: 4vw;
+  border-radius: 50%;
+  background: #014afe;
+  position: absolute;
+  left: 50%;
+  top: 25%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background: #014afe;
+  z-index: 99999999;
+}
+
+#section1 .menu span:nth-child(1) {
+  position: absolute;
+  left: 50%;
+  top: 45%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 1vw;
+  height: 1px;
+  background: #fff;
+}
+
+#section1 .menu span:nth-child(2) {
+  position: absolute;
+  left: 50%;
+  top: 55%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: .5vw;
+  height: 1px;
+  background: #fff;
+}
+
+#section1 .menu span:nth-child(3) {
+  position: absolute;
+  left: 50%;
+  top: 65%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 1vw;
+  height: 1px;
+  background: #fff;
+}
+
 #section1 .left {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 50%;
@@ -150,7 +197,7 @@ body {
 }
 
 #section1 .left h1 {
-  width: 590px;
+  width: 700px;
   height: 300px;
   margin-bottom: 6%;
   font-family: "Arita-buri-SemiBold";
@@ -162,6 +209,7 @@ body {
   letter-spacing: normal;
   text-align: left;
   color: #ffffff;
+  word-break: keep-all;
 }
 
 #section1 .right {

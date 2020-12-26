@@ -13,6 +13,11 @@
     <div class="cursor"></div>
     <div id="wrap">
         <section id="section1">
+            <div class=menu>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
             <div class="left">
                 <div class="logo1">jung</div>
                 <article>
@@ -36,7 +41,6 @@
                     <div class="desc3">코드의 맥락을 보고<br>확장성 있는 구조를 잡으며<br>모던 스크립트를 지향하는</div>
                     <div class="desc4">프론트엔드<br>개발자가 되겠습니다.</div>
                 </article>
-                
             </div>
         </section>
 
@@ -55,6 +59,7 @@
             window.addEventListener("scroll",()=>{
                 document.querySelector(".scroll").textContent = parseInt(window.pageYOffset)
                 document.querySelector(".scroll2").textContent = parseInt(-window.pageYOffset)
+                
             });
 
 
@@ -63,11 +68,11 @@
             
             let cursor = document.querySelector(".cursor");
             let X = e.clientX +"px";
-            let Y = e.clientY -20+"px";
+            let Y = e.clientY-30+"px";
 
             cursor.style.cssText = "left:" + X + "; top:" + Y;
             
-            gsap.to(cursor, { duration: 2.5,});
+            gsap.to(cursor, { duration: 2.5, left: X, top: Y});
 
             });
         </script>

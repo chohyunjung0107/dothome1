@@ -99,7 +99,7 @@ body {
     width: 10px; height: 10px;
     border-radius: 50%;
     background: #000;
-    z-index: 100000;
+    z-index: 100000000000000;
 }
 .scroll {
     position: fixed;
@@ -126,6 +126,42 @@ body {
 #section1 {
     display: flex;
 
+    .menu {
+        width: 4vw; height: 4vw;
+        border-radius: 50%;
+        background: $blue;
+        position: absolute;
+        left: 50%; top: 25%;
+        transform: translate(-50%, -50%);
+        background: $blue;
+        z-index: 99999999;
+
+        span:nth-child(1) {
+            position: absolute;
+            left: 50%; top: 45%;
+            transform: translate(-50%, -50%);
+            width: 1vw; height: 1px; 
+            background: #fff;
+        }
+        span:nth-child(2) {
+            position: absolute;
+            left: 50%; top: 55%;
+            transform: translate(-50%, -50%);
+            width: .5vw; height: 1px; 
+            background: #fff;
+
+
+        }
+        span:nth-child(3) {
+            position: absolute;
+            left: 50%; top: 65%;
+            transform: translate(-50%, -50%);
+            width: 1vw; height: 1px; 
+            background: #fff;
+
+        }
+    }
+
     .left{
         flex: 1 1 50%;
         width: 100vh;
@@ -139,7 +175,7 @@ body {
            font-family: $en-main;
         }
         h1 {
-            width: 590px;
+            width: 700px;
             height: 300px;
             margin-bottom: 6%;
             font-family: $ko-main;
@@ -152,6 +188,7 @@ body {
             text-align: left;
             color: #ffffff; 
             // border: 1px solid #fff;
+            word-break:keep-all;
         }
     }
     .right {

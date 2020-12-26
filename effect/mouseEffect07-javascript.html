@@ -122,9 +122,7 @@
     <!-- //info -->
     <main>
         <div class="cover" id="cover">
-            <div class="cover_wrap">
-                <!-- <img src="img/images07@2.jpg" alt="배경 이미지"> -->
-            </div>
+            <div class="cover_wrap"></div>
         </div>
         <svg id="svg-mask">
             <defs>
@@ -159,29 +157,24 @@
                 this.events();
             }
 
+            //반응별로 묶어 정리
             binds(){
                 this.handleResize = this.handleResize.bind(this); //핸들리사이즈함수를 변수화
                 this.handleMouse = this.handleMouse.bind(this);
                 this.handleClick = this.handleClick.bind(this);
             }
+            //발생 되는 이벤트 
             events(){
                 window.addEventListener('resize',this.handleResize);
                 window.addEventListener('mousemove',this.handleMouse);
                 window.addEventListener('touchmove',this.handleMouse);
                 window.addEventListener('click',this.handleClick);
             }
-            handleMouse(e){
-                gsap.to(this.circle, {
-                    duration: 0.7,
-                    cx: e.clientX || e.touches[0].clientX,
-                    cy: e.clientY || e.touches[0].clientaY,
-                    ease: 'power2.out'
-                });
-            }
 
+            //클릭에 원 사이즈 반응
             handleResize(){
-                this.minRadius = window.innerWidth * 0.1;
-                this.maxRadius = window.innerWidth * 1.1;
+                this.minRadius = window.innerWidth * 0.1; //다시 돌아오는 작은 원사이즈
+                this.maxRadius = window.innerWidth * 1.1; //클릭 시 커지는 원사이즈
 
                 gsap.set([this.el, this.rect],{
                     width: `${window.innerWidth}px`,
@@ -193,13 +186,23 @@
                 });
             }
 
+            //스마트폰 터치 기능 
+            handleMouse(e){
+                gsap.to(this.circle, {
+                    duration: 0.7,
+                    cx: e.clientX || e.touches.clientX, 
+                    cy: e.clientY || e.touches.clientaY,
+                    ease: 'power2.out'
+                });
+            }
+
             //토글메서드와 같은 스크립트
             handleClick(){
                 this.clicked = !this.clicked; 
                 gsap.to(this.circle,{
                     duration: 1,
-                    r: this.clicked ? this.maxRadius : this.minRadius,
-                    ease: 'power3.inOut'
+                    r: this.clicked ? this.maxRadius : this.minRadius, //clicked가 ture일 때 큰원 flase때 작은원
+                    ease: 'power3.inOut' 
                 })
             }
             
