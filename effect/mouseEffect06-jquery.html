@@ -17,9 +17,9 @@
         img {width: 100%; vertical-align: top;}
         li {list-style: none;}
         body {
-            background: url(img/images06@2.jpg) no-repeat center center;
+            background: url(img/images07@2.jpg) no-repeat center center;
             background-size: cover;
-            background-color: #959595;
+            background-color: #FFF;
             background-blend-mode:luminosity;
             height: 100vh;
             overflow: hidden;
@@ -131,7 +131,7 @@
     <!-- info -->
     <div class="info left">
         <h1>Mouse Effect06 - jQuery</h1>
-        <p>마우스 방향에 쉐도우효과 주기</p>
+        <p>마우스 방향에 쉐도우효과 주기(버그발생)</p>
     </div>
     <div class="info right">
         <ul>
@@ -185,6 +185,13 @@
             $(".mouseY").text(parseInt(mouseY));
             $(".mouseX2").text(parseInt(-mouseX));
             $(".mouseY2").text(parseInt(-mouseY));
+
+            //커서
+            gsap.to($(".cursor"),{
+                duration: 0.3,
+                left: x,
+                top: y
+            })
         });
 
     </script>
