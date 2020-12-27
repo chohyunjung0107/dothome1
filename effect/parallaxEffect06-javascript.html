@@ -321,6 +321,8 @@
                 let offsetTop = elem.offsetTop + elem.parentElement.offsetTop; //부모요소로 오프셋탑 값이 설정되기 때문에 각 요소의 오프셋탑값을 지정
                 // console.log(elem.offsetTop); //숫자가 똑같은데, 글자와 이미지에 넣은 기준이 되어 있다.
 
+                console.log(offsetTop)
+
                 if(scrollTop > offsetTop){
                     elem.classList.add("show");
                 }
