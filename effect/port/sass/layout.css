@@ -131,6 +131,8 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  background-attachment: fixed;
+
 }
 
 #section1 .menu {

@@ -88,10 +88,10 @@ $ko-sub : 'S-CoreDream-1Thin';
 *{margin: 0; padding: 0;}
 
 body {
-    display: fixed;
+    position: fixed;
     width: 100vw;
     height: 100vh;
-    // overflow: hidden;
+    overflow: hidden;
 }
 .cursor {
     position: absolute;
@@ -125,6 +125,7 @@ body {
 // 섹션1
 #section1 {
     display: flex;
+    background-attachment: fixed;
 
     .menu {
         width: 4vw; height: 4vw;
