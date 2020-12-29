@@ -84,8 +84,13 @@ $ko-sub : 'S-CoreDream-1Thin';
 
 
 
+//리셋
+*, body{margin: 0; padding: 0;}
+a {font-style: none; text-decoration: none;}
+ul, li{list-style: none;}
+
+
 //레이아웃
-*{margin: 0; padding: 0;}
 
 body {
     // position: fixed;
@@ -121,48 +126,47 @@ body {
     text-align: center; color: $blue;
     z-index: 1000000000;
 }
+.menu {
+    width: 4vw; height: 4vw;
+    border-radius: 50%;
+    background: $blue;
+    position: absolute;
+    left: 50%; top: 25%;
+    transform: translate(-50%, -50%);
+    background: $blue;
+    z-index: 100000;
+
+    span:nth-child(1) {
+        position: absolute;
+        left: 50%; top: 45%;
+        transform: translate(-50%, -50%);
+        width: 1vw; height: 1px; 
+        background: #fff;
+    }
+    span:nth-child(2) {
+        position: absolute;
+        left: 50%; top: 55%;
+        transform: translate(-50%, -50%);
+        width: .5vw; height: 1px; 
+        background: #fff;
+
+
+    }
+    span:nth-child(3) {
+        position: absolute;
+        left: 50%; top: 65%;
+        transform: translate(-50%, -50%);
+        width: 1vw; height: 1px; 
+        background: #fff;
+
+    }
+}
 #wrap {
 }
 
 // 섹션1
 .container {
     display: flex;
-
-    .menu {
-        width: 4vw; height: 4vw;
-        border-radius: 50%;
-        background: $blue;
-        position: absolute;
-        left: 50%; top: 25%;
-        transform: translate(-50%, -50%);
-        background: $blue;
-        z-index: 100000;
-
-        span:nth-child(1) {
-            position: absolute;
-            left: 50%; top: 45%;
-            transform: translate(-50%, -50%);
-            width: 1vw; height: 1px; 
-            background: #fff;
-        }
-        span:nth-child(2) {
-            position: absolute;
-            left: 50%; top: 55%;
-            transform: translate(-50%, -50%);
-            width: .5vw; height: 1px; 
-            background: #fff;
-
-
-        }
-        span:nth-child(3) {
-            position: absolute;
-            left: 50%; top: 65%;
-            transform: translate(-50%, -50%);
-            width: 1vw; height: 1px; 
-            background: #fff;
-
-        }
-    }
 
     .left{
         flex: 1 1 50%;

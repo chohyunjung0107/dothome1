@@ -11,13 +11,13 @@
     <div class="scroll">0</div> 
     <div class="scroll2">0</div> 
     <div class="cursor"></div>
+    <div class=menu>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
     <div id="wrap">
         <section class="container">
-            <div class=menu>
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
             <div class="left">
                 <div class="logo1">jung</div>
                 <article>
@@ -76,7 +76,6 @@
             let cursor = document.querySelector(".cursor");
             let X = e.pageX +"px";
             let Y = e.pageY-20+"px";
-
             cursor.style.cssText = "left:" + X + "; top:" + Y;
             
             gsap.to(cursor, { duration: 2.5, left: X, top: Y});
