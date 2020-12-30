@@ -1,6 +1,6 @@
 <h2>#dothome1</h2>
 <h3>#포트폴리오 작업</h3>
-<a href = "https://chohyunjung0107.github.io/dothome1/effect/port/Pindex.html">MAIN</a><br>
+<a href = "https://chohyunjung0107.github.io/dothome1/effect/port/Aindex.html">MAIN</a><br>
 
 <h3>#실습</h3>
 <a href = "https://chohyunjung0107.github.io/dothome1/index.html">닷홈</a><br>
