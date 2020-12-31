@@ -263,7 +263,6 @@ body {
   background-size: cover;
   margin-top: 35%;
   background-attachment: fixed;
-  border: 1px solid red;
   position: absolute;
   top: 70vh; left: 0;
 }

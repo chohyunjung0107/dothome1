@@ -70,8 +70,7 @@
         <script>
             const leftBox = document.querySelector(".left");
             const rightBox = document.querySelector(".right");
-            const left_desc1 = document.querySelector(".left_desc1");
-            const left_desc2 = document.querySelector(".left_desc2");
+            
             const section1 = document.querySelector(".section1");
 
             // 스크롤값
@@ -85,7 +84,15 @@
                 section1.style.cssText = "top:" + Y;
                 rightBox.style.cssText = "margin-top:" + differntY;
 
-                
+
+                ///////스크롤 하면 무한 클론해줘
+                const t = section1.pageYOffset;
+
+                if(t.top < 2000){
+                    section1.appendChild(section1);
+                    document.body.appendChild(section1);
+                }
+
 
                 //스크롤값 출력
                 document.querySelector(".scroll").textContent = parseInt(window.pageYOffset)
