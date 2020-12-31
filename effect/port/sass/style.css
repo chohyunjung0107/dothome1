@@ -264,7 +264,8 @@ body {
   margin-top: 35%;
   background-attachment: fixed;
   border: 1px solid red;
-  background: #000;
+  position: absolute;
+  top: 70vh; left: 0;
 }
 
 .container .right .desc {

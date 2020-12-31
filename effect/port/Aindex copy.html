@@ -19,7 +19,6 @@
             /* border: 1px solid lawngreen;
             background: lawngreen; */
         }
-        
 
     </style>
 </head>
@@ -79,12 +78,14 @@
             window.addEventListener("scroll",()=>{
                 let pageYOffset = (window.pageYOffset || document.documentElement.scrollTop);
 
-                ////스크롤하면 leftBox의 margin-top값을 위로 올려줘
+                ////스크롤하면 leftBox의 top값을 위로 올려줘
                 const Y = pageYOffset*0.2+"vh";
-                const upY = pageYOffset*-0.005+"vh";
+                const differntY = pageYOffset*-0.005+"vh";
                 
                 section1.style.cssText = "top:" + Y;
-                rightBox.style.cssText = "margin-top:" + upY;
+                rightBox.style.cssText = "margin-top:" + differntY;
+
+                
 
                 //스크롤값 출력
                 document.querySelector(".scroll").textContent = parseInt(window.pageYOffset)
