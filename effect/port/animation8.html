@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation8</title>
+    <style>
+        @font-face {
+            font-family: 'Wemakeprice-Bold';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.0/Wemakeprice-Bold.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body {height: 100vh; font-family: 'Wemakeprice-Bold'; background-image: linear-gradient(to top, #5ee7df 0%, #b490ca 100%);}
+
+        .hover_wrap {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            perspective: 1000px;
+        }
+        .hover_wrap > div {
+            position: relative;
+            max-width: 400px;
+            margin: 1%;
+        }
+        .hover_wrap > div .fornt {}
+        .hover_wrap > div .back {position: absolute; left: 0; top: 0; z-index: -1}
+
+        .hover_wrap > div figure {position: relative;}
+        .hover_wrap > div figacption {
+            position: absolute; 
+            bottom: 0; left: 0;
+            color: #fff;
+            background: rgba(0,0,0,0.8);
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .hover_wrap > div figacption h3 {
+            font-size: 24px;
+            padding-bottom: 10px;
+        }
+        .hover_wrap > div figacption p {
+            font-size: 18px;
+        }
+
+        .hover_wrap > div img {width: 100%; vertical-align: top; border: 7px solid #b490ca;
+            box-sizing: border-box;}
+
+        .hover_wrap > div > figure img {
+            width: 100%; vertical-align: top;
+        }
+
+        @media (max-width: 800px){
+            .hover_wrap {flex-direction: column;}
+        }
+
+        /* hover Effect */
+        .hover_wrap > div.hover5 .front {
+            transform: rotatey(0deg);
+            transition: transform 1s;
+            backface-visibility: hidden
+        }
+        .hover_wrap > div.hover5:hover .front {
+            transform: rotatey(180deg);
+        }
+        .hover_wrap > div.hover5 .back {
+            transform: rotatey(-180deg);
+            transition: transform 1s;
+        }
+        .hover_wrap > div.hover5:hover .back {
+            transform: rotatey(0deg);
+        }
+
+        /* 6 */
+        .hover_wrap > div.hover6 .front {
+            transform: rotatey(0deg);
+            transition: transform 1s;
+            backface-visibility: hidden
+        }
+        .hover_wrap > div.hover6:hover .front {
+            transform: rotatex(180deg);
+        }
+        .hover_wrap > div.hover6 .back {
+            transform: rotatex(-180deg);
+            transition: transform 1s;
+        }
+        .hover_wrap > div.hover6:hover .back {
+            transform: rotatex(0deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="hover_wrap">
+        <div class="hover5"> 
+            <figure class="front">
+                <img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/hover19.jpg" alt="이미지">
+                <figacption>
+                    <h3>Mouse Hover Effect05</h3>
+                    <p>마우스 오버 효과입니다.</p>
+                </figacption>
+            </figure>
+            <figure class="back">
+                <img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/hover18.jpg" alt="이미지">
+                <figacption>
+                    <h3>Mouse Hover Effect05</h3>
+                    <p>마우스 오버 효과입니다.</p>
+                </figacption>
+            </figure>
+        </div>
+        <div class="hover6"> 
+            <figure class="front">
+                <img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/hover20.jpg" alt="이미지">
+                <figacption>
+                    <h3>Mouse Hover Effect06</h3>
+                    <p>마우스 오버 효과입니다.</p>
+                </figacption>
+            </figure>
+            <figure class="back">
+                <img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/hover21.jpg" alt="이미지">
+                <figacption>
+                    <h3>Mouse Hover Effect06</h3>
+                    <p>마우스 오버 효과입니다.</p>
+                </figacption>
+            </figure>
+        </div>
+    </div> 
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation6</title>
+    <style>
+        @font-face {
+            font-family: 'BMEULJIRO';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/BMEULJIRO.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        body {
+            background: #e3f2fd;
+        }
+        svg {
+            font-family: 'BMEULJIRO';
+            position: absolute;
+            width: 100%; height: 100%;
+            background: #999;
+        }
+        svg text {
+            text-transform: uppercase;
+            font-size: 140px;
+            animation: stroke 5s infinite alternate;
+        }
+        @keyframes stroke {
+            0%   {
+                fill: rgba(255,255,255,0); stroke: rgba(255,255,255,1);
+                stroke-dashoffset: 25%;
+                stroke-dasharray: 0 50%;
+                stroke-width: 2;
+            }
+            70%  {fill: rgba(255,255,255,0); stroke: rgba(255,255,255,1)}
+            80%  {
+                fill: rgba(255,255,255,0); stroke: rgba(255,255,255,1);
+                stroke-width: 3;	
+            }
+            100% {
+                fill: rgba(255,255,255,1); stroke: rgba(255,255,255,0);
+                stroke-dashoffset: -25%;
+                stroke-dasharray: 50% 0%;
+                stroke-width: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <svg viewBox="0 0 1320 300">
+        <text x="50%" y="50%" dy="40px" text-anchor="middle">"조현정입니다yo"<text>
+    </svg>
+</body>
+</html>

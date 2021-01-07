@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation7</title>
+    <style>
+        body {background: #17181c;}
+        :root {font-size: 16px;}
+        .button-wrap {width:500px; position: absolute; left:50%; top: 50%; transform: translate(-50%, -50%); text-align:center; font-size: 16px;}
+        .button-wrap button {font-size: 1rem; padding:0.6rem 1rem; margin: 0.4rem; background: none; border: 2px solid #fff; color: #fff; transition: all 0.3s; cursor: alias;}
+
+        .button-wrap button:nth-child(1) {color: #cb72aa; border-color: #cb72aa;}
+        .button-wrap button:nth-child(2) {color: #ef7f62; border-color: #ef7f62;}
+        .button-wrap button:nth-child(3) {color: #ffdc7f; border-color: #ffdc7f;}
+        .button-wrap button:nth-child(4) {color: #e5ff60; border-color: #e5ff60;}
+        .button-wrap button:nth-child(5) {color: #94e458; border-color: #94e458;}
+        .button-wrap button:nth-child(6) {color: #66c887; border-color: #66c887;}
+        .button-wrap button:nth-child(7) {color: #1973bc; border-color: #1973bc;}
+        .button-wrap button:nth-child(8) {color: #fff; border-color: #fff;}
+
+        /* box-shadow */
+        .button-wrap button:nth-child(1):hover {box-shadow:inset 0 0 0 2rem #cb72aa; color: #fff;}
+        .button-wrap button:nth-child(2):hover {box-shadow: inset -5rem 0 0 0 #ef7f62, inset 5rem 0 0 0 #ef7f62; color: #fff;}
+        .button-wrap button:nth-child(3):hover {box-shadow: inset 0 -3rem 0 0 #ffdc7f; color: #fff;}
+        .button-wrap button:nth-child(4):hover {box-shadow: inset 10rem 0 0 0 #e5ff60; color: #fff;}
+
+        .button-wrap button:nth-child(5):hover {animation: pulse 1s 1; color: #fff;}
+        @keyframes pulse {
+            0% {box-shadow: 0 0 0 0 #94e458;}
+            100% {box-shadow: 0 0 0 2rem rgba(255,255,255,0);}
+        }
+
+        .button-wrap button:nth-child(6):hover {
+            box-shadow: 0 0.5rem 0.5rem -0.4rem #66c887;
+            transform: translatey(-0.14rem);
+            color: #fff;
+        }
+        .button-wrap button:nth-child(7):hover { box-shadow : 
+            inset 0.5rem 0 0 0 rgba(25,11,188,0.3),
+            inset 1.0rem 0 0 0 rgba(25,11,188,0.3),
+            inset 1.5rem 0 0 0 rgba(25,11,188,0.3),
+            inset 2.0rem 0 0 0 rgba(25,11,188,0.3),
+            inset 2.5rem 0 0 0 rgba(25,11,188,0.3),
+            inset 3.0rem 0 0 0 rgba(25,11,188,0.3),
+            inset 3.5rem 0 0 0 rgba(25,11,188,0.3),
+            inset 4.0rem 0 0 0 rgba(25,11,188,0.3),
+            inset -0.5rem 0 0 0 rgba(25,11,188,0.3),
+            inset -1.0rem 0 0 0 rgba(25,11,188,0.3),
+            inset -1.5rem 0 0 0 rgba(25,11,188,0.3),
+            inset -2.0rem 0 0 0 rgba(25,11,188,0.3),
+            inset -2.5rem 0 0 0 rgba(25,11,188,0.3),
+            inset -3.0rem 0 0 0 rgba(25,11,188,0.3),
+            inset -3.5rem 0 0 0 rgba(25,11,188,0.3),
+            inset -4.0rem 0 0 0 rgba(25,11,188,0.3);
+        }
+
+        .button-wrap button:nth-child(8):hover {box-shadow: inset -10em 0 0 0 #e0c3fc; color: #fff;}
+    </style>
+</head>
+<body>
+    <div class="button-wrap">
+        <button>Button Effect1</button>
+        <button>Button Effect2</button>
+        <button>Button Effect3</button>
+        <button>Button Effect4</button>
+        <button>Button Effect5</button>
+        <button>Button Effect6</button>
+        <button>Button Effect7</button>
+        <button>Button Effect8</button>
+    
+    </div>
+</body>
+</html>

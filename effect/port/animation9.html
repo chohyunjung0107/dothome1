@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation9</title>
+    <style>
+        @font-face {
+            font-family: 'Wemakeprice-Bold';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.0/Wemakeprice-Bold.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body {height: 100vh; font-family: 'Wemakeprice-Bold'; background-image: linear-gradient(to top, #5ee7df 0%, #b490ca 100%);}
+
+        .hover_wrap {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            
+        }
+        .hover_wrap > div {
+            position: relative;
+            max-width: 400px;
+            margin: 1%;
+            perspective: 1000px;
+        }
+
+        .hover_wrap > div img {
+            width: 100%; vertical-align: top; 
+            border: 7px solid #b490ca;
+            box-sizing: border-box;
+            box-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+        }
+
+        .hover_wrap > div .front {
+            transition: transform 1s; z-index: -1;
+            backface-visibility: hidden;
+            transform-style: preserve-3d;
+        }
+        .hover_wrap > div .back {
+            transition: transform 1s;
+            transform-style: preserve-3d;
+            position: absolute;
+            left: 0; top: 0;
+            z-index: -1;	
+        }
+        .hover_wrap > div figacption {
+            backface-visibility: hidden;
+            position: absolute; left: 50%; top: 50%; 
+            transform: translate(-50%, -50%) translatez(100px);
+            color: #fff;
+            background: rgba(0,0,0,0.4);
+            padding: 15px;
+            text-align: center;
+            line-height: 1.4;
+        }
+
+        /* hover effect */
+        .hover_wrap > div.hover7 .front {
+            transform: rotatex(0deg);
+        }
+        .hover_wrap > div.hover7:hover .front {
+            transform: rotatex(180deg);
+        }
+        .hover_wrap > div.hover7 .back {
+            transform: rotatex(-180deg);
+        }
+        .hover_wrap > div.hover7:hover .back {
+            transform: rotatex(0deg);
+        }
+
+        .hover_wrap > div.hover8 .front {
+            transform: rotatey(0deg);
+        }
+        .hover_wrap > div.hover8:hover .front {
+            transform: rotatey(180deg);
+        }
+        .hover_wrap > div.hover8 .back {
+            transform: rotatey(-180deg);
+        }
+        .hover_wrap > div.hover8:hover .back {
+            transform: rotatey(0deg);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="hover_wrap">
+        <div class="hover7"> 
+            <figure class="front">
+                <img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/hover19.jpg" alt="이미지">
+                <figacption>
+                    <h3>Mouse Hover Effect07</h3>
+                    <p>마우스 오버 효과입니다.</p>
+                </figacption>
+            </figure>
+            <figure class="back">
+                <img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/hover18.jpg" alt="이미지">
+                <figacption>
+                    <h3>Mouse Hover Effect07</h3>
+                    <p>마우스 오버 효과입니다.</p>
+                </figacption>
+            </figure>
+        </div>
+        <div class="hover8"> 
+            <figure class="front">
+                <img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/hover20.jpg" alt="이미지">
+                <figacption>
+                    <h3>Mouse Hover Effect08</h3>
+                    <p>마우스 오버 효과입니다.</p>
+                </figacption>
+            </figure>
+            <figure class="back">
+                <img src="https://tistory2.daumcdn.net/tistory/2933724/skin/images/hover21.jpg" alt="이미지">
+                <figacption>
+                    <h3>Mouse Hover Effect08</h3>
+                    <p>마우스 오버 효과입니다.</p>
+                </figacption>
+            </figure>
+        </div>
+    </div>
+</body>
+</html>

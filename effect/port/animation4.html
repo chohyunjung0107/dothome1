@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation4</title>
+    <style>
+        body {
+            height: 100vh; 
+            background-image: linear-gradient(to top, #fcc5e4 0%, #fda34b 15%, #ff7882 35%, #c8699e 52%, #7046aa 71%, #0c1db8 87%, #020f75 100%);
+        }
+
+        .loading {
+            width:20px; height: 150px; 
+        /* 	background: #fff; */
+            position: absolute;
+            top : 50%; right: 50%;
+            transform: translate(-50%, -50%);
+            animation: circle 1s ease 100;
+        }
+        .loading .circle1 {
+            display:block; width: 20px; height:20px; 
+            border-radius: 50%; background: #fff;
+            animation: move 1s ease infinite;
+        }
+        .loading .circle2 {
+            display:block; width: 20px; height:20px; 
+            margin-top: 110px;
+            border-radius: 50%; background: #fff;
+            animation: move 1s ease infinite;
+        }
+
+        @keyframes circle {
+            0% {transform: translate(-50%, -50%) rotate(0deg)}
+            100% {transform: translate(-50%, -50%) rotate(360deg)}
+        }
+
+    </style>
+</head>
+<body>
+    <div class="loading">
+        <span class="circle1"></span>
+        <span class="circle2"></span>
+    </div>
+</body>
+</html>
