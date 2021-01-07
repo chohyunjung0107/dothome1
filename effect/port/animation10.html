@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation10</title>
+    <style>
+        /* 웹폰트 */
+        @font-face {
+        font-family: 'Abel';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: local('Abel Regular'), local('Abel-Regular'), url(https://fonts.gstatic.com/s/abel/v12/MwQ5bhbm2POE2V9BPbh5uGM.woff2) format('woff2');
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        }
+        @font-face { font-family: 'S-CoreDream-1Thin'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-1Thin.woff') format('woff'); font-weight: normal; font-style: normal; }
+        @font-face { font-family: 'S-CoreDream-3Light'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff'); font-weight: normal; font-style: normal; }
+        @font-face { font-family: 'S-CoreDream-6Bold'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-6Bold.woff') format('woff'); font-weight: normal; font-style: normal; }
+        @font-face { font-family: 'S-CoreDream-7ExtraBold'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-7ExtraBold.woff') format('woff'); font-weight: normal; font-style: normal; }
+        @font-face { font-family: 'S-CoreDream-8Heavy'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-8Heavy.woff') format('woff'); font-weight: normal; font-style: normal; }
+
+        /* 리셋 */
+        ul, li {list-style: none;}
+        body {
+            background: radial-gradient(ellipse farthest-corner at center bottom, #69D2FB 0%, #20438E 100%);
+        }
+
+        /* nav */
+        #nav {
+            position: absolute;
+            left: -300px; top: 0;
+            width: 300px; height: 100vh;
+            background: rgba(255,255,255,0.4);
+            font-family: 'Abel';
+            /*transition: left 1s;*/
+        }
+        #nav.open {
+            left: 0;
+        }
+        #nav h1 {
+            padding: 60px 10px; color: #fff;
+            font-size: 40px;
+            text-align: center;
+            text-transform: uppercase;
+        }
+        #nav ul {}
+        #nav li {}
+        #nav li a {
+            display: block;
+            padding: 15px;
+            text-decoration: none;
+            color: #fff;
+            border-left: 5px solid transparent;
+        }
+        #nav li.active a {
+            background: rgba(255,255,255,0.4);
+            border-left: 5px solid rgba(255,255,255,0.8);
+        }
+        #nav .navBtn {
+            position: absolute; right: -60px; top: 10px;
+            text-decoration: none;
+            width: 50px; height: 50px;
+            background: rgba(255,255,255,0.5);
+            border-radius: 50%;
+            text-align: center;
+            line-height: 50px;
+            color: #fff;
+        }
+
+        /* contents */
+        #contents {
+            height: 100vh;
+        }
+        #contents h2 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            color: #fff;
+            font-size: 8vw;
+            line-height: 10vw;
+            font-family: 'S-CoreDream-3Light';
+        }
+    </style>
+</head>
+<body>
+    <nav id="nav">
+        <h1>HYUNJUNG</h1>
+        <ul>
+            <li class="active"><a href="#">Menu1</a></li>
+            <li><a href="#">Menu2</a></li>
+            <li><a href="#">Menu3</a></li>
+            <li><a href="#">Menu4</a></li>
+            <li><a href="#">Menu5</a></li>
+            <li><a href="#">Menu6</a></li>
+        </ul>
+        <a href="#" class="navBtn">Open</a>
+    </nav>
+    
+    <section id="contents">
+        <h2>최고에 도달하려면<br>최저에서 시작하라.</h2>
+    </section>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        //버튼(.navBtn)을 클릭하면 사이드박스(#nav) left: 0 변경
+
+        $(".navBtn").click(function(){
+            //$("#nav").css("left", "0");
+            //$("#nav").addClass("open");
+            //$("#nav").animate({"left":"0"},1000);
+            //$("#nav").toggleClass("open");
+            $("#nav").toggleClass("on");
+
+            if( $("#nav").hasClass("on") ){
+                //클래스 on이 있을 때 
+                $("#nav").animate({"left":"0"},400);
+                $(".navBtn").text("Close");
+            } else {
+                //클래스 on이 없을 때
+                $("#nav").animate({"left":"-300px"},400);
+                $(".navBtn").text("Open");
+            }
+        });
+    </script> 
+</body>
+</html>
