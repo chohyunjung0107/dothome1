@@ -8,7 +8,7 @@
     <style>
         .section1 {
             position: absolute;
-            top: 0%; 
+            top: 0px; 
         }
         .left .left_desc1{
             /* border: 1px solid red;
@@ -78,20 +78,20 @@
                 let pageYOffset = (window.pageYOffset || document.documentElement.scrollTop);
 
                 ////스크롤하면 leftBox의 top값을 위로 올려줘
-                const Y = pageYOffset*0.2+"vh";
-                const differntY = pageYOffset*-0.005+"vh";
+                const Y = pageYOffset*0.2+"px";
+                const differntY = pageYOffset*-0.005+"px";
                 
                 section1.style.cssText = "top:" + Y;
                 rightBox.style.cssText = "margin-top:" + differntY;
 
 
-                ///////스크롤 하면 무한 클론해줘
-                const t = section1.pageYOffset;
+                // /////스크롤 하면 클론해줘
+                // const t = section1.pageYOffset;
 
-                if(t.top < 2000){
-                    section1.appendChild(section1);
-                    document.body.appendChild(section1);
-                }
+                // if(t.top < 2000){
+                //     section1.appendChild(section1);
+                //     document.body.appendChild(section1);
+                // }
 
 
                 //스크롤값 출력

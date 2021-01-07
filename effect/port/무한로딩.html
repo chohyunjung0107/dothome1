@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>무한 스크롤-row</title>
+
+    <style>
+
+    /* 웹폰트 */
+    @font-face {
+    font-family: "Didot";
+    src: url("251039e6849ad977a8bfc40b564dce89.eot");
+    /* IE9*/
+    src: url("251039e6849ad977a8bfc40b564dce89.eot?#iefix") format("embedded-opentype"), url("251039e6849ad977a8bfc40b564dce89.woff2") format("woff2"), url("251039e6849ad977a8bfc40b564dce89.woff") format("woff"), url("251039e6849ad977a8bfc40b564dce89.ttf") format("truetype"), url("251039e6849ad977a8bfc40b564dce89.svg#Didot") format("svg");
+    /* iOS 4.1- */
+    }
+    
+    /* 리셋 */
+    * {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    }
+    ul,li {list-style: none;}
+
+    /* 아웃라인 */
+    body {
+    height: 100vh;
+    overflow: hidden;
+    color: #fff;
+    }
+
+    .menu {
+    width: 50vw;
+    height: 100vh;
+    overflow: hidden;
+    background: blue;
+    cursor: -webkit-grab;
+    cursor: grab;
+    z-index: 2;
+    }
+
+    /* 드래그 || 클릭 할때 커서의 모양을 바꿔줌 */
+    .menu.is-dragging {
+    cursor: -webkit-grabbing;
+    cursor: grabbing;
+    }
+
+    .menu ul {
+    counter-reset: count; /* 자동으로 번호를 매기는 역할(이름과 시작값(기본값0)을 설정해야함)*/
+    }
+
+    .menu--item {
+    counter-increment: count; /* 카운터 값을 1씩 증가*/
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 50vw;
+    font-size: 120px;
+    line-height: 1.2;
+    padding: .1rem 0;
+    text-align: left;
+    border: 1px solid red;
+    }
+
+    .menu--item:hover {
+        left: 50px;
+        /* transition: .6s ease-in-out; */
+    }
+
+    @media (max-width: 767px) {
+    .menu--item {
+        font-size: 10vw;
+        padding: 1rem 0;
+    }
+    }
+
+    .menu--item:nth-child(n+10):before {
+    content: counter(count);
+    }
+
+    .menu--item button {
+    text-decoration: none;
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    font-size: 120px;
+    -webkit-appearance: none;
+    background: none;
+    padding: 0;
+    border: none;
+    outline: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    color: #fff;
+    font-family: "Didot";
+    cursor: pointer;
+    }
+
+    @media (max-width: 767px) {
+    .menu--item button {
+        font-size: 10vw;
+    }
+    }
+
+    /* .menu--item button:before {
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    display: inline-block;
+    -webkit-transform: translateX(-100%) scale(0.4);
+            transform: translateX(-100%) scale(0.4);
+    content: "0" counter(count);
+    color: #862929;
+    font-family: cursive;
+    } */
+
+    .version {
+    display: inline-block;
+    position: fixed;
+    z-index: 1;
+    text-decoration: none;
+    background: #333;
+    font-family: sans-serif;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 12px;
+    border-radius: 10px;
+    -webkit-box-shadow: 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+    top: -30px;
+    right: -40px;
+    bottom: auto;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    -webkit-transform-origin: 0% 100%;
+            transform-origin: 0% 100%;
+    border-radius: 0;
+    padding: 8px 30px;
+    font-size: 11px;
+    }
+
+    .version:before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100px;
+    bottom: 0;
+    right: 0%;
+    background: transparent;
+    }
+
+    @media (max-width: 767px) {
+    .version {
+        -webkit-transform: scale(0.6) rotate(45deg);
+                transform: scale(0.6) rotate(45deg);
+        right: -110px;
+    }
+    }
+
+    
+    </style>
+</head>
+<body>
+
+<div class="menu">
+<ul class="menu--wrapper">
+    <li class="menu--item"><button href="#">About</button></li>
+    <li class="menu--item"><button href="#">Site PF</button></li>
+    <li class="menu--item"><button href="#">Animation</button></li>
+    <li class="menu--item"><button href="#">Script</button></li>
+    <li class="menu--item"><button href="#">Reference</button></li>
+    <li class="menu--item"><button href="#">Team-work</button></li>
+    <li class="menu--item"><button href="#">Contact</button></li>
+</ul>
+</div>
+  
+  <a class="version" href="https://codepen.io/supah/pen/VwegJwV" target="_parent">The more</a>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"></script>
+  <script>
+    /*--------------------
+    Vars
+    --------------------*/
+    const menu = document.querySelector('.menu')
+    const items = document.querySelectorAll('.menu--item')
+    let menuHeight = menu.clientHeight //사용자에게 보여지는 페이지 높이
+    let itemHeight = items[0].clientHeight
+    let wrapHeight = items.length * itemHeight 
+
+    let scrollSpeed = 0
+    let oldScrollY = 0
+    let scrollY = 0
+    let y = 0
+
+
+    /*--------------------
+    Lerp (선형보간법)
+    --------------------*/
+    const lerp = (v0, v1, t) => {
+    return v0 * ( 1 - t ) + v1 * t
+    }
+
+
+    /*--------------------
+    Dispose 
+    --------------------*/
+    const dispose = (scroll) => {
+    gsap.set(items, {
+        y: (i) => {
+        return i * itemHeight + scroll 
+        }, //아이템 사이의 일정한 거리 
+        modifiers: {
+        y: (y) => {
+            const s = gsap.utils.wrap(-itemHeight, wrapHeight - (itemHeight * -0.5), parseInt(y)) //-0.5는 다음 클론과의 거리를 곱해주었음
+            return `${s}px`
+        }
+        } // 스크롤 할 때 클론이 됨
+    })
+    } 
+    dispose(0)
+
+
+    /*--------------------
+    Wheel
+    --------------------*/
+    const handleMouseWheel = (e) => {
+    scrollY -= e.deltaY   //delyaY는 아래 스크롤 시 양수 값, 위로 스크롤 시 음수 값을 반환(아래위스크롤에 반응)
+    //   console.log(scrollY)
+    }
+
+    /*--------------------
+    Touch
+    --------------------*/
+    let touchStart = 0
+    let touchY = 0
+    let isDragging = false
+
+    const handleTouchStart = (e) => {
+    touchStart = e.clientY || e.touches[0].clientY 
+    isDragging = true
+    menu.classList.add('is-dragging')
+    }
+    const handleTouchMove = (e) => {
+    if (!isDragging) return
+    touchY = e.clientY || e.touches[0].clientY
+    scrollY += (touchY - touchStart) * 2.5
+    touchStart = touchY
+    }
+    const handleTouchEnd = () => {
+    isDragging = false
+    menu.classList.remove('is-dragging')
+    }
+
+
+    /*--------------------
+    Listeners
+    --------------------*/
+    menu.addEventListener('mousewheel', handleMouseWheel)
+
+    menu.addEventListener('touchstart', handleTouchStart)
+    menu.addEventListener('touchmove', handleTouchMove)
+    menu.addEventListener('touchend', handleTouchEnd)
+
+    menu.addEventListener('mousedown', handleTouchStart)
+    menu.addEventListener('mousemove', handleTouchMove)
+    menu.addEventListener('mouseleave', handleTouchEnd)
+    menu.addEventListener('mouseup', handleTouchEnd)
+
+    menu.addEventListener('selectstart', () => { return false })
+
+
+    /*--------------------
+    Resize : 문서의 뷰 사이즈가 변경될 때 이벤트가 작동합니다.
+    --------------------*/ 
+    window.addEventListener('resize', () => {
+    menuHeight = menu.clientHeight
+    itemHeight = items[0].clientHeight
+    wrapHeight = items.length * itemHeight
+    })
+
+
+    /*--------------------
+    Render : 스크롤 될 때 아이템에 transition값을 줌
+    --------------------*/
+    const render = () => {
+    requestAnimationFrame(render)
+    y = lerp(y, scrollY, .1)
+    dispose(y)
+    
+    scrollSpeed = y - oldScrollY
+    oldScrollY = y
+    
+    gsap.to(items, {
+        scale: 1 -  Math.min(100, Math.abs(scrollSpeed)) * .005,
+        rotate: scrollSpeed * 0.2,
+    })
+
+    }
+    render()
+
+    </script>
+</body>
+</html>

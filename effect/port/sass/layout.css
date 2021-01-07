@@ -137,8 +137,8 @@ body {
 }
 
 .menu {
-  width: 4vw;
-  height: 4vw;
+  width: 90px;
+  height: 90px;
   border-radius: 50%;
   background: #014afe;
   position: absolute;
@@ -257,11 +257,9 @@ body {
 }
 
 .container .right .img2 {
-  width: 455px;
-  height: 307px;
   background-image: url(../img/image16.png);
   background-size: cover;
-  margin-top: 35%;
+  margin-top: 38%;
   background-attachment: fixed;
 }
 
