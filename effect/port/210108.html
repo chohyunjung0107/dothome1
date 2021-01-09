@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>두루마기</title>
+    <style>
+        body {
+          background: #333;
+          overflow: hidden;
+        }
+
+        ::-webkit-scrollbar {
+          display: none;
+        }
+
+        div {
+          margin: 0;
+          padding: 0;
+          -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+          position: absolute;
+          z-index: 0;
+        }
+
+        #container {
+          font-family: UnifrakturMaguntia;
+          width: 350px;
+          height: 70%;
+          max-height: 500px;
+          top: 50%;
+          left: 50%;
+          -webkit-perspective: 5000px;
+          perspective: 5000px;
+          transform: translate(-50%, -50%) rotateY(20deg);
+        }
+
+        #container p {
+          padding: 0 5px 0 5px;
+        }
+
+        #container hr {
+          margin: 0 20px 0 20px;
+        }
+
+        .panel-node {
+          width: 100%;
+        }
+
+        .panel-cutout {
+          width: 100%;
+          height: 100%;
+          overflow: hidden;
+        }
+
+        #content {
+          -ms-overflow-style: none;
+          overflow: -moz-scrollbars-none;
+          overflow-y: scroll;
+          height: 100%;
+        }
+
+        #content, .panel-content {
+          background: #fefee0;
+        }
+
+        .panel-content {
+          -webkit-touch-callout: none;
+          -webkit-user-select: none;
+          -khtml-user-select: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
+          user-select: none;
+        }
+
+        .backface > * {
+          opacity: 0.25;
+        }
+
+        #lorem {
+          font-size: 7em;
+          float: left;
+          color: red;
+          border: 1px solid black;
+          margin-right: 5px;
+        }
+
+        #tree {
+          float: right;
+          width: 10em;
+          height: 10em;
+          border: 1px solid black;
+          margin: 0 5px 0 2px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="content">
+          <p>
+          <span id="lorem">HY</span>안녕하세요. 조현정입니다. 저는 무엇보다 기본기를 탄탄히하는 개발자가 되고자 노력하고 있습니다. 
+          </p>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;
+            익숙한 일의 반복이 요령이 되지 않고 노하우가 될 수 있도록 어머니에게 배웠습니다. 작은 것 하나도 간과하지 않고 아주 좁은 틈새도 놓치지 않는 어머니의 살림 비법은 바로 공부하는 자세였습니다. 
+          </p>
+          <hr>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;
+            저 또한 어머니에게서 배운 직업관에 따라 늘 겸손하며 배우는 삶을 살 수 있도록 노력할 것입니다.  갈고 닦으며 학습하는 자세를 통하여 현재에 안주하지 않고 더 큰 그림을 통해 사회에 메시지를 던지는 사람이 되겠습니다. <img id="tree" src="./img/about1.png">Mauris pulvinar ut sapien a posuere. Sed nisi elit, tincidunt vitae magna eu, dapibus suscipit purus. Maecenas tincidunt mollis eros et dictum. Duis est nulla, rhoncus tincidunt velit at, venenatis elementum velit. Phasellus lobortis sem tellus, id sodales quam dignissim nec. Phasellus pulvinar metus ex, nec gravida nunc elementum vel. Ut mattis varius fringilla. Phasellus imperdiet sit amet risus a elementum. Donec pulvinar ante sit amet massa blandit ullamcorper. Donec vitae malesuada nisl, et laoreet sem.
+          </p>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;
+          Suspendisse bibendum elit blandit arcu vulputate, nec hendrerit dui vehicula. Vestibulum porta finibus odio vitae maximus. Duis in vulputate risus. Donec mattis turpis ex, vitae semper sem ultrices eu. Aliquam in ex blandit erat ultrices sollicitudin. Vestibulum porta nisl in porttitor rutrum. Integer consectetur porttitor ligula facilisis malesuada. Proin placerat enim sed lacus commodo mollis nec eu arcu. In hac habitasse platea dictumst. Curabitur luctus est risus, sit amet fringilla nunc condimentum vel. Integer mauris lorem, molestie ut nisl sit amet, pellentesque mollis quam. Aliquam posuere purus non nisi molestie semper.
+          </p>
+          <hr>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;
+          Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris facilisis nisi diam, eu pulvinar ex sollicitudin sed. Maecenas sed eros id quam suscipit ultricies ut tincidunt quam. Donec iaculis, justo at fringilla laoreet, quam sem dapibus urna, ut eleifend odio eros et ligula. Proin urna ante, condimentum vitae sollicitudin sit amet, egestas ac nunc. Aenean sapien velit, porta a eros quis, iaculis dignissim felis. Suspendisse mollis vulputate metus vel interdum. Aliquam hendrerit elementum erat, sit amet commodo velit suscipit et. Sed semper sem at mauris rhoncus, id efficitur arcu molestie. Nam feugiat lorem pretium, consectetur felis et, fringilla dolor. Nunc dui velit, elementum non hendrerit nec, sagittis vitae odio. Curabitur nec leo tincidunt, pellentesque metus at, condimentum risus.
+          </p>
+        </div>
+      </div>
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+
+      
+
+      <script>
+        (function () {
+        var div = document.createElement('div');
+        div.style.width = '100px';
+        div.style.height = '100px';
+        div.style.overflow = 'scroll';
+        div.style.position = 'absolute';
+        div.style.top = '-9999px';
+        document.body.appendChild(div);
+
+        var scrollBarWidth = div.offsetWidth - div.clientWidth;
+
+        document.body.removeChild(div);
+
+        var style = document.createElement('style');
+        document.querySelector('head').appendChild(style);
+
+        var selector = '.panel-content';
+        var rule = `padding-right: ${scrollBarWidth}px`;
+
+        if (style.sheet) {
+            if (style.sheet.insertRule) style.sheet.insertRule(`${selector} {${rule}}`, 0);
+            else style.sheet.addRule(selector, rule);
+        }
+        else if (style.styleSheet) style.styleSheet.addRule(selector, rule);
+        })();
+
+        // Each articulation panel consists of three DOM elements
+        //  - a grandparent for 3d positioning
+        //  - a parent for clipping
+        //  - and a child to hold and 'scroll' content via changing transforms
+        function panel(html) {
+        var panelNode = document.createElement('div');
+        var panelCutoutNode = document.createElement('div');
+        var panelContentNode = document.createElement('div');
+            
+        panelNode.classList.add('panel-node');
+        
+        panelCutoutNode.classList.add('panel-cutout');
+        
+        panelContentNode.innerHTML = html;
+        panelContentNode.classList.add('panel-content');
+        
+        panelCutoutNode.appendChild(panelContentNode);
+        panelNode.appendChild(panelCutoutNode);
+        
+        return panelNode;
+        }
+
+        // Keep the content panels in sync by translating them up or down according to the scroll distance
+        function syncPanelContent(tops, bottoms, scrollTop, containerHeight, panelHeight) {
+        for (var i = 0; i < tops.length; i++) {
+            var t = tops[i];
+            var b = bottoms[i];
+            var tTop = (i + 1) * panelHeight - scrollTop;
+            var bTop = -i * panelHeight - scrollTop - containerHeight;
+            t.style.transform = `translate3d(0,${tTop}px,0)`;
+            b.style.transform = `translate3d(0,${bTop}px,0)`;
+        }
+        }
+
+        function transYrotX(y,x) {
+        return `translate3d(0,${y}px,0) rotateX(${x}rad)`;
+        }
+
+        // Create num top and bottom panels based off the innerHTML of el with articulation angle.
+        // We nest panels and use `transform-style: preserve-3d` to get the tentacle curl effect.
+        // Should probably only use this on relatively simple el's, because we are going to need to create 2 * num deep copies of el and attach them to the DOM. Needless to say, this will scale poorly.
+        function createScrollOverlay(el, panelHeight, num, angle) {
+        var tops = [];
+        var bottoms = [];
+
+        var topParent = el.parentNode;
+        var bottomParent = el.parentNode;
+
+        var html = el.innerHTML;
+        
+        var totalTheta = 0;
+        
+        for (var i = 0; i < num; i++) {
+            var topPanel = panel(html);
+            var bottomPanel = panel(html);
+
+            topPanel.style.height = `${panelHeight}px`;
+            bottomPanel.style.height = `${panelHeight}px`;
+            topPanel.style.transformOrigin = '50% 100% 0';
+            bottomPanel.style.transformOrigin = '50% 0% 0';
+            
+            var topPanelContent = topPanel.querySelector('.panel-content');
+            var bottomPanelContent = bottomPanel.querySelector('.panel-content');
+
+            if (i === 0) {
+            topPanel.style.transform = transYrotX(-panelHeight, 0);
+            bottomPanel.style.top = '100%';
+            bottomPanel.style.transform = transYrotX(0, 0);
+            }
+            else {
+            topPanel.style.transform = transYrotX(-panelHeight + 0.25, angle);
+            bottomPanel.style.transform = transYrotX(panelHeight - 0.25, angle);
+
+            totalTheta += angle;
+            totalTheta %= 2 * Math.PI;
+            if (Math.PI * (1 / 2) < totalTheta && totalTheta < Math.PI * (3 / 2)) {
+                topPanelContent.classList.add('backface');
+                bottomPanelContent.classList.add('backface');
+            }
+            }
+
+            angle += 0.025;
+
+            tops.push(topPanelContent);
+            bottoms.push(bottomPanelContent);
+
+            topParent.appendChild(topPanel);
+            bottomParent.appendChild(bottomPanel);
+
+            topParent = topPanel;
+            bottomParent = bottomPanel;
+        }
+
+        syncPanelContent(tops, bottoms, 0, container.clientHeight, panelHeight);
+
+        function update() {
+            var scrollTop = el.scrollTop;
+            var containerHeight = container.clientHeight;
+            requestAnimationFrame(function() {
+            syncPanelContent(tops, bottoms, scrollTop, containerHeight, panelHeight);
+            });
+        }
+
+        el.onscroll = update;
+        window.onresize = update;
+        
+        // setInterval(function() {el.scrollTop++}, 32)
+        }
+
+        var theta = 0.3;
+        var num = 20;
+        if (/iPhone|Android/.test(navigator.userAgent)) {
+        theta = 0.45;
+        num = 10;
+        }
+
+        var $ = document.querySelector.bind(document);
+        createScrollOverlay($('#content'), 20, num, theta);
+
+      </script>
+</body>
+</html>
