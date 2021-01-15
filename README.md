@@ -20,16 +20,16 @@
 <img src="https://user-images.githubusercontent.com/71998606/104689203-75769e00-5745-11eb-8b60-148c45e7ebfa.jpg">
 
 <h4>슬라이드<h4>
-<a href = "https://chohyunjung0107.github.io/dothome1/effect/sliderEffect01-javascript.html">>1. 패랠랙스 스크로링 효과</a><br>
-<a href = "https://chohyunjung0107.github.io/dothome1/effect/sliderEffect01-jquery.html">>2. 패랠랙스 스크로링 효과</a><br>
-<a href = "https://chohyunjung0107.github.io/dothome1/effect/sliderEffect02-javascript.html">>3. 패랠랙스 스크로링 효과</a><br>
-<a href = "https://chohyunjung0107.github.io/dothome1/effect/sliderEffect02-jquery.html">>4. 패랠랙스 스크로링 효과</a><br>
-<a href = "https://chohyunjung0107.github.io/dothome1/effect/sliderEffect03-jquery.html">>5. 패랠랙스 스크로링 효과</a><br>
-<a href = "https://chohyunjung0107.github.io/dothome1/effect/sliderEffect03-javascript.html">>6. 패랠랙스 스크로링 효과</a><br>
-<a href = "https://chohyunjung0107.github.io/dothome1/effect/sliderEffect04-jquery.html">>7. 패랠랙스 스크로링 효과</a><br>
-<a href = "https://chohyunjung0107.github.io/dothome1/effect/sliderEffect05-jquery.html">>8. 패랠랙스 스크로링 효과</a><br>
-<a href = "https://chohyunjung0107.github.io/dothome1/effect/sliderEffect06-jquery.html">>9. 패랠랙스 스크로링 효과</a><br>
-<a href = "https://chohyunjung0107.github.io/dothome1/effect/sliderEffect07-jquery.html">>10. 패랠랙스 스크로링 효과</a><br>
+<a href = "https://chohyunjung0107.github.io/dothome1/effect/sliderEffect01-javascript.html">>1. 이미지 슬라이드 효과</a><br>
+<a href = "https://chohyunjung0107.github.io/dothome1/effect/sliderEffect01-jquery.html">>2. 이미지 슬라이드 효과</a><br>
+<a href = "https://chohyunjung0107.github.io/dothome1/effect/sliderEffect02-javascript.html">>3. 이미지 슬라이드 효과</a><br>
+<a href = "https://chohyunjung0107.github.io/dothome1/effect/sliderEffect02-jquery.html">>4. 이미지 슬라이드 효과</a><br>
+<a href = "https://chohyunjung0107.github.io/dothome1/effect/sliderEffect03-jquery.html">>5. 이미지 슬라이드 효과</a><br>
+<a href = "https://chohyunjung0107.github.io/dothome1/effect/sliderEffect03-javascript.html">>6. 이미지 슬라이드 효과</a><br>
+<a href = "https://chohyunjung0107.github.io/dothome1/effect/sliderEffect04-jquery.html">>7. 이미지 슬라이드 효과</a><br>
+<a href = "https://chohyunjung0107.github.io/dothome1/effect/sliderEffect05-jquery.html">>8. 이미지 슬라이드 효과</a><br>
+<a href = "https://chohyunjung0107.github.io/dothome1/effect/sliderEffect06-jquery.html">>9. 이미지 슬라이드 효과</a><br>
+<a href = "https://chohyunjung0107.github.io/dothome1/effect/sliderEffect07-jquery.html">>10. 이미지 슬라이드 효과</a><br>
 <img src = "https://user-images.githubusercontent.com/71998606/104688015-a5bd3d00-5743-11eb-964c-cadf78a9b39b.png">
     
 <h4>슬라이드<h4>
