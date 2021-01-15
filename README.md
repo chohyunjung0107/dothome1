@@ -2,7 +2,7 @@
 <a href = "http://chohyunjung0107.dothome.co.kr/port/about.html">작업중-210113</a><br>
 <a href = "https://chohyunjung0107.github.io/dothome1/index.html">레퍼런스</a><br>
 <a href = "https://react201226.web.app/#/">리액트로 만든 포트폴리오</a><br>
-
+<img src="https://user-images.githubusercontent.com/71998606/104690753-57f70380-5748-11eb-9773-aa9b163e8953.jpg">
 
 <h3>#Site</h3>
 <a href = "https://chohyunjung0107.github.io/dothome1/webstandard/index.html">웹표준사이트</a><br>
