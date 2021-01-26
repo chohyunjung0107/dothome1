@@ -1,5 +1,5 @@
 <h3>#Portfolio</h3>
-<a href = "http://chohyunjung0107.dothome.co.kr/port/about.html">-작업중-210121</a><br>
+<a href = "http://chohyunjung0107.dothome.co.kr/port/about.html">-작업중-210126</a><br>
 <img src="https://user-images.githubusercontent.com/71998606/104875769-7142be80-5999-11eb-83db-05a688ca2f3c.jpg">
 <a href = "https://chohyunjung0107.github.io/dothome1/index.html">-레퍼런스</a><br>
 <a href = "https://react201226.web.app/#/">-리액트로 만든 포트폴리오</a><br>
