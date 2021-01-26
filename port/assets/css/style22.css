@@ -1,0 +1,233 @@
+@font-face {
+    font-family: 'S-CoreDream-3Light';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'S-CoreDream-1Thin';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-1Thin.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'S-CoreDream-2ExtraLight';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-2ExtraLight.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'S-CoreDream-8Heavy';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-8Heavy.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* loading */
+.loading {
+    position: fixed;
+    left: 0; top: 0;
+    width: 100%; 
+    height: 100vh;
+    z-index: 10000;
+    display: none;
+}
+.loading .left {
+    position: absolute;
+    width: 50%;
+    height: 100vh;
+    left: 0; 
+    top: 0vh;
+    background: #fff;
+    transition: top 1s ease;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    color: #FF4B03;
+    font-family: 'Playfair Display', serif;
+    padding-right: 5px;
+    font-size: 17px;
+}
+.loading .right {
+    position: absolute;
+    width: 50%;
+    height: 100vh;
+    right: 0; 
+    bottom: 0vh;
+    background: #FF4B03;
+    transition: bottom 1s ease;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: #fff;
+    font-family: 'S-CoreDream-1Thin';
+    padding-left: 5px;
+    padding-top: 7px;
+    text-transform: uppercase;
+    font-size: 19px;
+}
+.loading.start .left{
+    top: -100vh;
+}
+.loading.start .right{
+    bottom: -100vh;
+}
+
+/* layout */
+body {
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* header */
+#header {
+    position: fixed;
+    left: 0; top: 0;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+#header h2 {
+    color: #fff;
+    font-family: 'Playfair Display', serif;
+    flex: 0 0 100px;
+    text-align: right;
+    font-size: 30px;
+}
+#header h3 {
+    color: #014AFE;
+    font-family: 'S-CoreDream-1Thin';
+    flex: 0 0 100px;
+    text-align: left;
+    font-size: 24px;
+    padding-top: 6px;
+    text-transform: uppercase;
+}
+#header .nav {
+    flex: 0 0 80px;
+}
+#header .nav .ham {
+    width: 50px; height: 50px;
+    background: #014AFE;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+#header .nav .ham span {
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    width: 20px; height: 1px;
+    background: #fff;
+}
+#header .nav .ham span::before {
+    content: '';
+    width: 20px; height: 1px;
+    background: #fff;
+    position: absolute;
+    left: 0; top: 5px;
+}
+#header .nav .ham span::after {
+    content: '';
+    width: 20px; height: 1px;
+    background: #fff;
+    position: absolute;
+    left: 0; bottom: 5px;
+}
+
+/* wrap */
+#wrap {
+    height: 100vh;
+}
+
+/* about */
+.about {
+    position: relative;
+    width: 100%;
+    display: flex;
+    color: #fff;
+}
+.about .left {
+    width: 50%;
+    height: 100vh; 
+    overflow: hidden;
+    background: #014AFE;
+}
+.about .right {
+    width: 50%;
+    height: 100vh; 
+    overflow: hidden;
+    background: #fff;
+    position: relative;
+}
+.about .box {
+    height: 100vh;
+    position: absolute;
+    left: 0; top: 0;
+}
+.about .left .box {
+    width: 50%;
+    height: 100vh;
+    position: absolute;
+    left: 0; top: 0;
+}
+.about .right .box {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    right: 0; top: 0;
+}
+.about .left .box1 .cont {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    color: #000;
+    height: 100%;
+    font-family: 'Cinzel', serif;
+    color: #fff;
+}
+.about .right .box2 .cont {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: #000;
+    height: 100%;
+    color: #014AFE;
+}
+.about .b1 {
+    font-size: 17vw;
+}
+.about .b6 {
+    font-size: 14vw;
+    padding-top: 2vw;
+    font-family: 'S-CoreDream-1Thin';
+    text-transform: uppercase;
+}
+
+.about .b2 {}
+.about .b7 {}
+
+.about .b3 {}
+.about .b8 {}
+
+.about .b4 {}
+.about .b9 {}
+
+.about .b5 {}
+.about .b10 {}
+
+
+/*.about .left .box:nth-child(1){background: rgba(0,0,0,0.44);}
+ .about .left .box:nth-child(2){background: rgba(255,255,255,0.2);}
+.about .left .box:nth-child(3){background: rgba(255,255,255,0.3);}
+.about .left .box:nth-child(4){background: rgba(255,255,255,0.4);}
+.about .left .box:nth-child(5){background: rgba(255,255,255,0.5);}
+
+.about .right .box:nth-child(1){background: rgba(0,0,0,0.5);}
+.about .right .box:nth-child(2){background: rgba(0,0,0,0.2);}
+.about .right .box:nth-child(3){background: rgba(0,0,0,0.3);}
+.about .right .box:nth-child(4){background: rgba(0,0,0,0.4);}
+.about .right .box:nth-child(5){background: rgba(0,0,0,0.5);} */

@@ -1,0 +1,802 @@
+/* 커서 */
+.cursor {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #000;
+    z-index: 100000000000000;
+  }
+
+/* 로딩 */
+        
+.loading1 {
+    position: fixed;
+    left: 0; top: 0;
+    width: 0vw; height: 100vh;
+    background: blue;
+    animation: loading1 1s cubic-bezier(0, 0, 0.89, 0.63);
+    z-index: 2;
+}
+@keyframes loading1 {
+    0% {width: 50vw; transform: translateY(0vh);}
+    25% {width: 50vw; transform: translateY(25vh);}
+    50% {width: 50vw; transform: translateY(50vh);}
+    75% {width: 50vw; transform: translateY(75vh);}
+    100% {width: 50vw; transform: translateY(100vh); display: none;}
+}
+.loading1 span {
+    position: absolute;
+    right: 0%; top: 30%;
+    transform: translate(-50%, -50%);
+    width: 50vw; 
+    text-align: right;
+    font-family: 'Didot';
+    font-size: 3rem;
+    color: #fff;
+    z-index: 1;
+}
+.loading2 {
+    position: fixed;
+    right: 0; top: 0;
+    width: 0vw; height: 100vh;
+    background: #FFF;
+    animation: loading2 1s cubic-bezier(0, 0, 0.89, 0.63);
+    z-index: 3;
+}
+@keyframes loading2 {
+    0% {width: 50vw; transform: translateY(0vh);}
+    25% {width: 50vw; transform: translateY(-25vh);}
+    50% {width: 50vw; transform: translateY(-50vh);}
+    75% {width: 50vw; transform: translateY(-75vh);}
+    100% {width: 50vw; transform: translateY(-100vh);}
+}
+.loading2 span {
+    position: absolute;
+    left: 0%; top: 50%;
+    transform: translate(-50%, -50%);
+    display: inline-block;
+    width: 50vw; 
+    text-align: right;
+    font-family: 'Commissioner', sans-serif;
+    font-size: 2rem;
+    color: blue;
+    z-index: 3;
+}
+
+/* -----레이아웃 -----*/
+
+body {
+    position: relative;
+}
+
+#wrap {
+    position: flex;
+    /* overflow: hidden; */
+}
+
+/* -----상단 타이틀-----*/
+#header {
+    position: fixed; 
+    left: 0; top: 0; 
+    width: 100vw; height: 52px; 
+    z-index: 3;
+}
+#header ul {
+    height: 52px;
+    display: flex;
+}
+#header li:nth-child(1) {
+    flex: 1 1 50%;
+    justify-items: flex-end;
+}
+#header li:nth-child(2) {
+    flex: 1 1 50%;
+    justify-items: flex-end;
+    
+}
+#header .jung{
+    color: #fff;
+    font-size: 2rem;
+    text-align: right;
+    font-family: "Didot";
+}
+#header .portfolio{
+    color: blue;
+    font-size: 2rem;
+    text-align: left;
+    font-family: Commissioner;
+    font-weight: 100;
+}
+
+/*-----원 버튼-----*/
+.oneMenu {
+    position: fixed;
+    left: 50vw; top: 15vh;
+    transform: translate(-50%, -50%);
+    width: 60px; height: 60px;
+    background: blue;
+    border-radius: 50%;
+    z-index: 33;
+}
+.oneMenu:hover {
+    background: #fff;
+}
+
+.oneMenu:hover:before{
+    content: '';
+    position: absolute;
+    left: 40%; top: 50%;
+    width: 10px;
+    border: 0.1px solid blue;
+    transform: rotate(50deg);
+    z-index: 999;
+}
+.oneMenu:hover:after{
+    content: '';
+    position: absolute;
+    left: 40%; top: 50%;
+    width: 10px;
+    border: 0.1px solid blue;
+    transform: rotate(-50deg);
+    z-index: 999;
+}
+
+.oneMenu span:nth-child(1){
+    position: absolute;
+    left: 50%; top: 45%;
+    transform: translate(-50%, -50%);
+    width: 15px;
+    height: 1px;
+    background: #fff;
+}
+.oneMenu span:nth-child(2){
+    position: absolute;
+    left: 50%; top: 55%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 1px;
+    background: #fff;
+}
+.oneMenu span:nth-child(3){
+    position: absolute;
+    left: 50%; top: 65%;
+    transform: translate(-50%, -50%);
+    width: 15px;
+    height: 1px;
+    background: #fff;
+}
+
+/* -----사이드메뉴----- */
+.menu {
+    position: absolute;
+    left:  -50vw;
+    width: 50vw;
+    height: 100vh;
+    background: blue;
+    transition: .6s ease-in-out;
+    overflow: hidden;
+    z-index: 2;
+
+}
+.menu.open{
+    left: 0;
+    transition: .6s ease-in-out; 
+}
+
+.menu--item {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 50vw;
+    font-size: 120px;
+    line-height: 1.2;
+    padding: .1rem 0;
+    text-align: left;
+}
+
+.menu--item:hover {
+    left: 50px;
+    transform: .6s ease-in-out;
+}
+
+@media (max-width: 767px) {
+    .menu--item {
+        font-size: 10vw;
+        padding: 1rem 0;
+    }
+}
+
+.menu--item:nth-child(n+10):before {
+    content: counter(count);
+}
+
+.menu--item button {
+    text-decoration: none;
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    font-size: 120px;
+    -webkit-appearance: none;
+    background: none;
+    padding: 0;
+    border: none;
+    outline: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    color: #fff;
+    font-family: "Didot";
+    cursor: pointer;
+}
+
+@media (max-width: 767px) {
+    .menu--item button {
+        font-size: 10vw;
+    }
+}
+
+
+
+/* -----섹션1. 어바웃----- */
+#section1 {
+    width: 100vw;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: -13vh;
+}
+#section1 .left {
+    display: inline-block;
+    left: 0; top: 0;
+    width: 50%;
+    height: 200vh;
+    background: green;
+    color: #000;
+}
+
+#section1 .left .l1 {background: blue; height: 45.7vw; position: relative; border-bottom: 1px dashed #fff;}
+#section1 .left .l1 > h2 {
+    width: 700px; height: 300px;
+    position: absolute;
+    top: 3vh;
+    font-family: "Arita-buri-SemiBold";
+    font-size: 5rem;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    text-align: left;
+    color: #ffffff;
+    word-break: keep-all;
+}
+#section1 .left .l2 {background: blue; height: 45.7vw; position: relative; border-bottom: 1px dashed #fff;}
+#section1 .left .l2 > h2 {
+    width: 700px; height: 300px;
+    position: absolute;
+    top: 3vh;
+    font-family: "Arita-buri-SemiBold";
+    font-size: 5rem;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    text-align: left;
+    color: #ffffff;
+    word-break: keep-all;
+}
+
+#section1 .right {
+    display: inline-block;
+    position: absolute;
+    right: 0; top: 0;
+    width: 50%;
+    height: 200vh;
+    background: #fff;
+    color: #000;
+
+}
+
+#section1 .r1{height: 45.7vw;  position: relative; border-bottom: 1px dashed blue;}
+#section1 .right .r1> a {
+    width: 700px; height: 300px;
+    position: absolute;
+    font-family: 'S-CoreDream-1Thin';
+    font-size: 4rem;
+    font-weight: 100;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.8;
+    letter-spacing: normal;
+    text-align: right;
+    color: blue;
+    word-break: keep-all;
+    z-index: 2;
+}
+#section1 .right .r1> .img1 {
+    position: absolute;
+    bottom: 0vh;
+    z-index: 1;
+}
+#section1 .r2 {height: 45.7vw; position: relative; border-bottom: 1px dashed blue;}
+#section1 .right .r2 > a {
+    width: 700px; height: 300px;
+    position: absolute;
+    font-family: 'S-CoreDream-1Thin';
+    font-size: 4rem;
+    font-weight: 100;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.8;
+    letter-spacing: normal;
+    text-align: right;
+    color: blue;
+    word-break: keep-all;
+    z-index: 2;
+}
+#section1 .r2 .img2 {
+    position: absolute;
+    bottom: 20vh;
+    z-index: 1;
+}
+
+/* -----섹션2. 사이트포폴----- */
+#section2 {
+    width: 100vw;
+    position: relative;
+    display: block;
+    margin-bottom: -1vh;
+}
+#section2 .left {
+    display: inline-block;
+    left: 0; top: 0;
+    width: 50%;
+    background: green;
+    color: #000;
+}
+#section2 .left .l1 {
+    height: 45.7vw;  position: relative;
+    background: blue;
+    border-bottom: 1px dashed #fff;
+}
+#section2 .left .l1 > h2 {
+    width: 700px; height: 300px;
+    position: absolute;
+    top: 3vh;
+    font-family: "Arita-buri-SemiBold";
+    font-size: 5rem;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    text-align: left;
+    color: #ffffff;
+    word-break: keep-all;
+}
+
+#section2 .left .l2 {
+    height: 45.7vw;  position: relative;
+    background: blue;
+    border-bottom: 1px dashed #fff;
+}
+#section2 .left .l2 > h2 {
+    width: 700px; height: 300px;
+    position: absolute;
+    top: 3vh;
+    font-family: "Arita-buri-SemiBold";
+    font-size: 5rem;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    text-align: left;
+    color: #ffffff;
+    word-break: keep-all;
+}
+#section2 .left .l3 {
+    height: 45.7vw;  position: relative;
+    background: blue;
+    border-bottom: 1px dashed #fff;
+}
+#section2 .left .l3 > h2 {
+    width: 700px; height: 300px;
+    position: absolute;
+    top: 3vh;
+    font-family: "Arita-buri-SemiBold";
+    font-size: 5rem;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    text-align: left;
+    color: #ffffff;
+    word-break: keep-all;
+}
+#section2 .left .l4 {
+    height: 45.7vw;  position: relative;
+    background: blue;
+    border-bottom: 1px dashed #fff;
+    z-index: 3;
+}
+#section2 .left .l4 > h2 {
+    width: 700px; height: 300px;
+    position: absolute;
+    top: 3vh;
+    font-family: "Arita-buri-SemiBold";
+    font-size: 5rem;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    text-align: left;
+    color: #ffffff;
+    word-break: keep-all;
+}
+
+#section2 .right {
+    display: inline-block;
+    position: absolute;
+    right: 0; top: 0;
+    width: 50%;
+    height: 400vh;
+    color: #000;
+}
+
+#section2 .right .r1 {
+    height: 45.7vw;  position: relative;
+    border-bottom: 1px dashed blue;
+}
+#section2 .right .r1> a {
+    width: 700px; height: 300px;
+    position: absolute;
+    font-family: 'S-CoreDream-1Thin';
+    font-size: 4rem;
+    font-weight: 100;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.8;
+    letter-spacing: normal;
+    text-align: right;
+    color: blue;
+    word-break: keep-all;
+    z-index: 2;
+}
+#section2 .right .r1 .img1 {
+    width: 400px; height: 300px;
+    background-image: url(../img/site-webstan.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 30vh;
+    z-index: 1;
+}
+
+
+#section2 .right .r2 {
+    height: 45.7vw;  position: relative;
+    border-bottom: 1px dashed blue;
+}
+#section2 .right .r2> a {
+    width: 700px; height: 300px;
+    position: absolute;
+    font-family: 'S-CoreDream-1Thin';
+    font-size: 4rem;
+    font-weight: 100;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.8;
+    letter-spacing: normal;
+    text-align: right;
+    color: blue;
+    word-break: keep-all;
+    z-index: 2;
+}
+#section2 .right .r2 .img2 {
+    width: 400px; height: 300px;
+    background-image: url(../img/site-reponsi.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 30vh;
+    z-index: 1;
+}
+#section2 .right .r3 {
+    height: 45.7vw;  position: relative;
+    border-bottom: 1px dashed blue;
+}
+#section2 .right .r3> a {
+    width: 700px; height: 300px;
+    position: absolute;
+    font-family: 'S-CoreDream-1Thin';
+    font-size: 4rem;
+    font-weight: 100;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.8;
+    letter-spacing: normal;
+    text-align: right;
+    color: blue;
+    word-break: keep-all;
+    z-index: 2;
+}
+#section2 .right .r3 .img3 {
+    width: 400px; height: 300px;
+    background-image: url(../img/site-mega.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 30vh;
+    z-index: 1;
+}
+#section2 .right .r4 {
+    height: 45.7vw;  position: relative;
+    border-bottom: 1px dashed blue;
+    z-index: 3;
+}
+#section2 .right .r4> a {
+    width: 700px; height: 300px;
+
+    position: absolute;
+    font-family: 'S-CoreDream-1Thin';
+    font-size: 4rem;
+    font-weight: 100;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.8;
+    letter-spacing: normal;
+    text-align: right;
+    color: blue;
+    word-break: keep-all;
+    z-index: 2;
+}
+#section2 .right .r4 .img4 {
+    width: 400px; height: 300px;
+    background-image: url(../img/site-react.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 30vh;
+    z-index: 1;
+}
+
+/* -----섹션3. 애니메이션----- */
+#section3 {
+    width: 100vw;
+    position: relative;
+    display: block;
+}
+#section3 .left {
+    display: inline-block;
+    left: 0; top: 0;
+    width: 50%; height: 700vh;
+    background: green;
+    color: #000;
+}
+#section3 .left .l1 {
+    height: 45.7vw;  position: relative;
+    background: blue;
+    border-bottom: 1px dashed #fff;
+}
+#section3 .left .l1 > h2 {
+    width: 700px; 
+    padding-top: 3vh;
+    font-family: "Arita-buri-SemiBold";
+    font-size: 5rem;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 0.5;
+    letter-spacing: normal;
+    text-align: left;
+    color: #ffffff;
+}
+#section3 .left .l1 > h2:nth-child(even) {
+    width: 700px; 
+    padding-top: 3vh;
+    font-family: "Arita-buri-SemiBold";
+    font-size: 5rem;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 0.5;
+    letter-spacing: normal;
+    text-align: left;
+    -webkit-text-stroke: 1px #fff;
+    color: blue;
+}
+#section3 .left .l2 {
+    height: 45.7vw;  position: relative;
+    background: blue;
+    border-bottom: 1px dashed #fff;
+}
+#section3 .left .l2 > h2 {
+    width: 700px; 
+    padding-top: 3vh;
+    font-family: "Arita-buri-SemiBold";
+    font-size: 5rem;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 0.5;
+    letter-spacing: normal;
+    text-align: left;
+    color: #ffffff;
+}
+#section3 .left .l2 > h2:nth-child(even) {
+    width: 700px; 
+    padding-top: 3vh;
+    font-family: "Arita-buri-SemiBold";
+    font-size: 5rem;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 0.5;
+    letter-spacing: normal;
+    text-align: left;
+    -webkit-text-stroke: 1px #fff;
+    color: blue;
+}
+#section3 .left .l3 {
+    height: 45.7vw;  position: relative;
+    background: blue;
+    border-bottom: 1px dashed #fff;
+}
+#section3 .left .l3 > h2 {
+    width: 700px; 
+    padding-top: 3vh;
+    font-family: "Arita-buri-SemiBold";
+    font-size: 5rem;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 0.5;
+    letter-spacing: normal;
+    text-align: left;
+    color: #ffffff;
+}
+#section3 .left .l3 > h2:nth-child(even) {
+    width: 700px; 
+    padding-top: 3vh;
+    font-family: "Arita-buri-SemiBold";
+    font-size: 5rem;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 0.5;
+    letter-spacing: normal;
+    text-align: left;
+    -webkit-text-stroke: 1px #fff;
+    color: blue;
+}
+
+
+#section3 .right {
+    display: inline-block;
+    position: absolute;
+    right: 0; top: 0;
+    width: 50%; height: 700vh;
+    height: 400vh;
+    color: #000;
+}
+#section3 .right .r1 {
+    height: 45.7vw;  position: relative;
+    border-bottom: 1px dashed blue;
+}
+#section3 .right .r1> a {
+    width: 700px; height: 300px;
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'S-CoreDream-1Thin';
+    font-size: 4rem;
+    font-weight: 100;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.8;
+    letter-spacing: normal;
+    text-align: right;
+    color: blue;
+    word-break: keep-all;
+    z-index: 9999;
+}
+#section3 .right> .r1 .ani1>iframe {
+    position: absolute;
+    right: 55%; top: 15%;
+    transform: rotate(30deg);
+    z-index: -1;
+}
+#section3 .right> .r1 .ani2>iframe {
+    position: absolute;
+    right: 15%; top: 15%;
+    transform: rotate(30deg);
+}
+#section3 .right> .r1 .ani3>iframe {
+    position: absolute;
+    right: 55%; top: 55%;
+    transform: rotate(30deg);
+    z-index: -1;
+}
+#section3 .right> .r1 .ani4>iframe {
+    position: absolute;
+    right: 15%; top: 55%;
+    transform: rotate(30deg);
+}
+
+#section3 .right .r2 {
+    height: 45.7vw;  position: relative;
+    border-bottom: 1px dashed blue;
+}
+#section3 .right .r2> a {
+    width: 700px; height: 300px;
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'S-CoreDream-1Thin';
+    font-size: 4rem;
+    font-weight: 100;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.8;
+    letter-spacing: normal;
+    text-align: right;
+    color: blue;
+    word-break: keep-all;
+    z-index: 9999;
+}
+
+#section3 .right> .r2 .ani5>iframe {
+    position: absolute;
+    right: 35%; top: 15%;
+    transform: rotate(30deg);
+    z-index: -1;
+}
+#section3 .right> .r2 .ani6>iframe {
+    position: absolute;
+    right: 22%; top: 60%;
+    transform: rotate(30deg);
+}
+
+#section3 .right .r3 {
+    height: 45.7vw;  position: relative;
+    border-bottom: 1px dashed blue;
+}
+#section3 .right .r3> a {
+    width: 700px; height: 300px;
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'S-CoreDream-1Thin';
+    font-size: 4rem;
+    font-weight: 100;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.8;
+    letter-spacing: normal;
+    text-align: right;
+    color: blue;
+    word-break: keep-all;
+    z-index: 9999;
+}
+
+#section3 .right> .r3 .ani7>iframe {
+    margin-top: 1vh;
+}
+#section3 .right> .r3 .ani8>iframe {
+    
+}
+#section3 .right> .r3 .ani9>iframe {
+}
+
+
+

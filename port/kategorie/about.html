@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <style>
+
+        /* 폰트 */
+        @font-face {font-family: "Didot";
+            src: url("251039e6849ad977a8bfc40b564dce89.eot"); /* IE9*/
+            src: url("251039e6849ad977a8bfc40b564dce89.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+            url("251039e6849ad977a8bfc40b564dce89.woff2") format("woff2"), /* chrome、firefox */
+            url("251039e6849ad977a8bfc40b564dce89.woff") format("woff"), /* chrome、firefox */
+            url("251039e6849ad977a8bfc40b564dce89.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+            url("251039e6849ad977a8bfc40b564dce89.svg#Didot") format("svg"); /* iOS 4.1- */
+        }
+
+        @font-face {
+        font-family: 'S-CoreDream-1Thin';
+        src: ur l('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-1Thin.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+        }
+        @font-face {
+            font-family: 'S-CoreDream-2ExtraLight';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-2ExtraLight.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'S-CoreDream-3Light';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'S-CoreDream-4Regular';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-4Regular.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'S-CoreDream-5Medium';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-5Medium.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'S-CoreDream-6Bold';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-6Bold.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'S-CoreDream-7ExtraBold';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-7ExtraBold.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'S-CoreDream-8Heavy';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-8Heavy.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'S-CoreDream-9Black';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-9Black.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Arita-buri-SemiBold';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Arita-buri-SemiBold.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+        /* 로딩 */
+        .loading {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            position: fixed;
+            left: 0; top: 0;
+            width: 0%; height: 100vh;
+            background: #014AFE;
+            animation: loading1 1.5s cubic-bezier(0, 0, 0.89, 0.63);
+            z-index: 999;
+            overflow: hidden;
+        }
+        @keyframes loading1 {
+            0% {width: 100%; transform: translateY(0h);}
+            25% {width: 100%; transform: translateY(-25vh);}
+            50% {width: 100%; transform: translateY(-50vh);}
+            75% {width: 100%; transform: translateY(-75vh);}
+            100% {width: 100%; transform: translateY(-100vh); display: none;}
+        }
+        .loading span {  
+            flex: 1 1 100%; 
+            width: 100%; 
+            text-align: center;
+            font-family: 'Didot';
+            font-size: 3rem;
+            color: #fff;
+            z-index: 1;
+        }
+        
+        /* 리셋 */
+        *, body {margin: 0; padding: 0;}
+        a {font-style: none; text-decoration: none;}
+        ul, li {list-style: none;}
+
+        /* 레이아웃 */
+        #wrap {}
+        
+        /* 헤더 */
+        .header {
+            width: 100vw; height: 700px; 
+            color: #014afe;
+
+        }
+        .header .logo {
+            display: flex;
+            justify-content: flex-end;
+           /* background: black; */
+        }
+        .header .logo > a {
+            flex: 1 1 50%;
+            display: inline-block;
+            width: 50vw; 
+            text-align: right;
+            font-family: 'Didot';
+            font-size: 2rem;
+/*            border: 1px solid blue; */
+            color: #014afe;
+        }
+        .header .logo > span {
+            flex: 1 1 50%;
+            justify-content: flex-end;
+            display: inline-block;
+            width: 50vw;
+            text-align: left;
+            font-family: 'Commissioner', sans-serif;
+            font-size: 2rem;
+            font-weight: 100;
+/*            border: 1px solid red; */
+            color: #014afe;
+        }
+        
+        .header .circleMenu {
+            width: 60px; height: 60px;
+            border-radius: 50%;
+            background:#014afe;
+            position: relative;
+            margin: 5vh auto;
+        }
+        .header .circleMenu > span:nth-child(1) {
+            position: absolute;
+            left: 50%; top: 40%;
+            transform: translate(-50%, -50%);
+            width: 1vw; height: .1vh; 
+            background: #fff;
+        }
+        .header .circleMenu > span:nth-child(2) {
+            position: absolute;
+            left: 50%; top: 50%;
+            transform: translate(-50%, -50%);
+            width: .5vw; height: .1vh; 
+            background: #fff;
+        }
+        .header .circleMenu > span:nth-child(3) {
+            position: absolute;
+            left: 50%; top: 60%;
+            transform: translate(-50%, -50%);
+            width: 1vw; height: .1vh; 
+            background: #fff;
+
+        }
+        .header .arrow {
+            width: 130px; height: 140px;
+            background: url(../assets/img/arrow.png) no-repeat;
+        }
+        .header .plus {
+            font-size: 9rem;
+            text-align: center;
+            padding: 5vh 0 0 20vw;
+            font-weight: 500;
+        }
+
+        /* 컨텐츠 */
+        .contents {}
+        .contents .content1 {
+            width: 100vw; height: 800px;
+            position: relative;
+        }
+        .content1 h2{
+            color: #014afe;
+            font-family: 'Didot';
+            font-size: 5rem;
+            text-align: right;
+            position: absolute;
+            right: 29vw; top: 0;
+            z-index: 2;
+
+        }
+        .content1 .aboutIMG{
+            position: absolute;
+            left: 50%; top: 0%;
+            transform: translate(-50%, 0%);
+            width: 441px; height: 530px;
+            background: url(../assets/img/about1.png) no-repeat;
+            align-items: center;
+            
+        }
+        .content1 .aboutDesc{
+            position: absolute;
+            left: 31vw; top: 40vh;
+            color: #014afe;
+            z-index: 99;
+            font-size: 3rem;
+            font-weight: 100;
+        }
+        
+
+        .contents .content2 {width: 100vw; height: 500px;}
+        .contents .content2 .aboutBOX {
+            width: 60vw;
+            margin: 10vh auto;
+            text-align: center;
+            font-size: 1.5rem;
+            font-family: 'S-CoreDream-1Thin';
+            font-weight: 100;
+            color: #014afe;
+            line-height: 2;
+        }
+
+        .content3 {width: 100vw; height: 700px; position: relative;}
+        .content3 h2 {
+            color: #014afe;
+            font-family: 'Didot';
+            font-size: 5rem;
+            text-align: center;
+        }
+        .content3 .aboutBOX2 {
+            width: 768px; height: 260px;
+            position: absolute;
+            left: 23vw; top: 25vh;
+            margin: 0 auto;
+            background: url(../assets/img/skillBG.png);
+        }
+        .content3 .aboutBOX2>img {
+            position: absolute;
+            left: 1.2vw; top: 15vh;
+        }
+
+        /* 푸터 */
+        .footer {width: 100vw; height: 750px; position: relative; background: #052063;}
+        .footer .contact1 a {
+            position: absolute;
+            left: 6vw; top: 10vh;
+            font-size: 11rem;
+            font-family: 'Didot';
+            font-weight: 900;
+            color: #014AFE;  
+            line-height: .9;          
+        }
+        .footer .contact2 a {
+            position: absolute;
+            right: 6vw; top: 50vh;
+            font-size: 6rem;
+            font-family: 'Commissioner', sans-serif;
+            color: #fff;
+            font-weight: 100;
+            text-align: right;
+        }
+        .footer ul {
+            position: absolute;
+            right: 6vw; bottom: 20vh;
+            font-family: 'Commissioner', sans-serif;
+            text-align: right;
+            font-size: 1rem;
+            font-weight: 100;
+        }
+        .footer li {
+            font-family: 'Commissioner', sans-serif;
+            font-weight: 100;
+            font-size: 1rem;
+            display: inline-block;
+            color: #fff;
+        }
+        
+        /* 컨테이너 */
+        .container {width: 1200px; height: inherit; margin: 0 auto; background: rgba(255,255,255,0);}
+
+    </style>
+</head>
+<body>
+    <div class="loading"><span>jung | portfolio</span></div>
+    <div id="wrap">
+        <header class="header">
+            <div class="container">
+                <div class="logo"><a href="#">jung</a><span>About</span></div>
+                <div class="circleMenu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <a href="http://chohyunjung0107.dothome.co.kr/port/about.html"><div class="arrow"></div></a>
+                <div class="plus">+</div>
+            </div>
+        </header>
+        <section class="contents">
+            <article class="content1">
+                <div class="container">
+                    <h2>About me</h2>
+                    <div class="aboutIMG"></div>
+                    <div class="aboutDesc">
+                        IF YOU DO NOT<br> 
+                        TAKE RISKS,<br>
+                        YOU WILL<br> 
+                        NAVER ACCOMPLISH<br> 
+                        ANYTHING.
+                    </div>
+                </div>
+            </article>
+            <article class="content2">
+                <div class="container">
+                    <div class="aboutBOX"><span>
+                        익숙한 일의 반복이 요령이 되지 않고 노하우가 될 수 있도록 어머니에게 배웠습니다. 작은 것 하나도 간과하지 않고 아주 좁은 틈새도 놓치지 않는 어머니의 살림 비법은 바로 공부하는 자세였습니다. 저 또한 어머니에게서 배운 직업관에 따라 늘 겸손하며 배우는 삶을 살 수 있도록 노력할 것입니다.  갈고 닦으며 학습하는 자세를 통하여 현재에 안주하지 않고 더 큰 그림을 통해 사회에 메시지를 던지는 사람이 되겠습니다. 
+                    </span></div>
+                </div>
+            </article>
+            <article class="content3">
+                <div class="container">
+                    <h2>Skills</h2>
+                    <div class="aboutBOX2"><img src="../assets/img/skill_logo 1.png" alt="스킬"></div>
+                </div>
+            </article>
+        </section>
+        <footer class="footer">
+            <div class="container">
+                <h1 class="contact1"><a href="#">Get in<br>touch.</a></h1>
+                <h1 class="contact2"><a href="https://github.com/chohyunjung0107">github.com/<br>chohyunjung0107</a></h1>
+                <ul>
+                    <a href="mailto:chobomg0107@gmail.com"><li>e-mail | </li></a>
+                    <a href="https://codepen.io/chohyunjung0107"><li>codepen | </li></a>
+                    <a href="#"><li>instagram</li></a>
+                </ul>
+            </div>
+        </footer>
+    </div>
+    
+    <!-- 스크립트 -->
+    <script src="assets/js/costom.js"></script>
+
+</body>
+</html>
